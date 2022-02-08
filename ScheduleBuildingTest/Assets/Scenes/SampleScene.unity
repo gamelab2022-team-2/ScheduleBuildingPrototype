@@ -479,6 +479,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedItemGrid: {fileID: 0}
+  items:
+  - {fileID: 11400000, guid: 17e97c45f4cb70347ac4c5ebb93c5fb9, type: 2}
+  - {fileID: 11400000, guid: 725d07cdba6608343acee7d35bfa1094, type: 2}
+  - {fileID: 11400000, guid: 676542866b0acfe4ea34425be1d537a8, type: 2}
+  itemPrefab: {fileID: 7385355691028235131, guid: 0b144da0d98205f47b397d85635f4c04, type: 3}
+  canvasTransform: {fileID: 58158981}
 --- !u!1 &1478785916
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +576,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSizeWidth: 10
   gridSizeHeight: 10
-  inventoryItemPrefab: {fileID: 7385355691028235131, guid: 0b144da0d98205f47b397d85635f4c04, type: 3}
 --- !u!114 &1478785921
 MonoBehaviour:
   m_ObjectHideFlags: 0
