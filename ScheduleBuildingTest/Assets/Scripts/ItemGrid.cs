@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,23 +43,126 @@ public class ItemGrid : MonoBehaviour
         rectTransform.sizeDelta = size;
     }
 
-    public void PlaceItem(InventoryItem item, int posX, int posY)
+    internal InventoryItem GetItem(int x, int y)
     {
+        return inventoryItemSlot[x, y];
+    }
+
+    public bool PlaceItem(InventoryItem item, int posX, int posY, ref InventoryItem overlapItem)
+    {
+        if (!BoundryCheck(posX, posY, item.itemData.width, item.itemData.height))
+            return false;
+
+        if (!OverlapCheck(posX, posY, item.itemData.width, item.itemData.height, ref overlapItem))
+        {
+            overlapItem = null;
+            return false;
+        }
+
+        if (overlapItem != null)
+        {
+            CleanGridReference(overlapItem);
+        }
+
         RectTransform rectTransform = item.GetComponent<RectTransform>();
         rectTransform.SetParent(this.rectTransform);
-        inventoryItemSlot[posX, posY] = item;
 
-        Vector2 position = new Vector2();
-        position.x = posX * tileSizeWidth + tileSizeWidth / 2;
-        position.y = -(posY * tileSizeHeight + tileSizeHeight / 2);
+        for (int x = 0; x < item.itemData.width; x++)
+        {
+            for (int y = 0; y < item.itemData.height; y++)
+            {
+                inventoryItemSlot[posX + x, posY + y] = item;
+            }
+        }
+
+        item.onGridPositionX = posX;
+        item.onGridPositionY = posY;
+        Vector2 position = CaculatePositionOnGrid(item, posX, posY);
 
         rectTransform.localPosition = position;
+
+        return true;
+    }
+
+    public Vector2 CaculatePositionOnGrid(InventoryItem item, int posX, int posY)
+    {
+        Vector2 position = new Vector2();
+        position.x = posX * tileSizeWidth + tileSizeWidth * item.itemData.width / 2;
+        position.y = -(posY * tileSizeHeight + tileSizeHeight * item.itemData.height / 2);
+        return position;
+    }
+
+    private bool OverlapCheck(int posX, int posY, int width, int height, ref InventoryItem overlapItem)
+    {
+       for (int x = 0; x < width; x++)
+       {
+            for (int y = 0; y < height; y++)
+            {
+                if (inventoryItemSlot[posX +x, posY + y] != null)
+                {
+                    if (overlapItem == null)
+                    {
+                        overlapItem = inventoryItemSlot[posX +x, posY + y];
+                    }
+                    else
+                    {
+                        if (overlapItem != inventoryItemSlot[posX +x, posY + y])
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+       }
+
+       return true;
     }
 
     public InventoryItem PickUpItem(int x, int y)
     {
         InventoryItem item = inventoryItemSlot[x, y];
-        inventoryItemSlot[x, y] = null;
+
+        if (item == null)
+            return null;
+        CleanGridReference(item);
+
+        //inventoryItemSlot[x, y] = null;
         return item;
+    }
+
+    private void CleanGridReference(InventoryItem item)
+    {
+        for (int ix = 0; ix < item.itemData.width; ix++)
+        {
+            for (int iy = 0; iy < item.itemData.height; iy++)
+            {
+                inventoryItemSlot[item.onGridPositionX + ix, item.onGridPositionY + iy] = null;
+            }
+        }
+    }
+
+    bool PositionCheck(int posX, int posY)
+    {
+        if (posX < 0 || posY < 0)
+            return false;
+
+        if (posX >= gridSizeWidth || posY >= gridSizeHeight)
+            return false;
+
+        return true;
+    }
+
+    public bool BoundryCheck(int posX, int posY, int width, int height)
+    {
+        if (!PositionCheck(posX, posY))
+            return false;
+
+        posX += width - 1;
+        posY += height - 1;
+
+        if (!PositionCheck(posX, posY))
+            return false;
+
+        return true;
     }
 }
