@@ -25,7 +25,9 @@ public class InventoryController : MonoBehaviour
     RectTransform rectTransform;
 
     [SerializeField] List<ItemData> items;
+    [SerializeField] List<ItemData> shapedItems;
     [SerializeField] private GameObject itemPrefab;
+    [SerializeField] private GameObject shapeItemPrefab;
     [SerializeField] Transform canvasTransform;
 
     InventoryHighlight inventoryHighlight;
@@ -56,13 +58,17 @@ public class InventoryController : MonoBehaviour
         {
             RotateItem();
         }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            CreateRandomItemWithShape();
+        }
 
         if (selectedItemGrid == null)
         {
-           inventoryHighlight.Show(false);
-           return;
+            inventoryHighlight.Show(false);
+            return;
         }
-            
+
 
         HandleHighlight();
 
@@ -94,7 +100,7 @@ public class InventoryController : MonoBehaviour
         Vector2Int? posOnGrid = selectedItemGrid.FindSpaceForObject(itemToInsert);
 
         if (posOnGrid == null)
-           return;
+            return;
 
         selectedItemGrid.PlaceItem(itemToInsert, posOnGrid.Value.x, posOnGrid.Value.y);
     }
@@ -124,7 +130,7 @@ public class InventoryController : MonoBehaviour
         }
         else
         {
-            inventoryHighlight.Show(selectedItemGrid.BoundryCheck(positionOnGrid.x, positionOnGrid.y, 
+            inventoryHighlight.Show(selectedItemGrid.BoundryCheck(positionOnGrid.x, positionOnGrid.y,
                                                                   selectedItem.WIDTH, selectedItem.HEIGHT));
             inventoryHighlight.SetSize(selectedItem);
             //inventoryHighlight.SetParent(selectedItemGrid);
@@ -145,6 +151,20 @@ public class InventoryController : MonoBehaviour
         inventoryItem.Set(items[selectedItemIndex]);
     }
 
+    private void CreateRandomItemWithShape()
+    {
+        ItemShape inventoryItemWithShape = Instantiate(shapeItemPrefab).GetComponent<ItemShape>();
+        selectedItem = (InventoryItem)inventoryItemWithShape;
+
+
+        rectTransform = inventoryItemWithShape.GetComponent<RectTransform>();
+        rectTransform.SetParent(canvasTransform);
+        rectTransform.SetAsLastSibling();
+
+        int selectedItemIndex = UnityEngine.Random.Range(0, shapedItems.Count);
+        inventoryItemWithShape.GetComponent<ItemShape>().SetItemWithPixel(shapedItems[selectedItemIndex]);
+    }
+
     private void LeftMouseButtonPress()
     {
         Vector2Int tileGridPosition = GetTileGridPosition();
@@ -160,9 +180,9 @@ public class InventoryController : MonoBehaviour
     private Vector2Int GetTileGridPosition()
     {
         Vector2 position = Input.mousePosition;
-
         if (selectedItem != null)
         {
+
             position.x -= (selectedItem.WIDTH - 1) * ItemGrid.tileSizeWidth / 2;
             position.y += (selectedItem.HEIGHT - 1) * ItemGrid.tileSizeHeight / 2;
         }
