@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class CardManager : MonoBehaviour
 {
-    public Deck deck;
-    public Discard discard;
+    // deck and pile object
+    public GameObject deck;
+    public GameObject discard;
+
+    // card lists
+    public List<Card> cardsInHand;
+    public GameObject anxietyCardPrefab;
+    public List<Card> deckCards;
+    public List<Card> discardPile;
+
     public Transform[] cardSlots;
     public bool[] availableSlots;
     public static CardManager instance;
-    public List<Card> cardsInHand;
+    
 
     public void Awake()
     {
@@ -33,12 +41,13 @@ public class CardManager : MonoBehaviour
     {
         while (cardsInHand.Count < 5)
         {
-            if (deck.cards.Count >= 1)
+            if (deckCards.Count >= 1)
             {
                 Card drawnCard = DrawCard();
 
 
                 cardsInHand.Add(drawnCard);
+                drawnCard.inHand = true;
 
                 PlaceCard(drawnCard);
                
@@ -51,9 +60,9 @@ public class CardManager : MonoBehaviour
                 
             }
 
-            if(deck.cards.Count == 0)
+            if(deckCards.Count == 0)
             {
-                deck.gameObject.SetActive(false);
+                deck.SetActive(false);
             }
 
         }
@@ -66,16 +75,12 @@ public class CardManager : MonoBehaviour
             Card cardMove = cardsInHand[0];
             cardMove.gameObject.SetActive(false);
             cardMove.transform.position = discard.gameObject.transform.position;
-
-            if (!cardMove.inSchedule)
-            {
-                //RESOLVE CONSEQUENCE HERE : CALL METHOD FROM GAME MANAGER
-            }
-
+            cardMove.inHand = false;
+            cardMove.inSchedule = false;
 
             cardsInHand.RemoveAt(0);
-            discard.cards.Add(cardMove);
-            discard.gameObject.SetActive(true);
+            discardPile.Add(cardMove);
+            discard.SetActive(true);
         }
 
         for (int i = 0; i<availableSlots.Length; i++)
@@ -86,31 +91,31 @@ public class CardManager : MonoBehaviour
         
     }
 
-    public Card DrawCard()
+    private Card DrawCard()
     {
 
-        Card drawnCard = deck.cards[0];
+        Card drawnCard = deckCards[0];
         drawnCard.inHand = true;
 
         drawnCard.gameObject.SetActive(true);
-        deck.cards.RemoveAt(0);
+        deckCards.RemoveAt(0);
         return drawnCard;
 
 
 
     }
 
-    public void DiscardPileReturnToDeck()
+    private void DiscardPileReturnToDeck()
     {
-        while (discard.cards.Count > 0)
+        while (discardPile.Count > 0)
         {
-            Card card = discard.cards[0];
-            deck.cards.Add(card);
-            discard.cards.RemoveAt(0);
+            Card card = discardPile[0];
+            deckCards.Add(card);
+            discardPile.RemoveAt(0);
         }
         discard.gameObject.SetActive(false);
         deck.gameObject.SetActive(true);
-        deck.Shuffle();
+        Shuffle(deckCards);
     }
 
     public bool StatusCardCheck(Card cardToCheck)
@@ -119,7 +124,7 @@ public class CardManager : MonoBehaviour
         {
             //RESOLVE STATUS CARD
             cardsInHand.Remove(cardToCheck);
-            discard.cards.Add(cardToCheck); // OR DELETE CARD IF WE HAVE ONE TIME CARD
+            discardPile.Add(cardToCheck); // OR DELETE CARD IF WE HAVE ONE TIME CARD
             return true;
         }
 
@@ -145,6 +150,34 @@ public class CardManager : MonoBehaviour
 
             }
         }
+    }
+
+    public void AddAnxiety(int num)
+    {
+        for(int i=0; i<num; i++)
+        {
+            AddAnx();
+        }
+    }
+
+    private void AddAnx()
+    {
+        discardPile.Add(Instantiate(anxietyCardPrefab, CardManager.instance.transform).GetComponent<Card>());
+
+    }
+
+    public void Shuffle(List<Card> cards)
+    {
+        var rnd = new System.Random();
+
+        for (int i = 0; i < cards.Count; i++)
+        {
+            int k = rnd.Next(0, i);
+            Card value = cards[k];
+            cards[k] = cards[i];
+            cards[i] = value;
+        }
+
     }
 
 }
