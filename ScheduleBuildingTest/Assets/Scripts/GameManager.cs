@@ -56,7 +56,6 @@ public class GameManager : MonoBehaviour
             case 4:
                 ActivateEvent();
                 turn++;
-                phase = 0;
                 break;
         }
 

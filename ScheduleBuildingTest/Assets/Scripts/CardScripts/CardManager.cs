@@ -17,15 +17,15 @@ public class CardManager : MonoBehaviour
     public Transform[] cardSlots;
     public bool[] availableSlots;
     public static CardManager instance;
-    
+
 
     public void Awake()
     {
-       if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
-       else if (instance != this)
+        else if (instance != this)
         {
             Destroy(gameObject);
             return;
@@ -34,15 +34,18 @@ public class CardManager : MonoBehaviour
 
     public void Update()
     {
-        
+
     }
 
     public void DrawPhase()
     {
+        
         while (cardsInHand.Count < 5)
         {
+            
             if (deckCards.Count >= 1)
             {
+                
                 Card drawnCard = DrawCard();
 
 
@@ -50,22 +53,25 @@ public class CardManager : MonoBehaviour
                 drawnCard.inHand = true;
 
                 PlaceCard(drawnCard);
-               
+          
+                
 
             }
             else
             {
-                
+
                 DiscardPileReturnToDeck();
-                
+
             }
 
-            if(deckCards.Count == 0)
+            if (deckCards.Count == 0)
             {
                 deck.SetActive(false);
             }
-
+            
         }
+        
+        
     }
 
     public void DiscardPhase()
@@ -74,7 +80,8 @@ public class CardManager : MonoBehaviour
         {
             Card cardMove = cardsInHand[0];
             cardMove.gameObject.SetActive(false);
-            cardMove.transform.position = discard.gameObject.transform.position;
+            cardMove.transform.position = discard.transform.position;
+            StartCoroutine(MoveCard(cardMove,discard.transform));
             cardMove.inHand = false;
             cardMove.inSchedule = false;
 
@@ -111,6 +118,7 @@ public class CardManager : MonoBehaviour
         {
             Card card = discardPile[0];
             deckCards.Add(card);
+            card.transform.position = deck.transform.position;
             discardPile.RemoveAt(0);
         }
         discard.gameObject.SetActive(false);
@@ -123,8 +131,10 @@ public class CardManager : MonoBehaviour
         if (cardToCheck.isStatus)
         {
             //RESOLVE STATUS CARD
+            Debug.Log("Status Card resolved");
             cardsInHand.Remove(cardToCheck);
             discardPile.Add(cardToCheck); // OR DELETE CARD IF WE HAVE ONE TIME CARD
+            cardToCheck.gameObject.SetActive(false);
             return true;
         }
 
@@ -137,7 +147,7 @@ public class CardManager : MonoBehaviour
         {
             if (availableSlots[i] == true)
             {
-                cardToPlace.transform.position = cardSlots[i].position;
+                StartCoroutine(MoveCard(cardToPlace, cardSlots[i]));
                 availableSlots[i] = false;
 
                 bool isStatus = StatusCardCheck(cardToPlace);
@@ -178,6 +188,22 @@ public class CardManager : MonoBehaviour
             cards[i] = value;
         }
 
+    }
+
+    IEnumerator MoveCard(Card cardToMove, Transform place)
+    {
+        float moveDuration = 1.0f;
+        float t = 0.0f;
+        Vector3 startPos = cardToMove.gameObject.transform.position;
+        Vector3 endPos = place.position;
+
+        while (t < moveDuration)
+        {
+            t += Time.deltaTime * (Time.timeScale / moveDuration);
+            cardToMove.transform.position = Vector3.Lerp(startPos, endPos, t);
+            yield return 0;
+        }
+        
     }
 
 }
