@@ -37,9 +37,9 @@ public class CardManager : MonoBehaviour
 
     }
 
+
     public void DrawPhase()
     {
-        
         while (cardsInHand.Count < 5)
         {
             
@@ -71,8 +71,9 @@ public class CardManager : MonoBehaviour
             
         }
         
-        
     }
+
+
 
     public void DiscardPhase()
     {
@@ -81,7 +82,6 @@ public class CardManager : MonoBehaviour
             Card cardMove = cardsInHand[0];
             cardMove.gameObject.SetActive(false);
             cardMove.transform.position = discard.transform.position;
-            StartCoroutine(MoveCard(cardMove,discard.transform));
             cardMove.inHand = false;
             cardMove.inSchedule = false;
 
@@ -126,6 +126,7 @@ public class CardManager : MonoBehaviour
         Shuffle(deckCards);
     }
 
+
     public bool StatusCardCheck(Card cardToCheck)
     {
         if (cardToCheck.isStatus)
@@ -147,13 +148,15 @@ public class CardManager : MonoBehaviour
         {
             if (availableSlots[i] == true)
             {
-                StartCoroutine(MoveCard(cardToPlace, cardSlots[i]));
+                StartCoroutine(MoveCard(cardToPlace, i));
+                
                 availableSlots[i] = false;
 
                 bool isStatus = StatusCardCheck(cardToPlace);
                 if (isStatus)
                 {
                     availableSlots[i] = true;
+                    // start status card coroutine?
                 }
 
                 return;
@@ -190,20 +193,19 @@ public class CardManager : MonoBehaviour
 
     }
 
-    IEnumerator MoveCard(Card cardToMove, Transform place)
+    IEnumerator MoveCard(Card cardToMove, int i)
     {
         float moveDuration = 1.0f;
         float t = 0.0f;
         Vector3 startPos = cardToMove.gameObject.transform.position;
-        Vector3 endPos = place.position;
+        Vector3 endPos = cardSlots[i].position;
 
         while (t < moveDuration)
         {
             t += Time.deltaTime * (Time.timeScale / moveDuration);
             cardToMove.transform.position = Vector3.Lerp(startPos, endPos, t);
             yield return 0;
-        }
-        
+        }  
     }
 
 }

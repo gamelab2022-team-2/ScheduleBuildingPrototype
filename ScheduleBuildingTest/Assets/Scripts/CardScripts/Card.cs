@@ -51,7 +51,6 @@ public class Card : MonoBehaviour
         else
             isStatus = false;
 
-
     }
 
     public void Update()
