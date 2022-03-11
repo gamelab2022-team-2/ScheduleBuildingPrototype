@@ -32,4 +32,7 @@ public class EventChoice : ScriptableObject
 
     // Connection card added
     public int connect;
+
+    // Future event unlocked
+    public Event unlockedEvent;
 }

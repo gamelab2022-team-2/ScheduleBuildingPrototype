@@ -23,6 +23,6 @@ public class Database : MonoBehaviour
 
     public Event getRandomEvent()
     {
-        return events.eventList[Random.Range(0, events.eventList.Count)];
+        return events.availableEvents[Random.Range(0, events.availableEvents.Count)];
     }
 }

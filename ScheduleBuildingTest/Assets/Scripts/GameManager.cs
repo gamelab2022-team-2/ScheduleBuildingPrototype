@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
     // event variables
     public GameObject eventCanvas;
-    public List<Event> eventList;
+
 
 
     // Start is called before the first frame update
@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
         switch (phase)
         {
             case 0:
+                turn++;
                 CardManager.instance.DrawPhase();
                 phase++;
                 break;
@@ -54,8 +55,8 @@ public class GameManager : MonoBehaviour
                 phase++;
                 break;
             case 4:
-                ActivateEvent();
-                turn++;
+                ActivateEvent();  
+                Debug.Log("turn = " + turn);
                 break;
         }
 
@@ -65,28 +66,31 @@ public class GameManager : MonoBehaviour
 
     public void ActivateEvent()
     {
-        Debug.Log("event in event list = " + eventList.Count);
-        // Event activeEvent = eventList[Random.Range(0, eventList.Count)];
-
+        
         if (turn % 2 == 0)
         {
             eventCanvas.SetActive(true);
+            
 
-            
         }
+        else
+        {
             
+            phase = 0;
+        }
 
         
+
     }
 
-    private void updateGauges()
+    private void UpdateGauges()
     {
         motivText.text = motivation.ToString();
         gradeText.text = grades.ToString();
-        updateGaugeColor();
+        UpdateGaugeColor();
     }
 
-    private void updateGaugeColor()
+    private void UpdateGaugeColor()
     {
         if (motivation < 30)
         {
@@ -126,7 +130,7 @@ public class GameManager : MonoBehaviour
                 motivation += card.inHandMotiv;
                 CardManager.instance.AddAnxiety(card.anxiety);
                 Debug.Log(card.anxiety + " added");
-                updateGauges();
+                UpdateGauges();
             }
 
 
@@ -134,7 +138,7 @@ public class GameManager : MonoBehaviour
             {
                 grades += card.grades;
                 motivation += card.motivation;
-                updateGauges();
+                UpdateGauges();
             }
         }
 
@@ -160,6 +164,38 @@ public class GameManager : MonoBehaviour
     {
         eventCanvas.SetActive(false);
         phase = 0;
+    }
+
+    public void ApplyChoice(int selection)
+    {
+        EventChoice choice;
+
+        if (selection == 1)
+        {
+           choice  = EventManager.instance.selectedEvent.choice1;
+        }
+        else
+        {
+            choice = EventManager.instance.selectedEvent.choice2;
+        }
+        grades += choice.grade;
+        motivation += choice.motivation;
+
+        if(choice.card != null)
+            CardManager.instance.discardPile.Add(choice.card);
+        CardManager.instance.AddAnxiety(choice.addAnx);
+        // CardManager.instance.RemoveAnxiety(choice.remAnx1); TO DO IMPLEMENT THIS
+        // CardManager.instance.AddConnection(choice.connect); TO DO IMPLEMENT THIS
+        UpdateGauges();
+
+        Database.instance.events.availableEvents.Remove(EventManager.instance.selectedEvent);
+        Database.instance.events.usedEvents.Add(EventManager.instance.selectedEvent);
+
+        if(choice.unlockedEvent != null)
+            Database.instance.events.availableEvents.Add(choice.unlockedEvent);
+
+        EndEventPhase();
+
     }
 
 
