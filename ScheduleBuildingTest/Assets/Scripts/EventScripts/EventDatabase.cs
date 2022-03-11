@@ -5,6 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="New Event database", menuName = "Databases/Event Database" )]
 public class EventDatabase : ScriptableObject
 {
+
+    // This object holds all the events 
+
     public List<Event> availableEvents;
 
     public List<Event> usedEvents;

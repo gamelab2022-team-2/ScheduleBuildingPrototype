@@ -170,6 +170,7 @@ public class GameManager : MonoBehaviour
     {
         EventChoice choice;
 
+        // check which choice the user has made
         if (selection == 1)
         {
            choice  = EventManager.instance.selectedEvent.choice1;
@@ -178,6 +179,8 @@ public class GameManager : MonoBehaviour
         {
             choice = EventManager.instance.selectedEvent.choice2;
         }
+
+        // apply the changes that are contained in the choice selection
         grades += choice.grade;
         motivation += choice.motivation;
 
@@ -188,9 +191,11 @@ public class GameManager : MonoBehaviour
         // CardManager.instance.AddConnection(choice.connect); TO DO IMPLEMENT THIS
         UpdateGauges();
 
+        // remove the event from the available event list in the database so user doesn't get same event twice
         Database.instance.events.availableEvents.Remove(EventManager.instance.selectedEvent);
         Database.instance.events.usedEvents.Add(EventManager.instance.selectedEvent);
 
+        // if an event is unlocked by the current event add it to available event list in database
         if(choice.unlockedEvent != null)
             Database.instance.events.availableEvents.Add(choice.unlockedEvent);
 

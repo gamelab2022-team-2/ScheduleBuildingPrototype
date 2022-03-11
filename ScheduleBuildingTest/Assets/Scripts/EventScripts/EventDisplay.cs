@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class EventDisplay : MonoBehaviour
 {
 
+    // this class just fills the event canvas with the values of a selected event
+
     public TextMeshProUGUI title;
     public TextMeshProUGUI description;
     public Image artImage;
