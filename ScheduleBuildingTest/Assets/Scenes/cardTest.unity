@@ -561,6 +561,8 @@ MonoBehaviour:
   title: {fileID: 866191323}
   description: {fileID: 566116081}
   artImage: {fileID: 584740968}
+  choice1: {fileID: 1610813959}
+  choice2: {fileID: 1039968245}
 --- !u!1 &337396245
 GameObject:
   m_ObjectHideFlags: 0
@@ -3076,7 +3078,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95be712d7a1262f469c938a975f48a5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  choice: {fileID: 11400000, guid: 5f473529f9f196e42a0fe35980ab78a2, type: 2}
   title: {fileID: 592642471}
   description: {fileID: 200039678}
   artImage: {fileID: 0}
@@ -3792,7 +3793,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95be712d7a1262f469c938a975f48a5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  choice: {fileID: 11400000, guid: 6d974ab5749240e4391da6f431e346b4, type: 2}
   title: {fileID: 384400916}
   description: {fileID: 1239471168}
   artImage: {fileID: 0}
