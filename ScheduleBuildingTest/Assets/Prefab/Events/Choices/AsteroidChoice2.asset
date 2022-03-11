@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cff721d76f96434aab0c8260e8943d6, type: 3}
-  m_Name: AsteroidsChoice2
+  m_Name: AsteroidChoice2
   m_EditorClassIdentifier: 
-  title: Dont sleep in
-  description: You get right back up to work in the morning, no time to lose!
+  title: Power through
+  description: No time to loose, sleep is for the dead!
   motivation: -6
   grade: 0
   card: {fileID: 0}

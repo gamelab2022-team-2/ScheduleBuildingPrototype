@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AsteroidChoice1
   m_EditorClassIdentifier: 
   title: Sleep in
-  description: You sleep in
+  description: Sleep in to catch up on your sleep
   motivation: 0
   grade: 0
   card: {fileID: 0}

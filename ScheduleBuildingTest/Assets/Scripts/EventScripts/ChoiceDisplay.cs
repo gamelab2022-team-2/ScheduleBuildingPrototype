@@ -18,7 +18,7 @@ public class ChoiceDisplay : MonoBehaviour
 
         title.text = choice.title;
         description.text = choice.description;
-        artImage = choice.art;
+
     }
 
 }

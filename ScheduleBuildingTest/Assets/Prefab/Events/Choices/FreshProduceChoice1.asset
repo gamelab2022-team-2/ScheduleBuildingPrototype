@@ -9,12 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55fefe69578aadf48b3d336566ae7c40, type: 3}
-  m_Name: Asteroids
+  m_Script: {fileID: 11500000, guid: 6cff721d76f96434aab0c8260e8943d6, type: 3}
+  m_Name: FreshProduceChoice1
   m_EditorClassIdentifier: 
-  eventID: EV002
-  title: Asteroid belt
-  description: Your pod passed through an asteroid belt you couldn't sleep all night
-  art: {fileID: 0}
-  choice1: {fileID: 0}
-  choice2: {fileID: 0}
+  title: Cook it
+  description: Cook the produce
+  motivation: 10
+  grade: 0
+  card: {fileID: 0}
+  addAnx: 0
+  remAnx1: 0
+  connect: 0

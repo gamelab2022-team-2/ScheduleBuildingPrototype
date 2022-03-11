@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55fefe69578aadf48b3d336566ae7c40, type: 3}
-  m_Name: Asteroids
+  m_Name: FreshProduce
   m_EditorClassIdentifier: 
-  eventID: EV002
-  title: Asteroid belt
-  description: Your pod passed through an asteroid belt you couldn't sleep all night
+  eventID: EV001
+  title: Fresh Produce
+  description: We have fresh produce for you
   art: {fileID: 0}
-  choice1: {fileID: 0}
-  choice2: {fileID: 0}
+  choice1: {fileID: 11400000, guid: ae73140f1a3bb4b42b098a232893914d, type: 2}
+  choice2: {fileID: 11400000, guid: b7424755f6ab1be4dab3d2c0442c92b0, type: 2}
