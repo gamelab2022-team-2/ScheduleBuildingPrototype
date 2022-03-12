@@ -6,14 +6,25 @@ using UnityEngine;
 public class GameStateMachine : MonoBehaviour
 {
     public GameState currentState;
-    private GameState initialState = new InitialState();
-    private GameState drawPhase = new DrawState();
-    private GameState placePhase = new PlaceState();
-    private GameState resolutionPhase = new ResolutionState();
-    private GameState discardPhase = new DiscardState();
-    private GameState eventPhase = new EventState();
-    private GameState gameOverState = new GameOverState();
-    
+    public GameState initialState;
+    public GameState drawPhase;
+    public GameState placePhase;
+    public GameState resolutionPhase;
+    public GameState discardPhase;
+    public GameState eventPhase;
+    public GameState gameOverState;
+
+    public void Awake()
+    {
+        initialState = new InitialState(this);
+        drawPhase = new DrawState(this);
+        placePhase = new PlaceState(this);
+        resolutionPhase = new ResolutionState(this);
+        discardPhase = new DiscardState(this);
+        eventPhase = new EventState(this);
+        gameOverState = new GameOverState(this);
+    }
+
     public void Update()
     {
         currentState.Tick();

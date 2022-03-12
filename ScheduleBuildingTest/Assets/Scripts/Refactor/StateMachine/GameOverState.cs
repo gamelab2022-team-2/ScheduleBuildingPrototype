@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class GameOverState : GameState
 {
-    
+    public GameOverState(GameStateMachine gsm) : base(gsm)
+    {
+    }
 }

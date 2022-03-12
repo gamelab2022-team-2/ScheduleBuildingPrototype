@@ -7,8 +7,15 @@ public class Player : MonoBehaviour
   public CardSet hand, deck, discard;
   public GameBoard schedule;
   public int motivation, grade;
-  
-  public void Draw(){}
-  public void PlaceCard(Card card){}
+
+  public Card Draw()
+  {
+    return deck.Draw();
+  }
+
+  public bool PlaceCard(Card card)
+  {
+    return true;
+  }
   
 }
