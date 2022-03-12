@@ -12,14 +12,8 @@ public class DrawState : GameState
     public override void Tick()
     {
 
-        if (CheckIfHandFull())
-        {
-            _stateMachine.ChangeState(_stateMachine.placePhase);
-        }
         
     }
-    
-    public bool CheckIfHandFull(){}
-    
+
     
 }
