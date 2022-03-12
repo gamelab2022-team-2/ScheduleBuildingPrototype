@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55fefe69578aadf48b3d336566ae7c40, type: 3}
   m_Name: FreshProduce
   m_EditorClassIdentifier: 
-  eventID: EV001
+  eventID: 001
   title: Fresh Produce
   description: We have fresh produce for you
   art: {fileID: 0}

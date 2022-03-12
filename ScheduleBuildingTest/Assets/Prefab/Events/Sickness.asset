@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55fefe69578aadf48b3d336566ae7c40, type: 3}
   m_Name: Sickness
   m_EditorClassIdentifier: 
-  eventID: EV003
+  eventID: 001.1
   title: Sickness
   description: You arent feeling well today
   art: {fileID: 0}
   choice1: {fileID: 11400000, guid: 361f99606904ac8498d3365a7b6511b6, type: 2}
   choice2: {fileID: 11400000, guid: 62a3da27ed40ef8418f3fd07942538ab, type: 2}
+  hasPrerequisite: 1

@@ -8,6 +8,11 @@ public class Database : MonoBehaviour
 
     public EventDatabase events;
 
+    private void Start()
+    {
+        events.ReinitializeEventDB();
+    }
+
     private void Awake()
     {
         if(instance == null)
@@ -19,10 +24,14 @@ public class Database : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+
     }
 
     public Event getRandomEvent()
     {
         return events.availableEvents[Random.Range(0, events.availableEvents.Count)];
     }
+
+
 }

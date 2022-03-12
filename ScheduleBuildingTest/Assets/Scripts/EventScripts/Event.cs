@@ -19,6 +19,8 @@ public class Event : ScriptableObject
     public EventChoice choice1;
     public EventChoice choice2;
 
+    public bool hasPrerequisite;
+
     
 
 }

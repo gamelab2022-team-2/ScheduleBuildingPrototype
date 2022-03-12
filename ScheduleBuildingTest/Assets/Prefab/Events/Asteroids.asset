@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55fefe69578aadf48b3d336566ae7c40, type: 3}
   m_Name: Asteroids
   m_EditorClassIdentifier: 
-  eventID: EV002
+  eventID: 002
   title: Asteroid belt
   description: Your pod passed through an asteroid belt you couldn't sleep all night
   art: {fileID: 0}

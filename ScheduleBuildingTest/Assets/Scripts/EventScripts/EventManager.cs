@@ -23,14 +23,19 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    // When the event Canvas is set to active selected a new event 
+    // When the event Canvas is set to active select a new event 
     public void OnEnable()
     {
         selectedEvent = Database.instance.getRandomEvent();
         eventDisplay.SetUI(selectedEvent);
         Debug.Log("event selected");
     }
-
-    // TO DO : implement function to be called at the beginning of the game to reinitialize the database
+    
+    public void MoveToUsed(Event e)
+    {
+        // remove the event from the available event list in the database so user doesn't get same event twice
+        Database.instance.events.availableEvents.Remove(e);
+        Database.instance.events.usedEvents.Add(e);
+    }
 
 }
