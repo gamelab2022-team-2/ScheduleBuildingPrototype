@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
     // event variables
     public GameObject eventCanvas;
 
+    // Phase State Machine
+    private GameStateMachine gsm;
 
 
     // Start is called before the first frame update
