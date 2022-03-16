@@ -8,14 +8,23 @@ public class Player : MonoBehaviour
   public GameBoard schedule;
   public int motivation, grade;
 
-  public Card Draw()
+  public Card DrawDeck()
   {
     return deck.Draw();
+  }
+
+  public void ReplenishDeck()
+  {
+    while(discard.Count > 0)
+    {
+      deck.Add(discard.Draw());  
+    }
   }
 
   public bool PlaceCard(Card card)
   {
     return true;
   }
+ 
   
 }

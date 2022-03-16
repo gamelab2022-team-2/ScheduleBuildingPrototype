@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameStateMachine : MonoBehaviour
 {
+    public Player player;
     public GameState currentState;
     public GameState initialState;
     public GameState drawPhase;
@@ -16,13 +17,15 @@ public class GameStateMachine : MonoBehaviour
 
     public void Awake()
     {
-        initialState = new InitialState(this);
-        drawPhase = new DrawState(this);
-        placePhase = new PlaceState(this);
-        resolutionPhase = new ResolutionState(this);
-        discardPhase = new DiscardState(this);
-        eventPhase = new EventState(this);
-        gameOverState = new GameOverState(this);
+        if(!player) player = GetComponent<Player>();
+        
+        initialState = new InitialState(this, player);
+        drawPhase = new DrawState(this, player);
+        placePhase = new PlaceState(this, player);
+        resolutionPhase = new ResolutionState(this, player);
+        discardPhase = new DiscardState(this, player);
+        eventPhase = new EventState(this, player);
+        gameOverState = new GameOverState(this, player);
     }
 
     public void Update()

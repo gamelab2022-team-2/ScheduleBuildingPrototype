@@ -5,7 +5,7 @@ using UnityEngine;
 public class EventState : GameState
 {
     
-    public EventState(GameStateMachine gsm) : base(gsm)
+    public EventState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
     }
     // if condition -> next phase (Draw Phase)

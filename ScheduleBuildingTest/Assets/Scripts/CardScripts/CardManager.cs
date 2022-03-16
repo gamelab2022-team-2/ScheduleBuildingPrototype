@@ -107,9 +107,6 @@ public class CardManager : MonoBehaviour
         drawnCard.gameObject.SetActive(true);
         deckCards.RemoveAt(0);
         return drawnCard;
-
-
-
     }
 
     private void DiscardPileReturnToDeck()

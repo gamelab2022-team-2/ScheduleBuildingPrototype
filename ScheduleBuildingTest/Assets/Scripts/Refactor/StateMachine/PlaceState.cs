@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlaceState : GameState
 {
-    public PlaceState(GameStateMachine gsm) : base(gsm)
+    public PlaceState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
     }
     

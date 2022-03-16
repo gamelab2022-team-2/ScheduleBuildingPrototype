@@ -5,7 +5,7 @@ using UnityEngine;
 public class DiscardState : GameState
 {
     
-    public DiscardState(GameStateMachine gsm) : base(gsm)
+    public DiscardState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
     }
     
