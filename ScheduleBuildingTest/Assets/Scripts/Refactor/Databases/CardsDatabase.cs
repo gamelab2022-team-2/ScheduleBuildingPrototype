@@ -7,9 +7,13 @@ using UnityEngine;
 public class CardsDatabase : ScriptableObject
 {
 
-    public List<Cards> deck;
-    public List<Cards> discardPile;
-    public List<Cards> cardWithPrerequisite;
-    public List<Cards> allCards;
+    public CardSet deck;
+    public CardSet discardPile;
+    public CardSet allCards;
+
+    public void ReinitializeCardsDb()
+    {
+        // TO BE ADDED WHEN CARDS ALL DONE
+    }
 
 }
