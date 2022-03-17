@@ -1180,6 +1180,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DiscardPile
       objectReference: {fileID: 0}
+    - target: {fileID: 1170914440640385020, guid: e2743473ffc32814281a44af436b9037, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2743473ffc32814281a44af436b9037, type: 3}
 --- !u!1 &1576660000
