@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657856, g: 0.49641234, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -195,13 +195,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1061627131}
     m_Modifications:
+    - target: {fileID: 5002823601460914472, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 810869483}
+    - target: {fileID: 5002823601460914472, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002823601460914472, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameStateMachine, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5002823602272182482, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
       propertyPath: m_Name
       value: EventPhaseCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 5002823602272182482, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5002823602272182494, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
       propertyPath: m_Pivot.x
@@ -286,6 +298,50 @@ PrefabInstance:
     - target: {fileID: 5002823602272182494, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002823602415899662, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002823602415899662, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002823602415899662, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 810869483}
+    - target: {fileID: 5002823602415899662, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11500000, guid: 61121845d4532ad4ca5bc510d522f714, type: 3}
+    - target: {fileID: 5002823602415899662, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002823602415899662, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002823602415899662, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002823602415899662, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameStateMachine, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002823602415899662, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002823602415899662, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5002823602415899662, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f05771ce06cf5cb438fda07be3ef6c3a, type: 3}

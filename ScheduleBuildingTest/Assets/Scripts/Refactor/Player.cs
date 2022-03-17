@@ -7,8 +7,8 @@ public class Player : MonoBehaviour
   public CardSet hand, deck, discard;
   public GameBoard schedule;
   public int motivation, grade;
+  public GameObject motUI, gradeUI;
 
-  
   public Card DrawDeck()
   {
     return deck.Draw();
@@ -22,8 +22,15 @@ public class Player : MonoBehaviour
     }
   }
 
-  // TODO: Implement this function on for the gameboard/schedule
-  public bool PlaceCard(Card card,Vector2Int pos)
+    public void UpdateUI()
+    {
+        motUI.GetComponent<TMPro.TextMeshProUGUI>().text = motivation.ToString();
+        gradeUI.GetComponent<TMPro.TextMeshProUGUI>().text = grade.ToString();
+    }
+
+
+    // TODO: Implement this function on for the gameboard/schedule
+    public bool PlaceCard(Card card,Vector2Int pos)
   {
     return true;
   }

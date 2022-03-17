@@ -41,4 +41,10 @@ public class GameState
     {
         return false;
     }
+
+    public virtual void ApplyChoice(int selection)
+    {
+        Debug.Log("game state button pressed");
+    }
+
 }

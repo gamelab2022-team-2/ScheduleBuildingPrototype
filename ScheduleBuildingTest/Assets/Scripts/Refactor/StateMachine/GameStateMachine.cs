@@ -28,6 +28,8 @@ public class GameStateMachine : MonoBehaviour
         discardPhase = new DiscardState(this, player);
         eventPhase = new EventState(this, player);
         gameOverState = new GameOverState(this, player);
+
+        ChangeState(eventPhase);
     }
 
     public void Update()
@@ -43,4 +45,11 @@ public class GameStateMachine : MonoBehaviour
         
         currentState.OnStateEnter();
     }
+
+    public void ButtonPress(int button)
+    {
+        Debug.Log("button pressed");
+        currentState.ApplyChoice(button);
+    }
+
 }
