@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameOverState : GameState
 {
-    public GameOverState(GameStateMachine gsm) : base(gsm)
+    public GameOverState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
     }
 }

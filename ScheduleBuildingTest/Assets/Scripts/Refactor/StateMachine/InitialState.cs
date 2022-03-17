@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class InitialState : GameState
 {
-    public InitialState(GameStateMachine gsm) : base(gsm)
+    public InitialState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
     }
 }
