@@ -9,6 +9,11 @@ public class EventState : GameState
     {
         eventPopUp = _stateMachine.eventCanvas;
     }
+    
+    public override void InitializeNextState()
+    {
+        nextState = _stateMachine.drawPhase;
+    }
 
     public override void OnStateEnter()
     {
