@@ -28,12 +28,10 @@ public class GameStateMachine : MonoBehaviour
         discardPhase = new DiscardState(this, player);
         eventPhase = new EventState(this, player);
         gameOverState = new GameOverState(this, player);
+        
 
-<<<<<<< Updated upstream
-        ChangeState(eventPhase);
-=======
         currentState = initialState;
->>>>>>> Stashed changes
+
     }
 
     public void Update()
@@ -49,19 +47,18 @@ public class GameStateMachine : MonoBehaviour
         
         currentState.OnStateEnter();
     }
-
-<<<<<<< Updated upstream
+    
     public void ButtonPress(int button)
     {
         Debug.Log("button pressed");
         currentState.ApplyChoice(button);
     }
 
-=======
+
     public void NextState()
     {
         ChangeState(currentState.nextState);
         Debug.Log("Current State: " + currentState);
     }
->>>>>>> Stashed changes
+
 }
