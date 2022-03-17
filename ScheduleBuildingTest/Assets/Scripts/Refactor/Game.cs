@@ -5,57 +5,40 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
-    
+    #region Singleton
+    private static Game _instance;
+
+    public static Game Instance
+    {
+        get { return _instance; }
+    }
+
+    private void Awake() 
+    { 
+        if (Instance != null && Instance != this) { Destroy(this); } 
+        else { _instance = this; } 
+    }
+
+    #endregion Singleton
+
+    [SerializeField]
+    private Player _player;
+    [SerializeField]
+    private GameBoard schedule;
+
     public int turn;
-    
-    // Phase State Machine
-    private GameStateMachine gsm;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         turn = 0;
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    public void GenerateCardSets()
     {
-        // 0 = drawphase, 1 = placephase, 2 = resolutionphase, 3 = discardphase, 4 = eventphase  
-        switch (phase)
-        {
-            //draw
-            // case 0:
-            //     turn++;
-            //     CardManager.instance.DrawPhase();
-            //     phase++;
-            //     break;
-           //place
-            case 1:
-                
-                break;
-            // resolution
-            case 2:
-                ResolutionPhase();
-                Debug.Log("resolution ended");
-                break;
-            // discard
-            case 3:
-                CardManager.instance.DiscardPhase();
-                phase++;
-                break;
-            //event
-            case 4:
-                ActivateEvent();  
-                Debug.Log("turn = " + turn);
-                break;
-        }
-
+        // Generate cards
     }
 
-    
-
-    public void ActivateEvent()
+    /*public void ActivateEvent()
     {
         
         if (turn % 2 == 0)
@@ -72,9 +55,9 @@ public class Game : MonoBehaviour
 
         
 
-    }
+    }*/
 
-    private void UpdateGauges()
+    /*private void UpdateGauges()
     {
         motivText.text = motivation.ToString();
         gradeText.text = grades.ToString();
@@ -108,38 +91,10 @@ public class Game : MonoBehaviour
         {
             gradeText.color = Color.green;
         }
-    }
-
-    private void ResolutionPhase()
-    {
-        Debug.Log("Resolution Started");
-        foreach(Card card in CardManager.instance.cardsInHand)
-        {
-            Debug.Log("cards in Hand resolving");
-            if (!card.inSchedule)
-            {
-                motivation += card.inHandMotiv;
-                CardManager.instance.AddAnxiety(card.anxiety);
-                Debug.Log(card.anxiety + " added");
-                UpdateGauges();
-            }
-
-
-            if (card.inSchedule)
-            {
-                grades += card.grades;
-                motivation += card.motivation;
-                UpdateGauges();
-            }
-        }
-
-
-
-        phase++;
-
-    }
+    }*/
     
-    public void EndPlacePhase()
+    
+    /*public void EndPlacePhase()
     {
         Debug.Log("Place Phase Ended");
         if(phase == 1)
@@ -192,7 +147,7 @@ public class Game : MonoBehaviour
 
         EndEventPhase();
 
-    }
+    }*/
 
 
 }
