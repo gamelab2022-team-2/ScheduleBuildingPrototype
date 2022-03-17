@@ -98,7 +98,11 @@ public class CardManager : MonoBehaviour
         
     }
 
-    private Card DrawCard()
+    public void EventPhase()
+    { 
+    }
+
+        private Card DrawCard()
     {
 
         Card drawnCard = deckCards[0];

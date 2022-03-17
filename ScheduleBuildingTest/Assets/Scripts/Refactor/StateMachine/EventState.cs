@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EventState : GameState
 {
-    
+
     public EventState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
     }
@@ -21,6 +21,11 @@ public class EventState : GameState
         }
     }
 
+    public override void OnStateExit()
+    {
+        base.OnStateExit();
+    }
+
     // if condition -> next phase (Draw Phase)
 
 
@@ -30,11 +35,14 @@ public class EventState : GameState
     }
     
     
-    // Doesn't do anything right now
+    // toggle active of event UI
     public void ActivateEvent()
     {
+        //there may be a safer way to do this
+        eventPopup = GameObject.Find("EventPhaseCanvas");
 
+        eventPopup.SetActive(true);
     }
 
-    
+
 }
