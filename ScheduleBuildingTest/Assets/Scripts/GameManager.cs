@@ -57,33 +57,14 @@ public class GameManager : MonoBehaviour
                 phase++;
                 break;
             case 4:
-                ActivateEvent();  
+                CardManager.instance.EventPhase();
+                phase++; 
                 Debug.Log("turn = " + turn);
                 break;
         }
 
     }
 
-    
-
-    public void ActivateEvent()
-    {
-        
-        if (turn % 2 == 0)
-        {
-            eventCanvas.SetActive(true);
-            
-
-        }
-        else
-        {
-            
-            phase = 0;
-        }
-
-        
-
-    }
 
     private void UpdateGauges()
     {
