@@ -15,6 +15,8 @@ public class GameStateMachine : MonoBehaviour
     public GameState eventPhase;
     public GameState gameOverState;
 
+    public GameObject eventCanvas;
+
     public void Awake()
     {
         if(!player) player = GetComponent<Player>();

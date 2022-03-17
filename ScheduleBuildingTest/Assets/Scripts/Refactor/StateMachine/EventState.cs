@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class EventState : GameState
 {
-    
+    private GameObject eventPopUp;
     public EventState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
+        eventPopUp = _stateMachine.eventCanvas;
     }
 
     public override void OnStateEnter()
@@ -21,6 +22,11 @@ public class EventState : GameState
         }
     }
 
+    public override void OnStateExit()
+    {
+        base.OnStateExit();
+    }
+
     // if condition -> next phase (Draw Phase)
 
 
@@ -30,11 +36,13 @@ public class EventState : GameState
     }
     
     
-    // Doesn't do anything right now
+    // toggle active of event UI
     public void ActivateEvent()
     {
+        
 
+        eventPopUp.SetActive(true);
     }
 
-    
+
 }
