@@ -8,10 +8,24 @@ public class CardSet : MonoBehaviour
 
     public Card Draw()
     {
+        // NOTE card must be removed from deck and added to next cardset ( card must move, not stay in both cardsets)
         return cards[0];
     }
     
-    public void Shuffle(){}
+    public void Shuffle()
+    {
+
+        var rnd = new System.Random();
+
+        for (int i = 0; i < cards.Count; i++)
+        {
+            int k = rnd.Next(0, i);
+            Card value = cards[k];
+            cards[k] = cards[i];
+            cards[i] = value;
+        }
+
+    }
     public void Insert(Card card) => cards.Add(card);
 
     public void GetValues()
