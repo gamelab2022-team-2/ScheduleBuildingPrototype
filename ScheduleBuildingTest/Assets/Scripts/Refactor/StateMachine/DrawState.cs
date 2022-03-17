@@ -8,7 +8,13 @@ public class DrawState : GameState
     {
     }
     
+    
     // if condition -> next phase (Place State)
+    public override void InitializeNextState()
+    {
+        nextState = _stateMachine.placePhase;
+    }
+
     public override void Tick()
     {
         

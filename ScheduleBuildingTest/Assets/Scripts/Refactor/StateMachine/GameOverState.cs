@@ -7,4 +7,8 @@ public class GameOverState : GameState
     public GameOverState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
     }
+    public override void InitializeNextState()
+    {
+        nextState = _stateMachine.initialState;
+    }
 }

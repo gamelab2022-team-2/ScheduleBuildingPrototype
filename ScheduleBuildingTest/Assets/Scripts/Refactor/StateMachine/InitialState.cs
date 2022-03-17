@@ -7,6 +7,12 @@ public class InitialState : GameState
 {
     public InitialState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
+        nextState = gsm.drawPhase;
+    }
+    
+    public override void InitializeNextState()
+    {
+        nextState = _stateMachine.drawPhase;
     }
 }
         

@@ -7,6 +7,10 @@ public class PlaceState : GameState
     public PlaceState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
     }
+    public override void InitializeNextState()
+    {
+        nextState = _stateMachine.resolutionPhase;
+    }
     
     // if condition -> next phase (Resolution Phase)
     

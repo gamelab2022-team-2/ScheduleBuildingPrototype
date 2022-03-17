@@ -7,6 +7,11 @@ public class DiscardState : GameState
     public DiscardState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
     }
+    
+    public override void InitializeNextState()
+    {
+        nextState = _stateMachine.drawPhase;
+    }
 
 
     public override void Tick()

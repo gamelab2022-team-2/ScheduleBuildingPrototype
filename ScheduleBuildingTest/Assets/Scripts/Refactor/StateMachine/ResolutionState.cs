@@ -7,6 +7,11 @@ public class ResolutionState : GameState
     public ResolutionState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
     }
+    
+    public override void InitializeNextState()
+    {
+        nextState = _stateMachine.discardPhase;
+    }
 
     public override void Tick()
     {

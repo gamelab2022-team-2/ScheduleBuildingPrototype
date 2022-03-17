@@ -4,15 +4,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class GameState
+public abstract class GameState
 {
     protected GameStateMachine _stateMachine;
     protected Player _player;
+    public GameState nextState;
     public GameState(GameStateMachine gsm, Player p)
     {
         _stateMachine = gsm;
         _player = p;
     }
+
+    public abstract void InitializeNextState();
     
     /// <summary>
     /// Code within this function of the current state will be called on Update.
