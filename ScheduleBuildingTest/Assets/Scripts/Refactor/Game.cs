@@ -25,6 +25,7 @@ public class Game : MonoBehaviour
     private Player _player;
     [SerializeField]
     private GameBoard schedule;
+    
 
     public int turn;
 
