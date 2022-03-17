@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Card : ScriptableObject
+public class Card : MonoBehaviour
 {
     // played variables
     //public GameObject tetronimo; TO BE ADDED maybe as GameObject??

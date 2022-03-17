@@ -997,7 +997,6 @@ GameObject:
   - component: {fileID: 5002823602272182481}
   - component: {fileID: 5002823602272182480}
   - component: {fileID: 5002823602272182483}
-  - component: {fileID: 5002823602272182492}
   m_Layer: 5
   m_Name: EventPhaseCanvas
   m_TagString: Untagged
@@ -1089,20 +1088,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5002823602272182492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5002823602272182482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffea8b100d0585c4690836ace167ad8c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedEvent: {fileID: 0}
-  eventDisplay: {fileID: 5002823601856490782}
 --- !u!1 &5002823602388211455
 GameObject:
   m_ObjectHideFlags: 0
