@@ -6,11 +6,12 @@ public class Database : MonoBehaviour
 {
     public static Database instance;
 
-    public EventDatabase events;
+    public EventDatabase eventsDb;
+    public CardDatabase cardsDb;
 
     private void Start()
     {
-        events.ReinitializeEventDB();
+        eventsDb.ReinitializeEventDB();
     }
 
     private void Awake()
@@ -30,7 +31,7 @@ public class Database : MonoBehaviour
 
     public Event getRandomEvent()
     {
-        return events.availableEvents[Random.Range(0, events.availableEvents.Count)];
+        return eventsDb.availableEvents[Random.Range(0, eventsDb.availableEvents.Count)];
     }
 
 

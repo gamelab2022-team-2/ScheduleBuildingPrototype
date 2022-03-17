@@ -6,12 +6,16 @@ public class CardSet : MonoBehaviour
 {
     public List<Card> cards;
 
-    public Card Draw()
-    {
-        // NOTE card must be removed from deck and added to next cardset ( card must move, not stay in both cardsets)
-        return cards[0];
+    public int Count => cards.Count;
+    public void Add(Card card) => cards.Add(card);
+
+    public Card Draw() 
+    { 
+        var drawn = cards[0]; 
+        cards.RemoveAt(0); 
+        return drawn; 
     }
-    
+
     public void Shuffle()
     {
 

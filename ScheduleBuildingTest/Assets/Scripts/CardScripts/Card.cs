@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Card : MonoBehaviour
+public class Card : ScriptableObject
 {
     // played variables
     //public GameObject tetronimo; TO BE ADDED maybe as GameObject??
+    [TextArea]
     public string description;
     public int grades;
     public int motivation;
@@ -26,32 +27,6 @@ public class Card : MonoBehaviour
     [HideInInspector]
     public bool inHand;
 
-
-    public Card(string descript, int grad, int motiv,int inHandMotivation, int anx, bool isAnx, bool isConnect)
-    {
-        description = descript;
-        grades = grad;
-        motivation = motiv;
-        anxiety = anx;
-        inHandMotiv = inHandMotivation;
-        isAnxiety = isAnx;
-        inSchedule = false;
-        inHand = false;
-
-        if (isAnx == true)
-        {
-            isStatus = true;
-            isAnxiety = true;
-        }           
-        else if (isConnect == true)
-        {
-            isStatus = true;
-            isConnection = true;
-        }          
-        else
-            isStatus = false;
-
-    }
 
     public void Update()
     {
