@@ -34,8 +34,8 @@ public class EventManager : MonoBehaviour
     public void MoveToUsed(Event e)
     {
         // remove the event from the available event list in the database so user doesn't get same event twice
-        Database.instance.events.availableEvents.Remove(e);
-        Database.instance.events.usedEvents.Add(e);
+        Database.instance.eventsDb.availableEvents.Remove(e);
+        Database.instance.eventsDb.usedEvents.Add(e);
     }
 
 }

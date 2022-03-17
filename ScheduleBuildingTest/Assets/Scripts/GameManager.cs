@@ -179,8 +179,8 @@ public class GameManager : MonoBehaviour
         // if an event is unlocked by the current event add it to available event list in database
         if (choice.unlockedEvent != null)
         {
-            Database.instance.events.availableEvents.Add(choice.unlockedEvent);
-            Database.instance.events.eventsWithPrecondition.Remove(choice.unlockedEvent);
+            Database.instance.eventsDb.availableEvents.Add(choice.unlockedEvent);
+            Database.instance.eventsDb.eventsWithPrecondition.Remove(choice.unlockedEvent);
         }
            
         EndEventPhase();
