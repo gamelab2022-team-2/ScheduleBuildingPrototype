@@ -25,8 +25,7 @@ public class Game : MonoBehaviour
     private Player _player;
     [SerializeField]
     private GameBoard schedule;
-    [SerializeField]
-    private GameObject infoPanel;
+
 
     public int turn;
 
@@ -40,10 +39,6 @@ public class Game : MonoBehaviour
         // Generate cards
     }
 
-    public void updateAttributes()
-    {
-
-    }
 
     /*public void ActivateEvent()
     {
