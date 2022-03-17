@@ -16,6 +16,7 @@ public class EventState : GameState
         if(IsEventTurn()) ActivateEvent();
         else
         {
+            //TODO: will eventually be "discussion board phase" which does not exist yet
             _stateMachine.ChangeState(_stateMachine.drawPhase);
         }
     }
@@ -32,16 +33,7 @@ public class EventState : GameState
     // Doesn't do anything right now
     public void ActivateEvent()
     {
-        // every other turn, activate an event -> next phase (draw phase)
-        /*if (turn % 2 == 0)
-        {
-            eventCanvas.SetActive(true);
-        }
-        else
-        {
-            phase = 0;
-        }*/
-        
+
     }
 
     
