@@ -9,7 +9,12 @@ public class EventState : GameState
     {
         eventPopUp = _stateMachine.eventCanvas;
     }
-    
+
+    public override void Tick()
+    {
+        base.Tick();
+    }
+
     public override void InitializeNextState()
     {
         nextState = _stateMachine.drawPhase;
@@ -18,13 +23,12 @@ public class EventState : GameState
     public override void OnStateEnter()
     {
         base.OnStateEnter();
-        Debug.Log("Entering Event Phase");
-        if(IsEventTurn()) ActivateEvent();
-        else
-        {
-            //TODO: will eventually be "discussion board phase" which does not exist yet
-            _stateMachine.ChangeState(_stateMachine.drawPhase);
-        }
+        // if(IsEventTurn()) ActivateEvent();
+        // else
+        // {
+        //     //TODO: will eventually be "discussion board phase" which does not exist yet
+        //     _stateMachine.ChangeState(_stateMachine.drawPhase);
+        // }
     }
 
     public override void OnStateExit()

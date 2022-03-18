@@ -15,10 +15,10 @@ public class ResolutionState : GameState
 
     public override void Tick()
     {
-        base.Tick();
-        ResolutionPhase();
-        if(GameOverCondition()) _stateMachine.ChangeState(_stateMachine.gameOverState); // Game Over
-        else _stateMachine.ChangeState(_stateMachine.discardPhase); // Next Phase
+        // base.Tick();
+        // ResolutionPhase();
+        // if(GameOverCondition()) _stateMachine.ChangeState(_stateMachine.gameOverState); // Game Over
+        // else _stateMachine.ChangeState(_stateMachine.discardPhase); // Next Phase
     }
     
     /// <summary>

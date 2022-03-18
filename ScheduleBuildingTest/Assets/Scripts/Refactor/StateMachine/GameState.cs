@@ -11,10 +11,12 @@ public abstract class GameState
     public GameState nextState;
     public GameState(GameStateMachine gsm, Player p)
     {
+        Debug.Log("Instantiating State: " + this);
         _stateMachine = gsm;
         _player = p;
     }
 
+    
     public abstract void InitializeNextState();
     
     /// <summary>

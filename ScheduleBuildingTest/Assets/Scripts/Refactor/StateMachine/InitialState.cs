@@ -10,6 +10,10 @@ public class InitialState : GameState
         nextState = gsm.drawPhase;
     }
     
+    public override void Tick()
+    {
+        base.Tick();
+    }
     public override void InitializeNextState()
     {
         nextState = _stateMachine.drawPhase;

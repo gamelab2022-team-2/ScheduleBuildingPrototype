@@ -23,7 +23,7 @@ public class DrawState : GameState
     public override void OnStateEnter()
     {
         base.OnStateEnter();
-        Draw();
+        //Draw();
         // player hand should now have 5 cards -> next phase
         _stateMachine.ChangeState(_stateMachine.placePhase);
     }

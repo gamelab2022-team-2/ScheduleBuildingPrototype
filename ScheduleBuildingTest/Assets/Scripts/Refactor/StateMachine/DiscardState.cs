@@ -16,7 +16,7 @@ public class DiscardState : GameState
 
     public override void Tick()
     {
-        base.Tick();
+        /*base.Tick();
         DiscardPhase();
         
         // if condition -> next phase (Game Over)
@@ -24,7 +24,7 @@ public class DiscardState : GameState
         if (GameOverCondition())
         {
             _stateMachine.ChangeState(_stateMachine.eventPhase);
-        }
+        }*/
     }
 
     public void DiscardPhase()

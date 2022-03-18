@@ -7,13 +7,13 @@ public class GameStateMachine : MonoBehaviour
 {
     public Player player;
     public GameState currentState;
-    public GameState initialState;
-    public GameState drawPhase;
-    public GameState placePhase;
-    public GameState resolutionPhase;
-    public GameState discardPhase;
-    public GameState eventPhase;
-    public GameState gameOverState;
+    public InitialState initialState;
+    public DrawState drawPhase;
+    public PlaceState placePhase;
+    public ResolutionState resolutionPhase;
+    public DiscardState discardPhase;
+    public EventState eventPhase;
+    public GameOverState gameOverState;
 
     public GameObject eventCanvas;
 
@@ -29,6 +29,13 @@ public class GameStateMachine : MonoBehaviour
         eventPhase = new EventState(this, player);
         gameOverState = new GameOverState(this, player);
         
+        initialState.InitializeNextState();
+        drawPhase.InitializeNextState();
+        placePhase.InitializeNextState();
+        resolutionPhase.InitializeNextState();
+        discardPhase.InitializeNextState();
+        eventPhase.InitializeNextState();
+        gameOverState.InitializeNextState();
 
         currentState = initialState;
 
@@ -36,15 +43,14 @@ public class GameStateMachine : MonoBehaviour
 
     public void Update()
     {
+        
         currentState.Tick();
     }
 
     public void ChangeState(GameState state)
     {
         currentState.OnStateExit();
-
         currentState = state;
-        
         currentState.OnStateEnter();
     }
     
