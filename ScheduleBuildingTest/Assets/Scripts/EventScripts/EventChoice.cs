@@ -9,8 +9,8 @@ public class EventChoice : ScriptableObject
     // This class contains the information about choices that can be made during an event
 
     public string title;
+    [TextArea]
     public string description;
-    public Image art;
 
     // Effects on motivation
     public int motivation;
@@ -32,4 +32,7 @@ public class EventChoice : ScriptableObject
 
     // Connection card added
     public int connect;
+
+    // Future event unlocked
+    public Event unlockedEvent;
 }

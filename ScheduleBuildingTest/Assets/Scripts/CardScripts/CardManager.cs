@@ -98,7 +98,11 @@ public class CardManager : MonoBehaviour
         
     }
 
-    private Card DrawCard()
+    public void EventPhase()
+    { 
+    }
+
+        private Card DrawCard()
     {
 
         Card drawnCard = deckCards[0];
@@ -107,9 +111,6 @@ public class CardManager : MonoBehaviour
         drawnCard.gameObject.SetActive(true);
         deckCards.RemoveAt(0);
         return drawnCard;
-
-
-
     }
 
     private void DiscardPileReturnToDeck()

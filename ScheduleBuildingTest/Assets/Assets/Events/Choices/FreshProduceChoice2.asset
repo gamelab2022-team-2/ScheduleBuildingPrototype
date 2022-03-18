@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cff721d76f96434aab0c8260e8943d6, type: 3}
+  m_Name: FreshProduceChoice2
+  m_EditorClassIdentifier: 
+  title: Dont cook it
+  description: Eat it raw,no time for cooking things, there is studying to be done!
+  motivation: 0
+  grade: 5
+  card: {fileID: 0}
+  addAnx: 0
+  remAnx1: 0
+  connect: 0
+  unlockedEvent: {fileID: 11400000, guid: 8f675653ad22f5040a65a8858a8d830f, type: 2}
