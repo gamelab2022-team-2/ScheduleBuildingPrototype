@@ -15,6 +15,9 @@ public class StringVariableTMP : MonoBehaviour
         textMesh = GetComponent<TextMeshProUGUI>();
     }
 
+    /// <summary>
+    /// To be called via game event whenever the string variable is updated.
+    /// </summary>
     public void UpdateText()
     {
         textMesh.text = stringVariable.runtimeValue;
