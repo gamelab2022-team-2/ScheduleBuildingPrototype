@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// Adds anxiety cards - if a certain choice is selected
+/// Adds motivation or grades - added by certain choice
+/// </summary>
 public class EventState : GameState
 {
     private GameObject eventPopUp;
@@ -73,8 +78,6 @@ public class EventState : GameState
 
         player.grade.runtimeValue += choice.grade;
         player.motivation.runtimeValue += choice.motivation;
-
-        player.UpdateUI();
 
         //if (choice.card != null)
         //CardManager.instance.discardPile.Add(choice.card);

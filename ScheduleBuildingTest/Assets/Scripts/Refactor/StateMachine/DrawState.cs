@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+/// <summary>
+/// adds cards from the deck to the hand
+/// activates anxiety cards on the board if drawn
+/// </summary>
 public class DrawState : GameState
 {
     public DrawState(GameStateMachine gsm, Player player) : base(gsm, player)
@@ -26,14 +30,14 @@ public class DrawState : GameState
     {
     }
 
-    public override void OnStateExit()
+    public override void OnStateExit() 
     {
         base.OnStateExit();
     }
 
     public void Draw()
     {
-        _player.DrawFromDeck();
+        player.DrawFromDeck();
     }
     
 

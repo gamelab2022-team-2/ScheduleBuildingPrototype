@@ -12,7 +12,14 @@ public class DiscardState : GameState
 
     public override GameState NextState
     {
-        get => stateMachine.GameOverCondition()? stateMachine.gameOverState : nextState;
+        get => stateMachine.GameOverCondition()? stateMachine.gameOverState : EventOrDraw();
+    }
+
+    public GameState EventOrDraw()
+    {
+        if (Game.Instance.turn % 2 == 0)
+            return stateMachine.eventPhase;
+        return stateMachine.drawPhase;
     }
 
     public override void InitializeNextState()

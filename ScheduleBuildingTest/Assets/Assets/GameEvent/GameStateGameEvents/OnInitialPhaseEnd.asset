@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01c0ddfe970335e4b8d67d1ceea23ed4, type: 3}
-  m_Name: OnEventStateEnter
+  m_Name: OnInitialPhaseEnd
   m_EditorClassIdentifier: 

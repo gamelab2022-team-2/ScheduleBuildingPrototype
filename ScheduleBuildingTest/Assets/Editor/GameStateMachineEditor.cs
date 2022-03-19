@@ -16,6 +16,7 @@ public class GameStateMachineEditor : Editor
     {
         
         base.OnInspectorGUI();
+        
         if(GUILayout.Button("Next State"))
         {
             //add everthing the button would do.

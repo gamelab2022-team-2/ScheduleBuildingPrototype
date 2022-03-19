@@ -50,9 +50,32 @@ public class Player : MonoBehaviour
         deck.Shuffle();
     }
 
+
+    public void ApplyHand()
+    {
+        Debug.Log("Calculating Resolution Values");
+        
+        foreach(Card card in hand.cards)
+        {
+            Debug.Log("cards in Hand resolving");
+            /*if (!card.inSchedule)
+            {g
+                motivation += card.inHandMotiv;
+                CardManager.instance.AddAnxiety(card.anxiety);
+                Debug.Log(card.anxiety + " added");
+                UpdateGauges();
+            }*/
+
+            //TODO: Do we want to increase motivation when cards are in hand AND in the schedule?
+            /*if (card.inSchedule)
+            {
+                grades += card.grades;
+                motivation += card.motivation;
+                UpdateGauges();
+            }*/
+        }
+    }
     
-
-
 
     // TODO: Implement this function on for the gameboard/schedule
     public bool PlaceCard(Card card,Vector2Int pos)

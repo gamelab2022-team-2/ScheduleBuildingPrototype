@@ -25,8 +25,10 @@ public class GameStateMachine : MonoBehaviour
 
     [Header("GameEvents")] 
     public GameEvent changeStateEvent;
+
     [Header("Game State Events")] 
-    public GameEvent OnInitialPhaseEnter, OnInitialPhaseExit;
+    public GameEvent OnInitialPhaseEnter;
+    public GameEvent OnIntialPhaseExit;
     public GameEvent OnDrawPhaseEnter, OnDrawPhaseExit;
     public GameEvent OnPlacePhaseEnter, OnPlacePhaseExit;
     public GameEvent OnResolutionPhaseEnter, OnResolutionPhaseExit;

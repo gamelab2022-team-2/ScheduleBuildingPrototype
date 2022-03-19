@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Adds anxiety cards - if cards are not played
+/// Adds motivation or grades - added by certain choice
+/// </summary>
 public class ResolutionState : GameState
 {
     public ResolutionState(GameStateMachine gsm, Player player) : base(gsm, player)
@@ -48,9 +52,6 @@ public class ResolutionState : GameState
                 UpdateGauges();
             }*/
         }
-        //if(GameOverCondition()) stateMachine.ChangeState(stateMachine.gameOverState); // Game Over
-        //else stateMachine.ChangeState(stateMachine.discardPhase); // Next Phase
-        //phase++;
     }
 
     /// <summary>
