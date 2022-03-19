@@ -11,11 +11,11 @@ public class Player : MonoBehaviour
     public CardSet allCards;
 
     public IntegerVariable motivation, grade;
-    public GameObject motUI, gradeUI;
 
     public GameBoard schedule;
-    public int motivation, grade;
 
+    public int Motivation => motivation.runtimeValue;
+    public int Grade => grade.runtimeValue;
 
     public void DrawFromDeck()
     {
@@ -40,13 +40,6 @@ public class Player : MonoBehaviour
 
         }
     }
-
-    public void UpdateUI()
-    {
-        motUI.GetComponent<TMPro.TextMeshProUGUI>().text = motivation.ToString();
-        gradeUI.GetComponent<TMPro.TextMeshProUGUI>().text = grade.ToString();
-    }
-
     private void DiscardPileReturnToDeck()
     {
         while (discardPile.Count > 0)
