@@ -10,15 +10,15 @@ public class ResolutionState : GameState
     
     public override void InitializeNextState()
     {
-        nextState = _stateMachine.discardPhase;
+        nextState = stateMachine.discardPhase;
     }
 
     public override void Tick()
     {
         // base.Tick();
         // ResolutionPhase();
-        // if(GameOverCondition()) _stateMachine.ChangeState(_stateMachine.gameOverState); // Game Over
-        // else _stateMachine.ChangeState(_stateMachine.discardPhase); // Next Phase
+        // if(GameOverCondition()) stateMachine.ChangeState(stateMachine.gameOverState); // Game Over
+        // else stateMachine.ChangeState(stateMachine.discardPhase); // Next Phase
     }
     
     /// <summary>
@@ -48,8 +48,8 @@ public class ResolutionState : GameState
                 UpdateGauges();
             }*/
         }
-        //if(GameOverCondition()) _stateMachine.ChangeState(_stateMachine.gameOverState); // Game Over
-        //else _stateMachine.ChangeState(_stateMachine.discardPhase); // Next Phase
+        //if(GameOverCondition()) stateMachine.ChangeState(stateMachine.gameOverState); // Game Over
+        //else stateMachine.ChangeState(stateMachine.discardPhase); // Next Phase
         //phase++;
     }
 
@@ -59,7 +59,7 @@ public class ResolutionState : GameState
     /// <returns>True if player's motivation is less than or equal to 0, otherwise returns false.</returns>
     public override bool GameOverCondition()
     {
-        if (_player.motivation <= 0) return true;
+        if (player.motivation.runtimeValue <= 0) return true;
         return false;
     }
     

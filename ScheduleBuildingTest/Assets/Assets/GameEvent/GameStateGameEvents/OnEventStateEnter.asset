@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1347682c083446740b3f4459a72fc75c, type: 3}
-  m_Name: CurrentMoitvation
+  m_Script: {fileID: 11500000, guid: 01c0ddfe970335e4b8d67d1ceea23ed4, type: 3}
+  m_Name: OnEventStateEnter
   m_EditorClassIdentifier: 
-  initialValue: 0

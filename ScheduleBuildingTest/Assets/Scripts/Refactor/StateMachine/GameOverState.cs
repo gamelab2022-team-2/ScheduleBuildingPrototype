@@ -13,6 +13,6 @@ public class GameOverState : GameState
     }
     public override void InitializeNextState()
     {
-        nextState = _stateMachine.initialState;
+        nextState = stateMachine.initialPhase;
     }
 }

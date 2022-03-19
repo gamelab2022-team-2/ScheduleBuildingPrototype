@@ -16,7 +16,7 @@ public class InitialState : GameState
     }
     public override void InitializeNextState()
     {
-        nextState = _stateMachine.drawPhase;
+        nextState = stateMachine.drawPhase;
     }
 }
         

@@ -6,9 +6,16 @@ using UnityEngine;
 
 public class GameStateMachine : MonoBehaviour
 {
+    [Header("Fields")] 
     public Player player;
+    public GameObject eventCanvas;
+    public StringVariable currentStateString;
+    
+    [Header("Current State")] 
     public GameState currentState;
-    public InitialState initialState;
+    
+    [Header("Game States")] 
+    public InitialState initialPhase;
     public DrawState drawPhase;
     public PlaceState placePhase;
     public ResolutionState resolutionPhase;
@@ -16,18 +23,23 @@ public class GameStateMachine : MonoBehaviour
     public EventState eventPhase;
     public GameOverState gameOverState;
 
-    public GameObject eventCanvas;
-
-    public StringVariable currentStateString;
-
     [Header("GameEvents")] 
     public GameEvent changeStateEvent;
+    [Header("Game State Events")] 
+    public GameEvent OnInitialPhaseEnter, OnInitialPhaseExit;
+    public GameEvent OnDrawPhaseEnter, OnDrawPhaseExit;
+    public GameEvent OnPlacePhaseEnter, OnPlacePhaseExit;
+    public GameEvent OnResolutionPhaseEnter, OnResolutionPhaseExit;
+    public GameEvent OnDiscardPhaseEnter, OnDiscardPhaseExit;
+    public GameEvent OnEventPhaseEnter, OnEventPhaseExit;
+    public GameEvent OnGameOverStateEnter;
+  
 
     public void Awake()
     {
         if(!player) player = GetComponent<Player>();
         
-        initialState = new InitialState(this, player);
+        initialPhase = new InitialState(this, player);
         drawPhase = new DrawState(this, player);
         placePhase = new PlaceState(this, player);
         resolutionPhase = new ResolutionState(this, player);
@@ -35,7 +47,7 @@ public class GameStateMachine : MonoBehaviour
         eventPhase = new EventState(this, player);
         gameOverState = new GameOverState(this, player);
         
-        initialState.InitializeNextState();
+        initialPhase.InitializeNextState();
         drawPhase.InitializeNextState();
         placePhase.InitializeNextState();
         resolutionPhase.InitializeNextState();
@@ -44,7 +56,7 @@ public class GameStateMachine : MonoBehaviour
         gameOverState.InitializeNextState();
 
         
-        currentState = initialState;
+        currentState = initialPhase;
         currentState.OnStateEnter();
         
     }
@@ -79,7 +91,7 @@ public class GameStateMachine : MonoBehaviour
 
     public bool GameOverCondition()
     {
-        return player.motivation <= 0;
+        return player.motivation.runtimeValue <= 0;
     }
 
 }

@@ -7,7 +7,7 @@ public class EventState : GameState
     private GameObject eventPopUp;
     public EventState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
-        eventPopUp = _stateMachine.eventCanvas;
+        eventPopUp = stateMachine.eventCanvas;
     }
 
     public override void Tick()
@@ -17,23 +17,23 @@ public class EventState : GameState
 
     public override void InitializeNextState()
     {
-        nextState = _stateMachine.drawPhase;
+        nextState = stateMachine.drawPhase;
     }
 
     public override void OnStateEnter()
     {
-        base.OnStateEnter();
+        stateMachine.OnEventPhaseEnter.Raise();
         // if(IsEventTurn()) ActivateEvent();
         // else
         // {
         //     //TODO: will eventually be "discussion board phase" which does not exist yet
-        //     _stateMachine.ChangeState(_stateMachine.drawPhase);
+        //     stateMachine.ChangeState(stateMachine.drawPhase);
         // }
     }
 
     public override void OnStateExit()
-    {
-        base.OnStateExit();
+    { 
+        stateMachine.OnEventPhaseExit.Raise();
     }
 
     // if condition -> next phase (Draw Phase)
@@ -71,10 +71,10 @@ public class EventState : GameState
 
         // apply the changes that are contained in the choice selection
 
-        _player.grade += choice.grade;
-        _player.motivation += choice.motivation;
+        player.grade.runtimeValue += choice.grade;
+        player.motivation.runtimeValue += choice.motivation;
 
-        _player.UpdateUI();
+        player.UpdateUI();
 
         //if (choice.card != null)
         //CardManager.instance.discardPile.Add(choice.card);

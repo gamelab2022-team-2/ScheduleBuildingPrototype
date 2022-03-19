@@ -6,8 +6,8 @@ using UnityEngine;
 [Serializable]
 public abstract class GameState
 {
-    protected GameStateMachine _stateMachine;
-    protected Player _player;
+    protected GameStateMachine stateMachine;
+    protected Player player;
     protected GameState nextState;
 
     public virtual GameState NextState => nextState;
@@ -16,8 +16,8 @@ public abstract class GameState
     public GameState(GameStateMachine gsm, Player p)
     {
         Debug.Log("Instantiating State: " + this);
-        _stateMachine = gsm;
-        _player = p;
+        stateMachine = gsm;
+        player = p;
     }
 
     

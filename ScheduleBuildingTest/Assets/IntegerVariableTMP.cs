@@ -4,9 +4,9 @@ using ScriptableObjects;
 using TMPro;
 using UnityEngine;
 
-public class FloatVariableTMP : MonoBehaviour
+public class IntegerVariableTMP : MonoBehaviour
 {
-    public FloatVariable floatVariable;
+    public IntegerVariable integerVariable;
     public TextMeshProUGUI textMesh;
     
     public void Start()
@@ -16,6 +16,6 @@ public class FloatVariableTMP : MonoBehaviour
 
     public void UpdateText()
     {
-        textMesh.text = floatVariable.runtimeValue.ToString();
+        textMesh.text = integerVariable.runtimeValue.ToString();
     }
 }

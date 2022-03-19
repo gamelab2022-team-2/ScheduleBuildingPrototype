@@ -4,12 +4,12 @@ using UnityEngine;
 namespace ScriptableObjects
 {
     [CreateAssetMenu]
-    public class FloatVariable : ScriptableObject, ISerializationCallbackReceiver
+    public class IntegerVariable : ScriptableObject, ISerializationCallbackReceiver
     {
-        public float initialValue;
+        public int initialValue;
 
         [NonSerialized]
-        public float runtimeValue;
+        public int runtimeValue;
 
         public void OnAfterDeserialize()
         {
