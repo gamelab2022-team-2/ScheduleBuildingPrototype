@@ -4,7 +4,7 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Card ", menuName = "Card")]
 
-public class CardData : ScriptableObject
+public class Cards : ScriptableObject
 {
 
     // played variables
@@ -21,11 +21,13 @@ public class CardData : ScriptableObject
 
     // card state variables
     public bool isStatus;
+    public bool inSchedule;
 
     // status card info
     public bool isConnection;
     public bool isAnxiety;
 
+    public bool inHand;
 
 
 }

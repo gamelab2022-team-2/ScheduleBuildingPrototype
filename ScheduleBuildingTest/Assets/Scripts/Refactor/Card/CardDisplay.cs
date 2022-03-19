@@ -17,7 +17,7 @@ public class CardDisplay : MonoBehaviour
 
 
 
-    public void SetUI(CardData c)
+    public void SetUI(Cards c)
     {
         description.text = c.description;
 

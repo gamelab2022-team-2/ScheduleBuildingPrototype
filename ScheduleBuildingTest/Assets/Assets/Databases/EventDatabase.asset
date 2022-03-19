@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb27c640fd434c4f89c5c4a5c8cf285, type: 3}
   m_Name: EventDatabase
   m_EditorClassIdentifier: 
-  availableEvents:
+  availableEvents: []
+  usedEvents:
   - {fileID: 11400000, guid: c6a5896ad4712a64e9dd0fb345a25a3e, type: 2}
   - {fileID: 11400000, guid: 3f09e14aae0840045ba321c7f5d64f54, type: 2}
-  usedEvents: []
+  - {fileID: 11400000, guid: 8f675653ad22f5040a65a8858a8d830f, type: 2}
   eventsWithPrecondition:
   - {fileID: 11400000, guid: 8f675653ad22f5040a65a8858a8d830f, type: 2}

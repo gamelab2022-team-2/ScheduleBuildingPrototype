@@ -38,9 +38,5 @@ public class CardSet : MonoBehaviour
         // For each card still in the set, return some value to be applied
     }
 
-    public void EmptyCardSet()
-    {
-        cards.Clear();
-    }
     
 }
