@@ -1,33 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
-using ScriptableObjects;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-  public CardSet hand, deck, discard;
-  public GameBoard schedule;
-  public IntegerVariable motivation, grade;
-  public GameObject motUI, gradeUI;
+    public CardSet deck;
+    public CardSet discardPile;
+    public CardSet hand;
+    public CardSet allCards;
 
-  public Card DrawDeck()
-  {
-    return deck.Draw();
-  }
-  
-  public void ReplenishDeck()
-  {
-    while(discard.Count > 0)
-    {
-      deck.Add(discard.Draw());  
-    }
-  }
+    public GameBoard schedule;
+    public int motivation, grade;
 
-    public void UpdateUI()
+
+    public void DrawFromDeck()
     {
-        motUI.GetComponent<TMPro.TextMeshProUGUI>().text = motivation.ToString();
-        gradeUI.GetComponent<TMPro.TextMeshProUGUI>().text = grade.ToString();
+        while (hand.Count < 5)
+        {
+
+            if (deck.Count >= 1)
+            {
+
+                Card drawnCard = deck.Draw();
+
+
+                hand.Add(drawnCard);
+                drawnCard.inHand = true;
+            }
+            else
+            {
+
+                DiscardPileReturnToDeck();
+
+            }
+
+        }
     }
+
+    private void DiscardPileReturnToDeck()
+    {
+        while (discardPile.Count > 0)
+        {
+            Card card = discardPile.Draw();
+            deck.Add(card);
+        }
+        deck.Shuffle();
+    }
+
+    
+
 
 
     // TODO: Implement this function on for the gameboard/schedule
@@ -48,19 +69,19 @@ public class Player : MonoBehaviour
     }
     schedule.cardsInSchedule.Clear();*/
   }
-  
-  /// <summary>
-  /// Discards cards from the Hand set into the Discard set
-  /// </summary>
-  public void DiscardHand()
-  {
-    foreach (var card in deck.cards)
+
+    /// <summary>
+    /// Discards cards from the Hand set into the Discard set
+    /// </summary>
+    public void DiscardHand()
     {
-      discard.Add(card);
+        foreach (var card in hand.cards)
+        {
+            discardPile.Add(card);
+        }
+        hand.EmptyCardSet();
     }
-    deck.cards.Clear();
-  }
-  #endregion
-  
-  
+    #endregion
+
+
 }

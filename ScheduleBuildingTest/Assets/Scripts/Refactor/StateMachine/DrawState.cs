@@ -48,6 +48,7 @@ public class DrawState : GameState
             //     deck.SetActive(false);
             // }
         }
+        _player.DrawFromDeck();
     }
     
 
