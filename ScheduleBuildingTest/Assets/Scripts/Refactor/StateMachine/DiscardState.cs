@@ -7,7 +7,12 @@ public class DiscardState : GameState
     public DiscardState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
     }
-    
+
+    public override GameState NextState
+    {
+        get => _stateMachine.GameOverCondition()? _stateMachine.gameOverState : nextState;
+    }
+
     public override void InitializeNextState()
     {
         nextState = _stateMachine.drawPhase;

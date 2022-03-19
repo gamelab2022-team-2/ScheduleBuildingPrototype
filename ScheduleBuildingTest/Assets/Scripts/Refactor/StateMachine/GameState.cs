@@ -8,7 +8,11 @@ public abstract class GameState
 {
     protected GameStateMachine _stateMachine;
     protected Player _player;
-    public GameState nextState;
+    protected GameState nextState;
+
+    public virtual GameState NextState => nextState;
+    
+    
     public GameState(GameStateMachine gsm, Player p)
     {
         Debug.Log("Instantiating State: " + this);

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ScriptableObjects;
 using UnityEngine;
 
 public class GameStateMachine : MonoBehaviour
@@ -16,6 +17,11 @@ public class GameStateMachine : MonoBehaviour
     public GameOverState gameOverState;
 
     public GameObject eventCanvas;
+
+    public StringVariable currentStateString;
+
+    [Header("GameEvents")] 
+    public GameEvent changeStateEvent;
 
     public void Awake()
     {
@@ -37,8 +43,10 @@ public class GameStateMachine : MonoBehaviour
         eventPhase.InitializeNextState();
         gameOverState.InitializeNextState();
 
+        
         currentState = initialState;
-
+        currentState.OnStateEnter();
+        
     }
 
     public void Update()
@@ -51,6 +59,8 @@ public class GameStateMachine : MonoBehaviour
     {
         currentState.OnStateExit();
         currentState = state;
+        currentStateString.runtimeValue = currentState.GetType().ToString();
+        changeStateEvent.Raise();
         currentState.OnStateEnter();
     }
     
@@ -63,8 +73,13 @@ public class GameStateMachine : MonoBehaviour
 
     public void NextState()
     {
-        ChangeState(currentState.nextState);
+        ChangeState(currentState.NextState);
         Debug.Log("Current State: " + currentState);
+    }
+
+    public bool GameOverCondition()
+    {
+        return player.motivation <= 0;
     }
 
 }
