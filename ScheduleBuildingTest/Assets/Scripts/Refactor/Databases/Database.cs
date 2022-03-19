@@ -7,7 +7,6 @@ public class Database : MonoBehaviour
     public static Database instance;
 
     public EventDatabase eventsDb;
-    public CardsDatabase cardsDb;
 
     private void Start()
     {
