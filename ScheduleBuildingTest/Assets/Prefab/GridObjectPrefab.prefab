@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridCubePrefab: {fileID: 1740488627772041636, guid: d2a99905164eb9d419e2ffe69a28dc01, type: 3}
+  isInGrid: 0
