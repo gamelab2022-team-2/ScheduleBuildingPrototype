@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using ScriptableObjects;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
   public CardSet hand, deck, discard;
   public GameBoard schedule;
-  public int motivation, grade;
+  public IntegerVariable motivation, grade;
   public GameObject motUI, gradeUI;
 
   public Card DrawDeck()

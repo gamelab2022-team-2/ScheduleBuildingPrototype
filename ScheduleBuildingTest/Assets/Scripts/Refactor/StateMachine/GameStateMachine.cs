@@ -1,13 +1,21 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using ScriptableObjects;
 using UnityEngine;
 
 public class GameStateMachine : MonoBehaviour
 {
+    [Header("Fields")] 
     public Player player;
+    public GameObject eventCanvas;
+    public StringVariable currentStateString;
+    
+    [Header("Current State")] 
     public GameState currentState;
-    public InitialState initialState;
+    
+    [Header("Game States")] 
+    public InitialState initialPhase;
     public DrawState drawPhase;
     public PlaceState placePhase;
     public ResolutionState resolutionPhase;
@@ -15,13 +23,23 @@ public class GameStateMachine : MonoBehaviour
     public EventState eventPhase;
     public GameOverState gameOverState;
 
-    public GameObject eventCanvas;
+    [Header("GameEvents")] 
+    public GameEvent changeStateEvent;
+    [Header("Game State Events")] 
+    public GameEvent OnInitialPhaseEnter, OnInitialPhaseExit;
+    public GameEvent OnDrawPhaseEnter, OnDrawPhaseExit;
+    public GameEvent OnPlacePhaseEnter, OnPlacePhaseExit;
+    public GameEvent OnResolutionPhaseEnter, OnResolutionPhaseExit;
+    public GameEvent OnDiscardPhaseEnter, OnDiscardPhaseExit;
+    public GameEvent OnEventPhaseEnter, OnEventPhaseExit;
+    public GameEvent OnGameOverStateEnter;
+  
 
     public void Awake()
     {
         if(!player) player = GetComponent<Player>();
         
-        initialState = new InitialState(this, player);
+        initialPhase = new InitialState(this, player);
         drawPhase = new DrawState(this, player);
         placePhase = new PlaceState(this, player);
         resolutionPhase = new ResolutionState(this, player);
@@ -29,7 +47,7 @@ public class GameStateMachine : MonoBehaviour
         eventPhase = new EventState(this, player);
         gameOverState = new GameOverState(this, player);
         
-        initialState.InitializeNextState();
+        initialPhase.InitializeNextState();
         drawPhase.InitializeNextState();
         placePhase.InitializeNextState();
         resolutionPhase.InitializeNextState();
@@ -37,8 +55,10 @@ public class GameStateMachine : MonoBehaviour
         eventPhase.InitializeNextState();
         gameOverState.InitializeNextState();
 
-        currentState = initialState;
-
+        
+        currentState = initialPhase;
+        currentState.OnStateEnter();
+        
     }
 
     public void Update()
@@ -51,6 +71,8 @@ public class GameStateMachine : MonoBehaviour
     {
         currentState.OnStateExit();
         currentState = state;
+        currentStateString.runtimeValue = currentState.GetType().ToString();
+        changeStateEvent.Raise();
         currentState.OnStateEnter();
     }
     
@@ -63,8 +85,13 @@ public class GameStateMachine : MonoBehaviour
 
     public void NextState()
     {
-        ChangeState(currentState.nextState);
+        ChangeState(currentState.NextState);
         Debug.Log("Current State: " + currentState);
+    }
+
+    public bool GameOverCondition()
+    {
+        return player.motivation.runtimeValue <= 0;
     }
 
 }

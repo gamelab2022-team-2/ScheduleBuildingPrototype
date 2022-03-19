@@ -14,7 +14,7 @@ public class PlaceState : GameState
     }
     public override void InitializeNextState()
     {
-        nextState = _stateMachine.resolutionPhase;
+        nextState = stateMachine.resolutionPhase;
     }
     
     // if condition -> next phase (Resolution Phase)
