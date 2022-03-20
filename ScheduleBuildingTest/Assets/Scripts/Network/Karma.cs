@@ -19,10 +19,11 @@ public class Karma : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
             increaseKarma();
-        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+            decreaseKarma();
     }
     
     public void increaseKarma()
@@ -30,10 +31,22 @@ public class Karma : MonoBehaviour
         pv.RPC("increaseKarmaRPC", RpcTarget.All);
     }
 
+    public void decreaseKarma()
+    {
+        pv.RPC("decreasrKarmaRPC", RpcTarget.All);
+    }
+
     [PunRPC]
     void increaseKarmaRPC()
     {
         karma++;
+        karmaDisplay.text = "Karma: " + karma.ToString();
+    }
+
+    [PunRPC]
+    void decreasrKarmaRPC()
+    {
+        karma--;
         karmaDisplay.text = "Karma: " + karma.ToString();
     }
 }
