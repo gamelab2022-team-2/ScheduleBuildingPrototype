@@ -20,7 +20,7 @@ public class DiscardState : GameState
         if (Game.Instance.turn % 2 == 0)
             return stateMachine.eventPhase;
         return stateMachine.drawPhase;
-    }
+    }   
 
     public override void InitializeNextState()
     {
