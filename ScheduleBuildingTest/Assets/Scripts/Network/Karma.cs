@@ -28,12 +28,12 @@ public class Karma : MonoBehaviour
     
     public void increaseKarma()
     {
-        pv.RPC("increaseKarmaRPC", RpcTarget.All);
+        pv.RPC("increaseKarmaRPC", RpcTarget.AllBuffered);
     }
 
     public void decreaseKarma()
     {
-        pv.RPC("decreasrKarmaRPC", RpcTarget.All);
+        pv.RPC("decreasrKarmaRPC", RpcTarget.AllBuffered);
     }
 
     [PunRPC]
