@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
   m_Name: Yoga
   m_EditorClassIdentifier: 
+  shape: 34111010010010
+  shapeColor: {r: 0.8163822, g: 0.8679245, b: 0.12609467, a: 0}
   description: Yoga
   grades: 0
   motivation: 3
   inHandMotiv: -2
   anxiety: 0
   isStatus: 0
-  inSchedule: 0
   isConnection: 0
   isAnxiety: 0
-  inHand: 0

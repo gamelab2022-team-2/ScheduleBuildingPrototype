@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
   m_Name: Cram Session
   m_EditorClassIdentifier: 
+  shape: 13111
+  shapeColor: {r: 0.13508794, g: 0.12986825, b: 0.4528302, a: 0}
   description: Cram Session
   grades: 6
   motivation: -10

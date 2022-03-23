@@ -6,7 +6,10 @@ public class Card : MonoBehaviour
 {
     public CardData cardData;
     // played variables
-    //public GameObject tetronimo; TO BE ADDED maybe as GameObject??
+
+    public string shape;
+    public Color shapeColor;
+
     [TextArea]
     public string description;
     public int grades;
@@ -39,13 +42,7 @@ public class Card : MonoBehaviour
         }
     }
 
-    public void Update()
-    {
-        if (inHand)
-        {
-            PlaceInSchedule();
-        }
-    }
+
 
     public void LoadData(CardData data)
     {
@@ -59,23 +56,10 @@ public class Card : MonoBehaviour
         isStatus = data.isStatus;
         isConnection = data.isConnection;
         isAnxiety = data.isAnxiety;
+        shapeColor = data.shapeColor;
+        shape = data.shape;
     }
 
-    // Temporary method to replace placing tetronimo in schedule
-    public void PlaceInSchedule()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            RaycastHit raycastHit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out raycastHit, 100f))
-            {
-                if (raycastHit.transform != null)
-                {
-                    inSchedule = true;
-                }
-            }
-        }
-    }
+ 
 
 }
