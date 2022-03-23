@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CardDisplay : MonoBehaviour
 {
-    // this class just fills the event canvas with the values of a selected event
+    // this class just fills a card with the values of a selected event
 
     public TextMeshProUGUI description;
 
