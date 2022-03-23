@@ -20,6 +20,18 @@ public class EventState : GameState
         base.Tick();
     }
 
+    public override GameState NextState
+    {
+        get => stateMachine.GameOverCondition() ? stateMachine.gameOverState : EventOrDraw();
+    }
+
+    public GameState EventOrDraw()
+    {
+        if (Game.Instance.turn < 15)
+            return stateMachine.newCardPhase;
+        return stateMachine.drawPhase;
+    }
+
     public override void InitializeNextState()
     {
         nextState = stateMachine.drawPhase;
@@ -28,12 +40,11 @@ public class EventState : GameState
     public override void OnStateEnter()
     {
         stateMachine.OnEventPhaseEnter.Raise();
-        // if(IsEventTurn()) ActivateEvent();
-        // else
-        // {
-        //     //TODO: will eventually be "discussion board phase" which does not exist yet
-        //     stateMachine.ChangeState(stateMachine.drawPhase);
-        // }
+        if(IsEventTurn()) ActivateEvent();
+        else
+        {
+             stateMachine.ChangeState(stateMachine.drawPhase);
+        }
     }
 
     public override void OnStateExit()
@@ -105,7 +116,7 @@ public class EventState : GameState
 
     private void OpenCardSelector()
     {
-        //open card selector after first 7 events
+        stateMachine.ChangeState(stateMachine.newCardPhase);
     }
 
 

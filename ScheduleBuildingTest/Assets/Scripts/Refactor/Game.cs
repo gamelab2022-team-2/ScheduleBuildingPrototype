@@ -26,6 +26,7 @@ public class Game : MonoBehaviour
     [SerializeField]
     private GameBoard schedule;
 
+    public List<Card> allCards;
 
     public int turn;
 
@@ -36,7 +37,8 @@ public class Game : MonoBehaviour
     
     public void GenerateCardSets()
     {
-        // Generate cards
+        _player.CreateAllCards();
+        // TODO: Generate cards
     }
 
 

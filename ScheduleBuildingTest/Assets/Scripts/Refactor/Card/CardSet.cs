@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CardSet : MonoBehaviour
 {
-    public List<Card> cards;
+    public List<Card> cards = new List<Card>();
 
     public int Count => cards.Count;
     public void Add(Card card) => cards.Add(card);
