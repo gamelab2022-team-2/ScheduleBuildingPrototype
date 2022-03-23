@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
   m_Name: All-Nighter
   m_EditorClassIdentifier: 
+  shape: 281010000000000101
+  shapeColor: {r: 0.2010603, g: 0.0061053517, b: 0.46226418, a: 0}
   description: All-Nighter
   grades: 10
   motivation: -8
   inHandMotiv: 0
-  anxiety: 0
+  anxiety: 1
   isStatus: 0
   isConnection: 0
   isAnxiety: 0

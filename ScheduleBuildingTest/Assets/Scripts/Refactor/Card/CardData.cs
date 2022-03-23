@@ -8,11 +8,15 @@ public class CardData : ScriptableObject
 {
 
     // played variables
+    public string shape;
+    public Color shapeColor;
+
     //public GameObject tetronimo; TO BE ADDED maybe as GameObject??
     [TextArea]
     public string description;
     public int grades;
     public int motivation;
+    
 
 
     // inhand (not played) variables

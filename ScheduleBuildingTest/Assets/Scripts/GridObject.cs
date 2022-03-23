@@ -28,13 +28,13 @@ public class GridObject : MonoBehaviour
         schedule = FindObjectOfType<Schedule>();
     }
 
-    public void init(string s, Vector3 home)
+    public void init(string s, Vector3 home, Color color)
     {
         _home = home;
         transform.position = _home;
         _width = s[0] - '0';
         _height = s[1] - '0';
-
+        mouseOverColor = color;
 
         for (int h = 0; h < _height; h++)
         {
@@ -49,6 +49,7 @@ public class GridObject : MonoBehaviour
                     obj.transform.position = pos;
                     GridCube newCube = obj.GetComponent<GridCube>();
                     cubes.Add(newCube);
+                    
                 }
             }
         }

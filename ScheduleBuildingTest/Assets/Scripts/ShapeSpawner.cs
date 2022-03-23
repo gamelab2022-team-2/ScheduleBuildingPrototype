@@ -12,10 +12,13 @@ public class ShapeSpawner : MonoBehaviour
     void Start()
     {
         schedule = FindObjectOfType<Schedule>();
+        schedule.blockColumn(1);
         schedule.blockRandomSlot();
         schedule.blockRandomSlot();
         schedule.blockRandomSlot();
 
+        
+        
         SpawnShape(transform.position, "34111010010010");       
         SpawnShape(transform.position + Vector3.right * 8, "33101101101");
         SpawnShape(transform.position + Vector3.right * 16, "551010101010101010101010101");
@@ -25,6 +28,6 @@ public class ShapeSpawner : MonoBehaviour
     {
         var shape = Instantiate(gridObjectPrefab);
         //shape.transform.parent = transform;
-        shape.GetComponent<GridObject>().init(shapeString, position);
+        shape.GetComponent<GridObject>().init(shapeString, position, Color.red);
     }
 }
