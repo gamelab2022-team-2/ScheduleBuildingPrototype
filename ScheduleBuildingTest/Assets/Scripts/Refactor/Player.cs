@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public CardSet deck;
-    public CardSet discardPile;
-    public CardSet hand;
-    public CardSet allCards;
+    public CardSet deck = new CardSet();
+    public CardSet discardPile = new CardSet();
+    public CardSet hand = new CardSet();
+    public CardSet allCards = new CardSet();
 
     public IntegerVariable motivation, grade;
 
@@ -17,15 +17,12 @@ public class Player : MonoBehaviour
     public int Motivation => motivation.runtimeValue;
     public int Grade => grade.runtimeValue;
 
-    public void CreateAllCards()
+
+    public void GetOpeningDeck()
     {
-        if(allCards == null)
+        for(int i = 0; i < 10; i++)
         {
-            allCards = gameObject.AddComponent<CardSet>();
-        }
-        foreach(Card c in Game.Instance.allCards)
-        {
-            allCards.Add(c);
+            deck.Add(allCards.Draw());
         }
     }
 

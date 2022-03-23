@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardSet : MonoBehaviour
+public class CardSet
 {
     public List<Card> cards = new List<Card>();
 

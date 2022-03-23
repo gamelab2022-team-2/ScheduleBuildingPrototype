@@ -26,19 +26,33 @@ public class Game : MonoBehaviour
     [SerializeField]
     private GameBoard schedule;
 
-    public List<Card> allCards;
+    public List<CardData> allCardData;
+    public GameObject cardgo;
+    private GameObject go;
+
 
     public int turn;
 
     void Start()
     {
         turn = 0;
+        GenerateCardSets();
     }
     
     public void GenerateCardSets()
     {
-        _player.CreateAllCards();
-        // TODO: Generate cards
+        go = new GameObject("Card Sleeve");
+        foreach (CardData c in allCardData)
+        {
+            Debug.Log("this ran " + c);
+            GameObject card = Instantiate(cardgo, go.transform);
+            card.name = c.description + " Card";
+            var cardComponent = card.GetComponent<Card>();
+            cardComponent.cardData = c;
+            cardComponent.LoadData(c);
+            _player.allCards.Add(cardComponent);
+        }
+        _player.GetOpeningDeck();
     }
 
 

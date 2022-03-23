@@ -9,7 +9,7 @@ using UnityEngine;
 public class NewCardState : GameState
 {
     private GameObject newCardPopUp;
-    private List<Card> threeCards;
+    private List<CardData> threeCards;
     public NewCardState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
         newCardPopUp = stateMachine.newCardCanvas;
@@ -34,14 +34,13 @@ public class NewCardState : GameState
     {
         base.OnStateEnter();
 
-        threeCards = new List<Card>();
+        threeCards = new List<CardData>();
 
-        player.CreateAllCards();
         player.allCards.Shuffle();
 
         for(int i = 0; i < 3; i++)
         {
-            threeCards.Add(player.allCards.Draw());
+            threeCards.Add(player.allCards.Draw().cardData);
         }
 
         if (IsNewCardTurn()) newCardPopUp.SetActive(true);
@@ -64,7 +63,7 @@ public class NewCardState : GameState
 
         if(threeCards.Count != 0)
         {
-            player.deck.Add(threeCards[selection - 1]);
+            //player.deck.Add(threeCards[selection - 1]);
         }
 
         stateMachine.ChangeState(stateMachine.drawPhase);
