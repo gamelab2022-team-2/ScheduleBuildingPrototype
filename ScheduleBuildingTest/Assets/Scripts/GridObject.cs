@@ -113,7 +113,7 @@ public class GridObject : MonoBehaviour
         return isInGrid;
     }
 
-    private bool validPosition()
+    public bool validPosition()
     {
         Vector3 newPosition = new Vector3(0f, 0f, 0f);
         if (Math.Abs(transform.position.x + 4f) < 0.75f) newPosition.x = -4f;

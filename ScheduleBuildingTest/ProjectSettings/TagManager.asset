@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GridCube
   - ScheduleSlot
+  - GridObject
   layers:
   - Default
   - TransparentFX
