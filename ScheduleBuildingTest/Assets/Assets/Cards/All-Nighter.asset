@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
-  m_Name: AssignementPrep
+  m_Name: All-Nighter
   m_EditorClassIdentifier: 
-  description: Assignment Preparation
-  grades: 2
-  motivation: -4
+  description: All-Nighter
+  grades: 10
+  motivation: -8
   inHandMotiv: 0
-  anxiety: 1
+  anxiety: 0
   isStatus: 0
   isConnection: 0
   isAnxiety: 0

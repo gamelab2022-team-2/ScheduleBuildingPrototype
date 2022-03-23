@@ -17,6 +17,18 @@ public class Player : MonoBehaviour
     public int Motivation => motivation.runtimeValue;
     public int Grade => grade.runtimeValue;
 
+    public void CreateAllCards()
+    {
+        if(allCards == null)
+        {
+            allCards = gameObject.AddComponent<CardSet>();
+        }
+        foreach(Card c in Game.Instance.allCards)
+        {
+            allCards.Add(c);
+        }
+    }
+
     public void DrawFromDeck()
     {
         while (hand.Count < 5)
@@ -24,12 +36,11 @@ public class Player : MonoBehaviour
 
             if (deck.Count >= 1)
             {
-
                 Card drawnCard = deck.Draw();
 
 
                 hand.Add(drawnCard);
-                drawnCard.inHand = true;
+                //drawnCard.inHand = true;
             }
             else
             {

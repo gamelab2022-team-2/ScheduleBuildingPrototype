@@ -9,6 +9,7 @@ public class GameStateMachine : MonoBehaviour
     [Header("Fields")] 
     public Player player;
     public GameObject eventCanvas;
+    public GameObject newCardCanvas;
     public StringVariable currentStateString;
     
     [Header("Current State")] 
@@ -21,6 +22,7 @@ public class GameStateMachine : MonoBehaviour
     public ResolutionState resolutionPhase;
     public DiscardState discardPhase;
     public EventState eventPhase;
+    public NewCardState newCardPhase;
     public GameOverState gameOverState;
 
     [Header("GameEvents")] 
@@ -34,6 +36,7 @@ public class GameStateMachine : MonoBehaviour
     public GameEvent OnResolutionPhaseEnter, OnResolutionPhaseExit;
     public GameEvent OnDiscardPhaseEnter, OnDiscardPhaseExit;
     public GameEvent OnEventPhaseEnter, OnEventPhaseExit;
+    public GameEvent OnNewCardPhaseEnter, OnNewCardPhaseExit;
     public GameEvent OnGameOverStateEnter;
   
 
@@ -47,6 +50,7 @@ public class GameStateMachine : MonoBehaviour
         resolutionPhase = new ResolutionState(this, player);
         discardPhase = new DiscardState(this, player);
         eventPhase = new EventState(this, player);
+        newCardPhase = new NewCardState(this, player);
         gameOverState = new GameOverState(this, player);
         
         initialPhase.InitializeNextState();
@@ -55,10 +59,11 @@ public class GameStateMachine : MonoBehaviour
         resolutionPhase.InitializeNextState();
         discardPhase.InitializeNextState();
         eventPhase.InitializeNextState();
+        newCardPhase.InitializeNextState();
         gameOverState.InitializeNextState();
 
         
-        currentState = initialPhase;
+        currentState = newCardPhase;
         currentState.OnStateEnter();
         
     }
