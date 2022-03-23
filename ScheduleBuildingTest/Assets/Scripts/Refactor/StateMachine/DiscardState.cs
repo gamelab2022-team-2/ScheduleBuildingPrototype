@@ -67,4 +67,9 @@ public class DiscardState : GameState
         // }
         
     }
+
+    public override void OnStateExit()
+    {
+        stateMachine.OnDiscardPhaseExit.Raise();
+    }
 }

@@ -28,6 +28,7 @@ public class DrawState : GameState
 
     public override void OnStateEnter()
     {
+        stateMachine.OnDrawPhaseEnter.Raise();
         Game.Instance.turn += 1;
         Debug.Log(Game.Instance.turn);
     }

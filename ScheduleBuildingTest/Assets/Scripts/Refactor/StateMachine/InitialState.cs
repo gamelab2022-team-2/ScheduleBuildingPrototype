@@ -18,5 +18,10 @@ public class InitialState : GameState
     {
         nextState = stateMachine.drawPhase;
     }
+
+    public override void OnStateExit()
+    {
+        stateMachine.OnIntialPhaseExit.Raise();
+    }
 }
         

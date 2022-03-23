@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test3dGrid : MonoBehaviour
+public class ShapeSpawner : MonoBehaviour
 {
 
     [SerializeField] GameObject gridObjectPrefab;
+
     Schedule schedule;
     // Start is called before the first frame update
     void Start()
@@ -14,17 +15,16 @@ public class Test3dGrid : MonoBehaviour
         schedule.blockRandomSlot();
         schedule.blockRandomSlot();
         schedule.blockRandomSlot();
-        GameObject theThing = Instantiate(gridObjectPrefab);
-        theThing.GetComponent<GridObject>().init("34111010010010", transform.position);
-        GameObject newThing = Instantiate(gridObjectPrefab);
-        newThing.GetComponent<GridObject>().init("33101101101", transform.position + Vector3.right*8);
-        GameObject anotherThing = Instantiate(gridObjectPrefab);
-        anotherThing.GetComponent<GridObject>().init("551010101010101010101010101", transform.position + Vector3.right * 16);
+
+        SpawnShape(transform.position, "34111010010010");       
+        SpawnShape(transform.position + Vector3.right * 8, "33101101101");
+        SpawnShape(transform.position + Vector3.right * 16, "551010101010101010101010101");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SpawnShape(Vector3 position, string shapeString)
     {
-        
+        var shape = Instantiate(gridObjectPrefab);
+        //shape.transform.parent = transform;
+        shape.GetComponent<GridObject>().init(shapeString, position);
     }
 }
