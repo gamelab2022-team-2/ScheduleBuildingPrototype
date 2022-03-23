@@ -1088,8 +1088,8 @@ MonoBehaviour:
   OnDiscardPhaseExit: {fileID: 11400000, guid: 4b68ff909f899674b8c26cf1536beb17, type: 2}
   OnEventPhaseEnter: {fileID: 11400000, guid: 96769821d48bff54c9397438a1cc2ca0, type: 2}
   OnEventPhaseExit: {fileID: 11400000, guid: 28475defc82ff3e49b76330dcc9a7ab9, type: 2}
-  OnNewCardPhaseEnter: {fileID: 0}
-  OnNewCardPhaseExit: {fileID: 0}
+  OnNewCardPhaseEnter: {fileID: 11400000, guid: 0e1f12e4811f9c04498810e01f9cb54a, type: 2}
+  OnNewCardPhaseExit: {fileID: 11400000, guid: 55a45a1293a1e714f9904fdd1d4a1cc8, type: 2}
   OnGameOverStateEnter: {fileID: 11400000, guid: cdcaa71399447a84899810bd65b5197e, type: 2}
 --- !u!1001 &846045891
 PrefabInstance:
@@ -1854,7 +1854,7 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 669109004}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -1882,7 +1882,7 @@ MonoBehaviour:
   response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 669109004}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
