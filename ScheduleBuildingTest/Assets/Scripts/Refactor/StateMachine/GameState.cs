@@ -4,15 +4,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class GameState
+public abstract class GameState
 {
-    protected GameStateMachine _stateMachine;
-    protected Player _player;
+    protected GameStateMachine stateMachine;
+    protected Player player;
+    protected GameState nextState;
+
+    public virtual GameState NextState => nextState;
+    
+    
     public GameState(GameStateMachine gsm, Player p)
     {
-        _stateMachine = gsm;
-        _player = p;
+        Debug.Log("Instantiating State: " + this);
+        stateMachine = gsm;
+        player = p;
     }
+
+    
+    public abstract void InitializeNextState();
     
     /// <summary>
     /// Code within this function of the current state will be called on Update.
@@ -41,4 +50,10 @@ public class GameState
     {
         return false;
     }
+
+    public virtual void ApplyChoice(int selection)
+    {
+        Debug.Log("game state button pressed");
+    }
+
 }

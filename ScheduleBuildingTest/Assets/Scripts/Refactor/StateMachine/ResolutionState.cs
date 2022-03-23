@@ -2,18 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Adds anxiety cards - if cards are not played
+/// Adds motivation or grades - added by certain choice
+/// </summary>
 public class ResolutionState : GameState
 {
     public ResolutionState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
     }
+    
+    public override void InitializeNextState()
+    {
+        nextState = stateMachine.discardPhase;
+    }
 
     public override void Tick()
     {
-        base.Tick();
-        ResolutionPhase();
-        if(GameOverCondition()) _stateMachine.ChangeState(_stateMachine.gameOverState); // Game Over
-        else _stateMachine.ChangeState(_stateMachine.discardPhase); // Next Phase
+        // base.Tick();
+        // ResolutionPhase();
+        // if(GameOverCondition()) stateMachine.ChangeState(stateMachine.gameOverState); // Game Over
+        // else stateMachine.ChangeState(stateMachine.discardPhase); // Next Phase
     }
     
     /// <summary>
@@ -43,9 +52,6 @@ public class ResolutionState : GameState
                 UpdateGauges();
             }*/
         }
-        //if(GameOverCondition()) _stateMachine.ChangeState(_stateMachine.gameOverState); // Game Over
-        //else _stateMachine.ChangeState(_stateMachine.discardPhase); // Next Phase
-        //phase++;
     }
 
     /// <summary>
@@ -54,7 +60,7 @@ public class ResolutionState : GameState
     /// <returns>True if player's motivation is less than or equal to 0, otherwise returns false.</returns>
     public override bool GameOverCondition()
     {
-        if (_player.motivation <= 0) return true;
+        if (player.motivation.runtimeValue <= 0) return true;
         return false;
     }
     

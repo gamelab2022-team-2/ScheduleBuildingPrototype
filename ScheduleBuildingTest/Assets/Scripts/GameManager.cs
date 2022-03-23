@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
                 phase++;
                 break;
             case 4:
-               // CardManager.instance.EventPhase();
+                //CardManager.instance.EventPhase();
                 phase++; 
                 Debug.Log("turn = " + turn);
                 break;

@@ -26,7 +26,7 @@ public class EventManager : MonoBehaviour
     // When the event Canvas is set to active select a new event 
     public void OnEnable()
     {
-        selectedEvent = Database.instance.getRandomEvent();
+        //selectedEvent = Database.instance.getRandomEvent();
         eventDisplay.SetUI(selectedEvent);
         Debug.Log("event selected");
     }

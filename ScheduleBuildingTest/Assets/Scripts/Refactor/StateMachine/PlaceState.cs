@@ -8,6 +8,15 @@ public class PlaceState : GameState
     {
     }
     
+    public override void Tick()
+    {
+        base.Tick();
+    }
+    public override void InitializeNextState()
+    {
+        nextState = stateMachine.resolutionPhase;
+    }
+    
     // if condition -> next phase (Resolution Phase)
     
 }

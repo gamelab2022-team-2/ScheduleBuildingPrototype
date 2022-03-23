@@ -26,6 +26,7 @@ public class Game : MonoBehaviour
     [SerializeField]
     private GameBoard schedule;
 
+
     public int turn;
 
     void Start()
@@ -37,6 +38,7 @@ public class Game : MonoBehaviour
     {
         // Generate cards
     }
+
 
     /*public void ActivateEvent()
     {
@@ -92,8 +94,8 @@ public class Game : MonoBehaviour
             gradeText.color = Color.green;
         }
     }*/
-    
-    
+
+
     /*public void EndPlacePhase()
     {
         Debug.Log("Place Phase Ended");
