@@ -9,6 +9,11 @@ public class CardSet
     public int Count => cards.Count;
     public void Add(Card card) => cards.Add(card);
 
+    public Card GetAtIndex(int index)
+    {
+        return cards[index];
+    }
+
     public Card Draw() 
     { 
         var drawn = cards[0]; 

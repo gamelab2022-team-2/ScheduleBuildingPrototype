@@ -31,6 +31,7 @@ public class DrawState : GameState
         stateMachine.OnDrawPhaseEnter.Raise();
         Game.Instance.turn += 1;
         Debug.Log(Game.Instance.turn);
+        Draw();
     }
 
     public override void OnStateExit() 

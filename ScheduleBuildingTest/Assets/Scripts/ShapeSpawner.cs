@@ -11,23 +11,23 @@ public class ShapeSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        schedule = FindObjectOfType<Schedule>();
-        schedule.blockColumn(1);
-        schedule.blockRandomSlot();
-        schedule.blockRandomSlot();
-        schedule.blockRandomSlot();
+        //schedule = FindObjectOfType<Schedule>();
+       // schedule.blockColumn(1);
+        //schedule.blockRandomSlot();
+        //schedule.blockRandomSlot();
+        //schedule.blockRandomSlot();
 
         
         
-        SpawnShape(transform.position, "34111010010010");       
-        SpawnShape(transform.position + Vector3.right * 8, "33101101101");
-        SpawnShape(transform.position + Vector3.right * 16, "551010101010101010101010101");
+       // SpawnShape(transform.position, "34111010010010");       
+       // SpawnShape(transform.position + Vector3.right * 8, "33101101101");
+       // SpawnShape(transform.position + Vector3.right * 16, "551010101010101010101010101");
     }
 
-    public void SpawnShape(Vector3 position, string shapeString)
+    public void SpawnShape(Vector3 position, string shapeString, Color color)
     {
         var shape = Instantiate(gridObjectPrefab);
         //shape.transform.parent = transform;
-        shape.GetComponent<GridObject>().init(shapeString, position, Color.red);
+        shape.GetComponent<GridObject>().init(shapeString, position, color);
     }
 }

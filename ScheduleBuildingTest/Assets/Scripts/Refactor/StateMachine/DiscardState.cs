@@ -41,31 +41,13 @@ public class DiscardState : GameState
         }*/
     }
 
-    public void DiscardPhase()
+    public override void OnStateEnter()
     {
         // send all cards in hand to the discard set
         player.DiscardHand();
         // send all cards in schedule to the discard set
         player.DiscardSchedule();
-        
-        // Send cards in hand and schedule to discard pile
-        // while (player.deck.Count > 0)
-        // {
-        //     Card cardMove = cardsInHand[0];
-        //     cardMove.gameObject.SetActive(false);
-        //     cardMove.transform.position = discard.transform.position;
-        //     cardMove.inHand = false;
-        //     cardMove.inSchedule = false;
-        //
-        //     cardsInHand.RemoveAt(0);
-        //     discardPile.Add(cardMove);
-        //     discard.SetActive(true);
-        // }
-        // for (int i = 0; i<availableSlots.Length; i++)
-        // {
-        //     availableSlots[i] = true;
-        // }
-        
+
     }
 
     public override void OnStateExit()

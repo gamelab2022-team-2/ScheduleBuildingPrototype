@@ -42,6 +42,11 @@ public class Card : MonoBehaviour
         }
     }
 
+    public void OnDrawGizmos()
+    {
+        Gizmos.DrawCube(transform.position, Vector3.one * 0.2f);
+    }
+
 
 
     public void LoadData(CardData data)

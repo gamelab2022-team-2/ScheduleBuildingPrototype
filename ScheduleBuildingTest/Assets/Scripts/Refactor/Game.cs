@@ -27,8 +27,11 @@ public class Game : MonoBehaviour
     private GameBoard schedule;
 
     public List<CardData> allCardData;
+
     public GameObject cardgo;
-    private GameObject go;
+    private GameObject sleeve;
+
+    public GameObject shapeSpawner;
 
 
     public int turn;
@@ -41,18 +44,37 @@ public class Game : MonoBehaviour
     
     public void GenerateCardSets()
     {
-        go = new GameObject("Card Sleeve");
+        sleeve = new GameObject("Card Sleeve");
+        sleeve.transform.position = new Vector3(-100, -100, -100);
+
         foreach (CardData c in allCardData)
         {
-            Debug.Log("this ran " + c);
-            GameObject card = Instantiate(cardgo, go.transform);
+            GameObject card = Instantiate(cardgo, sleeve.transform);
             card.name = c.description + " Card";
             var cardComponent = card.GetComponent<Card>();
             cardComponent.cardData = c;
             cardComponent.LoadData(c);
             _player.allCards.Add(cardComponent);
         }
+
         _player.GetOpeningDeck();
+    }
+
+    public void DisplayCardsInHand()
+    {
+        for (int i = 0; i < _player.hand.Count; i++)
+        {
+            Card currCard = _player.hand.GetAtIndex(i);
+            currCard.gameObject.transform.position = _player.handGO.transform.GetChild(i).position;
+            shapeSpawner.GetComponent<ShapeSpawner>().SpawnShape(_player.handGO.transform.GetChild(i).position, currCard.cardData.shape, currCard.cardData.shapeColor);
+        }
+    }
+    public void ReturnAllToSleeve() 
+    {
+        for (int i = 0; i < _player.hand.Count; i++)
+        {
+            _player.hand.GetAtIndex(i).gameObject.transform.position = sleeve.transform.position;
+        }
     }
 
 

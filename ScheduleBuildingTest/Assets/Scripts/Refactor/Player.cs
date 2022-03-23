@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 
     public GameBoard schedule;
 
+    public GameObject handGO;
+
     public int Motivation => motivation.runtimeValue;
     public int Grade => grade.runtimeValue;
 
@@ -37,7 +39,6 @@ public class Player : MonoBehaviour
 
 
                 hand.Add(drawnCard);
-                //drawnCard.inHand = true;
             }
             else
             {
@@ -45,8 +46,9 @@ public class Player : MonoBehaviour
                 DiscardPileReturnToDeck();
 
             }
-
         }
+
+        Game.Instance.DisplayCardsInHand();
     }
     private void DiscardPileReturnToDeck()
     {
@@ -109,11 +111,13 @@ public class Player : MonoBehaviour
     /// </summary>
     public void DiscardHand()
     {
+        Game.Instance.ReturnAllToSleeve();
         foreach (var card in hand.cards)
         {
             discardPile.Add(card);
         }
         hand.EmptyCardSet();
+
     }
     #endregion
 
