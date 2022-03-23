@@ -63,7 +63,7 @@ public class GameStateMachine : MonoBehaviour
         gameOverState.InitializeNextState();
 
         
-        currentState = newCardPhase;
+        currentState = initialPhase;
         currentState.OnStateEnter();
         
     }

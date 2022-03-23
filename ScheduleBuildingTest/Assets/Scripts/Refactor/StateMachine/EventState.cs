@@ -20,6 +20,18 @@ public class EventState : GameState
         base.Tick();
     }
 
+    public override GameState NextState
+    {
+        get => stateMachine.GameOverCondition() ? stateMachine.gameOverState : EventOrDraw();
+    }
+
+    public GameState EventOrDraw()
+    {
+        if (Game.Instance.turn < 15)
+            return stateMachine.newCardPhase;
+        return stateMachine.drawPhase;
+    }
+
     public override void InitializeNextState()
     {
         nextState = stateMachine.drawPhase;
