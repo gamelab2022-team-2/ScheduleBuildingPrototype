@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
   m_Name: AssignementPrep
   m_EditorClassIdentifier: 
+  shape: 34010010010111
+  shapeColor: {r: 0.3155927, g: 0.77042025, b: 0.8490566, a: 0}
   description: Assignment Preparation
   grades: 2
   motivation: -4

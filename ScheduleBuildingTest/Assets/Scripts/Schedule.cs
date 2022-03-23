@@ -54,5 +54,21 @@ public class Schedule : MonoBehaviour
             slots[i].releaseSlot();
         }
     }
+    public void clearSchedule()
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i].releaseSlot();
+        }
+    }
+    public void blockColumn(int i)
+    {
+        int rowX = -6 + (2 * i);
+        for (int j = 0; j < slots.Length; j++)
+        {
+            if (slots[j].transform.position.x == rowX)
+                slots[j].takeSlot();
+        }
+    }
     
 }

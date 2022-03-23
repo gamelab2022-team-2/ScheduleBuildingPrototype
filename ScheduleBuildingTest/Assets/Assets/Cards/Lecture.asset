@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
   m_Name: Lecture
   m_EditorClassIdentifier: 
+  shape: 23111111
+  shapeColor: {r: 0.13556422, g: 0.7254902, b: 0.6415094, a: 0}
   description: 'Video Lecture
 
 '
@@ -20,7 +22,5 @@ MonoBehaviour:
   inHandMotiv: 0
   anxiety: 2
   isStatus: 0
-  inSchedule: 0
   isConnection: 0
   isAnxiety: 0
-  inHand: 0

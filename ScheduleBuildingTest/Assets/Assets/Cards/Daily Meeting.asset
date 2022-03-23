@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
-  m_Name: Tutorial
+  m_Name: Daily Meeting
   m_EditorClassIdentifier: 
-  shape: 33101101101
-  shapeColor: {r: 0.09411764, g: 0.2399654, b: 0.8666667, a: 0}
-  description: "Tutorial\t"
-  grades: 3
-  motivation: -2
+  shape: 
+  shapeColor: {r: 0, g: 0, b: 0, a: 0}
+  description: 
+  grades: 0
+  motivation: 0
   inHandMotiv: 0
-  anxiety: 2
+  anxiety: 0
   isStatus: 0
   isConnection: 0
   isAnxiety: 0
