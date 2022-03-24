@@ -43,6 +43,8 @@ public class ResolutionState : GameState
         {
             Card currCard = player.hand.GetAtIndex(i);
             player.motivation.runtimeValue += currCard.cardData.motivation;
+            player.grade.runtimeValue += currCard.cardData.grades;
+            Debug.Log(player.grade.runtimeValue);
 
         }
 

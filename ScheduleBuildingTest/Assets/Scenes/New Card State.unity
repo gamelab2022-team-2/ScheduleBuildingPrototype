@@ -2406,7 +2406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   motivation: {fileID: 11400000, guid: 7eea4d068aeea3f4fa7a3df9924855b6, type: 2}
-  grade: {fileID: 0}
+  grade: {fileID: 11400000, guid: 759ada04acdc5a54394070bbcb9769c4, type: 2}
   schedule: {fileID: 0}
   handGO: {fileID: 36325970}
 --- !u!4 &1944111506
@@ -2435,6 +2435,8 @@ GameObject:
   - component: {fileID: 2006099127}
   - component: {fileID: 2006099126}
   - component: {fileID: 2006099128}
+  - component: {fileID: 2006099130}
+  - component: {fileID: 2006099129}
   m_Layer: 0
   m_Name: Grades Value
   m_TagString: Untagged
@@ -2578,6 +2580,48 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &2006099129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006099124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f914fad7cd370f34e8a0db62afe09def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  integerVariable: {fileID: 11400000, guid: 759ada04acdc5a54394070bbcb9769c4, type: 2}
+  textMesh: {fileID: 2006099126}
+--- !u!114 &2006099130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006099124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac0863abbb50b647b2c57369d90d78a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 649b32030cdba1e4caa311e28c52b5c6, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2006099129}
+        m_TargetAssemblyTypeName: IntegerVariableTMP, Assembly-CSharp
+        m_MethodName: UpdateText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2020951616
 GameObject:
   m_ObjectHideFlags: 0
