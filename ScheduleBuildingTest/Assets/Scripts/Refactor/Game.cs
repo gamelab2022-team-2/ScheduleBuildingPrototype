@@ -75,6 +75,7 @@ public class Game : MonoBehaviour
         {
             _player.hand.GetAtIndex(i).gameObject.transform.position = sleeve.transform.position;
         }
+        shapeSpawner.GetComponent<ShapeSpawner>().Clear();
     }
 
 

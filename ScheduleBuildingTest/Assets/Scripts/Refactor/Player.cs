@@ -26,6 +26,7 @@ public class Player : MonoBehaviour
         {
             deck.Add(allCards.Draw());
         }
+        deck.Shuffle();
     }
 
     public void DrawFromDeck()

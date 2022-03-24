@@ -17,8 +17,14 @@ public class ResolutionState : GameState
         nextState = stateMachine.discardPhase;
     }
 
+    public override void OnStateEnter()
+    {
+        ResolutionPhase();
+    }
+
     public override void Tick()
     {
+        
         // base.Tick();
         // ResolutionPhase();
         // if(GameOverCondition()) stateMachine.ChangeState(stateMachine.gameOverState); // Game Over
@@ -33,25 +39,15 @@ public class ResolutionState : GameState
         Debug.Log("Resolution Started");
 
 
-        foreach(Card card in CardManager.instance.cardsInHand)
+        for(int i = 0; i < player.hand.Count; i++)
         {
-            Debug.Log("cards in Hand resolving");
-            /*if (!card.inSchedule)
-            {g
-                motivation += card.inHandMotiv;
-                CardManager.instance.AddAnxiety(card.anxiety);
-                Debug.Log(card.anxiety + " added");
-                UpdateGauges();
-            }*/
+            Card currCard = player.hand.GetAtIndex(i);
+            player.motivation.runtimeValue += currCard.cardData.motivation;
 
-            //TODO: Do we want to increase motivation when cards are in hand AND in the schedule?
-            /*if (card.inSchedule)
-            {
-                grades += card.grades;
-                motivation += card.motivation;
-                UpdateGauges();
-            }*/
         }
+
+            Debug.Log("cards in Hand resolving");
+
     }
 
     /// <summary>

@@ -7,6 +7,8 @@ public class ShapeSpawner : MonoBehaviour
 
     [SerializeField] GameObject gridObjectPrefab;
 
+    List<GameObject> shapes = new List<GameObject>();
+
     Schedule schedule;
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,17 @@ public class ShapeSpawner : MonoBehaviour
     public void SpawnShape(Vector3 position, string shapeString, Color color)
     {
         var shape = Instantiate(gridObjectPrefab);
+        shapes.Add(shape);
         //shape.transform.parent = transform;
         shape.GetComponent<GridObject>().init(shapeString, position, color);
     }
+
+    public void Clear()
+    {
+        foreach(GameObject shape in shapes)
+        {
+            Destroy(shape);
+        }
+    }
+
 }
