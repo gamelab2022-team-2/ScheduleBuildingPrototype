@@ -14,11 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 34010010010111
   shapeColor: {r: 0.3155927, g: 0.77042025, b: 0.8490566, a: 0}
-  description: Assignment Preparation
-  grades: 2
-  motivation: -4
-  inHandMotiv: 0
-  anxiety: 1
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
+  cardId: 4
+  type: 0
+  cardName: Assignment Prep
+  cardDescription: Independent Study
+  placedResolve:
+  - ChangeGrades
+  - ChangeMotivation
+  placedResolveParams: 03000000fdffffff
+  unplacedResolve:
+  - AddCard
+  - AddCard
+  unplacedResolveParams: 0000000000000000
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0

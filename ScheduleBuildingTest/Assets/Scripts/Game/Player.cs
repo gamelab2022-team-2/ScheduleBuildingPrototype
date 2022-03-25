@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using ScriptableObjects;
 using UnityEngine;
+using System;
+using System.Reflection;
 
 public class Player : MonoBehaviour
 {
@@ -10,34 +12,68 @@ public class Player : MonoBehaviour
     public CardSet hand = new CardSet();
     public CardSet allCards = new CardSet();
 
+    public List<GridObject> gridObjects;
+
     public IntegerVariable motivation, grade;
     
     public GameObject handGO;
 
+    public GameObject cardObject;
     public int Motivation => motivation.runtimeValue;
     public int Grade => grade.runtimeValue;
 
+    public Schedule schedule;
 
     public void GetOpeningDeck()
     {
-        for(int i = 0; i < 10; i++)
-        {
-            deck.Add(allCards.Draw());
-        }
+        AddCardToDeck(2);
+        AddCardToDeck(2);
+        AddCardToDeck(2);
+        AddCardToDeck(3);
+        AddCardToDeck(3);
+        AddCardToDeck(3);
+        AddCardToDeck(4);
+        AddCardToDeck(4);
+        AddCardToDeck(5);
+        AddCardToDeck(5);
         deck.Shuffle();
     }
 
     public void DrawFromDeck()
     {
+        Debug.Log("DECK CONTAINS:");
+        foreach (Card c in deck.cards)
+        {
+            Debug.Log("   " + c.cardName);
+        }
         while (hand.Count < 5)
         {
 
             if (deck.Count >= 1)
             {
                 Card drawnCard = deck.Draw();
+                
+                if (drawnCard.type == CardType.STATUS)
+                {
+                    for (int m = 0; m < drawnCard.onDraw.Count; m++)
+                    {
+                        Type thisType = this.GetType();
+                        MethodInfo theMethod = thisType
+                            .GetMethod(drawnCard.onDraw[m]);
+                        theMethod.Invoke(this, new object[] { drawnCard.onDrawParams[m] });
+                    }
+                    if (drawnCard.burnAfterUse)
+                    {
+                        Destroy(drawnCard.transform.gameObject);
+                    }
+                    else
+                    {
+                        discardPile.Add(drawnCard);
+                    }
+                }
+                else
+                    hand.Add(drawnCard);
 
-
-                hand.Add(drawnCard);
             }
             else
             {
@@ -64,39 +100,118 @@ public class Player : MonoBehaviour
     {
         Debug.Log("Calculating Resolution Values");
         
-        foreach(Card card in hand.cards)
+        for( int c = 0; c < hand.Count; c++)
         {
+            Card resolvingCard = hand.GetAtIndex(c);
             Debug.Log("cards in Hand resolving");
-            /*if (!card.inSchedule)
-            {g
-                motivation += card.inHandMotiv;
-                CardManager.instance.AddAnxiety(card.anxiety);
-                Debug.Log(card.anxiety + " added");
-                UpdateGauges();
-            }*/
-
-            //TODO: Do we want to increase motivation when cards are in hand AND in the schedule?
-            /*if (card.inSchedule)
+            if (gridObjects[c].OnGrid())
             {
-                grades += card.grades;
-                motivation += card.motivation;
-                UpdateGauges();
-            }*/
+
+                Debug.Log("About to resolve card #" + c);
+                for (int m = 0; m < resolvingCard.placedResolve.Count; m++)
+                {
+                    Type thisType = this.GetType();
+                    MethodInfo theMethod = thisType
+                        .GetMethod(resolvingCard.placedResolve[m]);
+                    
+                    theMethod.Invoke(this, new object[] { resolvingCard.placedResolveParams[m] });
+                }
+            }
+            else
+            {
+                Debug.Log("About to resolve card #" + c);
+                for (int m = 0; m < resolvingCard.unplacedResolve.Count; m++)
+                {
+                    Type thisType = this.GetType();
+                    MethodInfo theMethod = thisType
+                        .GetMethod(resolvingCard.unplacedResolve[m]);
+                    theMethod.Invoke(this, new object[] { resolvingCard.unplacedResolveParams[m] });
+                }
+            }
         }
     }
     
 
     // TODO: Implement this function on for the gameboard/schedule
-    public bool PlaceCard(Card card,Vector2Int pos)
-  {
-    return true;
-  }
+  //  public bool PlaceCard(Card card,Vector2Int pos)
+  //{
+  //  return true;
+  //}
  
-  #region Discard Methods
-  /// <summary>
-  /// Discards cards from the schedule into the Discard set
-  /// </summary>
-  public void DiscardSchedule()
+   public void ChangeMotivation(int i)
+    {
+        Debug.Log("IN CHANGE MOTIVATION WITH PARAM: "+ i);
+        motivation.runtimeValue += i;
+        Debug.Log("MOTIVATION NOW IS "+motivation.runtimeValue);
+    }
+
+    public void ChangeGrades(int i)
+    {
+        grade.runtimeValue += i;
+    }
+
+    public void AddCard(int i)
+    {
+
+        
+        GameObject newCardObject = Instantiate(cardObject);
+
+        var cardComponent = newCardObject.GetComponent<Card>();
+        cardComponent.cardData = allCards.GetAtIndex(i).cardData;
+        cardComponent.LoadData(cardComponent.cardData);
+        cardObject.transform.position = new Vector3(-100, -100, -100);
+        discardPile.Add(cardComponent);
+
+
+    }
+    public void AddCardToDeck(int i)
+    {
+
+
+        GameObject newCardObject = Instantiate(cardObject);
+
+        var cardComponent = newCardObject.GetComponent<Card>();
+        cardComponent.cardData = allCards.GetAtIndex(i).cardData;
+        cardComponent.LoadData(cardComponent.cardData);
+        cardObject.transform.position = new Vector3(-100, -100, -100);
+        deck.Add(cardComponent);
+
+
+    }
+
+    public void RemoveCard(int i)
+    {
+        bool found = true;
+        int index = -1;
+        for (int j = 0; j < discardPile.cards.Count; j++)
+        {
+            if (discardPile.GetAtIndex(j).cardId == i)
+            {
+                index = j;
+                found = true;
+            }
+
+        }
+        if (found)
+        {
+            Card toDelete = discardPile.GetAtIndex(index);
+            discardPile.cards.RemoveAt(index);
+            Destroy(toDelete.transform.gameObject);
+
+        }
+    }
+
+    public void BlockSpot(int i)
+    {
+        for (int j = 0; j < i; j++)
+            schedule.BlockRandomSlot();
+    }
+
+    #region Discard Methods
+    /// <summary>
+    /// Discards cards from the schedule into the Discard set
+    /// </summary>
+    public void DiscardSchedule()
   {
     /*foreach (var card in schedule.cardsInSchedule)
     {
@@ -117,6 +232,13 @@ public class Player : MonoBehaviour
         }
         hand.EmptyCardSet();
 
+    }
+
+    public void ClearShapes()
+    {
+        foreach (GridObject go in gridObjects)
+            Destroy(go.transform.gameObject);
+        gridObjects.Clear();  
     }
     #endregion
 

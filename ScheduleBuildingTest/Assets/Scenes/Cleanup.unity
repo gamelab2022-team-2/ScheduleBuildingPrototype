@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657856, g: 0.49641234, b: 0.57481724, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -175,11 +175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d7bd538a040224286afa8285add386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: {fileID: 0}
-  motiv: {fileID: 0}
-  grade: {fileID: 0}
-  inHandMotiv: {fileID: 0}
-  anx: {fileID: 0}
 --- !u!114 &1549015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,16 +190,16 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: b15128837600dbb4885ce5a5d80af633, type: 2}
   shape: 
   shapeColor: {r: 0, g: 0, b: 0, a: 0}
-  description: 
-  grades: 0
-  motivation: 0
-  inHandMotiv: 0
-  anxiety: 0
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
-  inHand: 0
-  inSchedule: 0
+  cardId: 0
+  type: 0
+  cardName: 
+  placedResolve: []
+  placedResolveParams: 
+  unplacedResolve: []
+  unplacedResolveParams: 
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0
 --- !u!64 &1549016
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -355,11 +350,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d7bd538a040224286afa8285add386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: {fileID: 0}
-  motiv: {fileID: 0}
-  grade: {fileID: 0}
-  inHandMotiv: {fileID: 0}
-  anx: {fileID: 0}
 --- !u!114 &137466108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,16 +365,16 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 4ef47e6c998207448a10d25f1ac757ca, type: 2}
   shape: 
   shapeColor: {r: 0, g: 0, b: 0, a: 0}
-  description: 
-  grades: 0
-  motivation: 0
-  inHandMotiv: 0
-  anxiety: 0
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
-  inHand: 0
-  inSchedule: 0
+  cardId: 0
+  type: 0
+  cardName: 
+  placedResolve: []
+  placedResolveParams: 
+  unplacedResolve: []
+  unplacedResolveParams: 
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0
 --- !u!64 &137466109
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -786,11 +776,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d7bd538a040224286afa8285add386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: {fileID: 0}
-  motiv: {fileID: 0}
-  grade: {fileID: 0}
-  inHandMotiv: {fileID: 0}
-  anx: {fileID: 0}
 --- !u!114 &473534206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,16 +791,16 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: e03d71293175b6b4d9a2685026433ad9, type: 2}
   shape: 
   shapeColor: {r: 0, g: 0, b: 0, a: 0}
-  description: 
-  grades: 0
-  motivation: 0
-  inHandMotiv: 0
-  anxiety: 0
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
-  inHand: 0
-  inSchedule: 0
+  cardId: 0
+  type: 0
+  cardName: 
+  placedResolve: []
+  placedResolveParams: 
+  unplacedResolve: []
+  unplacedResolveParams: 
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0
 --- !u!64 &473534207
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1183,11 +1168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d7bd538a040224286afa8285add386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: {fileID: 0}
-  motiv: {fileID: 0}
-  grade: {fileID: 0}
-  inHandMotiv: {fileID: 0}
-  anx: {fileID: 0}
 --- !u!114 &590258792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1203,16 +1183,16 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: e03d71293175b6b4d9a2685026433ad9, type: 2}
   shape: 
   shapeColor: {r: 0, g: 0, b: 0, a: 0}
-  description: 
-  grades: 0
-  motivation: 0
-  inHandMotiv: 0
-  anxiety: 0
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
-  inHand: 0
-  inSchedule: 0
+  cardId: 0
+  type: 0
+  cardName: 
+  placedResolve: []
+  placedResolveParams: 
+  unplacedResolve: []
+  unplacedResolveParams: 
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0
 --- !u!64 &590258793
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1549,11 +1529,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d7bd538a040224286afa8285add386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: {fileID: 0}
-  motiv: {fileID: 0}
-  grade: {fileID: 0}
-  inHandMotiv: {fileID: 0}
-  anx: {fileID: 0}
 --- !u!114 &655812738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1569,16 +1544,16 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 4ef47e6c998207448a10d25f1ac757ca, type: 2}
   shape: 
   shapeColor: {r: 0, g: 0, b: 0, a: 0}
-  description: 
-  grades: 0
-  motivation: 0
-  inHandMotiv: 0
-  anxiety: 0
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
-  inHand: 0
-  inSchedule: 0
+  cardId: 0
+  type: 0
+  cardName: 
+  placedResolve: []
+  placedResolveParams: 
+  unplacedResolve: []
+  unplacedResolveParams: 
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0
 --- !u!64 &655812739
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1704,11 +1679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d7bd538a040224286afa8285add386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: {fileID: 0}
-  motiv: {fileID: 0}
-  grade: {fileID: 0}
-  inHandMotiv: {fileID: 0}
-  anx: {fileID: 0}
 --- !u!114 &677622798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1724,16 +1694,16 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 3e70b8ce733f12c45ab2c48ab5c3f6a4, type: 2}
   shape: 
   shapeColor: {r: 0, g: 0, b: 0, a: 0}
-  description: 
-  grades: 0
-  motivation: 0
-  inHandMotiv: 0
-  anxiety: 0
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
-  inHand: 0
-  inSchedule: 0
+  cardId: 0
+  type: 0
+  cardName: 
+  placedResolve: []
+  placedResolveParams: 
+  unplacedResolve: []
+  unplacedResolveParams: 
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0
 --- !u!64 &677622799
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1927,12 +1897,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1944111505}
   allCardData:
+  - {fileID: 11400000, guid: e9f7368329034a246b275ad4abfe31ef, type: 2}
+  - {fileID: 11400000, guid: f242dd2a7c3a18c45b38bbb0b7c06f5c, type: 2}
   - {fileID: 11400000, guid: 4ef47e6c998207448a10d25f1ac757ca, type: 2}
-  - {fileID: 11400000, guid: 4ef47e6c998207448a10d25f1ac757ca, type: 2}
-  - {fileID: 11400000, guid: e03d71293175b6b4d9a2685026433ad9, type: 2}
-  - {fileID: 11400000, guid: e03d71293175b6b4d9a2685026433ad9, type: 2}
   - {fileID: 11400000, guid: e03d71293175b6b4d9a2685026433ad9, type: 2}
   - {fileID: 11400000, guid: 3e70b8ce733f12c45ab2c48ab5c3f6a4, type: 2}
+  - {fileID: 11400000, guid: b15128837600dbb4885ce5a5d80af633, type: 2}
   - {fileID: 11400000, guid: 3e70b8ce733f12c45ab2c48ab5c3f6a4, type: 2}
   - {fileID: 11400000, guid: 3e70b8ce733f12c45ab2c48ab5c3f6a4, type: 2}
   - {fileID: 11400000, guid: b15128837600dbb4885ce5a5d80af633, type: 2}
@@ -1949,6 +1919,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 165b1116ce071584aaed5aa40fb515e0, type: 2}
   cardgo: {fileID: 2541533064208557587, guid: 6d80a66fb34684d04a487790385cf32c, type: 3}
   shapeSpawner: {fileID: 746132742}
+  gridObjectPrefab: {fileID: 5226957958578483780, guid: 43231032393513b4ca4f10c93d1d945b, type: 3}
   turn: 0
 --- !u!4 &810869482
 Transform:
@@ -2215,11 +2186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d7bd538a040224286afa8285add386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: {fileID: 0}
-  motiv: {fileID: 0}
-  grade: {fileID: 0}
-  inHandMotiv: {fileID: 0}
-  anx: {fileID: 0}
 --- !u!114 &819561623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2235,16 +2201,16 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: e03d71293175b6b4d9a2685026433ad9, type: 2}
   shape: 
   shapeColor: {r: 0, g: 0, b: 0, a: 0}
-  description: 
-  grades: 0
-  motivation: 0
-  inHandMotiv: 0
-  anxiety: 0
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
-  inHand: 0
-  inSchedule: 0
+  cardId: 0
+  type: 0
+  cardName: 
+  placedResolve: []
+  placedResolveParams: 
+  unplacedResolve: []
+  unplacedResolveParams: 
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0
 --- !u!64 &819561624
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2854,11 +2820,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d7bd538a040224286afa8285add386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: {fileID: 0}
-  motiv: {fileID: 0}
-  grade: {fileID: 0}
-  inHandMotiv: {fileID: 0}
-  anx: {fileID: 0}
 --- !u!114 &1202806259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2874,16 +2835,16 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 4ef47e6c998207448a10d25f1ac757ca, type: 2}
   shape: 
   shapeColor: {r: 0, g: 0, b: 0, a: 0}
-  description: 
-  grades: 0
-  motivation: 0
-  inHandMotiv: 0
-  anxiety: 0
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
-  inHand: 0
-  inSchedule: 0
+  cardId: 0
+  type: 0
+  cardName: 
+  placedResolve: []
+  placedResolveParams: 
+  unplacedResolve: []
+  unplacedResolveParams: 
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0
 --- !u!64 &1202806260
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3029,11 +2990,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d7bd538a040224286afa8285add386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: {fileID: 0}
-  motiv: {fileID: 0}
-  grade: {fileID: 0}
-  inHandMotiv: {fileID: 0}
-  anx: {fileID: 0}
 --- !u!114 &1296749677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3049,16 +3005,16 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: 3e70b8ce733f12c45ab2c48ab5c3f6a4, type: 2}
   shape: 
   shapeColor: {r: 0, g: 0, b: 0, a: 0}
-  description: 
-  grades: 0
-  motivation: 0
-  inHandMotiv: 0
-  anxiety: 0
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
-  inHand: 0
-  inSchedule: 0
+  cardId: 0
+  type: 0
+  cardName: 
+  placedResolve: []
+  placedResolveParams: 
+  unplacedResolve: []
+  unplacedResolveParams: 
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0
 --- !u!64 &1296749678
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3674,9 +3630,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d768c0b66e18c24590edc662e8fde3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gridObjects: []
   motivation: {fileID: 11400000, guid: 7eea4d068aeea3f4fa7a3df9924855b6, type: 2}
   grade: {fileID: 11400000, guid: 759ada04acdc5a54394070bbcb9769c4, type: 2}
   handGO: {fileID: 36325970}
+  cardObject: {fileID: 2541533064208557587, guid: 6d80a66fb34684d04a487790385cf32c, type: 3}
+  schedule: {fileID: 552416117}
 --- !u!4 &1944111506
 Transform:
   m_ObjectHideFlags: 0
@@ -4206,11 +4165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d7bd538a040224286afa8285add386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: {fileID: 0}
-  motiv: {fileID: 0}
-  grade: {fileID: 0}
-  inHandMotiv: {fileID: 0}
-  anx: {fileID: 0}
 --- !u!114 &2042106974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4226,16 +4180,16 @@ MonoBehaviour:
   cardData: {fileID: 11400000, guid: b15128837600dbb4885ce5a5d80af633, type: 2}
   shape: 
   shapeColor: {r: 0, g: 0, b: 0, a: 0}
-  description: 
-  grades: 0
-  motivation: 0
-  inHandMotiv: 0
-  anxiety: 0
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
-  inHand: 0
-  inSchedule: 0
+  cardId: 0
+  type: 0
+  cardName: 
+  placedResolve: []
+  placedResolveParams: 
+  unplacedResolve: []
+  unplacedResolveParams: 
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0
 --- !u!64 &2042106975
 MeshCollider:
   m_ObjectHideFlags: 0

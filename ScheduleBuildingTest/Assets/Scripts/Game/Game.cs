@@ -26,11 +26,12 @@ public class Game : MonoBehaviour
 
     public List<CardData> allCardData;
 
-    public GameObject cardgo;
+    [SerializeField] public GameObject cardgo;
     private GameObject sleeve;
 
     public GameObject shapeSpawner;
 
+    public GameObject gridObjectPrefab;
 
     public int turn;
 
@@ -48,7 +49,7 @@ public class Game : MonoBehaviour
         foreach (CardData c in allCardData)
         {
             GameObject card = Instantiate(cardgo, sleeve.transform);
-            card.name = c.description + " Card";
+            card.name = c.cardName + " Card";
             var cardComponent = card.GetComponent<Card>();
             cardComponent.cardData = c;
             cardComponent.LoadData(c);
@@ -63,8 +64,12 @@ public class Game : MonoBehaviour
         for (int i = 0; i < _player.hand.Count; i++)
         {
             Card currCard = _player.hand.GetAtIndex(i);
-            currCard.gameObject.transform.position = _player.handGO.transform.GetChild(i).position;
-            shapeSpawner.GetComponent<ShapeSpawner>().SpawnShape(_player.handGO.transform.GetChild(i).position, currCard.cardData.shape, currCard.cardData.shapeColor);
+            currCard.gameObject.transform.position = _player.handGO.transform.GetChild(i).position + Vector3.up;
+            var shape = Instantiate(gridObjectPrefab);
+
+            shape.GetComponent<GridObject>().init(currCard.cardData.shape, _player.handGO.transform.GetChild(i).position + 2*Vector3.up, currCard.cardData.shapeColor);
+            //shapeSpawner.GetComponent<ShapeSpawner>().SpawnShape(_player.handGO.transform.GetChild(i).position, currCard.cardData.shape, currCard.cardData.shapeColor);
+            _player.gridObjects.Add(shape.GetComponent<GridObject>());
         }
     }
     public void ReturnAllToSleeve() 

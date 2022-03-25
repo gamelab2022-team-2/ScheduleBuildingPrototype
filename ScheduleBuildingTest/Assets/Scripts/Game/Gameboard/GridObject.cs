@@ -21,6 +21,8 @@ public class GridObject : MonoBehaviour
 
     Schedule schedule;
 
+    public bool allowedToMove = false;
+
     private List<GridCube> cubes = new List<GridCube>();
 
     public void Awake()
@@ -34,7 +36,7 @@ public class GridObject : MonoBehaviour
         transform.position = _home;
         _width = s[0] - '0';
         _height = s[1] - '0';
-        mouseOverColor = color;
+        originalColor = color;
 
         for (int h = 0; h < _height; h++)
         {
@@ -53,50 +55,63 @@ public class GridObject : MonoBehaviour
                 }
             }
         }
+        foreach (GridCube gc in cubes)
+            gc.transform.GetComponent<Renderer>().material.color = originalColor;
 
 
     }
     public void mouseEnters()
     {
-        foreach (GridCube gc in cubes)
-            gc.transform.GetComponent<Renderer>().material.color = mouseOverColor;
+        if (allowedToMove)
+        {
+            foreach (GridCube gc in cubes)
+                gc.transform.GetComponent<Renderer>().material.color = mouseOverColor;
+        }
     }
 
     public void mouseExits()
     {
-        foreach (GridCube gc in cubes)
-            gc.transform.GetComponent<Renderer>().material.color = originalColor;
+        if (allowedToMove)
+        {
+            foreach (GridCube gc in cubes)
+                gc.transform.GetComponent<Renderer>().material.color = originalColor;
+        }
     }
 
     public void mouseClick()
     {
-        if (isInGrid)
+        if (allowedToMove)
         {
-            foreach (GridCube gc in cubes)
+            if (isInGrid)
             {
-                gc.releaseSlot();
+                foreach (GridCube gc in cubes)
+                {
+                    gc.releaseSlot();
+                }
             }
+            isInGrid = false;
+            transform.position -= Vector3.forward / 2;
+            distance = Vector3.Distance(transform.position, Camera.main.transform.position);
+            dragging = true;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Vector3 rayPoint = ray.GetPoint(distance);
+            startDist = transform.position - rayPoint;
         }
-        isInGrid = false;
-        transform.position -= Vector3.forward/2;
-        distance = Vector3.Distance(transform.position, Camera.main.transform.position);
-        dragging = true;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Vector3 rayPoint = ray.GetPoint(distance);
-        startDist = transform.position - rayPoint;
-
 
 
     }
 
     public void mouseRelease()
     {
-        transform.position += Vector3.forward / 2;
-        dragging = false;
-        if (!validPosition())
-            transform.position = _home;
-        else
-            isInGrid = true;
+        if (allowedToMove)
+        {
+            transform.position += Vector3.forward / 2;
+            dragging = false;
+            if (!validPosition())
+                transform.position = _home;
+            else
+                isInGrid = true;
+        }
     }
 
     void Update()
@@ -109,7 +124,7 @@ public class GridObject : MonoBehaviour
         }
     }
 
-    public bool onGrid()
+    public bool OnGrid()
     {
         return isInGrid;
     }

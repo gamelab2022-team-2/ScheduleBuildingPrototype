@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CardType  {STUDY, SELFCARE, STATUS };
+
 [CreateAssetMenu(fileName = "New Card ", menuName = "Card")]
 
 public class CardData : ScriptableObject
@@ -11,24 +13,26 @@ public class CardData : ScriptableObject
     public string shape;
     public Color shapeColor;
 
-    //public GameObject tetronimo; TO BE ADDED maybe as GameObject??
+    public int cardId;
+
+    public CardType type;
+
+    public string cardName;
+
     [TextArea]
-    public string description;
-    public int grades;
-    public int motivation;
-    
+    public string cardDescription;
 
+    public List<string> placedResolve;
+    public List<int> placedResolveParams;
 
-    // inhand (not played) variables
-    public int inHandMotiv;
-    public int anxiety;
+    public List<string> unplacedResolve;
+    public List<int> unplacedResolveParams;
 
-    // card state variables
-    public bool isStatus;
+    public List<string> onDraw;
+    public List<int> onDrawParams;
 
-    // status card info
-    public bool isConnection;
-    public bool isAnxiety;
+    public bool burnAfterUse;
+
 
 
 

@@ -14,11 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 34111010010010
   shapeColor: {r: 0.8163822, g: 0.8679245, b: 0.12609467, a: 0}
-  description: Yoga
-  grades: 0
-  motivation: 3
-  inHandMotiv: -2
-  anxiety: 0
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
+  cardId: 5
+  type: 1
+  cardName: Yoga
+  cardDescription: Good for the mind, good for the body
+  placedResolve:
+  - ChangeMotivation
+  placedResolveParams: 03000000
+  unplacedResolve:
+  - ChangeMotivation
+  unplacedResolveParams: feffffff
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0
