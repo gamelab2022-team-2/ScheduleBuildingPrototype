@@ -12,7 +12,6 @@ public class ChoiceDisplay : MonoBehaviour
     public TextMeshProUGUI description;
     public Image artImage;
 
-
     public void SetUI(EventChoice e)
     {
         title.text = e.title;
