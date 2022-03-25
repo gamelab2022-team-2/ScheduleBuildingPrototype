@@ -1905,10 +1905,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db24107234217e046bc635167b8d5577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedEvent: {fileID: 11400000, guid: 3f09e14aae0840045ba321c7f5d64f54, type: 2}
+  selectedEvent: {fileID: 0}
   title: {fileID: 1323323899}
   description: {fileID: 724725443}
   artImage: {fileID: 1794891287}
+  eventContainer: {fileID: 810869484}
   choice1: {fileID: 1930254998}
   choice2: {fileID: 1867610458}
 --- !u!1 &677622795
@@ -2277,6 +2278,7 @@ MonoBehaviour:
   availableEvents: []
   eventWithPrecondition: []
   usedEvents: []
+  eventDisplay: {fileID: 669109009}
 --- !u!1 &811332695
 GameObject:
   m_ObjectHideFlags: 0

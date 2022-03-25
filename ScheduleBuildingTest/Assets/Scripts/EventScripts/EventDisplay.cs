@@ -13,13 +13,17 @@ public class EventDisplay : MonoBehaviour
     public TextMeshProUGUI description;
     public Image artImage;
 
+    public EventContainer eventContainer;
+
     public ChoiceDisplay choice1;
     public ChoiceDisplay choice2;
 
-    public void Awake()
+    public void OnEnable()
     {
+        selectedEvent = eventContainer.getRandomEvent();
         SetUI(selectedEvent);
     }
+
 
     public void SetUI(Event e)
     {

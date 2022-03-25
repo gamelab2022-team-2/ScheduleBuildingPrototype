@@ -8,10 +8,15 @@ public class EventContainer : MonoBehaviour
     public List<Event> eventWithPrecondition;
     public List<Event> usedEvents;
 
-    public void Awake()
+    public EventDisplay eventDisplay;
+
+    public static EventContainer instance;
+
+    public void Start()
     {
         CreateAllEvents();
     }
+
 
     public void CreateAllEvents()
     {
