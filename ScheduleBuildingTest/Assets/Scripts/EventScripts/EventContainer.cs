@@ -34,6 +34,17 @@ public class EventContainer : MonoBehaviour
 
     public Event getRandomEvent()
     {
-        return availableEvents[Random.Range(0, availableEvents.Count)];
+        Event eventSelect = availableEvents[Random.Range(0, availableEvents.Count)];
+        availableEvents.Remove(eventSelect);
+        usedEvents.Add(eventSelect);
+
+        if(eventSelect.eventUnlock != null)
+        {
+            Event unlocked = eventSelect.eventUnlock;
+            availableEvents.Add(unlocked);
+            eventWithPrecondition.Remove(unlocked);
+        }
+
+        return eventSelect;
     }
 }

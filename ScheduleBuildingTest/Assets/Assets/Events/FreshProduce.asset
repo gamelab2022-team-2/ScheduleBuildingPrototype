@@ -18,3 +18,5 @@ MonoBehaviour:
   art: {fileID: 0}
   choice1: {fileID: 11400000, guid: ae73140f1a3bb4b42b098a232893914d, type: 2}
   choice2: {fileID: 11400000, guid: b7424755f6ab1be4dab3d2c0442c92b0, type: 2}
+  hasPrerequisite: 0
+  eventUnlock: {fileID: 11400000, guid: 8f675653ad22f5040a65a8858a8d830f, type: 2}
