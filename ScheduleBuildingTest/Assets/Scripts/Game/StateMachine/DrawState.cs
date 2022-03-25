@@ -10,6 +10,8 @@ using UnityEngine;
 /// </summary>
 public class DrawState : GameState
 {
+
+
     public DrawState(GameStateMachine gsm, Player player) : base(gsm, player)
     {
     }
@@ -23,7 +25,7 @@ public class DrawState : GameState
 
     public override void Tick()
     {
-        
+
     }
 
     public override void OnStateEnter()
@@ -32,6 +34,7 @@ public class DrawState : GameState
         Game.Instance.turn += 1;
         Debug.Log(Game.Instance.turn);
         Draw();
+
     }
 
     public override void OnStateExit() 

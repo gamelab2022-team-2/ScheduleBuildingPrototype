@@ -34,7 +34,7 @@ public class GridObject : MonoBehaviour
         transform.position = _home;
         _width = s[0] - '0';
         _height = s[1] - '0';
-        mouseOverColor = color;
+        originalColor = color;
 
         for (int h = 0; h < _height; h++)
         {
