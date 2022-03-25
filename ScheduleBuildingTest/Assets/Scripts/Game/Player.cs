@@ -11,9 +11,7 @@ public class Player : MonoBehaviour
     public CardSet allCards = new CardSet();
 
     public IntegerVariable motivation, grade;
-
-    public GameBoard schedule;
-
+    
     public GameObject handGO;
 
     public int Motivation => motivation.runtimeValue;

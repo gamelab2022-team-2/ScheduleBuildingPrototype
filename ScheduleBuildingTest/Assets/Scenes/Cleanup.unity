@@ -1926,7 +1926,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 1944111505}
-  schedule: {fileID: 0}
   allCardData:
   - {fileID: 11400000, guid: 4ef47e6c998207448a10d25f1ac757ca, type: 2}
   - {fileID: 11400000, guid: 4ef47e6c998207448a10d25f1ac757ca, type: 2}
@@ -3677,7 +3676,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   motivation: {fileID: 11400000, guid: 7eea4d068aeea3f4fa7a3df9924855b6, type: 2}
   grade: {fileID: 11400000, guid: 759ada04acdc5a54394070bbcb9769c4, type: 2}
-  schedule: {fileID: 0}
   handGO: {fileID: 36325970}
 --- !u!4 &1944111506
 Transform:

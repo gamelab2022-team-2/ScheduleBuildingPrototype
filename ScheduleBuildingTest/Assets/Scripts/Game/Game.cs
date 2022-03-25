@@ -23,8 +23,6 @@ public class Game : MonoBehaviour
 
     [SerializeField]
     private Player _player;
-    [SerializeField]
-    private GameBoard schedule;
 
     public List<CardData> allCardData;
 
