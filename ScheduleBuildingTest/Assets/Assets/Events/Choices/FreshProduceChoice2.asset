@@ -12,12 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cff721d76f96434aab0c8260e8943d6, type: 3}
   m_Name: FreshProduceChoice2
   m_EditorClassIdentifier: 
+  eventChoiceId: 0
   title: Dont cook it
   description: Eat it raw,no time for cooking things, there is studying to be done!
-  motivation: 0
-  grade: 5
-  card: {fileID: 0}
-  addAnx: 0
-  remAnx1: 0
-  connect: 0
-  unlockedEvent: {fileID: 11400000, guid: 8f675653ad22f5040a65a8858a8d830f, type: 2}
+  choiceResolve:
+  - ChangeGrades
+  choiceParams: 05000000

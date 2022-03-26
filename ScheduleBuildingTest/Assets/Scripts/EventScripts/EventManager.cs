@@ -6,36 +6,55 @@ public class EventManager : MonoBehaviour
 {
     // this class will manage the movement of events between different places in the event database 
 
+    public Player player;
+    public GameStateMachine stateMachine;
     public Event selectedEvent;
-    public EventDisplay eventDisplay;
-
-    public static EventManager instance;
+    public EventChoice choice;
 
     public void Start()
     {
-        if(instance == null)
+
+    }
+
+    public void ApplyChoice(int selection)
+    {
+        
+        Debug.Log("event state button pressed");
+
+        // check which choice the user has made
+        if (selection == 1)
         {
-            instance = this;
+            player.ApplyEventChoice(selectedEvent.choice1);
         }
         else
         {
-            Destroy(gameObject);
+            player.ApplyEventChoice(selectedEvent.choice2);
         }
-    }
 
-    // When the event Canvas is set to active select a new event 
-    public void OnEnable()
-    {
-        //selectedEvent = Database.instance.getRandomEvent();
-        eventDisplay.SetUI(selectedEvent);
-        Debug.Log("event selected");
-    }
-    
-    public void MoveToUsed(Event e)
-    {
-        // remove the event from the available event list in the database so user doesn't get same event twice
-        Database.instance.eventsDb.availableEvents.Remove(e);
-        Database.instance.eventsDb.usedEvents.Add(e);
+        
+
+        // apply the changes that are contained in the choice selection
+
+        //player.grade.runtimeValue += choice.grade;
+        //player.motivation.runtimeValue += choice.motivation;
+
+        //if (choice.card != null)
+        //CardManager.instance.discardPile.Add(choice.card);
+        //CardManager.instance.AddAnxiety(choice.addAnx);
+        // CardManager.instance.RemoveAnxiety(choice.remAnx1); TO DO IMPLEMENT THIS
+        // CardManager.instance.AddConnection(choice.connect); TO DO IMPLEMENT THIS
+        //UpdateGauges();
+
+        //EventManager.instance.MoveToUsed(EventManager.instance.selectedEvent);
+
+        // if an event is unlocked by the current event add it to available event list in database
+        //if (choice.unlockedEvent != null)
+        //{
+        //Database.instance.eventsDb.availableEvents.Add(choice.unlockedEvent);
+        //Database.instance.eventsDb.eventsWithPrecondition.Remove(choice.unlockedEvent);
+        //}
+
+        stateMachine.NextState();
     }
 
 }
