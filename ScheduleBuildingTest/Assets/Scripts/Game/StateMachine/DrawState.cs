@@ -39,6 +39,10 @@ public class DrawState : GameState
 
     public override void OnStateExit() 
     {
+        foreach (GridObject go in player.gridObjects)
+        {
+            go.allowedToMove = true;
+        }
         base.OnStateExit();
     }
 

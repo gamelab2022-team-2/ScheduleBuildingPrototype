@@ -13,15 +13,15 @@ public class Schedule : MonoBehaviour
         slots = transform.GetComponentsInChildren<ScheduleSlot>();
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            deleteBlock();
-        }
-    }
+    //void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Escape))
+    //    {
+    //        deleteBlock();
+    //    }
+    //}
 
-    public void blockRandomSlot()
+    public void BlockRandomSlot()
     {
         bool blocked = false;
         int index;
@@ -36,32 +36,32 @@ public class Schedule : MonoBehaviour
         }
     }
 
-    public void deleteBlock()
-    {
-        GridObject[] gridObjects = FindObjectsOfType<GridObject>();
+    //public void deleteBlock()
+    //{
+    //    GridObject[] gridObjects = FindObjectsOfType<GridObject>();
 
-        foreach (GridObject go in gridObjects)
-        {
-            if (go.isInGrid)
-            {
-                Destroy(go.gameObject);
-            }
+    //    foreach (GridObject go in gridObjects)
+    //    {
+    //        if (go.isInGrid)
+    //        {
+    //            Destroy(go.gameObject);
+    //        }
                 
-        }
+    //    }
 
-        for (int i = 0; i < slots.Length; i++)
-        {
-            slots[i].releaseSlot();
-        }
-    }
-    public void clearSchedule()
+    //    for (int i = 0; i < slots.Length; i++)
+    //    {
+    //        slots[i].releaseSlot();
+    //    }
+    //}
+    public void ClearSchedule()
     {
         for (int i = 0; i < slots.Length; i++)
         {
             slots[i].releaseSlot();
         }
     }
-    public void blockColumn(int i)
+    public void BlockColumn(int i)
     {
         int rowX = -6 + (2 * i);
         for (int j = 0; j < slots.Length; j++)

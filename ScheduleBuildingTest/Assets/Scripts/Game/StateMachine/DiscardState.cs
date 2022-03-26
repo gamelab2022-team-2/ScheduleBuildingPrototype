@@ -46,7 +46,9 @@ public class DiscardState : GameState
         // send all cards in hand to the discard set
         player.DiscardHand();
         // send all cards in schedule to the discard set
-        player.DiscardSchedule();
+        // player.DiscardSchedule();
+        player.ClearShapes();
+        player.schedule.ClearSchedule();
 
     }
 

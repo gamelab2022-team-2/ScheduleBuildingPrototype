@@ -14,11 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 33101101101
   shapeColor: {r: 0.09411764, g: 0.2399654, b: 0.8666667, a: 0}
-  description: "Tutorial\t"
-  grades: 3
-  motivation: -2
-  inHandMotiv: 0
-  anxiety: 2
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
+  cardId: 3
+  type: 0
+  cardName: Tutorial
+  cardDescription: Additional Study Time
+  placedResolve:
+  - ChangeGrades
+  - ChangeMotivation
+  placedResolveParams: 03000000fdffffff
+  unplacedResolve:
+  - AddCard
+  - AddCard
+  unplacedResolveParams: 0000000000000000
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0

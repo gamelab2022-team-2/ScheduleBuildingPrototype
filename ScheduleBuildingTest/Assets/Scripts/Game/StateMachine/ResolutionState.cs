@@ -19,6 +19,10 @@ public class ResolutionState : GameState
 
     public override void OnStateEnter()
     {
+        foreach (GridObject go in player.gridObjects)
+        {
+            go.allowedToMove = false;
+        }
         ResolutionPhase();
     }
 
@@ -38,13 +42,13 @@ public class ResolutionState : GameState
     {
         Debug.Log("Resolution Started");
 
-
+        player.ApplyHand();
         for(int i = 0; i < player.hand.Count; i++)
         {
-            Card currCard = player.hand.GetAtIndex(i);
-            player.motivation.runtimeValue += currCard.cardData.motivation;
-            player.grade.runtimeValue += currCard.cardData.grades;
-            Debug.Log(player.grade.runtimeValue);
+            //Card currCard = player.hand.GetAtIndex(i);
+            //player.motivation.runtimeValue += currCard.cardData.motivation;
+            //player.grade.runtimeValue += currCard.cardData.grades;
+            //Debug.Log(player.grade.runtimeValue);
 
         }
 

@@ -10,26 +10,24 @@ public class Card : MonoBehaviour
     public string shape;
     public Color shapeColor;
 
-    [TextArea]
-    public string description;
-    public int grades;
-    public int motivation;
+    public int cardId;
+
+    public CardType type;
+
+    public string cardName;
 
 
-    // inhand (not played) variables
-    public int inHandMotiv;
-    public int anxiety;
 
-    // card state variables
-    public bool isStatus;
+    public List<string> placedResolve;
+    public List<int> placedResolveParams;
 
-    // status card info
-    public bool isConnection;
-    public bool isAnxiety;
+    public List<string> unplacedResolve;
+    public List<int> unplacedResolveParams;
 
+    public List<string> onDraw;
+    public List<int> onDrawParams;
 
-    public bool inHand;
-    public bool inSchedule;
+    public bool burnAfterUse;
 
     void Start()
     {
@@ -51,20 +49,49 @@ public class Card : MonoBehaviour
 
     public void LoadData(CardData data)
     {
-        description = data.description;
-        grades = data.grades;
-        motivation = data.motivation;
+        cardId = data.cardId;
+        type = data.type;
+        cardName = data.cardName;
 
-        inHandMotiv = data.inHandMotiv;
-        anxiety = data.anxiety;
-
-        isStatus = data.isStatus;
-        isConnection = data.isConnection;
-        isAnxiety = data.isAnxiety;
         shapeColor = data.shapeColor;
         shape = data.shape;
+
+        placedResolve = data.placedResolve;
+        placedResolveParams = data.placedResolveParams;
+
+        unplacedResolve = data.unplacedResolve;
+        unplacedResolveParams = data.unplacedResolveParams;
+
+        onDraw = data.onDraw;
+        onDrawParams = data.onDrawParams;
+
+        burnAfterUse = data.burnAfterUse;
     }
 
- 
+    public Card(Card data)
+    {
+
+
+        this.cardData = data.cardData;
+
+        this.cardId = data.cardId;
+        this.type = data.type;
+        this.cardName = data.cardName;
+
+        this.shapeColor = data.shapeColor;
+        this.shape = data.shape;
+
+        this.placedResolve = data.placedResolve;
+        this.placedResolveParams = data.placedResolveParams;
+
+        this.unplacedResolve = data.unplacedResolve;
+        this.unplacedResolveParams = data.unplacedResolveParams;
+
+        this.onDraw = data.onDraw;
+        this.onDrawParams = data.onDrawParams;
+
+        this.burnAfterUse = data.burnAfterUse;
+
+    }
 
 }
