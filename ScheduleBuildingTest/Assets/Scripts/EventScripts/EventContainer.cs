@@ -7,11 +7,8 @@ public class EventContainer : MonoBehaviour
     public List<Event> availableEvents;
     public List<Event> eventWithPrecondition;
     public List<Event> usedEvents;
-
-    public EventDisplay eventDisplay;
-
-    public static EventContainer instance;
-
+    
+    
     public void Start()
     {
         CreateAllEvents();
@@ -32,7 +29,7 @@ public class EventContainer : MonoBehaviour
 
     }
 
-    public Event getRandomEvent()
+    public Event GetRandomEvent()
     {
         Event eventSelect = availableEvents[Random.Range(0, availableEvents.Count)];
         availableEvents.Remove(eventSelect);

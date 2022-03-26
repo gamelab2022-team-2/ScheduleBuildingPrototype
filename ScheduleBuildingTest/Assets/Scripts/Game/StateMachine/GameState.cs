@@ -1,59 +1,60 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public abstract class GameState
+namespace Game.StateMachine
 {
-    protected GameStateMachine stateMachine;
-    protected Player player;
-    protected GameState nextState;
-
-    public virtual GameState NextState => nextState;
-    
-    
-    public GameState(GameStateMachine gsm, Player p)
+    [Serializable]
+    public abstract class GameState
     {
-        Debug.Log("Instantiating State: " + this);
-        stateMachine = gsm;
-        player = p;
-    }
+        protected GameStateMachine stateMachine;
+        protected Player player;
+        protected GameState nextState;
+
+        public virtual GameState NextState => nextState;
+    
+    
+        public GameState(GameStateMachine gsm, Player p)
+        {
+            Debug.Log("Instantiating State: " + this);
+            stateMachine = gsm;
+            player = p;
+        }
 
     
-    public abstract void InitializeNextState();
+        public abstract void InitializeNextState();
     
-    /// <summary>
-    /// Code within this function of the current state will be called on Update.
-    /// Will likely be used to animate the game.
-    /// </summary>
-    public virtual void Tick(){}
+        /// <summary>
+        /// Code within this function of the current state will be called on Update.
+        /// Will likely be used to animate the game.
+        /// </summary>
+        public virtual void Tick(){}
 
-    /// <summary>
-    /// Called when the current state is first entered, after exiting the previous state.
-    /// </summary>
-    public virtual void OnStateEnter()
-    {
+        /// <summary>
+        /// Called when the current state is first entered, after exiting the previous state.
+        /// </summary>
+        public virtual void OnStateEnter()
+        {
         
-    }
+        }
 
-    /// <summary>
-    /// Called when when exiting current state, before entering another.
-    /// </summary>
-    public virtual void OnStateExit()
-    {
+        /// <summary>
+        /// Called when when exiting current state, before entering another.
+        /// </summary>
+        public virtual void OnStateExit()
+        {
         
-    }
+        }
     
-    // TODO: make this more robust
-    public virtual bool GameOverCondition()
-    {
-        return false;
-    }
+        // TODO: make this more robust
+        public virtual bool GameOverCondition()
+        {
+            return false;
+        }
 
-    public virtual void ApplyChoice(int selection)
-    {
-        Debug.Log("game state button pressed");
-    }
+        public virtual void ApplyChoice(int selection)
+        {
+            Debug.Log("game state button pressed");
+        }
 
+    }
 }

@@ -1,18 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class GameOverState : GameState
+namespace Game.StateMachine
 {
-    public GameOverState(GameStateMachine gsm, Player player) : base(gsm, player)
+    public class GameOverState : GameState
     {
-    }
-    public override void Tick()
-    {
-        base.Tick();
-    }
-    public override void InitializeNextState()
-    {
-        nextState = stateMachine.initialPhase;
+        public GameOverState(GameStateMachine gsm, Player player) : base(gsm, player)
+        {
+        }
+        public override void InitializeNextState()
+        {
+            nextState = stateMachine.initialPhase;
+        }
+
+        public override void OnStateEnter()
+        {
+            stateMachine.OnGameOverStateEnter.Raise();
+        }
+    
     }
 }

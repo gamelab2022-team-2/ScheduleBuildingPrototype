@@ -20,7 +20,7 @@ public class EventDisplay : MonoBehaviour
 
     public void OnEnable()
     {
-        selectedEvent = eventContainer.getRandomEvent();
+        selectedEvent = eventContainer.GetRandomEvent();
         SetUI(selectedEvent);
     }
 

@@ -31,11 +31,9 @@ public class Card : MonoBehaviour
 
     void Start()
     {
-
-        Debug.Log("start");
+        
         if (cardData != null)
         {
-            Debug.Log("data loading called");
             LoadData(cardData);
         }
     }
@@ -49,6 +47,8 @@ public class Card : MonoBehaviour
 
     public void LoadData(CardData data)
     {
+        Debug.Log("Loading card data: " + data.cardName);
+        
         cardId = data.cardId;
         type = data.type;
         cardName = data.cardName;
@@ -68,7 +68,7 @@ public class Card : MonoBehaviour
         burnAfterUse = data.burnAfterUse;
     }
 
-    public Card(Card data)
+    /*public Card(Card data)
     {
 
 
@@ -92,6 +92,6 @@ public class Card : MonoBehaviour
 
         this.burnAfterUse = data.burnAfterUse;
 
-    }
+    }*/
 
 }

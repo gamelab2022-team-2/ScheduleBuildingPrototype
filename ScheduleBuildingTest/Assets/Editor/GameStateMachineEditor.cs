@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Game.StateMachine;
 using UnityEditor;
 using UnityEngine;
+
 
 [CustomEditor(typeof(GameStateMachine))]
 public class GameStateMachineEditor : Editor

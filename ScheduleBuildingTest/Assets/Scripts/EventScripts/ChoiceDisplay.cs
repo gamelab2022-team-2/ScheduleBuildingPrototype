@@ -16,7 +16,6 @@ public class ChoiceDisplay : MonoBehaviour
     {
         title.text = e.title;
         description.text = e.description;
-
     }
 
 }
