@@ -130,6 +130,22 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    public void ApplyEventChoice(EventChoice choice)
+    {
+        Debug.Log("Calculating Choice Values");
+
+        for (int m = 0; m < choice.choiceResolve.Count; m++)
+        {
+            Debug.Log("Get Method = " + choice.choiceResolve[m]);
+            Type thisType = this.GetType();
+            MethodInfo theMethod = thisType
+            .GetMethod(choice.choiceResolve[m]);
+
+            theMethod.Invoke(this, new object[] { choice.choiceParams[m] });
+        }
+
+    }
     
 
     // TODO: Implement this function on for the gameboard/schedule
@@ -181,7 +197,7 @@ public class Player : MonoBehaviour
 
     public void RemoveCard(int i)
     {
-        bool found = true;
+        bool found = false;
         int index = -1;
         for (int j = 0; j < discardPile.cards.Count; j++)
         {

@@ -86,8 +86,8 @@ public class EventState : GameState
 
         // apply the changes that are contained in the choice selection
 
-        player.grade.runtimeValue += choice.grade;
-        player.motivation.runtimeValue += choice.motivation;
+        //player.grade.runtimeValue += choice.grade;
+        //player.motivation.runtimeValue += choice.motivation;
 
         //if (choice.card != null)
         //CardManager.instance.discardPile.Add(choice.card);

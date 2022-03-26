@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cff721d76f96434aab0c8260e8943d6, type: 3}
   m_Name: FreshProduceChoice1
   m_EditorClassIdentifier: 
+  eventChoiceId: 0
   title: Cook it
   description: Cook the produce
-  motivation: 10
-  grade: 0
-  card: {fileID: 0}
-  addAnx: 0
-  remAnx1: 0
-  connect: 0
+  choiceResolve:
+  - ChangeMotivation
+  - RemoveCard
+  choiceParams: 0a00000000000000

@@ -24,19 +24,19 @@ public class EventManager : MonoBehaviour
         // check which choice the user has made
         if (selection == 1)
         {
-            choice = selectedEvent.choice1;
-            Debug.Log("Choice 1 Clicked");
+            player.ApplyEventChoice(selectedEvent.choice1);
         }
         else
         {
-            choice = selectedEvent.choice2;
-            Debug.Log("Choice 2 Clicked");
+            player.ApplyEventChoice(selectedEvent.choice2);
         }
+
+        
 
         // apply the changes that are contained in the choice selection
 
-        player.grade.runtimeValue += choice.grade;
-        player.motivation.runtimeValue += choice.motivation;
+        //player.grade.runtimeValue += choice.grade;
+        //player.motivation.runtimeValue += choice.motivation;
 
         //if (choice.card != null)
         //CardManager.instance.discardPile.Add(choice.card);
