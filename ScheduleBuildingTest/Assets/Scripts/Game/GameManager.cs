@@ -32,11 +32,13 @@ namespace Game
         public GameObject shapeSpawner;
 
         public GameObject gridObjectPrefab;
+        public CardSpawner cardSpawner;
 
         public int turn;
 
         void Start()
         {
+            if (cardSpawner == null) cardSpawner = GetComponent<CardSpawner>();
             turn = 0;
             GenerateCardSets();
         }
@@ -44,17 +46,10 @@ namespace Game
         //Creates card game objects and adds them to the "sleeve", which is a deck of cards off screen. Adds the card data to each card, then asks the player to draw the first 10
         public void GenerateCardSets()
         {
-            sleeve = new GameObject("Card Sleeve");
-            sleeve.transform.position = new Vector3(-100, -100, -100);
-
             foreach (CardData c in allCardData)
             {
-                GameObject card = Instantiate(cardgo, sleeve.transform);
-                card.name = c.cardName + " Card";
-                var cardComponent = card.GetComponent<Card>();
-                cardComponent.cardData = c;
-                cardComponent.LoadData(c);
-                _player.allCards.Add(cardComponent);
+                var card = cardSpawner.SpawnCard(c);
+                _player.allCards.Add(card);
             }
 
             _player.GetOpeningDeck();
