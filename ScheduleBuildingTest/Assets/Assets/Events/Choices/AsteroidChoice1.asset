@@ -16,5 +16,5 @@ MonoBehaviour:
   title: Sleep in
   description: Sleep in to catch up on your sleep
   choiceResolve:
-  - ChangeGrades
-  choiceParams: 05000000
+  - BlockRow
+  choiceParams: 01000000

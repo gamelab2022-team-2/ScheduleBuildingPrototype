@@ -8,7 +8,7 @@ public class Event : ScriptableObject
 {
     // this class contains 2 choice for the event, the event description text and the event art
 
-    public string eventID;
+    public int eventID;
     public string title;
 
     [TextArea]
