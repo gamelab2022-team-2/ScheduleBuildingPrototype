@@ -40,7 +40,8 @@ public class Game : MonoBehaviour
         turn = 0;
         GenerateCardSets();
     }
-    
+
+    //Creates card game objects and adds them to the "sleeve", which is a deck of cards off screen. Adds the card data to each card, then asks the player to draw the first 10
     public void GenerateCardSets()
     {
         sleeve = new GameObject("Card Sleeve");
@@ -59,6 +60,7 @@ public class Game : MonoBehaviour
         _player.GetOpeningDeck();
     }
 
+    //gets the 5 cards that should already be in the player's hand, and moves them from the offscreen "sleeve" to in front of the camera. also spawns the shapes on top of the cards
     public void DisplayCardsInHand()
     {
         for (int i = 0; i < _player.hand.Count; i++)
@@ -72,6 +74,8 @@ public class Game : MonoBehaviour
             _player.gridObjects.Add(shape.GetComponent<GridObject>());
         }
     }
+
+    //returns all cards to the off screen "sleeve" location in the discard or resolve phase
     public void ReturnAllToSleeve() 
     {
         for (int i = 0; i < _player.hand.Count; i++)

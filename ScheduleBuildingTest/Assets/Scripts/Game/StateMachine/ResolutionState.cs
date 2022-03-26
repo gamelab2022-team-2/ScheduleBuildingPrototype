@@ -43,14 +43,6 @@ public class ResolutionState : GameState
         Debug.Log("Resolution Started");
 
         player.ApplyHand();
-        for(int i = 0; i < player.hand.Count; i++)
-        {
-            //Card currCard = player.hand.GetAtIndex(i);
-            //player.motivation.runtimeValue += currCard.cardData.motivation;
-            //player.grade.runtimeValue += currCard.cardData.grades;
-            //Debug.Log(player.grade.runtimeValue);
-
-        }
 
             Debug.Log("cards in Hand resolving");
 

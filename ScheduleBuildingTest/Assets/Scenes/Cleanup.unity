@@ -882,7 +882,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1143, y: 506}
+  m_AnchoredPosition: {x: 1143, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &451264501
@@ -2195,7 +2195,7 @@ MonoBehaviour:
   _player: {fileID: 1944111505}
   allCardData:
   - {fileID: 11400000, guid: e9f7368329034a246b275ad4abfe31ef, type: 2}
-  - {fileID: 11400000, guid: f242dd2a7c3a18c45b38bbb0b7c06f5c, type: 2}
+  - {fileID: 11400000, guid: 4ef47e6c998207448a10d25f1ac757ca, type: 2}
   - {fileID: 11400000, guid: 4ef47e6c998207448a10d25f1ac757ca, type: 2}
   - {fileID: 11400000, guid: e03d71293175b6b4d9a2685026433ad9, type: 2}
   - {fileID: 11400000, guid: 3e70b8ce733f12c45ab2c48ab5c3f6a4, type: 2}
@@ -3857,7 +3857,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1619728359
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6792,7 +6792,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8442901031196748431, guid: 2875584dbd434b04d8599a7fc3ab5312, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8442901031312603552, guid: 2875584dbd434b04d8599a7fc3ab5312, type: 3}
       propertyPath: m_AnchorMax.y
