@@ -77,11 +77,11 @@ public class EventState : GameState
         // check which choice the user has made
         if (selection == 1)
         {
-            choice = EventManager.instance.selectedEvent.choice1;
+            choice = EventContainer.instance.eventSelect.choice1;
         }
         else
         {
-            choice = EventManager.instance.selectedEvent.choice2;
+            choice = EventContainer.instance.eventSelect.choice2;
         }
 
         // apply the changes that are contained in the choice selection

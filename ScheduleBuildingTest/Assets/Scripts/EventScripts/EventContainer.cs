@@ -10,6 +10,10 @@ public class EventContainer : MonoBehaviour
 
     public EventDisplay eventDisplay;
 
+    public Event eventSelect;
+
+    public EventManager eventManager;
+
     public static EventContainer instance;
 
     public void Start()
@@ -34,9 +38,11 @@ public class EventContainer : MonoBehaviour
 
     public Event getRandomEvent()
     {
-        Event eventSelect = availableEvents[Random.Range(0, availableEvents.Count)];
+        eventSelect = availableEvents[Random.Range(0, availableEvents.Count)];
         availableEvents.Remove(eventSelect);
         usedEvents.Add(eventSelect);
+
+        eventManager.selectedEvent = eventSelect;
 
         if(eventSelect.eventUnlock != null)
         {
@@ -45,6 +51,7 @@ public class EventContainer : MonoBehaviour
             eventWithPrecondition.Remove(unlocked);
         }
 
+        Debug.Log("Event select = " + eventSelect.title);
         return eventSelect;
     }
 }
