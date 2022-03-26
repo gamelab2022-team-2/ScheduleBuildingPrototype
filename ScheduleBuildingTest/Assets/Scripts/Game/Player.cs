@@ -4,6 +4,7 @@ using ScriptableObjects;
 using UnityEngine;
 using System;
 using System.Reflection;
+using Game;
 
 public class Player : MonoBehaviour
 {
@@ -83,7 +84,7 @@ public class Player : MonoBehaviour
             }
         }
 
-        Game.Instance.DisplayCardsInHand();
+        GameManager.Instance.DisplayCardsInHand();
     }
     private void DiscardPileReturnToDeck()
     {
@@ -241,7 +242,7 @@ public class Player : MonoBehaviour
     /// </summary>
     public void DiscardHand()
     {
-        Game.Instance.ReturnAllToSleeve();
+        GameManager.Instance.ReturnAllToSleeve();
         foreach (var card in hand.cards)
         {
             discardPile.Add(card);

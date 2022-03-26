@@ -68,7 +68,7 @@ namespace Game.StateMachine
 
         }
 
-        public override void ApplyChoice(int selection)
+        /*public override void ApplyChoice(int selection)
         {
             EventChoice choice;
             Debug.Log("event state button pressed");
@@ -102,15 +102,15 @@ namespace Game.StateMachine
             //{
             //Database.instance.eventsDb.availableEvents.Add(choice.unlockedEvent);
             //Database.instance.eventsDb.eventsWithPrecondition.Remove(choice.unlockedEvent);
-            //}
+            //}*/
 
             //EndEventPhase();
 
-            if (GameManager.Instance.turn < 15)
+            /*if (GameManager.Instance.turn < 15)
             {
                 OpenCardSelector();
             }
-        }
+        }*/
 
         private void OpenCardSelector()
         {
