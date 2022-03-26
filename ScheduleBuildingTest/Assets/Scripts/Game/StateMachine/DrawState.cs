@@ -21,11 +21,20 @@ namespace Game.StateMachine
             nextState = stateMachine.placePhase;
         }
 
+        public override void Tick()
+        {
+            base.Tick();
+            if (TimeSinceEnter > 2)
+            {
+                stateMachine.ChangeState(NextState);
+            }
+        }
+
         public override void OnStateEnter()
         {
+            base.OnStateEnter();
             stateMachine.OnDrawPhaseEnter.Raise();
             GameManager.Instance.turn += 1;
-            Debug.Log(GameManager.Instance.turn);
             Draw();
         }
 

@@ -19,6 +19,7 @@ namespace Game.StateMachine
 
         public override void OnStateEnter()
         {
+            base.OnStateEnter();
             stateMachine.OnResolutionPhaseEnter.Raise();
             foreach (GridObject go in player.gridObjects)
             {
@@ -30,10 +31,11 @@ namespace Game.StateMachine
         public override void Tick()
         {
         
-            // base.Tick();
-            // ResolutionPhase();
-            // if(GameOverCondition()) stateMachine.ChangeState(stateMachine.gameOverState); // Game Over
-            // else stateMachine.ChangeState(stateMachine.discardPhase); // Next Phase
+            base.Tick();
+            if (TimeSinceEnter > 2)
+            {
+                stateMachine.ChangeState(NextState);
+            }
         }
     
         /// <summary>

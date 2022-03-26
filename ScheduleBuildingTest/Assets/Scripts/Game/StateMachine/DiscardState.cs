@@ -26,19 +26,16 @@ namespace Game.StateMachine
 
         public override void Tick()
         {
-            /*base.Tick();
-        DiscardPhase();
-        
-        // if condition -> next phase (Game Over)
-        // if condition -> next phase (Event Phase)
-        if (GameOverCondition())
-        {
-            stateMachine.ChangeState(stateMachine.eventPhase);
-        }*/
+            base.Tick();
+            if (TimeSinceEnter > 2)
+            {
+                stateMachine.ChangeState(NextState);
+            }
         }
 
         public override void OnStateEnter()
         {
+            base.OnStateEnter();
             stateMachine.OnDiscardPhaseEnter.Raise();
             // send all cards in hand to the discard set
             player.DiscardHand();

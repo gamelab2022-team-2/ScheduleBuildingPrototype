@@ -12,9 +12,24 @@ namespace Game.StateMachine
             nextState = stateMachine.drawPhase;
         }
 
+        public override void Tick()
+        {
+            base.Tick();base.Tick();
+            if (TimeSinceEnter > 2)
+            {
+                stateMachine.ChangeState(NextState);
+            }
+        }
+
         public override void OnStateExit()
         {
             stateMachine.OnIntialPhaseExit.Raise();
+        }
+
+        public override void OnStateEnter()
+        {
+            base.OnStateEnter();
+            stateMachine.OnInitialPhaseEnter.Raise();
         }
     }
 }

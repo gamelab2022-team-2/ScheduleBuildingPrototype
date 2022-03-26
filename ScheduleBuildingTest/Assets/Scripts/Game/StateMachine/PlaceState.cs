@@ -13,6 +13,7 @@ namespace Game.StateMachine
     
         public override void OnStateEnter()
         {
+            base.OnStateEnter();
             stateMachine.OnPlacePhaseEnter.Raise();
         }
         // if condition -> next phase (Resolution Phase)

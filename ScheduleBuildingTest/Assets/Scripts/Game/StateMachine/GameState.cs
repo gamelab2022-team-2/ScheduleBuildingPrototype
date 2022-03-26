@@ -9,9 +9,11 @@ namespace Game.StateMachine
         protected GameStateMachine stateMachine;
         protected Player player;
         protected GameState nextState;
+        protected float stateEnterTime = 0;
 
         public virtual GameState NextState => nextState;
-    
+
+        public float TimeSinceEnter => Time.time - stateEnterTime;
     
         public GameState(GameStateMachine gsm, Player p)
         {
@@ -34,7 +36,7 @@ namespace Game.StateMachine
         /// </summary>
         public virtual void OnStateEnter()
         {
-        
+            stateEnterTime = Time.time;
         }
 
         /// <summary>

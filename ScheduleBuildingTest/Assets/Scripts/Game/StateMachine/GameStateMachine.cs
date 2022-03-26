@@ -71,6 +71,7 @@ namespace Game.StateMachine
         {
         
             currentState.Tick();
+            //Debug.Log("State Time: " + currentState.TimeSinceEnter);
         }
 
     
