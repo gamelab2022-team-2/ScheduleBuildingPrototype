@@ -28,10 +28,7 @@ public class Database : MonoBehaviour
 
     }
 
-    public Event getRandomEvent()
-    {
-        return eventsDb.availableEvents[Random.Range(0, eventsDb.availableEvents.Count)];
-    }
+
 
 
 }

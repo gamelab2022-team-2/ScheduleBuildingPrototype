@@ -64,7 +64,6 @@ public class EventState : GameState
     // toggle active of event UI
     public void ActivateEvent()
     {
-
         eventPopUp.SetActive(true);
 
 

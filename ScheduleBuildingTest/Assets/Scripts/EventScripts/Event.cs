@@ -20,7 +20,7 @@ public class Event : ScriptableObject
     public EventChoice choice2;
 
     public bool hasPrerequisite;
-
+    public Event eventUnlock;
     
 
 }
