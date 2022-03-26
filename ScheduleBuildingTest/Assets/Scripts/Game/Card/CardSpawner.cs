@@ -9,6 +9,8 @@ public class CardSpawner : MonoBehaviour
     public GameObject cardPrefab;
 
 
+    public GameObject CardSleeve => _cardSleeve;
+
     public void Awake()
     {
         _cardSleeve = new GameObject("Card Sleeve");

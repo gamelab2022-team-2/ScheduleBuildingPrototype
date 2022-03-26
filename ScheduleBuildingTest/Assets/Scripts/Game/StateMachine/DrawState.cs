@@ -27,7 +27,6 @@ namespace Game.StateMachine
             GameManager.Instance.turn += 1;
             Debug.Log(GameManager.Instance.turn);
             Draw();
-
         }
 
         public override void OnStateExit() 

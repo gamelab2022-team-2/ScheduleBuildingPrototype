@@ -49,8 +49,6 @@ namespace Game.StateMachine
             {
                 stateMachine.ChangeState(stateMachine.drawPhase);
             }
-        
-
         }
 
         public bool IsNewCardTurn()

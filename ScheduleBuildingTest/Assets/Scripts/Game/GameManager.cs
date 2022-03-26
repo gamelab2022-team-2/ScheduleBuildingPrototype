@@ -75,7 +75,7 @@ namespace Game
         {
             for (int i = 0; i < _player.hand.Count; i++)
             {
-                _player.hand.GetAtIndex(i).gameObject.transform.position = sleeve.transform.position;
+                _player.hand.GetAtIndex(i).gameObject.transform.position = cardSpawner.CardSleeve.transform.position;
             }
             shapeSpawner.GetComponent<ShapeSpawner>().Clear();
         }

@@ -85,7 +85,6 @@ namespace Game.StateMachine
     
         public void ButtonPress(int button)
         {
-            Debug.Log("button pressed");
             currentState.ApplyChoice(button);
         }
 
@@ -93,7 +92,6 @@ namespace Game.StateMachine
         public void NextState()
         {
             ChangeState(currentState.NextState);
-            Debug.Log("Current State: " + currentState);
         }
 
         public bool GameOverCondition()
