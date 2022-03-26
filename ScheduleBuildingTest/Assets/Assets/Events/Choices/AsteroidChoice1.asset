@@ -17,4 +17,6 @@ MonoBehaviour:
   description: Sleep in to catch up on your sleep
   choiceResolve:
   - BlockRow
-  choiceParams: 01000000
+  - UnlockEvent
+  - UnlockEvent
+  choiceParams: 010000000500000006000000

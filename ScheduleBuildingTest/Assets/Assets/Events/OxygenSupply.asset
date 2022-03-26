@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55fefe69578aadf48b3d336566ae7c40, type: 3}
-  m_Name: ClearSkies
+  m_Name: OxygenSupply
   m_EditorClassIdentifier: 
-  eventID: 3
-  title: Clear Skies
+  eventID: 5
+  title: Oxygen Tank damaged
   description: 
   art: {fileID: 0}
-  choice1: {fileID: 11400000, guid: 8f85fc04fb21b724fac5ab2fe5f3ad5e, type: 2}
-  choice2: {fileID: 11400000, guid: 247335bf6fbed4b43b92e0c552e67b68, type: 2}
-  hasPrerequisite: 0
+  choice1: {fileID: 11400000, guid: de9ad3aa3471ab64fb8f85d6833c89f2, type: 2}
+  choice2: {fileID: 11400000, guid: 62143ba0caa5c0b4bb83e1788926bc42, type: 2}
+  hasPrerequisite: 1
   eventUnlock: {fileID: 0}

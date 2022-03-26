@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cff721d76f96434aab0c8260e8943d6, type: 3}
-  m_Name: FreshProduceChoice2
+  m_Name: CoolRockChoice1
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Dont cook it
-  description: Eat it raw,no time for cooking things, there is studying to be done!
+  title: Take Rock
+  description: 
   choiceResolve:
   - ChangeGrades
+  - BlockSpot
   - UnlockEvent
-  choiceParams: 0500000008000000
+  choiceParams: 0a0000000200000007000000

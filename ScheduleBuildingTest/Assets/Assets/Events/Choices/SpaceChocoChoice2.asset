@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cff721d76f96434aab0c8260e8943d6, type: 3}
-  m_Name: FreshProduceChoice2
+  m_Name: SpaceChocoChoice2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Dont cook it
-  description: Eat it raw,no time for cooking things, there is studying to be done!
+  title: Send your chocolate to someone else
+  description: 
   choiceResolve:
-  - ChangeGrades
-  - UnlockEvent
-  choiceParams: 0500000008000000
+  - ChangeMotivation
+  choiceParams: 0a000000

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55fefe69578aadf48b3d336566ae7c40, type: 3}
   m_Name: WaterRations
   m_EditorClassIdentifier: 
-  eventID: 0
+  eventID: 2
   title: Water Rations
   description: 
   art: {fileID: 0}
