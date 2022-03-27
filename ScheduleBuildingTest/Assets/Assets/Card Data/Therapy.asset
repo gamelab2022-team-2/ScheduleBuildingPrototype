@@ -14,11 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 521111111111
   shapeColor: {r: 0, g: 0, b: 0, a: 0}
-  description: Therapy
-  grades: 0
-  motivation: 3
-  inHandMotiv: -10
-  anxiety: 0
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
+  cardId: 0
+  type: 0
+  cardName: Therapy
+  cardDescription: 
+  placedResolve:
+  - ChangeMotivation
+  placedResolveParams: 03000000
+  unplacedResolve:
+  - ChangeMotivation
+  unplacedResolveParams: f6ffffff
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0

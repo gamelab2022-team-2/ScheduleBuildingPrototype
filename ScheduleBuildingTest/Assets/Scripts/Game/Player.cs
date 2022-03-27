@@ -12,14 +12,13 @@ public class Player : MonoBehaviour
     public CardSet discardPile = new CardSet();
     public CardSet hand = new CardSet();
     public CardSet allCards = new CardSet();
+    
 
     public List<GridObject> gridObjects;
 
     public EventContainer eventContainer;
 
     public IntegerVariable motivation, grade;
-    
-    public GameObject handGO;
 
     public GameObject cardObject;
     public int Motivation => motivation.runtimeValue;
@@ -76,13 +75,10 @@ public class Player : MonoBehaviour
                 }
                 else
                     hand.Add(drawnCard);
-
             }
             else
             {
-
                 DiscardPileReturnToDeck();
-
             }
         }
 
@@ -147,7 +143,6 @@ public class Player : MonoBehaviour
 
             theMethod.Invoke(this, new object[] { choice.choiceParams[m] });
         }
-
     }
     
 
@@ -171,8 +166,6 @@ public class Player : MonoBehaviour
 
     public void AddCard(int i)
     {
-
-        
         GameObject newCardObject = Instantiate(cardObject);
 
         var cardComponent = newCardObject.GetComponent<Card>();
@@ -180,13 +173,9 @@ public class Player : MonoBehaviour
         cardComponent.LoadData(cardComponent.cardData);
         cardObject.transform.position = new Vector3(-100, -100, -100);
         discardPile.Add(cardComponent);
-
-
     }
     public void AddCardToDeck(int i)
     {
-
-
         GameObject newCardObject = Instantiate(cardObject);
 
         var cardComponent = newCardObject.GetComponent<Card>();
@@ -194,8 +183,6 @@ public class Player : MonoBehaviour
         cardComponent.LoadData(cardComponent.cardData);
         cardObject.transform.position = new Vector3(-100, -100, -100);
         deck.Add(cardComponent);
-
-
     }
 
     public void RemoveCard(int i)
@@ -209,14 +196,12 @@ public class Player : MonoBehaviour
                 index = j;
                 found = true;
             }
-
         }
         if (found)
         {
             Card toDelete = discardPile.GetAtIndex(index);
             discardPile.cards.RemoveAt(index);
             Destroy(toDelete.transform.gameObject);
-
         }
     }
 
@@ -265,7 +250,6 @@ public class Player : MonoBehaviour
             discardPile.Add(card);
         }
         hand.EmptyCardSet();
-
     }
 
     public void ClearShapes()

@@ -14,11 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 4211111111
   shapeColor: {r: 0, g: 0, b: 0, a: 0}
-  description: Daily Meeting
-  grades: 6
-  motivation: 1
-  inHandMotiv: -5
-  anxiety: 3
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
+  cardId: 0
+  type: 0
+  cardName: Daily Meeting
+  cardDescription: 
+  placedResolve:
+  - ChangeGrades
+  - ChangeMotivation
+  placedResolveParams: 0600000001000000
+  unplacedResolve:
+  - ChangeMotivation
+  - AddCard
+  - AddCard
+  - AddCard
+  unplacedResolveParams: fbffffff000000000000000000000000
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0

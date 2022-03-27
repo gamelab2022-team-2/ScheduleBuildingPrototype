@@ -14,11 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 43111110001000
   shapeColor: {r: 1, g: 0, b: 0, a: 0}
-  description: Video Games
-  grades: 0
-  motivation: 5
-  inHandMotiv: -8
-  anxiety: 0
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
+  cardId: 0
+  type: 0
+  cardName: Video Games
+  cardDescription: 
+  placedResolve:
+  - ChangeMotivation
+  placedResolveParams: 05000000
+  unplacedResolve:
+  - ChangeMotivation
+  unplacedResolveParams: f8ffffff
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0
