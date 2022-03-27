@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Game;
 
 public class EventDisplay : MonoBehaviour
 {
@@ -20,7 +21,18 @@ public class EventDisplay : MonoBehaviour
 
     public void OnEnable()
     {
-        selectedEvent = eventContainer.GetRandomEvent();
+        Debug.Log("Event Display On enabled called");
+
+        if (GameManager.Instance.turn == 2)
+        {
+            selectedEvent = eventContainer.FindEventByIdInAvail(9);
+            Debug.Log("Display event selected is " + selectedEvent.eventID);
+        }
+        else
+        {
+            selectedEvent = eventContainer.GetRandomEvent();
+        }
+        
         SetUI(selectedEvent);
     }
 
