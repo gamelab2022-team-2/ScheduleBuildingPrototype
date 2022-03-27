@@ -19,6 +19,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2821482e8292beb4db8fc08d98a09f2d, type: 2}
   - {fileID: 11400000, guid: d0f938b8a62349a4da92bba5c527b979, type: 2}
   - {fileID: 11400000, guid: 13e583872a201d447a9e2fb5ffe56e37, type: 2}
+  - {fileID: 11400000, guid: 1c508145c9b8e6a4d81097b145938324, type: 2}
   usedEvents: []
   eventsWithPrecondition:
   - {fileID: 11400000, guid: 8f675653ad22f5040a65a8858a8d830f, type: 2}
