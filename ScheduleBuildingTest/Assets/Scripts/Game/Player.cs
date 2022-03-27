@@ -19,8 +19,6 @@ public class Player : MonoBehaviour
     public EventContainer eventContainer;
 
     public IntegerVariable motivation, grade;
-    
-    public GameObject handGO;
 
     public GameObject cardObject;
     public int Motivation => motivation.runtimeValue;

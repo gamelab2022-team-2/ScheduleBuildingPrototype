@@ -14,11 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 141111
   shapeColor: {r: 0.4811321, g: 0.28113687, b: 0, a: 0}
-  description: Spa Day
-  grades: 0
-  motivation: 5
-  inHandMotiv: -6
-  anxiety: 0
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
+  cardId: 0
+  type: 0
+  cardName: Spa Day
+  cardDescription: 
+  placedResolve:
+  - ChangeMotivation
+  placedResolveParams: 05000000
+  unplacedResolve:
+  - ChangeMotivation
+  unplacedResolveParams: faffffff
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0

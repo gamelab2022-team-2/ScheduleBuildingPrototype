@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
-  m_Name: New Card
+  m_Name: Nice Meal
   m_EditorClassIdentifier: 
-  shape: 
-  shapeColor: {r: 0, g: 0, b: 0, a: 0}
+  shape: 13111
+  shapeColor: {r: 0, g: 1, b: 0.028794765, a: 0}
   cardId: 0
-  description: 
-  grades: 0
-  motivation: 0
-  inHandMotiv: 0
-  anxiety: 0
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
+  type: 1
+  cardName: Nice Meal
+  cardDescription: 
+  placedResolve:
+  - ChangeMotivation
+  placedResolveParams: 0a000000
+  unplacedResolve: []
+  unplacedResolveParams: 
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 1

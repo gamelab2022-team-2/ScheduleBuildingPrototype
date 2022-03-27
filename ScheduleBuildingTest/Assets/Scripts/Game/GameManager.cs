@@ -39,6 +39,8 @@ namespace Game
         public GameObject gridObjectPrefab;
         public CardSpawner cardSpawner;
 
+        public GameObject handGO;
+
         public int turn;
 
         void Start()
@@ -66,11 +68,11 @@ namespace Game
             for (int i = 0; i < _player.hand.Count; i++)
             {
                 Card currCard = _player.hand.GetAtIndex(i);
-                currCard.gameObject.transform.position = _player.handGO.transform.GetChild(i).position + Vector3.up;
+                currCard.gameObject.transform.position = handGO.transform.GetChild(i).position + Vector3.up;
                 var shape = Instantiate(gridObjectPrefab);
 
                 shape.GetComponent<GridObject>().init(currCard.cardData.shape,
-                    _player.handGO.transform.GetChild(i).position + 2 * Vector3.up, currCard.cardData.shapeColor);
+                    handGO.transform.GetChild(i).position + 2 * Vector3.up, currCard.cardData.shapeColor);
                 //shapeSpawner.GetComponent<ShapeSpawner>().SpawnShape(_player.handGO.transform.GetChild(i).position, currCard.cardData.shape, currCard.cardData.shapeColor);
                 _player.gridObjects.Add(shape.GetComponent<GridObject>());
             }

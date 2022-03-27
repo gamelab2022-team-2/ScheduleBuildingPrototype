@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -158,6 +158,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &158338603 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 516959562311019451, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+  m_PrefabInstance: {fileID: 2177997252538929057}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &236615021 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8825789983405575826, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
@@ -219,6 +230,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 810869487}
+        m_TargetAssemblyTypeName: NewCardManager, Assembly-CSharp
+        m_MethodName: ApplyChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &245036312
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,6 +272,17 @@ Transform:
   m_Father: {fileID: 36325971}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &271259158 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5750579777857791330, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+  m_PrefabInstance: {fileID: 2177997252538929057}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &474003335
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +722,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 810869487}
+        m_TargetAssemblyTypeName: NewCardManager, Assembly-CSharp
+        m_MethodName: ApplyChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &810869480
 GameObject:
   m_ObjectHideFlags: 0
@@ -702,6 +748,7 @@ GameObject:
   - component: {fileID: 810869484}
   - component: {fileID: 810869485}
   - component: {fileID: 810869486}
+  - component: {fileID: 810869487}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -729,24 +776,16 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e03d71293175b6b4d9a2685026433ad9, type: 2}
   - {fileID: 11400000, guid: 3e70b8ce733f12c45ab2c48ab5c3f6a4, type: 2}
   - {fileID: 11400000, guid: b15128837600dbb4885ce5a5d80af633, type: 2}
-  - {fileID: 11400000, guid: 3e70b8ce733f12c45ab2c48ab5c3f6a4, type: 2}
-  - {fileID: 11400000, guid: 3e70b8ce733f12c45ab2c48ab5c3f6a4, type: 2}
-  - {fileID: 11400000, guid: b15128837600dbb4885ce5a5d80af633, type: 2}
-  - {fileID: 11400000, guid: b15128837600dbb4885ce5a5d80af633, type: 2}
-  - {fileID: 11400000, guid: 815340a43ffc0bd4d9d733fb01b91fdc, type: 2}
-  - {fileID: 11400000, guid: 815340a43ffc0bd4d9d733fb01b91fdc, type: 2}
-  - {fileID: 11400000, guid: 6cb29db5272112149ad1bdc9f8276025, type: 2}
-  - {fileID: 11400000, guid: 6cb29db5272112149ad1bdc9f8276025, type: 2}
   - {fileID: 11400000, guid: 4340c23a0e9a3b442b97ad1d21ce166c, type: 2}
-  - {fileID: 11400000, guid: 4340c23a0e9a3b442b97ad1d21ce166c, type: 2}
-  - {fileID: 11400000, guid: b15128837600dbb4885ce5a5d80af633, type: 2}
-  - {fileID: 11400000, guid: b15128837600dbb4885ce5a5d80af633, type: 2}
+  - {fileID: 11400000, guid: 6cb29db5272112149ad1bdc9f8276025, type: 2}
+  - {fileID: 11400000, guid: 815340a43ffc0bd4d9d733fb01b91fdc, type: 2}
+  - {fileID: 11400000, guid: ce1fd194d5689e74ba239bb9b655d468, type: 2}
+  - {fileID: 11400000, guid: 48faddfd5b68eee4481a5e7ebc10f621, type: 2}
   - {fileID: 11400000, guid: 165b1116ce071584aaed5aa40fb515e0, type: 2}
-  - {fileID: 11400000, guid: 165b1116ce071584aaed5aa40fb515e0, type: 2}
-  cardgo: {fileID: 2541533064208557587, guid: 6d80a66fb34684d04a487790385cf32c, type: 3}
   shapeSpawner: {fileID: 746132742}
   gridObjectPrefab: {fileID: 5226957958578483780, guid: 43231032393513b4ca4f10c93d1d945b, type: 3}
   cardSpawner: {fileID: 810869486}
+  handGO: {fileID: 36325970}
   turn: 0
 --- !u!4 &810869482
 Transform:
@@ -841,6 +880,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 2541533064208557587, guid: 6d80a66fb34684d04a487790385cf32c, type: 3}
+--- !u!114 &810869487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810869480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ace60b301b5d840931db8d4b15b86a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1944111505}
+  stateMachine: {fileID: 810869483}
+  title:
+  - {fileID: 1554915142}
+  - {fileID: 158338603}
+  - {fileID: 271259158}
 --- !u!1 &811332695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,6 +1252,17 @@ Transform:
   m_Father: {fileID: 36325971}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1554915142 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4450499119953349961, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+  m_PrefabInstance: {fileID: 2177997252538929057}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1576660000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,6 +1480,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 810869487}
+        m_TargetAssemblyTypeName: NewCardManager, Assembly-CSharp
+        m_MethodName: ApplyChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1944111504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,7 +1525,6 @@ MonoBehaviour:
   eventContainer: {fileID: 810869484}
   motivation: {fileID: 11400000, guid: 7eea4d068aeea3f4fa7a3df9924855b6, type: 2}
   grade: {fileID: 11400000, guid: 759ada04acdc5a54394070bbcb9769c4, type: 2}
-  handGO: {fileID: 36325970}
   cardObject: {fileID: 2541533064208557587, guid: 6d80a66fb34684d04a487790385cf32c, type: 3}
   schedule: {fileID: 552416117}
 --- !u!4 &1944111506
@@ -2126,7 +2205,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
@@ -2134,12 +2221,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1302869122}
     - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 810869487}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: OpenNewCardPanel
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GetNewCardOpts
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UIController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: NewCardManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769977, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode

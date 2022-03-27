@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Game.StateMachine
 {
     public class DiscardState : GameState
@@ -14,7 +16,11 @@ namespace Game.StateMachine
         public GameState EventOrDraw()
         {
             if (GameManager.Instance.turn % 2 == 0)
+            {
+                Debug.Log(GameManager.Instance.turn);
                 return stateMachine.eventPhase;
+            }
+                
             return stateMachine.drawPhase;
         }   
 

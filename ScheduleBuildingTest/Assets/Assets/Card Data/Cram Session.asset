@@ -14,11 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 13111
   shapeColor: {r: 0.13508794, g: 0.12986825, b: 0.4528302, a: 0}
-  description: Cram Session
-  grades: 6
-  motivation: -10
-  inHandMotiv: 0
-  anxiety: 1
-  isStatus: 0
-  isConnection: 0
-  isAnxiety: 0
+  cardId: 0
+  type: 0
+  cardName: Cram Sesh
+  cardDescription: 
+  placedResolve:
+  - ChangeGrades
+  - ChangeMotivation
+  placedResolveParams: 06000000f6ffffff
+  unplacedResolve:
+  - AddCard
+  unplacedResolveParams: 00000000
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0
