@@ -19,7 +19,7 @@ public class EventDisplay : MonoBehaviour
     public ChoiceDisplay choice1;
     public ChoiceDisplay choice2;
 
-    public void OnEnable()
+    public void SelectEvent()
     {
         Debug.Log("Event Display On enabled called");
 
