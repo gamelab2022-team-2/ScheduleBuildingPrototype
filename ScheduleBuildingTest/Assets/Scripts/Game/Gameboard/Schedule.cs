@@ -45,6 +45,17 @@ public class Schedule : MonoBehaviour
                 slots[j].takeSlot();
         }
     }
+
+    public void BlockRow(int i)
+    {
+        float colY = (float)(4.5 - (float)i);
+        for (int j = 0; j < slots.Length; j++)
+        {
+            if (slots[j].transform.position.y == colY)
+                slots[j].takeSlot();
+        }
+    }
+
     //void Update()
     //{
     //    if (Input.GetKeyDown(KeyCode.Escape))

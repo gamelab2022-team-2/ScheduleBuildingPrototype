@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
 
     public List<GridObject> gridObjects;
 
+    public EventContainer eventContainer;
+
     public IntegerVariable motivation, grade;
     
     public GameObject handGO;
@@ -218,10 +220,25 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void UnlockEvent(int eventId)
+    {
+        eventContainer.UnlockEvent(eventId);
+    }
+
     public void BlockSpot(int i)
     {
         for (int j = 0; j < i; j++)
             schedule.BlockRandomSlot();
+    }
+
+    public void BlockRow(int i)
+    {
+        schedule.BlockRow(i);
+    }
+
+    public void BlockColumn(int i)
+    {
+        schedule.BlockColumn(i);
     }
 
     #region Discard Methods

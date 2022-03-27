@@ -15,6 +15,13 @@ MonoBehaviour:
   availableEvents:
   - {fileID: 11400000, guid: c6a5896ad4712a64e9dd0fb345a25a3e, type: 2}
   - {fileID: 11400000, guid: 3f09e14aae0840045ba321c7f5d64f54, type: 2}
+  - {fileID: 11400000, guid: 3edeffd8b1d51d548ab1810a3de52f8c, type: 2}
+  - {fileID: 11400000, guid: 2821482e8292beb4db8fc08d98a09f2d, type: 2}
+  - {fileID: 11400000, guid: d0f938b8a62349a4da92bba5c527b979, type: 2}
+  - {fileID: 11400000, guid: 13e583872a201d447a9e2fb5ffe56e37, type: 2}
   usedEvents: []
   eventsWithPrecondition:
   - {fileID: 11400000, guid: 8f675653ad22f5040a65a8858a8d830f, type: 2}
+  - {fileID: 11400000, guid: 8f675653ad22f5040a65a8858a8d830f, type: 2}
+  - {fileID: 11400000, guid: ec197ad86c874354d86ce43caaf41ce8, type: 2}
+  - {fileID: 11400000, guid: b2411fd303d2f04458bed5fa1fff8f7d, type: 2}

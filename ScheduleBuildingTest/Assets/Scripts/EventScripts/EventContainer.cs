@@ -48,12 +48,36 @@ public class EventContainer : MonoBehaviour
 
         if(eventSelect.eventUnlock != null)
         {
-            Event unlocked = eventSelect.eventUnlock;
-            availableEvents.Add(unlocked);
-            eventWithPrecondition.Remove(unlocked);
+            int unlockedID = eventSelect.eventUnlock.eventID;
+            UnlockEvent(unlockedID);
         }
 
         Debug.Log("Event select = " + eventSelect.title);
         return eventSelect;
+    }
+
+    public void UnlockEvent(int id)
+    {
+
+        Event unlocked = FindEventById(id);
+        availableEvents.Add(unlocked);
+        eventWithPrecondition.Remove(unlocked);
+    }
+
+    public Event FindEventById(int id)
+    {
+        int index = -1;
+        for (int j = 0; j < eventWithPrecondition.Count; j++)
+        {
+            if (eventWithPrecondition[j].eventID == id)
+            {
+                index = j;
+                break;
+            }
+        }
+        if (index > -1)
+            return eventWithPrecondition[index];
+        else
+            return null;
     }
 }

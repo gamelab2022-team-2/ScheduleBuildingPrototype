@@ -18,4 +18,6 @@ MonoBehaviour:
   choiceResolve:
   - ChangeMotivation
   - ChangeGrades
-  choiceParams: fafffffffdffffff
+  - UnlockEvent
+  - UnlockEvent
+  choiceParams: fafffffffdffffff0500000006000000
