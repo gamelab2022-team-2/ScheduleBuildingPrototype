@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum CardType  {STUDY, SELFCARE, STATUS };
 
@@ -18,6 +19,8 @@ public class CardData : ScriptableObject
     public CardType type;
 
     public string cardName;
+
+    public Sprite shapeImage;
 
     [TextArea]
     public string cardDescription;

@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 281010000000000101
   shapeColor: {r: 0.2010603, g: 0.0061053517, b: 0.46226418, a: 0}
-  cardId: 0
+  cardId: 5
   type: 0
   cardName: All-Nighter
+  shapeImage: {fileID: 21300000, guid: 5a2ee48472fe1c644b765e2e505d1fb7, type: 3}
   cardDescription: 
   placedResolve:
   - ChangeMotivation

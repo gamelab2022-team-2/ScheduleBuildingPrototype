@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 141111
   shapeColor: {r: 0.4811321, g: 0.28113687, b: 0, a: 0}
-  cardId: 0
+  cardId: 12
   type: 0
   cardName: Spa Day
+  shapeImage: {fileID: 21300000, guid: cac698f6ed2bad548b4f53aa1b0ef2e2, type: 3}
   cardDescription: 
   placedResolve:
   - ChangeMotivation

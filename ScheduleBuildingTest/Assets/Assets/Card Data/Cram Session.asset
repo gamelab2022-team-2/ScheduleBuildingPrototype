@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 13111
   shapeColor: {r: 0.13508794, g: 0.12986825, b: 0.4528302, a: 0}
-  cardId: 0
+  cardId: 4
   type: 0
   cardName: Cram Sesh
+  shapeImage: {fileID: 0}
   cardDescription: 
   placedResolve:
   - ChangeGrades
