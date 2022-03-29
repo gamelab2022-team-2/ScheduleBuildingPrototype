@@ -771,26 +771,17 @@ MonoBehaviour:
   _player: {fileID: 1944111505}
   allCardData:
   - {fileID: 11400000, guid: e9f7368329034a246b275ad4abfe31ef, type: 2}
+  - {fileID: 11400000, guid: f242dd2a7c3a18c45b38bbb0b7c06f5c, type: 2}
   - {fileID: 11400000, guid: 4ef47e6c998207448a10d25f1ac757ca, type: 2}
   - {fileID: 11400000, guid: e03d71293175b6b4d9a2685026433ad9, type: 2}
   - {fileID: 11400000, guid: 3e70b8ce733f12c45ab2c48ab5c3f6a4, type: 2}
-  - {fileID: 11400000, guid: 6cb29db5272112149ad1bdc9f8276025, type: 2}
-  - {fileID: 11400000, guid: 4340c23a0e9a3b442b97ad1d21ce166c, type: 2}
-  - {fileID: 11400000, guid: 815340a43ffc0bd4d9d733fb01b91fdc, type: 2}
-  - {fileID: 11400000, guid: cc9bdde590d27c441b109d415f41a53f, type: 2}
-  - {fileID: 11400000, guid: e23bcbd40af08d14ab721f57bd68802d, type: 2}
-  - {fileID: 11400000, guid: 0c12a73a1dd4aee4e811d53e3ca3dd4f, type: 2}
   - {fileID: 11400000, guid: b15128837600dbb4885ce5a5d80af633, type: 2}
-  - {fileID: 11400000, guid: 65d6ec6656e245c409e34ca7aeb83739, type: 2}
+  - {fileID: 11400000, guid: 4340c23a0e9a3b442b97ad1d21ce166c, type: 2}
+  - {fileID: 11400000, guid: 6cb29db5272112149ad1bdc9f8276025, type: 2}
+  - {fileID: 11400000, guid: 815340a43ffc0bd4d9d733fb01b91fdc, type: 2}
   - {fileID: 11400000, guid: ce1fd194d5689e74ba239bb9b655d468, type: 2}
-  - {fileID: 11400000, guid: 165b1116ce071584aaed5aa40fb515e0, type: 2}
   - {fileID: 11400000, guid: 48faddfd5b68eee4481a5e7ebc10f621, type: 2}
-  - {fileID: 11400000, guid: df2e0d7d9d0971040aa1a2190a2371ca, type: 2}
-  - {fileID: 11400000, guid: 3b9d225027ddb794da90133aef2733d3, type: 2}
-  - {fileID: 11400000, guid: a1d9f6e3e09a6874f951fa92c412ac3e, type: 2}
-  - {fileID: 11400000, guid: 7952eb5c72e9fa64faaf65d79a544320, type: 2}
-  - {fileID: 11400000, guid: f6eae6a690c52bb42a3136d98d092193, type: 2}
-  - {fileID: 11400000, guid: f242dd2a7c3a18c45b38bbb0b7c06f5c, type: 2}
+  - {fileID: 11400000, guid: 165b1116ce071584aaed5aa40fb515e0, type: 2}
   shapeSpawner: {fileID: 746132742}
   gridObjectPrefab: {fileID: 5226957958578483780, guid: 43231032393513b4ca4f10c93d1d945b, type: 3}
   cardSpawner: {fileID: 810869486}
@@ -1534,7 +1525,6 @@ MonoBehaviour:
   eventContainer: {fileID: 810869484}
   motivation: {fileID: 11400000, guid: 7eea4d068aeea3f4fa7a3df9924855b6, type: 2}
   grade: {fileID: 11400000, guid: 759ada04acdc5a54394070bbcb9769c4, type: 2}
-  anxiety: {fileID: 11400000, guid: 66572ef91efa8634bb034f2fe5e60f5a, type: 2}
   cardObject: {fileID: 2541533064208557587, guid: 6d80a66fb34684d04a487790385cf32c, type: 3}
   schedule: {fileID: 552416117}
 --- !u!4 &1944111506

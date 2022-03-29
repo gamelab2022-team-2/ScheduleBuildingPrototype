@@ -10,22 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
-  m_Name: 4-Cram Session
+  m_Name: Spa Day
   m_EditorClassIdentifier: 
-  shape: 13111
-  shapeColor: {r: 0.13508794, g: 0.12986825, b: 0.4528302, a: 0}
-  cardId: 4
+  shape: 141111
+  shapeColor: {r: 0.4811321, g: 0.28113687, b: 0, a: 0}
+  cardId: 12
   type: 0
-  cardName: Cram Sesh
-  shapeImage: {fileID: 0}
+  cardName: Spa Day
+  shapeImage: {fileID: 21300000, guid: cac698f6ed2bad548b4f53aa1b0ef2e2, type: 3}
   cardDescription: 
   placedResolve:
-  - ChangeGrades
   - ChangeMotivation
-  placedResolveParams: 06000000f6ffffff
+  placedResolveParams: 05000000
   unplacedResolve:
-  - AddCard
-  unplacedResolveParams: 00000000
+  - ChangeMotivation
+  unplacedResolveParams: faffffff
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
