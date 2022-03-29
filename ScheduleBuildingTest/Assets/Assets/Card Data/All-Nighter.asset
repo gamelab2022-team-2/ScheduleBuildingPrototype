@@ -29,3 +29,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
+  displayMotiv: -10
+  displayGrades: 8
+  displayAnx: 1
+  displayMotivInHand: 0

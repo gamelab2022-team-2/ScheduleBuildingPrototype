@@ -20,9 +20,9 @@ MonoBehaviour:
   shapeImage: {fileID: 21300000, guid: 2aa15ae2bb73dd040b08dd237b192589, type: 3}
   cardDescription: 
   placedResolve:
-  - ChangeGrades
   - ChangeMotivation
-  placedResolveParams: 0600000001000000
+  - ChangeGrades
+  placedResolveParams: 0100000006000000
   unplacedResolve:
   - ChangeMotivation
   - AddCard
@@ -32,3 +32,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
+  displayMotiv: 1
+  displayGrades: 6
+  displayAnx: 3
+  displayMotivInHand: 0

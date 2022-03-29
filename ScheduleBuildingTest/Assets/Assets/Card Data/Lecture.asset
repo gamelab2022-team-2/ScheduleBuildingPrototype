@@ -20,9 +20,9 @@ MonoBehaviour:
   shapeImage: {fileID: 21300000, guid: 79f4b58a8bf42c44fbf43cc1a7c6b7c6, type: 3}
   cardDescription: Basic education card
   placedResolve:
-  - ChangeGrades
   - ChangeMotivation
-  placedResolveParams: 03000000fcffffff
+  - ChangeGrades
+  placedResolveParams: fcffffff03000000
   unplacedResolve:
   - AddCard
   - AddCard
@@ -30,3 +30,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
+  displayMotiv: -4
+  displayGrades: 3
+  displayAnx: 2
+  displayMotivInHand: 0

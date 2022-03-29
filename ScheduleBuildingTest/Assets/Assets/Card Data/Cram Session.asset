@@ -20,12 +20,16 @@ MonoBehaviour:
   shapeImage: {fileID: 0}
   cardDescription: 
   placedResolve:
-  - ChangeGrades
   - ChangeMotivation
-  placedResolveParams: 06000000f6ffffff
+  - ChangeGrades
+  placedResolveParams: f6ffffff06000000
   unplacedResolve:
   - AddCard
   unplacedResolveParams: 00000000
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
+  displayMotiv: -10
+  displayGrades: 6
+  displayAnx: 1
+  displayMotivInHand: 0

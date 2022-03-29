@@ -17,6 +17,7 @@ MonoBehaviour:
   cardId: 18
   type: 1
   cardName: Nice Meal
+  shapeImage: {fileID: 0}
   cardDescription: 
   placedResolve:
   - ChangeMotivation
@@ -26,3 +27,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 1
+  displayMotiv: 10
+  displayGrades: 0
+  displayAnx: 0
+  displayMotivInHand: 0
