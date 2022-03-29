@@ -10,22 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
-  m_Name: Cram Session
+  m_Name: 20-Connection
   m_EditorClassIdentifier: 
-  shape: 13111
-  shapeColor: {r: 0.13508794, g: 0.12986825, b: 0.4528302, a: 0}
-  cardId: 4
-  type: 0
-  cardName: Cram Sesh
+  shape: 
+  shapeColor: {r: 0.745283, g: 0.33326805, b: 0.62672734, a: 0}
+  cardId: 20
+  type: 2
+  cardName: Connection
   shapeImage: {fileID: 0}
-  cardDescription: 
-  placedResolve:
-  - ChangeGrades
-  - ChangeMotivation
-  placedResolveParams: 06000000f6ffffff
-  unplacedResolve:
-  - AddCard
-  unplacedResolveParams: 00000000
-  onDraw: []
-  onDrawParams: 
-  burnAfterUse: 0
+  cardDescription: Removes an anxiety card from the discard (if possible), then burns
+    away
+  placedResolve: []
+  placedResolveParams: 
+  unplacedResolve: []
+  unplacedResolveParams: 
+  onDraw:
+  - RemoveCard
+  onDrawParams: 00000000
+  burnAfterUse: 1

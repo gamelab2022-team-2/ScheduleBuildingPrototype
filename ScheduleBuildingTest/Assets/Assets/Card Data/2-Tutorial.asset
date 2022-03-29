@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
+  m_Name: 2-Tutorial
+  m_EditorClassIdentifier: 
+  shape: 33101101101
+  shapeColor: {r: 0.09411764, g: 0.2399654, b: 0.8666667, a: 0}
+  cardId: 2
+  type: 0
+  cardName: Tutorial
+  shapeImage: {fileID: 21300000, guid: 2c67d04b182fe5446805424a7bb422aa, type: 3}
+  cardDescription: Additional Study Time
+  placedResolve:
+  - ChangeGrades
+  - ChangeMotivation
+  placedResolveParams: 03000000fdffffff
+  unplacedResolve:
+  - AddCard
+  unplacedResolveParams: 00000000
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0

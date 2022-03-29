@@ -10,20 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
-  m_Name: Anxiety
+  m_Name: 7-Online Video
   m_EditorClassIdentifier: 
-  shape: 
-  shapeColor: {r: 0.1792453, g: 0.13426487, b: 0.13426487, a: 0}
-  cardId: 0
-  type: 2
-  cardName: Anxiety
-  cardDescription: Blocks a random hour in the schedule, then draws an additional
-    card
-  placedResolve: []
-  placedResolveParams: 
-  unplacedResolve: []
-  unplacedResolveParams: 
-  onDraw:
-  - BlockSpot
-  onDrawParams: 01000000
+  shape: 34010010101101
+  shapeColor: {r: 0.1764706, g: 0.54901963, b: 1, a: 0}
+  cardId: 7
+  type: 0
+  cardName: Online Video
+  shapeImage: {fileID: 0}
+  cardDescription: 
+  placedResolve:
+  - ChangeGrades
+  placedResolveParams: 0a000000
+  unplacedResolve:
+  - AddCard
+  - AddCard
+  unplacedResolveParams: 0000000000000000
+  onDraw: []
+  onDrawParams: 
   burnAfterUse: 0

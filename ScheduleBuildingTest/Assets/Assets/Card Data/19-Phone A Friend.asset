@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
+  m_Name: 19-Phone A Friend
+  m_EditorClassIdentifier: 
+  shape: 16111111
+  shapeColor: {r: 1, g: 0.5342758, b: 0, a: 0}
+  cardId: 19
+  type: 1
+  cardName: Phone A Friend
+  shapeImage: {fileID: 0}
+  cardDescription: 6 hours because your friend is very chatty.
+  placedResolve:
+  - AddCard
+  - AddCard
+  - AddCard
+  placedResolveParams: 140000001400000014000000
+  unplacedResolve:
+  - ChangeMotivation
+  unplacedResolveParams: faffffff
+  onDraw: []
+  onDrawParams: 
+  burnAfterUse: 0

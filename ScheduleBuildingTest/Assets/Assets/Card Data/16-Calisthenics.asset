@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
-  m_Name: Yoga
+  m_Name: 16-Calisthenics
   m_EditorClassIdentifier: 
-  shape: 34111010010010
-  shapeColor: {r: 0.8163822, g: 0.8679245, b: 0.12609467, a: 0}
-  cardId: 10
+  shape: 221111
+  shapeColor: {r: 0.97583306, g: 1, b: 0, a: 0}
+  cardId: 16
   type: 1
-  cardName: Yoga
-  shapeImage: {fileID: 21300000, guid: bc71e043cfa786541970eda5877afee0, type: 3}
-  cardDescription: Good for the mind, good for the body
+  cardName: Calisthenics
+  shapeImage: {fileID: 0}
+  cardDescription: 
   placedResolve:
   - ChangeMotivation
-  placedResolveParams: 03000000
+  - AddCard
+  placedResolveParams: 0100000014000000
   unplacedResolve:
   - ChangeMotivation
   unplacedResolveParams: feffffff

@@ -10,23 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
-  m_Name: Lecture
+  m_Name: 6-Daily Meeting
   m_EditorClassIdentifier: 
-  shape: 2411111111
-  shapeColor: {r: 0.13556422, g: 0.7254902, b: 0.6415094, a: 0}
-  cardId: 1
+  shape: 4211111111
+  shapeColor: {r: 0.5754717, g: 0.5754717, b: 0.5754717, a: 0}
+  cardId: 6
   type: 0
-  cardName: Lecture
-  shapeImage: {fileID: 21300000, guid: 79f4b58a8bf42c44fbf43cc1a7c6b7c6, type: 3}
-  cardDescription: Basic education card
+  cardName: Daily Meeting
+  shapeImage: {fileID: 21300000, guid: 2aa15ae2bb73dd040b08dd237b192589, type: 3}
+  cardDescription: 
   placedResolve:
   - ChangeGrades
   - ChangeMotivation
-  placedResolveParams: 03000000fcffffff
+  placedResolveParams: 0600000001000000
   unplacedResolve:
+  - ChangeMotivation
   - AddCard
   - AddCard
-  unplacedResolveParams: 0000000000000000
+  - AddCard
+  unplacedResolveParams: fbffffff000000000000000000000000
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
