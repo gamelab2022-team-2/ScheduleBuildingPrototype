@@ -37,6 +37,7 @@ namespace Game.StateMachine
         public virtual void OnStateEnter()
         {
             stateEnterTime = Time.time;
+            if(GameOverCondition()) stateMachine.ChangeState(stateMachine.gameOverState);
         }
 
         /// <summary>
@@ -50,7 +51,7 @@ namespace Game.StateMachine
         // TODO: make this more robust
         public virtual bool GameOverCondition()
         {
-            return false;
+            return (player.Motivation <= 0);
         }
 
         public virtual void ApplyChoice(int selection)
