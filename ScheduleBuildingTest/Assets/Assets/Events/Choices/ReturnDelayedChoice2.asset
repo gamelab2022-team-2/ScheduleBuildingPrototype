@@ -16,6 +16,6 @@ MonoBehaviour:
   title: Stay Motivated!
   description: 
   choiceResolve:
-  - AddCardToDeck
-  - AddCardToDeck
+  - AddCard
+  - AddCard
   choiceParams: 0000000000000000

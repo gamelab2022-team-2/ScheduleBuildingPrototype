@@ -16,6 +16,6 @@ MonoBehaviour:
   title: Stare at the screen blankly
   description: 
   choiceResolve:
-  - AddCardToDeck
-  - AddCardToDeck
+  - AddCard
+  - AddCard
   choiceParams: 0000000000000000

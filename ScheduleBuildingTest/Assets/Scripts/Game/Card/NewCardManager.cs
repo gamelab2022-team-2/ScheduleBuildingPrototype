@@ -51,7 +51,7 @@ public class NewCardManager : MonoBehaviour
 
         if (_threeCards.Count != 0)
         {
-            player.AddCardToDeck(_threeCards[selection - 1]);
+            player.AddCard(_threeCards[selection - 1]);
             Debug.Log(player.allCards.GetAtIndex(_threeCards[selection - 1]));
         }
         else
