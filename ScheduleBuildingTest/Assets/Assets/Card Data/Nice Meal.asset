@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 13111
   shapeColor: {r: 0, g: 1, b: 0.028794765, a: 0}
-  cardId: 0
+  cardId: 18
   type: 1
   cardName: Nice Meal
   cardDescription: 

@@ -72,7 +72,7 @@ namespace Game
                 var shape = Instantiate(gridObjectPrefab);
 
                 shape.GetComponent<GridObject>().init(currCard.cardData.shape,
-                    handGO.transform.GetChild(i).position + 2 * Vector3.up, currCard.cardData.shapeColor);
+                    handGO.transform.GetChild(i).position + 2 * Vector3.up + Vector3.left*2 - Vector3.forward, currCard.cardData.shapeColor);
                 //shapeSpawner.GetComponent<ShapeSpawner>().SpawnShape(_player.handGO.transform.GetChild(i).position, currCard.cardData.shape, currCard.cardData.shapeColor);
                 _player.gridObjects.Add(shape.GetComponent<GridObject>());
             }
