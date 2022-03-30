@@ -78,6 +78,8 @@ MonoBehaviour:
   inHandAnx: {fileID: 1993545779063624983}
   image: {fileID: 2053397201481135848}
   cardImage: {fileID: 551621501677702801}
+  anxietyCard: {fileID: 21300000, guid: b4b536054d31c394694cff473b458ea9, type: 3}
+  connectionCard: {fileID: 0}
 --- !u!1 &3645405009817532727
 GameObject:
   m_ObjectHideFlags: 0
