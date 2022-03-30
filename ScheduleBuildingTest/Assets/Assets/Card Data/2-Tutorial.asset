@@ -18,6 +18,7 @@ MonoBehaviour:
   type: 0
   cardName: Tutorial
   shapeImage: {fileID: 21300000, guid: 2c67d04b182fe5446805424a7bb422aa, type: 3}
+  cardColor: {r: 0.012904947, g: 0.09610589, b: 0.5471698, a: 1}
   cardDescription: Additional Study Time
   placedResolve:
   - ChangeMotivation

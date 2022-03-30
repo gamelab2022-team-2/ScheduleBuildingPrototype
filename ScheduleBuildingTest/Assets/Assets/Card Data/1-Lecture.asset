@@ -18,6 +18,7 @@ MonoBehaviour:
   type: 0
   cardName: Lecture
   shapeImage: {fileID: 21300000, guid: 79f4b58a8bf42c44fbf43cc1a7c6b7c6, type: 3}
+  cardColor: {r: 0, g: 0.16121197, b: 1, a: 1}
   cardDescription: Basic education card
   placedResolve:
   - ChangeMotivation

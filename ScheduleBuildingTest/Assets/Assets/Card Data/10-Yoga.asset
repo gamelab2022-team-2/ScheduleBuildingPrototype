@@ -18,6 +18,7 @@ MonoBehaviour:
   type: 1
   cardName: Yoga
   shapeImage: {fileID: 21300000, guid: bc71e043cfa786541970eda5877afee0, type: 3}
+  cardColor: {r: 1, g: 0.97981787, b: 0, a: 1}
   cardDescription: Good for the mind, good for the body
   placedResolve:
   - ChangeMotivation

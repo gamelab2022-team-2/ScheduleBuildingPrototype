@@ -21,6 +21,7 @@ public class CardData : ScriptableObject
     public string cardName;
 
     public Sprite shapeImage;
+    public Color cardColor;
 
     [TextArea]
     public string cardDescription;
