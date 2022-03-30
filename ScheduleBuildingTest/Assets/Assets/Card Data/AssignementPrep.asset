@@ -18,6 +18,7 @@ MonoBehaviour:
   type: 0
   cardName: Assignment Prep
   shapeImage: {fileID: 21300000, guid: eb397b788373d474d949fbe41750ad75, type: 3}
+  cardColor: {r: 0, g: 0.9700117, b: 1, a: 1}
   cardDescription: Independent Study
   placedResolve:
   - ChangeMotivation

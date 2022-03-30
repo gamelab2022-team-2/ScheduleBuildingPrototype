@@ -18,6 +18,7 @@ MonoBehaviour:
   type: 0
   cardName: All-Nighter
   shapeImage: {fileID: 21300000, guid: 5a2ee48472fe1c644b765e2e505d1fb7, type: 3}
+  cardColor: {r: 0.53940105, g: 0, b: 1, a: 1}
   cardDescription: 
   placedResolve:
   - ChangeMotivation

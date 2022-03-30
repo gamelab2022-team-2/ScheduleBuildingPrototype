@@ -18,6 +18,7 @@ MonoBehaviour:
   type: 1
   cardName: Nice Meal
   shapeImage: {fileID: 0}
+  cardColor: {r: 0.2502427, g: 1, b: 0, a: 1}
   cardDescription: 
   placedResolve:
   - ChangeMotivation

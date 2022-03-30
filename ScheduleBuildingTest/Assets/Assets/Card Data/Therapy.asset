@@ -18,6 +18,7 @@ MonoBehaviour:
   type: 0
   cardName: Therapy
   shapeImage: {fileID: 21300000, guid: e5f814040fc01ae448cc31640c3d8265, type: 3}
+  cardColor: {r: 0.6320754, g: 0, b: 0, a: 1}
   cardDescription: 
   placedResolve:
   - ChangeMotivation
