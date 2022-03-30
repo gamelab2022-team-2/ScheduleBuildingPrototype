@@ -11,6 +11,7 @@ public class CardRenderer : MonoBehaviour
     public TextMeshProUGUI title, inScheduleMot, inScheduleGrad, inHandMot, inHandAnx;
     public Image image;
     public Image cardImage;
+    public Sprite anxietyCard, connectionCard;
 
 
     public void Start()
@@ -22,14 +23,36 @@ public class CardRenderer : MonoBehaviour
         data = GetComponent<Card>().cardData;
         if (data != null)
         {
-            title.text = data.cardName;
-            image.sprite = data.shapeImage;
-            inScheduleMot.text = data.displayMotiv.ToString();
-            inScheduleGrad.text = data.displayGrades.ToString();
-            inHandAnx.text = data.displayAnx.ToString();
-            inHandMot.text = data.displayMotivInHand.ToString();
-            cardImage.color = data.cardColor;
-            image.color = data.cardColor;
+            if(data.type == CardType.STATUS)
+            {
+                title.gameObject.SetActive(false);
+                inScheduleGrad.gameObject.SetActive(false);
+                inScheduleMot.gameObject.SetActive(false);
+                inHandAnx.gameObject.SetActive(false);
+                inHandMot.gameObject.SetActive(false);
+                image.gameObject.SetActive(false);
+
+                if(data.cardName == "Anxiety")
+                {
+                    cardImage.sprite = anxietyCard;
+                }
+                else if (data.cardName == "Connection")
+                {
+                    cardImage.sprite = connectionCard;
+                }
+            }
+            else
+            {
+                title.text = data.cardName;
+                image.sprite = data.shapeImage;
+                inScheduleMot.text = data.displayMotiv.ToString();
+                inScheduleGrad.text = data.displayGrades.ToString();
+                inHandAnx.text = data.displayAnx.ToString();
+                inHandMot.text = data.displayMotivInHand.ToString();
+                cardImage.color = data.cardColor;
+                image.color = data.cardColor;
+            }
+            
         }
     }
 }
