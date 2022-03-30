@@ -496,9 +496,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 4340c23a0e9a3b442b97ad1d21ce166c, type: 2}
   title: {fileID: 0}
-  inSchedule: {fileID: 0}
-  inHand: {fileID: 0}
+  inScheduleMot: {fileID: 0}
+  inScheduleGrad: {fileID: 0}
+  inHandMot: {fileID: 0}
+  inHandAnx: {fileID: 0}
   image: {fileID: 0}
+  cardColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &633073111
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,18 +798,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _player: {fileID: 1944111505}
   allCardData:
-  - {fileID: 11400000, guid: e9f7368329034a246b275ad4abfe31ef, type: 2}
-  - {fileID: 11400000, guid: f242dd2a7c3a18c45b38bbb0b7c06f5c, type: 2}
-  - {fileID: 11400000, guid: 4ef47e6c998207448a10d25f1ac757ca, type: 2}
-  - {fileID: 11400000, guid: e03d71293175b6b4d9a2685026433ad9, type: 2}
-  - {fileID: 11400000, guid: 3e70b8ce733f12c45ab2c48ab5c3f6a4, type: 2}
-  - {fileID: 11400000, guid: b15128837600dbb4885ce5a5d80af633, type: 2}
-  - {fileID: 11400000, guid: 4340c23a0e9a3b442b97ad1d21ce166c, type: 2}
-  - {fileID: 11400000, guid: 6cb29db5272112149ad1bdc9f8276025, type: 2}
-  - {fileID: 11400000, guid: 815340a43ffc0bd4d9d733fb01b91fdc, type: 2}
-  - {fileID: 11400000, guid: ce1fd194d5689e74ba239bb9b655d468, type: 2}
-  - {fileID: 11400000, guid: 48faddfd5b68eee4481a5e7ebc10f621, type: 2}
-  - {fileID: 11400000, guid: 165b1116ce071584aaed5aa40fb515e0, type: 2}
+  - {fileID: 11400000, guid: fec93f8fc50f4f643a07891852c44096, type: 2}
+  - {fileID: 11400000, guid: 78329ea1052509a4e8e2691567cb882e, type: 2}
+  - {fileID: 11400000, guid: e701e253620b8824c801009debfbc68c, type: 2}
+  - {fileID: 11400000, guid: 0751b63cc0ec57c418dc40c38d66d8e9, type: 2}
+  - {fileID: 11400000, guid: 000518cbd9ece7c4eb433a6d9cd0a5d4, type: 2}
+  - {fileID: 11400000, guid: e7ffe7eacd9e3bb45a90092ab079643a, type: 2}
+  - {fileID: 11400000, guid: b0d71657e0587284489f01852d6243b9, type: 2}
+  - {fileID: 11400000, guid: dbbda9c3ae45e1e40b3bf3377d4c000d, type: 2}
+  - {fileID: 11400000, guid: 6320cbab394f8944293fa5d4d8808e48, type: 2}
+  - {fileID: 11400000, guid: 692ccfe578187da469a2d4c9ca56f78f, type: 2}
+  - {fileID: 11400000, guid: 3ea7e73fce767ec43a1aaac27cd92ff7, type: 2}
+  - {fileID: 11400000, guid: c4f78da5bce7f8946ad03f8ab3a92e41, type: 2}
+  - {fileID: 11400000, guid: 152ac40310410c04da51839b8ae7b831, type: 2}
+  - {fileID: 11400000, guid: f9bcd335d746763478dfca5eb3f13da5, type: 2}
+  - {fileID: 11400000, guid: f6ecac1f567499948955604d43ed21ed, type: 2}
+  - {fileID: 11400000, guid: 9b03e52a7c7b49647b361e97b2882111, type: 2}
+  - {fileID: 11400000, guid: bf292484be7925449958a2241fd90bdc, type: 2}
+  - {fileID: 11400000, guid: ca18b06733ff9314b860f8f30f643998, type: 2}
+  - {fileID: 11400000, guid: 62acc5a151ff4ff47a5b5eee942a1995, type: 2}
+  - {fileID: 11400000, guid: 093ff7b9ad0d7fe4a86adf314d06f3bb, type: 2}
+  - {fileID: 11400000, guid: d8a01761a33d5244cbf4fff97a962ae7, type: 2}
   shapeSpawner: {fileID: 746132742}
   gridObjectPrefab: {fileID: 5226957958578483780, guid: 43231032393513b4ca4f10c93d1d945b, type: 3}
   cardSpawner: {fileID: 810869486}
@@ -1721,6 +1733,7 @@ MonoBehaviour:
   eventContainer: {fileID: 810869484}
   motivation: {fileID: 11400000, guid: 7eea4d068aeea3f4fa7a3df9924855b6, type: 2}
   grade: {fileID: 11400000, guid: 759ada04acdc5a54394070bbcb9769c4, type: 2}
+  anxiety: {fileID: 11400000, guid: fd7f0343e39c1164a8ec73d552b65e98, type: 2}
   cardObject: {fileID: 2541533064208557587, guid: 6d80a66fb34684d04a487790385cf32c, type: 3}
   schedule: {fileID: 552416117}
 --- !u!4 &1944111506
