@@ -30,11 +30,11 @@ public class NewCardManager : MonoBehaviour
 
         for (int i = 0; i < 3; i++)
         {
-            int index = Random.Range(6, player.allCards.Count);
+            int index = Random.Range(4, player.allCards.Count - 1);
 
-            while (_threeCards.Contains(index))
+            while (_threeCards.Contains(index) || index == 10) //can't be Yoga
             {
-                index = Random.Range(6, player.allCards.Count);
+                index = Random.Range(4, player.allCards.Count - 1);
             }
 
             _threeCards.Add(index);
