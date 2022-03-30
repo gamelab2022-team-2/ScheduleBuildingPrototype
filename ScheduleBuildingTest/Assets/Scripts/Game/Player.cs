@@ -18,26 +18,27 @@ public class Player : MonoBehaviour
 
     public EventContainer eventContainer;
 
-    public IntegerVariable motivation, grade;
+    public IntegerVariable motivation, grade, anxiety;
 
     public GameObject cardObject;
     public int Motivation => motivation.runtimeValue;
     public int Grade => grade.runtimeValue;
+    public int Anxiety => anxiety.runtimeValue;
 
     public Schedule schedule;
 
     public void GetOpeningDeck()
     {
+        AddCardToDeck(1);
+        AddCardToDeck(1);
+        AddCardToDeck(1);
         AddCardToDeck(2);
         AddCardToDeck(2);
         AddCardToDeck(2);
         AddCardToDeck(3);
         AddCardToDeck(3);
-        AddCardToDeck(3);
-        AddCardToDeck(4);
-        AddCardToDeck(4);
-        AddCardToDeck(5);
-        AddCardToDeck(5);
+        AddCardToDeck(10);
+        AddCardToDeck(10);
         deck.Shuffle();
     }
 
@@ -159,6 +160,13 @@ public class Player : MonoBehaviour
         Debug.Log("MOTIVATION NOW IS "+motivation.runtimeValue);
     }
 
+    public void ChangeAnxiety(int i)
+    {
+        Debug.Log("IN CHANGE ANXIETY WITH PARAM: " + i);
+        anxiety.runtimeValue += i;
+        Debug.Log("ANXIETY NOW IS " + anxiety.runtimeValue);
+    }
+
     public void ChangeGrades(int i)
     {
         grade.runtimeValue += i;
@@ -169,11 +177,15 @@ public class Player : MonoBehaviour
         GameObject newCardObject = Instantiate(cardObject);
 
         var cardComponent = newCardObject.GetComponent<Card>();
+
+        if (i == 0) ChangeAnxiety(1);
+
         cardComponent.cardData = allCards.GetAtIndex(i).cardData;
         cardComponent.LoadData(cardComponent.cardData);
         cardObject.transform.position = new Vector3(-100, -100, -100);
         discardPile.Add(cardComponent);
     }
+
     public void AddCardToDeck(int i)
     {
         GameObject newCardObject = Instantiate(cardObject);
@@ -202,6 +214,7 @@ public class Player : MonoBehaviour
             Card toDelete = discardPile.GetAtIndex(index);
             discardPile.cards.RemoveAt(index);
             Destroy(toDelete.transform.gameObject);
+            if (i == 0) ChangeAnxiety(-1);
         }
     }
 
