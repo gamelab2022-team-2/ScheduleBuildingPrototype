@@ -15,7 +15,6 @@ public class ChoiceDisplay : MonoBehaviour
     public void SetUI(EventChoice e)
     {
         title.text = e.title;
-        description.text = e.description;
     }
 
 }
