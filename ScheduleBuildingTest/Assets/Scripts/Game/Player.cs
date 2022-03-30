@@ -49,6 +49,11 @@ public class Player : MonoBehaviour
         {
             Debug.Log("   " + c.cardName);
         }
+        Debug.Log("DISCARD CONTAINS:");
+        foreach (Card c in discardPile.cards)
+        {
+            Debug.Log("   " + c.cardName);
+        }
         while (hand.Count < 5)
         {
 
