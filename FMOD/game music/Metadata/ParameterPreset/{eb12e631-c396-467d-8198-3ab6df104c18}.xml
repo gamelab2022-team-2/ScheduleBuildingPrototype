@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{eb12e631-c396-467d-8198-3ab6df104c18}">
+		<property name="name">
+			<value>Anxiety Mod</value>
+		</property>
+		<relationship name="folder">
+			<destination>{9f9a9438-d4bd-48ca-872d-73ffc46e28ca}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{9a80af74-78f6-4905-8ae1-1f351e30a2f9}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{9a80af74-78f6-4905-8ae1-1f351e30a2f9}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
