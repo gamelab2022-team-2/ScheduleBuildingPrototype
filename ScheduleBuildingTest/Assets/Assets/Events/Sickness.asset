@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: 8
   title: Sickness
+  eventKarma: 10
+  eventPriority: 20
   description: You arent feeling well today
   art: {fileID: 0}
   choice1: {fileID: 11400000, guid: 361f99606904ac8498d3365a7b6511b6, type: 2}

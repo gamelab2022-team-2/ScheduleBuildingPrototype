@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: 0
   title: Fresh Produce
+  eventKarma: 70
+  eventPriority: 0
   description: We have fresh produce for you
   art: {fileID: 0}
   choice1: {fileID: 11400000, guid: ae73140f1a3bb4b42b098a232893914d, type: 2}

@@ -18,7 +18,10 @@ MonoBehaviour:
   type: 0
   cardName: Caffeinated Learning
   shapeImage: {fileID: 0}
-  cardDescription: 
+  cardColor: {r: 0, g: 0, b: 0, a: 0}
+  cardDescription: Will increase grade by 6 but add an anxiety card when played in
+    the schedule. Will add three anxiety cards to the discard pile if unplayed.\nHigh
+    stress study, not very time consuming but causes anxiety to rise
   placedResolve:
   - ChangeGrades
   - AddCard

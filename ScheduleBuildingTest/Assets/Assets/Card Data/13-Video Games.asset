@@ -19,7 +19,8 @@ MonoBehaviour:
   cardName: Video Games
   shapeImage: {fileID: 21300000, guid: 41f49aa89379f204cbc7af802a17df49, type: 3}
   cardColor: {r: 0.08795879, g: 0.027901389, b: 0.5377358, a: 1}
-  cardDescription: 
+  cardDescription: WIll increase motivation by 10 when played. Will decrease motivation
+    by 4 when unplayed.\nTime consuming but motivational
   placedResolve:
   - ChangeMotivation
   placedResolveParams: 0a000000

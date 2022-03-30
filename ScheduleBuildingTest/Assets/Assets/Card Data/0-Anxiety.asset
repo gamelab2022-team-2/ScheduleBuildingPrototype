@@ -17,8 +17,11 @@ MonoBehaviour:
   cardId: 0
   type: 2
   cardName: Anxiety
+  shapeImage: {fileID: 0}
+  cardColor: {r: 0, g: 0, b: 0, a: 0}
   cardDescription: Blocks a random hour in the schedule, then draws an additional
-    card
+    card. \n As anxiety builds up, one's chest tightens and a feeling of inescapable
+    dread rises. It becomes harder to do even the most basic tasks...
   placedResolve: []
   placedResolveParams: 
   unplacedResolve: []
@@ -27,3 +30,7 @@ MonoBehaviour:
   - BlockSpot
   onDrawParams: 01000000
   burnAfterUse: 0
+  displayMotiv: 0
+  displayGrades: 0
+  displayAnx: 0
+  displayMotivInHand: 0
