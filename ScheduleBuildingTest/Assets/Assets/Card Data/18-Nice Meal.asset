@@ -19,7 +19,9 @@ MonoBehaviour:
   cardName: Nice Meal
   shapeImage: {fileID: 0}
   cardColor: {r: 0.2502427, g: 1, b: 0, a: 1}
-  cardDescription: 
+  cardDescription: Will increase motivation by 10 and add a connection card to your
+    discard, but will be destroyed when played. No effect when unplayed.\nA nice
+    meal, shame it's gone so fast
   placedResolve:
   - ChangeMotivation
   - AddCard

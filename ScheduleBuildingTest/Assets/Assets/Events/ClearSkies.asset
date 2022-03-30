@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: 3
   title: Clear Skies
+  eventKarma: 60
+  eventPriority: 0
   description: 
   art: {fileID: 0}
   choice1: {fileID: 11400000, guid: 8f85fc04fb21b724fac5ab2fe5f3ad5e, type: 2}

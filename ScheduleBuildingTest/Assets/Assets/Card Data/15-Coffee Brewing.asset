@@ -18,7 +18,10 @@ MonoBehaviour:
   type: 1
   cardName: Coffee Brewing
   shapeImage: {fileID: 0}
-  cardDescription: 
+  cardColor: {r: 0, g: 0, b: 0, a: 0}
+  cardDescription: Will increase grades by 2 and increase motivation by 1 when played.
+    Will decrease motivation by 4 when unplayed.\nA warm cup of coffee substitute
+    helps you remember the joys of living.
   placedResolve:
   - ChangeMotivation
   - ChangeGrades

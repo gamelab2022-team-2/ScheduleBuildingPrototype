@@ -139,6 +139,7 @@ public class Player : MonoBehaviour
     public void ApplyEventChoice(EventChoice choice)
     {
         Debug.Log("Calculating Choice Values");
+        eventContainer.karma += choice.karmaValue;
 
         for (int m = 0; m < choice.choiceResolve.Count; m++)
         {

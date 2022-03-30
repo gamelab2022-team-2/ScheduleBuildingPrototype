@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: 5
   title: Oxygen Tank damaged
+  eventKarma: 30
+  eventPriority: 0
   description: 
   art: {fileID: 0}
   choice1: {fileID: 11400000, guid: de9ad3aa3471ab64fb8f85d6833c89f2, type: 2}

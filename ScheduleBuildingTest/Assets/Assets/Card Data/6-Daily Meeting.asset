@@ -19,11 +19,14 @@ MonoBehaviour:
   cardName: Daily Meeting
   shapeImage: {fileID: 21300000, guid: 2aa15ae2bb73dd040b08dd237b192589, type: 3}
   cardColor: {r: 1, g: 0, b: 0.9577489, a: 1}
-  cardDescription: 
+  cardDescription: Will increase grade by 6 and increase motivation by 2 when entered
+    in the schedule. Will decrease motivation by 5 and add three anxiety cards to
+    the discard pile if unplayed.\nStudying online with a group can make you feel
+    less lonely, but missing your meeting has awful consequences
   placedResolve:
   - ChangeMotivation
   - ChangeGrades
-  placedResolveParams: 0100000006000000
+  placedResolveParams: 0200000006000000
   unplacedResolve:
   - ChangeMotivation
   - AddCard

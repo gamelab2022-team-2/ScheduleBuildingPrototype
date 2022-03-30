@@ -11,6 +11,9 @@ public class Event : ScriptableObject
     public int eventID;
     public string title;
 
+    public int eventKarma;
+    public int eventPriority;
+
     [TextArea]
     public string description;
 
