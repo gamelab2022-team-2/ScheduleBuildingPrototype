@@ -10,22 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
-  m_Name: 3-AssignmentPrep
+  m_Name: Tutorial
   m_EditorClassIdentifier: 
-  shape: 34010010010111
-  shapeColor: {r: 0.3155927, g: 0.77042025, b: 0.8490566, a: 0}
-  cardId: 3
+  shape: 33101101101
+  shapeColor: {r: 0.09411764, g: 0.2399654, b: 0.8666667, a: 0}
+  cardId: 2
   type: 0
-  cardName: Assignment Prep
-  shapeImage: {fileID: 21300000, guid: eb397b788373d474d949fbe41750ad75, type: 3}
-  cardDescription: Independent Study
+  cardName: Tutorial
+  shapeImage: {fileID: 21300000, guid: 2c67d04b182fe5446805424a7bb422aa, type: 3}
+  cardDescription: Additional Study Time
   placedResolve:
-  - ChangeGrades
   - ChangeMotivation
-  placedResolveParams: 03000000fdffffff
+  - ChangeGrades
+  placedResolveParams: fdffffff03000000
   unplacedResolve:
   - AddCard
-  unplacedResolveParams: 00000000
+  - AddCard
+  unplacedResolveParams: 0000000000000000
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
+  displayMotiv: -3
+  displayGrades: 3
+  displayAnx: 2
+  displayMotivInHand: 0

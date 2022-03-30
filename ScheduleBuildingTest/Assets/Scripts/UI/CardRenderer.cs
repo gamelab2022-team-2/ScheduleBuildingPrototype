@@ -8,8 +8,9 @@ using UnityEngine.UI;
 public class CardRenderer : MonoBehaviour
 {
     public CardData data;
-    public TextMeshProUGUI title, inSchedule, inHand;
+    public TextMeshProUGUI title, inScheduleMot, inScheduleGrad, inHandMot, inHandAnx;
     public Sprite image;
+    public Color cardColor;
 
     public void Start()
     {
@@ -22,6 +23,10 @@ public class CardRenderer : MonoBehaviour
         {
             title.text = data.cardName;
             image = data.shapeImage;
+            inScheduleMot.text = data.displayMotiv.ToString();
+            inScheduleGrad.text = data.displayGrades.ToString();
+            inHandAnx.text = data.displayAnx.ToString();
+            inHandMot.text = data.displayMotivInHand.ToString();
         }
     }
 }

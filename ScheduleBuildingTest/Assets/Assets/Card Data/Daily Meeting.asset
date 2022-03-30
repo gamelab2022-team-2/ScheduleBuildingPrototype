@@ -10,22 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
-  m_Name: 15-Coffee Brewing
+  m_Name: Daily Meeting
   m_EditorClassIdentifier: 
-  shape: 1211
-  shapeColor: {r: 0.26415092, g: 0.23384349, b: 0.13805623, a: 0}
-  cardId: 15
-  type: 1
-  cardName: Coffee Brewing
-  shapeImage: {fileID: 0}
+  shape: 4211111111
+  shapeColor: {r: 0, g: 0, b: 0, a: 0}
+  cardId: 6
+  type: 0
+  cardName: Daily Meeting
+  shapeImage: {fileID: 21300000, guid: 2aa15ae2bb73dd040b08dd237b192589, type: 3}
   cardDescription: 
   placedResolve:
-  - ChangeGrades
   - ChangeMotivation
-  placedResolveParams: 0200000001000000
+  - ChangeGrades
+  placedResolveParams: 0100000006000000
   unplacedResolve:
   - ChangeMotivation
-  unplacedResolveParams: fcffffff
+  - AddCard
+  - AddCard
+  - AddCard
+  unplacedResolveParams: fbffffff000000000000000000000000
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
+  displayMotiv: 1
+  displayGrades: 6
+  displayAnx: 3
+  displayMotivInHand: 0

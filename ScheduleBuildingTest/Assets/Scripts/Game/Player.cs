@@ -18,27 +18,26 @@ public class Player : MonoBehaviour
 
     public EventContainer eventContainer;
 
-    public IntegerVariable motivation, grade, anxiety;
+    public IntegerVariable motivation, grade;
 
     public GameObject cardObject;
     public int Motivation => motivation.runtimeValue;
     public int Grade => grade.runtimeValue;
-    public int Anxiety => anxiety.runtimeValue;
 
     public Schedule schedule;
 
     public void GetOpeningDeck()
     {
-        AddCardToDeck(1);
-        AddCardToDeck(1);
-        AddCardToDeck(1);
         AddCardToDeck(2);
         AddCardToDeck(2);
         AddCardToDeck(2);
         AddCardToDeck(3);
         AddCardToDeck(3);
-        AddCardToDeck(10);
-        AddCardToDeck(10);
+        AddCardToDeck(3);
+        AddCardToDeck(4);
+        AddCardToDeck(4);
+        AddCardToDeck(5);
+        AddCardToDeck(5);
         deck.Shuffle();
     }
 
@@ -165,17 +164,9 @@ public class Player : MonoBehaviour
         grade.runtimeValue += i;
     }
 
-    public void ChangeAnxiety(int i)
-    {
-        anxiety.runtimeValue += i;
-        Debug.Log("ANXIETY COUNT IS " + anxiety.runtimeValue);
-    }
-
     public void AddCard(int i)
     {
         GameObject newCardObject = Instantiate(cardObject);
-
-        if (i == 0) ChangeAnxiety(1);
 
         var cardComponent = newCardObject.GetComponent<Card>();
         cardComponent.cardData = allCards.GetAtIndex(i).cardData;
@@ -211,11 +202,6 @@ public class Player : MonoBehaviour
             Card toDelete = discardPile.GetAtIndex(index);
             discardPile.cards.RemoveAt(index);
             Destroy(toDelete.transform.gameObject);
-            if (i == 0)
-            {
-                Debug.Log("REMOVED ANXIETY");
-                ChangeAnxiety(-1);
-            }
         }
     }
 

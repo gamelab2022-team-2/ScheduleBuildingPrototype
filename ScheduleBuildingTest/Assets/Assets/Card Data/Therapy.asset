@@ -10,21 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
-  m_Name: 12-Spa Day
+  m_Name: Therapy
   m_EditorClassIdentifier: 
-  shape: 141111
-  shapeColor: {r: 0.023635997, g: 0.48235294, b: 0, a: 0}
-  cardId: 12
-  type: 1
-  cardName: Spa Day
-  shapeImage: {fileID: 21300000, guid: cac698f6ed2bad548b4f53aa1b0ef2e2, type: 3}
+  shape: 521111111111
+  shapeColor: {r: 0, g: 0, b: 0, a: 0}
+  cardId: 14
+  type: 0
+  cardName: Therapy
+  shapeImage: {fileID: 21300000, guid: e5f814040fc01ae448cc31640c3d8265, type: 3}
   cardDescription: 
   placedResolve:
   - ChangeMotivation
-  placedResolveParams: 05000000
+  placedResolveParams: 03000000
   unplacedResolve:
   - ChangeMotivation
-  unplacedResolveParams: faffffff
+  unplacedResolveParams: f6ffffff
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
+  displayMotiv: 3
+  displayGrades: 0
+  displayAnx: 0
+  displayMotivInHand: -10

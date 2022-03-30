@@ -10,21 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
-  m_Name: 20-Connection
+  m_Name: Anxiety
   m_EditorClassIdentifier: 
   shape: 
-  shapeColor: {r: 0.745283, g: 0.33326805, b: 0.62672734, a: 0}
-  cardId: 20
+  shapeColor: {r: 0.1792453, g: 0.13426487, b: 0.13426487, a: 0}
+  cardId: 0
   type: 2
-  cardName: Connection
-  shapeImage: {fileID: 0}
-  cardDescription: Removes an anxiety card from the discard (if possible), then burns
-    away
+  cardName: Anxiety
+  cardDescription: Blocks a random hour in the schedule, then draws an additional
+    card
   placedResolve: []
   placedResolveParams: 
   unplacedResolve: []
   unplacedResolveParams: 
   onDraw:
-  - RemoveCard
-  onDrawParams: 00000000
-  burnAfterUse: 1
+  - BlockSpot
+  onDrawParams: 01000000
+  burnAfterUse: 0

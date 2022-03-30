@@ -36,6 +36,11 @@ public class CardData : ScriptableObject
 
     public bool burnAfterUse;
 
+    public int displayMotiv;
+    public int displayGrades;
+    public int displayAnx;
+    public int displayMotivInHand;
+
 
 
 
