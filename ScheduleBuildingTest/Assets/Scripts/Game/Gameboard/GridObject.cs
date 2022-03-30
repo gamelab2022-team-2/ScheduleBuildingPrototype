@@ -82,6 +82,7 @@ public class GridObject : MonoBehaviour
     {
         if (allowedToMove)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/FX/CardPickup");
             if (isInGrid)
             {
                 foreach (GridCube gc in cubes)
@@ -110,7 +111,11 @@ public class GridObject : MonoBehaviour
             if (!validPosition())
                 transform.position = _home;
             else
+            {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/FX/Snap");
                 isInGrid = true;
+            }
+                
         }
     }
 

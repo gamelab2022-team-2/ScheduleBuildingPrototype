@@ -76,6 +76,7 @@ namespace Game
                 //shapeSpawner.GetComponent<ShapeSpawner>().SpawnShape(_player.handGO.transform.GetChild(i).position, currCard.cardData.shape, currCard.cardData.shapeColor);
                 _player.gridObjects.Add(shape.GetComponent<GridObject>());
             }
+            
         }
 
         //returns all cards to the off screen "cardSleeve" location in the discard or resolve phase
