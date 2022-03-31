@@ -25,7 +25,7 @@ public class EventDisplay : MonoBehaviour
 
         if (GameManager.Instance.turn == 2)
         {
-            selectedEvent = eventContainer.FindEventByIdInAvail(1);
+            selectedEvent = eventContainer.FindEventByIdInAvail(9);
             Debug.Log("Display event selected is " + selectedEvent.eventID);
         }
         else
