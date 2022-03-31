@@ -2093,7 +2093,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1944111505}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: resetModifiers
+        m_MethodName: ResetModifiers
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
