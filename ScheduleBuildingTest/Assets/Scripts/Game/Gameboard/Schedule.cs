@@ -56,6 +56,36 @@ public class Schedule : MonoBehaviour
         }
     }
 
+    // block i blocks in a row from a random row
+    public void BlockInRow(int i) 
+    {
+        int index;
+        index = (int)Random.Range(0f, (float)slots.Length-i);
+        if (slots[index].isSlotFree())
+        {
+            for(int s = 0; s <= i; s++)
+            {
+                slots[index+s].takeSlot();
+            }
+            
+        }
+    }
+
+    // block i cubes in a row from a column
+    public void BlockInColumn(int i)
+    {
+        int index;
+        index = (int)Random.Range(0f, (float)slots.Length- 5*i);
+        if (slots[index].isSlotFree())
+        {
+            for (int s = 0; s < i*5; s+=5)
+            {
+                slots[index + s].takeSlot();
+            }
+
+        }
+    }
+
     //void Update()
     //{
     //    if (Input.GetKeyDown(KeyCode.Escape))

@@ -16,6 +16,6 @@ MonoBehaviour:
   title: Dont cook it
   description: Eat it raw,no time for cooking things, there is studying to be done!
   choiceResolve:
-  - ChangeGrades
+  - SetGradeMotifier
   - UnlockEvent
-  choiceParams: 0500000008000000
+  choiceParams: 0100000008000000

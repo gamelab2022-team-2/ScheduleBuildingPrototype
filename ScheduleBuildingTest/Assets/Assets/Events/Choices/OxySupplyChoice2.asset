@@ -16,5 +16,5 @@ MonoBehaviour:
   title: Ignore
   description: 
   choiceResolve:
-  - ChangeGrades
-  choiceParams: fbffffff
+  - SetGradeModifier
+  choiceParams: ffffffff
