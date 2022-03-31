@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: 6
   title: Cool Space Rock
+  eventKarma: 65
+  eventPriority: 30
   description: 
   art: {fileID: 0}
   choice1: {fileID: 11400000, guid: ef555b5b87e718a468c6613ae16e97b5, type: 2}

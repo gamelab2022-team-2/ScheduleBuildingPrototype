@@ -53,6 +53,11 @@ public class Player : MonoBehaviour
         {
             Debug.Log("   " + c.cardName);
         }
+        Debug.Log("DISCARD CONTAINS:");
+        foreach (Card c in discardPile.cards)
+        {
+            Debug.Log("   " + c.cardName);
+        }
         while (hand.Count < 5)
         {
 
@@ -138,6 +143,7 @@ public class Player : MonoBehaviour
     public void ApplyEventChoice(EventChoice choice)
     {
         Debug.Log("Calculating Choice Values");
+        eventContainer.karma += choice.karmaValue;
 
         for (int m = 0; m < choice.choiceResolve.Count; m++)
         {

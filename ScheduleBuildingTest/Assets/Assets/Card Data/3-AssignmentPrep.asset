@@ -19,7 +19,9 @@ MonoBehaviour:
   cardName: Assignment Prep
   shapeImage: {fileID: 21300000, guid: bc71e043cfa786541970eda5877afee0, type: 3}
   cardColor: {r: 0, g: 0.9700117, b: 1, a: 1}
-  cardDescription: Independent Study
+  cardDescription: Will increase grade by 3 but decrease motivation by 3 when entered
+    in the schedule. Will add an anxiety card to the discard pile if unplayed.\nIndependent
+    Study
   placedResolve:
   - ChangeMotivation
   - ChangeGrades

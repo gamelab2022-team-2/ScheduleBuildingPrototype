@@ -19,7 +19,9 @@ MonoBehaviour:
   cardName: Cram Sesh
   shapeImage: {fileID: 0}
   cardColor: {r: 0.4113164, g: 1, b: 0, a: 0.99215686}
-  cardDescription: 
+  cardDescription: Will increase grade by 6 but decrease motivation by 10 when entered
+    in the schedule. Will add an anxiety card to the discard pile if unplayed.\nLeaving
+    things to the last minute is efficient, but demotivational.
   placedResolve:
   - ChangeMotivation
   - ChangeGrades
