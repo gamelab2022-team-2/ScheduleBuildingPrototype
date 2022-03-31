@@ -2032,6 +2032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1944111506}
   - component: {fileID: 1944111505}
+  - component: {fileID: 1944111507}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2051,6 +2052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d768c0b66e18c24590edc662e8fde3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  motivationModifier: 0
+  gradeModifier: 0
   gridObjects: []
   eventContainer: {fileID: 810869484}
   motivation: {fileID: 11400000, guid: 7eea4d068aeea3f4fa7a3df9924855b6, type: 2}
@@ -2072,6 +2075,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1944111507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944111504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac0863abbb50b647b2c57369d90d78a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 4f20b3156b8539d478ce78d2fe4c2589, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1944111505}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: ResetModifiers
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1950453497 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6488050621010553494, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}

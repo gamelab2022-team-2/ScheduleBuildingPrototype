@@ -16,5 +16,5 @@ MonoBehaviour:
   title: Go into medbay
   description: 
   choiceResolve:
-  - BlockColumn
-  choiceParams: 01000000
+  - BlockInColumn
+  choiceParams: 04000000

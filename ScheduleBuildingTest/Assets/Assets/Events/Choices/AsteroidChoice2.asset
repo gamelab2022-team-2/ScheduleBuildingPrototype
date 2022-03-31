@@ -17,7 +17,7 @@ MonoBehaviour:
   description: No time to loose, sleep is for the dead!
   choiceResolve:
   - ChangeMotivation
-  - ChangeGrades
+  - SetGradeMotifier
   - UnlockEvent
   - UnlockEvent
-  choiceParams: fafffffffdffffff0500000006000000
+  choiceParams: faffffffffffffff0500000006000000

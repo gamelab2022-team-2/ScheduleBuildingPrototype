@@ -17,5 +17,5 @@ MonoBehaviour:
   description: 
   choiceResolve:
   - ChangeMotivation
-  - Block
-  choiceParams: 02000000
+  - BlockInColumn
+  choiceParams: 0200000002000000

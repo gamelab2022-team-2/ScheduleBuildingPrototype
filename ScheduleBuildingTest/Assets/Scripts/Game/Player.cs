@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
     public CardSet discardPile = new CardSet();
     public CardSet hand = new CardSet();
     public CardSet allCards = new CardSet();
+
+    // modifier variables (from events)
+    public int motivationModifier = 0;
+    public int gradeModifier = 0;
     
 
     public List<GridObject> gridObjects;
@@ -156,7 +160,7 @@ public class Player : MonoBehaviour
    public void ChangeMotivation(int i)
     {
         Debug.Log("IN CHANGE MOTIVATION WITH PARAM: "+ i);
-        motivation.runtimeValue += i;
+        motivation.runtimeValue += i + motivationModifier;
         Debug.Log("MOTIVATION NOW IS "+motivation.runtimeValue);
     }
 
@@ -169,7 +173,7 @@ public class Player : MonoBehaviour
 
     public void ChangeGrades(int i)
     {
-        grade.runtimeValue += i;
+        grade.runtimeValue += i + gradeModifier;
     }
 
     public void AddCard(int i)
@@ -231,12 +235,39 @@ public class Player : MonoBehaviour
 
     public void BlockRow(int i)
     {
+        Debug.Log("block row " + i);
         schedule.BlockRow(i);
     }
 
     public void BlockColumn(int i)
     {
         schedule.BlockColumn(i);
+    }
+
+    public void BlockInRow(int i)
+    {
+        schedule.BlockInRow(i);
+    }
+
+    public void BlockInColumn(int i)
+    {
+        schedule.BlockInColumn(i);
+    }
+
+    public void SetMotivationModifier(int i)
+    {
+        motivationModifier = i;
+    }
+
+    public void SetGradeMotifier(int i)
+    {
+        gradeModifier = i;
+    }
+
+    public void ResetModifiers()
+    {
+        gradeModifier = 0;
+        motivationModifier = 0;
     }
 
     #region Discard Methods

@@ -16,6 +16,6 @@ MonoBehaviour:
   title: Drink Impure water
   description: 
   choiceResolve:
-  - ChangeGrades
+  - SetGradeMotifier
   - UnlockEvent
-  choiceParams: fdffffff08000000
+  choiceParams: ffffffff08000000

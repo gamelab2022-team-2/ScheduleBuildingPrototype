@@ -16,7 +16,7 @@ MonoBehaviour:
   title: Eat the chocolate
   description: 
   choiceResolve:
-  - ChangeGrades
+  - SetGradeMotifier
   - RemoveCard
   - RemoveCard
-  choiceParams: fbffffff0000000000000000
+  choiceParams: ffffffff0000000000000000
