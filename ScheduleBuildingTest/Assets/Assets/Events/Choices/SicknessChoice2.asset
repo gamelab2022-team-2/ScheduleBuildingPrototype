@@ -16,5 +16,5 @@ MonoBehaviour:
   title: Power through
   description: Don't rest, you aren't feeling THAT bad
   choiceResolve:
-  - ChangeGrades
-  choiceParams: fbffffff
+  - SetGradeModifier
+  choiceParams: feffffff

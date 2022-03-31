@@ -16,7 +16,7 @@ MonoBehaviour:
   title: Take Rock
   description: 
   choiceResolve:
-  - ChangeGrades
-  - BlockSpot
+  - SetGradeModifier
+  - BlockInColumn
   - UnlockEvent
-  choiceParams: 0a0000000200000007000000
+  choiceParams: 020000000200000007000000

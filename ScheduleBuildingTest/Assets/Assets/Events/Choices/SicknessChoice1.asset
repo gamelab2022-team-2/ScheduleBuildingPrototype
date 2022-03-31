@@ -16,5 +16,6 @@ MonoBehaviour:
   title: Rest
   description: Spend 2 days in bed
   choiceResolve:
-  - BlockSpot
-  choiceParams: 04000000
+  - BlockColumn
+  - BlockColumn
+  choiceParams: 0100000002000000
