@@ -42,7 +42,7 @@ public class EventContainer : MonoBehaviour
 
     public Event GetRandomEvent()
     {
-        eventSelect = availableEvents[Random.Range(0, availableEvents.Count)];
+        eventSelect = AIGetNextEvent();
         availableEvents.Remove(eventSelect);
         usedEvents.Add(eventSelect);
 
