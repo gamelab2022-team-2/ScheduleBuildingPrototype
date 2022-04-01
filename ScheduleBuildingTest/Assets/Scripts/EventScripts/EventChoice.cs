@@ -41,6 +41,8 @@ public class EventChoice : ScriptableObject
 
     public string title;
 
+    public int karmaValue;
+
     [TextArea]
     public string description;
 

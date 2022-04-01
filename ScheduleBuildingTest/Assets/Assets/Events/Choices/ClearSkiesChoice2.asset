@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventChoiceId: 0
   title: Enjoy the View
+  karmaValue: 0
   description: 
   choiceResolve:
   - ChangeMotivation
-  - BlockInColumn
-  choiceParams: 0200000002000000
+  choiceParams: 02000000

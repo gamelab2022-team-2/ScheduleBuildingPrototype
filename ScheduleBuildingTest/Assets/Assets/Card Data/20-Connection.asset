@@ -18,8 +18,9 @@ MonoBehaviour:
   type: 2
   cardName: Connection
   shapeImage: {fileID: 0}
-  cardDescription: Removes an anxiety card from the discard (if possible), then burns
-    away
+  cardColor: {r: 0, g: 0, b: 0, a: 0}
+  cardDescription: Removes an anxiety card from the discard (if possible), then this
+    card is destroyed.\nRemember, you're not alone.
   placedResolve: []
   placedResolveParams: 
   unplacedResolve: []
@@ -28,3 +29,7 @@ MonoBehaviour:
   - RemoveCard
   onDrawParams: 00000000
   burnAfterUse: 1
+  displayMotiv: 0
+  displayGrades: 0
+  displayAnx: 0
+  displayMotivInHand: 0

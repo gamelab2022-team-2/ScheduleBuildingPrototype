@@ -19,7 +19,9 @@ MonoBehaviour:
   cardName: Online Video
   shapeImage: {fileID: 21300000, guid: 7c28c0f33907b074ab45d3be0fd1aecb, type: 3}
   cardColor: {r: 0, g: 0, b: 0, a: 0}
-  cardDescription: 
+  cardDescription: Will increase grade by 10 . Will add 2 anxiety cards to the discard
+    pile if unplayed.\nAdditional educational videos. Efficient and motivational,
+    but time consuming
   placedResolve:
   - ChangeGrades
   placedResolveParams: 0a000000

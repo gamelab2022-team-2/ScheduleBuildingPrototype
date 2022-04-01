@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: 7
   title: Radioactive Poisoning
+  eventKarma: 25
+  eventPriority: 40
   description: 
   art: {fileID: 0}
   choice1: {fileID: 11400000, guid: 9408814d840155a42abda285f2ace5bb, type: 2}

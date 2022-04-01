@@ -7,8 +7,10 @@ public class EventContainer : MonoBehaviour
     public List<Event> availableEvents;
     public List<Event> eventWithPrecondition;
     public List<Event> usedEvents;
-    
-    
+
+    public int karma = 50;
+
+    public Player _player;
 
     public EventDisplay eventDisplay;
 
@@ -21,6 +23,7 @@ public class EventContainer : MonoBehaviour
     public void Start()
     {
         CreateAllEvents();
+        _player = FindObjectOfType<Player>();
     }
 
 
@@ -35,7 +38,6 @@ public class EventContainer : MonoBehaviour
         {
             eventWithPrecondition.Add(e);
         }
-
     }
 
     public Event GetRandomEvent()
@@ -77,12 +79,10 @@ public class EventContainer : MonoBehaviour
 
     public Event FindEventByIdInAvail(int id)
     {
-        bool found = false;
         for (int j = 0; j < availableEvents.Count; j++)
         {
             if (availableEvents[j].eventID == id)
             {
-                found = true;
                 Event eventSelect = availableEvents[j];
                 availableEvents.Remove(eventSelect);
                 usedEvents.Add(eventSelect);
@@ -92,4 +92,46 @@ public class EventContainer : MonoBehaviour
         }
         return null;
     }
+    
+    public void UpdateKarma()
+    {
+        int k = karma;
+        int t = Game.GameManager.Instance.turn % 10;
+        k -= (_player.motivation.runtimeValue - 25 + _player.motivation.runtimeValue - 4*t);
+        k += 5 * (_player.anxiety.runtimeValue - 3);
+        karma = k;
+
+    }
+    public Event AIGetNextEvent()
+    {
+        Event potentialEvent1 = availableEvents[Random.Range(0, availableEvents.Count)];
+        if (availableEvents.Count < 2) return potentialEvent1;
+        int event1value = Mathf.Abs(potentialEvent1.eventKarma - karma) - potentialEvent1.eventPriority;
+       
+        Event potentialEvent2 = availableEvents[Random.Range(0, availableEvents.Count)];
+        bool eventFound = false;
+        while (!eventFound)
+        {
+            potentialEvent2 = availableEvents[Random.Range(0, availableEvents.Count)];
+            if (potentialEvent2.eventID != potentialEvent1.eventID) eventFound = true;
+        }
+        int event2value = Mathf.Abs(potentialEvent2.eventKarma - karma) - potentialEvent2.eventPriority;
+        if (availableEvents.Count < 3)
+        {
+            if (event1value < event2value) return potentialEvent1;
+            else return potentialEvent2;
+        }
+        eventFound = false;
+        Event potentialEvent3 = availableEvents[Random.Range(0, availableEvents.Count)];
+        while (!eventFound)
+        {
+            potentialEvent3 = availableEvents[Random.Range(0, availableEvents.Count)];
+            if (potentialEvent3.eventID != potentialEvent1.eventID && potentialEvent3.eventID != potentialEvent2.eventID) eventFound = true;
+        }
+        int event3value = Mathf.Abs(potentialEvent3.eventKarma - karma) - potentialEvent3.eventPriority;
+        if (event1value < event2value && event2value < event3value) return potentialEvent1;
+        else if (event2value < event3value) return potentialEvent2;
+        else return potentialEvent3;
+    }
+
 }
