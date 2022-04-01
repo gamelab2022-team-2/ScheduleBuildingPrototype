@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: WaterChoice2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Drink Less
-  description: 
+  title: Drink less [Motivation -3]
+  karmaValue: 20
+  description: Drink less [Motivation -3]
   choiceResolve:
   - ChangeMotivation
   choiceParams: fdffffff

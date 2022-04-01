@@ -16,8 +16,10 @@ MonoBehaviour:
   title: Water Rations
   eventKarma: 40
   eventPriority: 0
-  description: 
-  art: {fileID: 0}
+  description: "Your water synthesizer\u2019s on the fritz! Major yikes! Please stick
+    to your current tank for the next week until your pod\u2019s repair system has
+    it fixed."
+  art: {fileID: 21300000, guid: 08199b8357e3cad4295f8c0e55426d69, type: 3}
   choice1: {fileID: 11400000, guid: d4a735ad0db84064baa4b2bfe9c7ae13, type: 2}
   choice2: {fileID: 11400000, guid: c4109b6643d4caf44839e0e86caebb0c, type: 2}
   hasPrerequisite: 0

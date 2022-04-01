@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: ClearSkiesChoice1
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Fall asleep looking at the stars
+  title: Sleep under the lights [Remove an Anxiety card from your discard]
+  karmaValue: -20
   description: 
   choiceResolve:
   - RemoveCard

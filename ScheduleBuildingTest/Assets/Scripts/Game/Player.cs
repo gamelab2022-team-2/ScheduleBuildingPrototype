@@ -265,7 +265,7 @@ public class Player : MonoBehaviour
         motivationModifier = i;
     }
 
-    public void SetGradeMotifier(int i)
+    public void SetGradeModifier(int i)
     {
         gradeModifier = i;
     }

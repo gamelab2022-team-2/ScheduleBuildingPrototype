@@ -933,6 +933,8 @@ MonoBehaviour:
   availableEvents: []
   eventWithPrecondition: []
   usedEvents: []
+  karma: 50
+  _player: {fileID: 0}
   eventDisplay: {fileID: 669109009}
   eventSelect: {fileID: 0}
   eventManager: {fileID: 810869485}
@@ -1677,7 +1679,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2018,7 +2020,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -2337,6 +2339,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1.4003496
       objectReference: {fileID: 0}
+    - target: {fileID: 1520272084620021026, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520272084620021026, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 1617855075667392855, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -2409,6 +2419,10 @@ PrefabInstance:
       propertyPath: description
       value: 
       objectReference: {fileID: 1528910645}
+    - target: {fileID: 2177997251891020976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: loadableImage
+      value: 
+      objectReference: {fileID: 2177997252538929060}
     - target: {fileID: 2177997251891020976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: eventContainer
       value: 
@@ -3649,6 +3663,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5093355789934378316, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5093355789934378316, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
     - target: {fileID: 5160491222942367487, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4364,6 +4386,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2177997252538929060 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3415203497653144607, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+  m_PrefabInstance: {fileID: 2177997252538929057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7156012716525650943 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9040570879644044382, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}

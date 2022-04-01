@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Sickness
   m_EditorClassIdentifier: 
   eventID: 8
-  title: Sickness
+  title: Food Poisoning
   eventKarma: 10
   eventPriority: 20
-  description: You arent feeling well today
-  art: {fileID: 0}
+  description: "Looking good out there, settler. NOT! \nYou are sick, and not in
+    a good way! Take care of yourself. We need you to regain your health in order
+    to be able to complete the mandatory certification program."
+  art: {fileID: 21300000, guid: 3525f542bcec15141acfa9215f8267c7, type: 3}
   choice1: {fileID: 11400000, guid: 361f99606904ac8498d3365a7b6511b6, type: 2}
-  choice2: {fileID: 11400000, guid: 62a3da27ed40ef8418f3fd07942538ab, type: 2}
+  choice2: {fileID: 11400000, guid: 708839138e58881429e666606b8c551f, type: 2}
   hasPrerequisite: 1
   eventUnlock: {fileID: 0}

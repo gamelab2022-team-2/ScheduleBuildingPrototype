@@ -20,9 +20,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d0f938b8a62349a4da92bba5c527b979, type: 2}
   - {fileID: 11400000, guid: 13e583872a201d447a9e2fb5ffe56e37, type: 2}
   - {fileID: 11400000, guid: 1c508145c9b8e6a4d81097b145938324, type: 2}
+  - {fileID: 11400000, guid: 467185dc43119f14d97ace40b0ce5deb, type: 2}
+  - {fileID: 11400000, guid: 02a80a2314a136845ad1cef0cd60a431, type: 2}
   usedEvents: []
   eventsWithPrecondition:
   - {fileID: 11400000, guid: 8f675653ad22f5040a65a8858a8d830f, type: 2}
   - {fileID: 11400000, guid: 8f675653ad22f5040a65a8858a8d830f, type: 2}
   - {fileID: 11400000, guid: ec197ad86c874354d86ce43caaf41ce8, type: 2}
   - {fileID: 11400000, guid: b2411fd303d2f04458bed5fa1fff8f7d, type: 2}
+  - {fileID: 11400000, guid: bb5f0c7af6a8f1046b0f554acae246ec, type: 2}
