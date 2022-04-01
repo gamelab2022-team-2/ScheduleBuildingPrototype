@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: CoolRockChoice1
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Take Rock
-  description: 
+  title: Take in the rock [Block a slot in column 2, Study cards get +2 grades this
+    week]
+  karmaValue: -20
+  description: Take in the rock [Block a slot in column 2, Study cards get +2 grades
+    this week]
   choiceResolve:
   - SetGradeModifier
   - BlockInColumn

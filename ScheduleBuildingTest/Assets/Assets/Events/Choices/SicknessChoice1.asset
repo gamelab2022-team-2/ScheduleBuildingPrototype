@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: SicknessChoice1
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Rest
-  description: Spend 2 days in bed
+  title: Spend 2 days in bed [Block the first 2 days of the week]
+  karmaValue: 70
+  description: Spend 2 days in bed [Block the first 2 days of the week]
   choiceResolve:
   - BlockColumn
   - BlockColumn

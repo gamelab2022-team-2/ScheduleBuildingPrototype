@@ -16,8 +16,10 @@ MonoBehaviour:
   title: Space Chocolate
   eventKarma: 55
   eventPriority: 0
-  description: 
-  art: {fileID: 0}
+  description: We've reviewed your performance as a member of the company, settler,
+    and you've been found to meet expectations! Awesome! As a reward, we offer you
+    this most excellent piece of chocolate. Score!
+  art: {fileID: 21300000, guid: 08199b8357e3cad4295f8c0e55426d69, type: 3}
   choice1: {fileID: 11400000, guid: 1e172b82fe5de0d4b8570a6ebc51df38, type: 2}
   choice2: {fileID: 11400000, guid: 708839138e58881429e666606b8c551f, type: 2}
   hasPrerequisite: 0

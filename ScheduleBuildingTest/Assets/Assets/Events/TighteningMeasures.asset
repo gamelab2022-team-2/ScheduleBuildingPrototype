@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55fefe69578aadf48b3d336566ae7c40, type: 3}
+  m_Name: TighteningMeasures
+  m_EditorClassIdentifier: 
+  eventID: 12
+  title: Halting Planetfall
+  eventKarma: 40
+  eventPriority: 40
+  description: 'Yikes, settler.
+
+    Looks like we were a little hasty in letting
+    settlers down to the colony. We need to halt any further planetfall until we
+    resolve this issue. Please continue to take any time in orbit to complete your
+    certification.'
+  art: {fileID: 21300000, guid: e6749d4c66aeb8c4a885980184653362, type: 3}
+  choice1: {fileID: 11400000, guid: be9e26d674bae6c40989825951d12468, type: 2}
+  choice2: {fileID: 11400000, guid: c71d98fdfad06164285118017791dcf4, type: 2}
+  hasPrerequisite: 1
+  eventUnlock: {fileID: 0}

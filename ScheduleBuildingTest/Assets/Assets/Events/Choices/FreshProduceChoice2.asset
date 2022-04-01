@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: FreshProduceChoice2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Dont cook it
-  description: Eat it raw,no time for cooking things, there is studying to be done!
+  title: Eat it raw [Motivation +25]
+  karmaValue: -45
+  description: Eat it now [Motivation +25]
   choiceResolve:
-  - SetGradeMotifier
+  - ChangeMotivation
   - UnlockEvent
-  choiceParams: 0100000008000000
+  choiceParams: 1900000008000000

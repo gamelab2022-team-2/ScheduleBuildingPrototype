@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Asteroids
   m_EditorClassIdentifier: 
   eventID: 1
-  title: Asteroid belt
+  title: Meter shower
   eventKarma: 20
   eventPriority: 0
-  description: Your pod passed through an asteroid belt you couldn't sleep all night
-  art: {fileID: 0}
+  description: "WOAH settler! Rise and shine! We\u2019re about to hit some gnarly
+    turbulence! Hold on tight, because there's a couple meteors coming by your pod.
+    Don't have a cow, man! You'll have plenty of time to make up for lost sleep after
+    you complete your certification."
+  art: {fileID: 21300000, guid: 8c28740c04b91164d9fbb39ecc635f12, type: 3}
   choice1: {fileID: 11400000, guid: 8aeff5ec458285444bfeb47e72f9119c, type: 2}
   choice2: {fileID: 11400000, guid: 9f88d84d505cc94449855e880ac786db, type: 2}
   hasPrerequisite: 0

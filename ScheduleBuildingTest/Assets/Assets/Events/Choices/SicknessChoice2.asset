@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: SicknessChoice2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Power through
-  description: Don't rest, you aren't feeling THAT bad
+  title: Work through it [Motivation -10, Studies Cards worth -2 Grades this week]
+  karmaValue: 40
+  description: Work through it [Motivation -10, Studies Cards worth -2 Grades this
+    week]
   choiceResolve:
   - SetGradeModifier
-  choiceParams: feffffff
+  - ChangeMotivation
+  choiceParams: fefffffff6ffffff

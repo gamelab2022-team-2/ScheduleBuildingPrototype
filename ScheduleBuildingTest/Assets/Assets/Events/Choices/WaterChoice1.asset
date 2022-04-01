@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: WaterChoice1
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Drink Impure water
-  description: 
+  title: Drink unfiltered water [Grades cards get -1 grade this week]
+  karmaValue: 15
+  description: Drink unfiltered water [Grades cards get -1 grade this week]
   choiceResolve:
-  - SetGradeMotifier
+  - SetGradeModifier
   - UnlockEvent
   choiceParams: ffffffff08000000

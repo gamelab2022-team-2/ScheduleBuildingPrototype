@@ -14,8 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventID: 9
   title: Return to Earth delayed
-  description: adds 2 anxiety to your deck
-  art: {fileID: 0}
+  eventKarma: 0
+  eventPriority: 0
+  description: "Slight bummer, dude!\nTerraforming isn\u2019t quite as close as I
+    originally told you. That\u2019s totally my bad! No worries though, we\u2019ll
+    get you down to your permanent digs as soon as they\u2019re ready for you! Please
+    continue to follow the mandatory certification program in the meantime."
+  art: {fileID: 21300000, guid: e6749d4c66aeb8c4a885980184653362, type: 3}
   choice1: {fileID: 11400000, guid: 074c6a4c5f3551b44b313bf9c8069b64, type: 2}
   choice2: {fileID: 11400000, guid: ebf2f05a14bf32f4f91370b0ce027ac6, type: 2}
   hasPrerequisite: 0

@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: RadioactivePoison
   m_EditorClassIdentifier: 
   eventID: 7
-  title: Radioactive Poisoning
+  title: Radiation Poisoning
   eventKarma: 25
   eventPriority: 40
-  description: 
-  art: {fileID: 0}
+  description: 'How''re your isotopes feeling settler?
+
+    You have a glow about
+    you today, and not a good one... Please don''t scrub out on us before completing
+    your certification process.'
+  art: {fileID: 21300000, guid: 3525f542bcec15141acfa9215f8267c7, type: 3}
   choice1: {fileID: 11400000, guid: 9408814d840155a42abda285f2ace5bb, type: 2}
   choice2: {fileID: 11400000, guid: 35e288f263ab4a74e9efbd3694435835, type: 2}
   hasPrerequisite: 1

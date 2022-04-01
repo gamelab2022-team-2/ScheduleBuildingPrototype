@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: OxySupplyChoice2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Ignore
-  description: 
+  title: Ignore low oxygen [Studies Cards get -1 Grades this week]
+  karmaValue: 35
+  description: Ignore low oxygen [Studies Cards get -1 Grades this week]
   choiceResolve:
   - SetGradeModifier
   choiceParams: ffffffff

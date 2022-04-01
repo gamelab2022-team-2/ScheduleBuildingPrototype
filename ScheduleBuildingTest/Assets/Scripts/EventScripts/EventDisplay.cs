@@ -12,12 +12,14 @@ public class EventDisplay : MonoBehaviour
     public Event selectedEvent;
     public TextMeshProUGUI title;
     public TextMeshProUGUI description;
-    public Image artImage;
+    public Sprite artImage;
 
     public EventContainer eventContainer;
 
     public ChoiceDisplay choice1;
     public ChoiceDisplay choice2;
+
+    public GameObject loadableImage;
 
     public void SelectEvent()
     {
@@ -42,6 +44,7 @@ public class EventDisplay : MonoBehaviour
         title.text = e.title;
         description.text = e.description;
         artImage = e.art;
+        loadableImage.GetComponentInChildren<Image>().sprite = artImage;
         choice1.SetUI(e.choice1);
         choice2.SetUI(e.choice2);
 
