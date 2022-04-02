@@ -15,7 +15,7 @@ namespace Game.StateMachine
 
         public GameState EventOrDraw()
         {
-            if (GameManager.Instance.turn % 2 == 0)
+            if (GameManager.Instance.turn.runtimeValue % 2 == 0)
             {
                 Debug.Log(GameManager.Instance.turn);
                 return stateMachine.eventPhase;

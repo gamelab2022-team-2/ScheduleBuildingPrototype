@@ -42,9 +42,15 @@ public class EventContainer : MonoBehaviour
 
     public Event GetRandomEvent()
     {
+
         eventSelect = AIGetNextEvent();
         availableEvents.Remove(eventSelect);
         usedEvents.Add(eventSelect);
+
+        if (Game.GameManager.Instance.turn.runtimeValue == 10)
+        {
+            eventSelect = FindEventByIdInPrecon(13);
+        }
 
         eventManager.selectedEvent = eventSelect;
 
@@ -96,7 +102,7 @@ public class EventContainer : MonoBehaviour
     public void UpdateKarma()
     {
         int k = karma;
-        int t = Game.GameManager.Instance.turn % 10;
+        int t = Game.GameManager.Instance.turn.runtimeValue % 10;
         k -= (_player.motivation.runtimeValue - 25 + _player.motivation.runtimeValue - 4*t);
         k += 5 * (_player.anxiety.runtimeValue - 3);
         karma = k;

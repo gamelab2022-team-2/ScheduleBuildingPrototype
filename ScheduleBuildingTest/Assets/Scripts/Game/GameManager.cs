@@ -1,3 +1,4 @@
+using ScriptableObjects;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -41,12 +42,11 @@ namespace Game
 
         public GameObject handGO;
 
-        public int turn;
+        public IntegerVariable turn;
 
         void Start()
         {
             if (cardSpawner == null) cardSpawner = GetComponent<CardSpawner>();
-            turn = 0;
             GenerateCardSets();
         }
 

@@ -871,7 +871,7 @@ MonoBehaviour:
   gridObjectPrefab: {fileID: 5226957958578483780, guid: 43231032393513b4ca4f10c93d1d945b, type: 3}
   cardSpawner: {fileID: 810869486}
   handGO: {fileID: 36325970}
-  turn: 0
+  turn: {fileID: 11400000, guid: 822e5668a79d6dd42815af2bc96a001b, type: 2}
 --- !u!4 &810869482
 Transform:
   m_ObjectHideFlags: 0
@@ -3478,6 +3478,30 @@ PrefabInstance:
     - target: {fileID: 2968598269552266471, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -12.123478
+      objectReference: {fileID: 0}
+    - target: {fileID: 3396044054795857801, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3396044054795857801, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3396044054795857801, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3396044054795857801, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3396044054795857801, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3396044054795857801, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3620067587068377576, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: m_AnchorMax.y

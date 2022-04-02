@@ -43,5 +43,11 @@ namespace Game.StateMachine
             stateMachine.OnNewCardPhaseExit.Raise();
         }
 
+        public override bool GameOverCondition()
+        {
+            if (player.Motivation <= 0) return true;
+            return GameManager.Instance.turn.runtimeValue == 10 && player.Grade < 60;
+        }
+
     }
 }

@@ -9,7 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2797867d9713b644db3f6c72a565fa78, type: 3}
-  m_Name: CurrentGrade
+  m_Script: {fileID: 11500000, guid: 6cff721d76f96434aab0c8260e8943d6, type: 3}
+  m_Name: FinalExams2
   m_EditorClassIdentifier: 
-  initialValue: 59
+  eventChoiceId: 0
+  title: Take it easy, you've got this! [No effect]
+  karmaValue: 0
+  description: Take it easy, you've got this! [No effect]
+  choiceResolve: []
+  choiceParams: 

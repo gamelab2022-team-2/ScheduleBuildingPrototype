@@ -39,7 +39,7 @@ namespace Game.StateMachine
         public override bool GameOverCondition()
         {
             if (player.Motivation <= 0) return true;
-            return GameManager.Instance.turn == 10 && player.Grade < 60;
+            return false;
         }
     }
 }
