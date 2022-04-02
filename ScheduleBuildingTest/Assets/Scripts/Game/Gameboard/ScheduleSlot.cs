@@ -5,8 +5,8 @@ using UnityEngine;
 public class ScheduleSlot : MonoBehaviour
 {
     private bool isTaken;
-    private Color baseColor = new Color(127f / 255f, 185f / 255f, 55f / 255f);
-    private Color takenColor = new Color(16f / 255f, 29f / 255f, 0f);
+    private Color baseColor = new Color(162f / 255f, 164f / 255f, 166f / 255f);
+    private Color takenColor = new Color(79f / 255f, 82f / 255f, 89f/255f);
     
     public void takeSlot()
     {
