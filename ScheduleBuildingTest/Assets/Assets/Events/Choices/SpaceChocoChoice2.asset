@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: SpaceChocoChoice2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Send your chocolate to someone else
-  description: 
+  title: Send it to a friend [Motivation +10]
+  karmaValue: 0
+  description: Send it to a friend [Motivation +10]
   choiceResolve:
   - ChangeMotivation
   choiceParams: 0a000000

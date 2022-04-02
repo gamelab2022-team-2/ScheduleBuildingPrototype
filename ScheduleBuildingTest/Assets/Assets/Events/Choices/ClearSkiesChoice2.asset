@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ClearSkiesChoice2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Enjoy the View
-  karmaValue: 0
+  title: Admire the view [+4 Motivation]
+  karmaValue: -15
   description: 
   choiceResolve:
   - ChangeMotivation
-  choiceParams: 02000000
+  choiceParams: 04000000

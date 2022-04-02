@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: FreshProduceChoice1
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Cook it
-  description: Cook the produce
+  title: Cook the veggies [+10 Motivation, Remove an Anxiety card from your discard]
+  karmaValue: -40
+  description: Cook the veggies [+10 Motivation, Remove an Anxiety card from your
+    discard]
   choiceResolve:
   - ChangeMotivation
   - RemoveCard

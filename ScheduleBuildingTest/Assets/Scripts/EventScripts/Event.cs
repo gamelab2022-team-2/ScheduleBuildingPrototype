@@ -17,7 +17,7 @@ public class Event : ScriptableObject
     [TextArea]
     public string description;
 
-    public Image art;
+    public Sprite art;
 
     public EventChoice choice1;
     public EventChoice choice2;

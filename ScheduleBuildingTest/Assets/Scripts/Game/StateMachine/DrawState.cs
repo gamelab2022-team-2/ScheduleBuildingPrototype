@@ -34,7 +34,7 @@ namespace Game.StateMachine
         {
             base.OnStateEnter();
             stateMachine.OnDrawPhaseEnter.Raise();
-            GameManager.Instance.turn += 1;
+            GameManager.Instance.turn.runtimeValue += 1;
             Draw();
         }
 

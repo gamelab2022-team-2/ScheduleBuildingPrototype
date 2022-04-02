@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: RadioActiveChoice1
   m_EditorClassIdentifier: 
   eventChoiceId: 7
-  title: Take Radiation pill
-  description: 
+  title: Take iodine pills [Add 2 Anxiety cards to your discard]
+  karmaValue: 35
+  description: Take iodine pills [Add 2 Anxiety cards to your discard]
   choiceResolve:
   - AddCard
   - AddCard

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: CoolRockChoice2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Ignore it
-  description: 
+  title: Ignore the rock [No effect]
+  karmaValue: -10
+  description: Ignore the rock [No effect]
   choiceResolve: []
   choiceParams: 

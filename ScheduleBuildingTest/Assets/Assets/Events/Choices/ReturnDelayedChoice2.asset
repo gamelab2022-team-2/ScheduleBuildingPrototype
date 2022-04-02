@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: ReturnDelayedChoice2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Stay Motivated!
+  title: Grit your teeth [Gain 2 Anxiety]
+  karmaValue: 20
   description: 
   choiceResolve:
   - AddCard

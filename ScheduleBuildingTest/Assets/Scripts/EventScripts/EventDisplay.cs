@@ -12,18 +12,20 @@ public class EventDisplay : MonoBehaviour
     public Event selectedEvent;
     public TextMeshProUGUI title;
     public TextMeshProUGUI description;
-    public Image artImage;
+    public Sprite artImage;
 
     public EventContainer eventContainer;
 
     public ChoiceDisplay choice1;
     public ChoiceDisplay choice2;
 
+    public GameObject loadableImage;
+
     public void SelectEvent()
     {
         Debug.Log("Event Display On enabled called");
 
-        if (GameManager.Instance.turn == 2)
+        if (GameManager.Instance.turn.runtimeValue == 2)
         {
             selectedEvent = eventContainer.FindEventByIdInAvail(9);
             Debug.Log("Display event selected is " + selectedEvent.eventID);
@@ -42,6 +44,7 @@ public class EventDisplay : MonoBehaviour
         title.text = e.title;
         description.text = e.description;
         artImage = e.art;
+        loadableImage.GetComponentInChildren<Image>().sprite = artImage;
         choice1.SetUI(e.choice1);
         choice2.SetUI(e.choice2);
 
