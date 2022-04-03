@@ -14,6 +14,8 @@ public class TempValueDisplay : MonoBehaviour
 
     public void ApplyHand()
     {
+        motivationValue = 0;
+        gradeValue = 0;
 
         for (int c = 0; c < player.hand.Count; c++)
         {
@@ -55,12 +57,12 @@ public class TempValueDisplay : MonoBehaviour
 
     public void ChangeMotivation(int i)
     {
-        motivationValue += i + player.motivationModifier;
+        motivationValue += player.Motivation + i + player.motivationModifier;
     }
 
     public void ChangeGrades(int i)
     {
-        gradeValue += i + player.gradeModifier;
+        gradeValue += player.Grade + i + player.gradeModifier;
     }
 
     public void UpdateDisplay()
