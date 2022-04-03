@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: 8-Caffeinated Learning
   m_EditorClassIdentifier: 
   shape: 13111
-  shapeColor: {r: 0.2735849, g: 0.2314565, b: 0.33333334, a: 0}
+  shapeColor: {r: 0.70463765, g: 0.52954787, b: 0.9433962, a: 1}
   cardId: 8
   type: 0
   cardName: Caffeinated Learning
-  shapeImage: {fileID: 0}
-  cardColor: {r: 0.27450982, g: 0.23137255, b: 0.33333334, a: 1}
+  shapeImage: {fileID: 21300000, guid: 229b5bc3710081f4dbc6ebcf94820a48, type: 3}
+  cardColor: {r: 0.6370185, g: 0.44001427, b: 0.9056604, a: 1}
   cardDescription: Will increase grade by 6 but add an anxiety card when played in
     the schedule. Will add three anxiety cards to the discard pile if unplayed.\nHigh
     stress study, not very time consuming but causes anxiety to rise
