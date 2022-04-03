@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    public RectTransform eventPanel,newCardPanel, gameOverPanel;
+    public RectTransform eventPanel,newCardPanel, gameOverPanel, introPanel, winPanel;
     public Transform schedule;
         
     public void OpenEventPanel()
@@ -33,7 +33,7 @@ public class UIController : MonoBehaviour
     public void OpenSchedule()
     {
         
-        schedule.DOMove(new Vector3(0, 0,0), 0.25f);
+        schedule.DOMove(new Vector3(0, 1,0), 0.25f);
     }
     public void CloseSchedule()
     {
@@ -49,6 +49,30 @@ public class UIController : MonoBehaviour
     public void CloseGameOver()
     {
         gameOverPanel.DOAnchorPos(new Vector2(0, -1000), 0.25f).SetDelay(0.1f);
-        gameOverPanel.gameObject.SetActive(true);
+        gameOverPanel.gameObject.SetActive(false);
+    }
+
+    public void OpenWinPanel()
+    {
+        winPanel.gameObject.SetActive(true);
+        winPanel.DOAnchorPos(new Vector2(0, 0), 0.25f).SetDelay(0.25f);
+    }
+
+    public void CloseWinPanel()
+    {
+        winPanel.DOAnchorPos(new Vector2(0, -1000), 0.25f).SetDelay(0.1f);
+        winPanel.gameObject.SetActive(false);
+    }
+
+    public void OpenIntro()
+    {
+        introPanel.gameObject.SetActive(true);
+        introPanel.DOAnchorPos(new Vector2(0, 0), 0.25f).SetDelay(0.25f);
+    }
+
+    public void CloseIntro()
+    {
+        introPanel.DOAnchorPos(new Vector2(0, -1000), 0.25f).SetDelay(0.1f);
+        introPanel.gameObject.SetActive(false);
     }
 }
