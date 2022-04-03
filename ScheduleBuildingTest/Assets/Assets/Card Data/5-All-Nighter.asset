@@ -22,6 +22,10 @@ MonoBehaviour:
   cardDescription: Will increase grade by 8 but decrease motivation by 10 when entered
     in the schedule. Will add an anxiety card to the discard pile if unplayed.\nStaying
     up all night before a test is efficient, but can be devastating to one's motivation
+  onPlayDescription: Increases grades by 8 and decreases motivation by 10.
+  unplayedDescription: Adds an Anxiety Card to the discard pile.
+  statusDescription: 
+  flavorText: Sleep is a worthy sacrifice for the efficiency of the colony.
   placedResolve:
   - ChangeMotivation
   - ChangeGrades

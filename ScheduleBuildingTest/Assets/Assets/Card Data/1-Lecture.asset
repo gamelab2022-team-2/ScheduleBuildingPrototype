@@ -22,6 +22,10 @@ MonoBehaviour:
   cardDescription: Will increase grade by 3 but decrease motivation by 4 when entered
     in the schedule. Will add 2 anxiety cards to the discard pile if unplayed. \nBasic
     education card
+  onPlayDescription: Increases grade by 3 and decreases motivation by 4.
+  unplayedDescription: Adds 2 Anxiety Cards to the discard pile.
+  statusDescription: 
+  flavorText: The cornerstone of any educational program
   placedResolve:
   - ChangeMotivation
   - ChangeGrades

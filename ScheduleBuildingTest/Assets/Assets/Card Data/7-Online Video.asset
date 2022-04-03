@@ -22,6 +22,10 @@ MonoBehaviour:
   cardDescription: Will increase grade by 10 . Will add 2 anxiety cards to the discard
     pile if unplayed.\nAdditional educational videos. Efficient and motivational,
     but time consuming
+  onPlayDescription: Increases grade by 10.
+  unplayedDescription: Adds 2 Anxiety Cards to the Discard.
+  statusDescription: 
+  flavorText: Please keep the use of non-company approved learning mediums to a minimum.
   placedResolve:
   - ChangeGrades
   placedResolveParams: 0a000000

@@ -23,6 +23,11 @@ MonoBehaviour:
     in the schedule. Will decrease motivation by 5 and add three anxiety cards to
     the discard pile if unplayed.\nStudying online with a group can make you feel
     less lonely, but missing your meeting has awful consequences
+  onPlayDescription: Increases grade by 6 and increases motivation by 2
+  unplayedDescription: Decreases motivation by 5 and adds 3 Anxiety cards to the
+    discard pile.
+  statusDescription: 
+  flavorText: A great teambuilding opportunity for you and your future neighbors.
   placedResolve:
   - ChangeMotivation
   - ChangeGrades

@@ -25,6 +25,14 @@ public class CardData : ScriptableObject
 
     [TextArea]
     public string cardDescription;
+    [TextArea]
+    public string onPlayDescription;
+    [TextArea]
+    public string unplayedDescription;
+    [TextArea]
+    public string statusDescription;
+    [TextArea]
+    public string flavorText;
 
     public List<string> placedResolve;
     public List<int> placedResolveParams;

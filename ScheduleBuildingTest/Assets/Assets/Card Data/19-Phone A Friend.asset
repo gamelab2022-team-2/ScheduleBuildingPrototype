@@ -22,6 +22,11 @@ MonoBehaviour:
   cardDescription: Adds 3 connection cards to your discard when played. Decreases
     your motivation by 6 when unplayed.\nHearing someone else's makes the time slip
     away
+  onPlayDescription: Adds 3 Connection Cards to the discard pile.
+  unplayedDescription: Decreases motivation by 6.
+  statusDescription: 
+  flavorText: Carries the distinct and unshakable suspicion that the phone was never
+    plugged in the entire time.
   placedResolve:
   - AddCard
   - AddCard

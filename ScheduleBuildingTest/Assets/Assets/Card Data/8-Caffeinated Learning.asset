@@ -22,6 +22,12 @@ MonoBehaviour:
   cardDescription: Will increase grade by 6 but add an anxiety card when played in
     the schedule. Will add three anxiety cards to the discard pile if unplayed.\nHigh
     stress study, not very time consuming but causes anxiety to rise
+  onPlayDescription: Increases grade by 6 and adds an anxiety to the discard when
+    played.
+  unplayedDescription: Adds 3 anxiety to the discard if unplayed.
+  statusDescription: Adds 3 anxiety to the discard if unplayed.
+  flavorText: Please note that overcaffeination is not covered by your employee health
+    care plan.
   placedResolve:
   - ChangeGrades
   - AddCard

@@ -22,6 +22,10 @@ MonoBehaviour:
   cardDescription: Will increase grade by 6 but decrease motivation by 10 when entered
     in the schedule. Will add an anxiety card to the discard pile if unplayed.\nLeaving
     things to the last minute is efficient, but demotivational.
+  onPlayDescription: Increases grade by 6 and decreases motivation by 10
+  unplayedDescription: Adds an Anxiety Card to the discard pile.
+  statusDescription: 
+  flavorText: It is more profitable to rush something than not do it at all.
   placedResolve:
   - ChangeMotivation
   - ChangeGrades

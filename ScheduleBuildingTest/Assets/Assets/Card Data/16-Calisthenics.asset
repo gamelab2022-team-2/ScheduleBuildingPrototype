@@ -22,6 +22,12 @@ MonoBehaviour:
   cardDescription: Will increase motivation by 1 and add a connection card to the
     discard when played. Will decrease motivation by 2 when unplayed.\nExercises
     to feel connected with the universe
+  onPlayDescription: Increases motivation by 1 and adds a connection card to the
+    discard pile.
+  unplayedDescription: Decreases motivation by 2.
+  statusDescription: 
+  flavorText: Parts of your vascular system may still be frozen from cryosleep. These
+    exercises will hopefully thaw you out.
   placedResolve:
   - ChangeMotivation
   - AddCard

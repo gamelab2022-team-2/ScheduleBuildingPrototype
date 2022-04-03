@@ -21,6 +21,10 @@ MonoBehaviour:
   cardColor: {r: 0, g: 0, b: 0, a: 0}
   cardDescription: Will add 2 connection cards to the discard when played. Will decrease
     motivation by 2 when unplayed.\nGood preparation can keep anxiety at bay
+  onPlayDescription: Adds 2 connection cards to the discard.
+  unplayedDescription: Decreases motivation by 2.
+  statusDescription: 
+  flavorText: Plan or plan not. There is no do.
   placedResolve:
   - AddCard
   - AddCard
