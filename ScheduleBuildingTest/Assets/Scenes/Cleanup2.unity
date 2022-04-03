@@ -2390,7 +2390,6 @@ GameObject:
   - component: {fileID: 369127454}
   - component: {fileID: 369127456}
   - component: {fileID: 369127455}
-  - component: {fileID: 369127458}
   - component: {fileID: 369127457}
   m_Layer: 0
   m_Name: 'Temp Value display '
@@ -2464,34 +2463,6 @@ MonoBehaviour:
       - m_Target: {fileID: 369127455}
         m_TargetAssemblyTypeName: TempValueDisplay, Assembly-CSharp
         m_MethodName: ApplyHand
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &369127458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 369127453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ac0863abbb50b647b2c57369d90d78a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: 1187082acda70464a88d57d79671c7ef, type: 2}
-  response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 369127455}
-        m_TargetAssemblyTypeName: TempValueDisplay, Assembly-CSharp
-        m_MethodName: EnterPlacePhase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
