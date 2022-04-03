@@ -20,7 +20,7 @@ MonoBehaviour:
     turbulence! Hold on tight, because there's a couple meteors coming by your pod.
     Don't have a cow, man! You'll have plenty of time to make up for lost sleep after
     you complete your certification."
-  art: {fileID: 21300000, guid: 8c28740c04b91164d9fbb39ecc635f12, type: 3}
+  art: {fileID: 21300000, guid: 233515cdeedb231469be6dd2d75625d6, type: 3}
   choice1: {fileID: 11400000, guid: 8aeff5ec458285444bfeb47e72f9119c, type: 2}
   choice2: {fileID: 11400000, guid: 9f88d84d505cc94449855e880ac786db, type: 2}
   hasPrerequisite: 0
