@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    public RectTransform eventPanel,newCardPanel, gameOverPanel, handBook;
+    public RectTransform eventPanel,newCardPanel, gameOverPanel;
     public Transform schedule;
         
     public void OpenEventPanel()
@@ -49,16 +49,6 @@ public class UIController : MonoBehaviour
     public void CloseGameOver()
     {
         gameOverPanel.DOAnchorPos(new Vector2(0, -1000), 0.25f).SetDelay(0.1f);
-        gameOverPanel.gameObject.SetActive(false);
-    }
-
-    public void OpenHandbook()
-    {
-        handBook.gameObject.SetActive(true);
-    }
-
-    public void CloseHandbook()
-    {
-        handBook.gameObject.SetActive(false);
+        gameOverPanel.gameObject.SetActive(true);
     }
 }

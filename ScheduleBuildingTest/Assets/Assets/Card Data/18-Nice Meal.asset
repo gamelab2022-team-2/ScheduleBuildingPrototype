@@ -17,7 +17,7 @@ MonoBehaviour:
   cardId: 18
   type: 1
   cardName: Nice Meal
-  shapeImage: {fileID: 21300000, guid: 229b5bc3710081f4dbc6ebcf94820a48, type: 3}
+  shapeImage: {fileID: 0}
   cardColor: {r: 0.2502427, g: 1, b: 0, a: 1}
   cardDescription: Will increase motivation by 10 and add a connection card to your
     discard, but will be destroyed when played. No effect when unplayed.\nA nice
