@@ -22,6 +22,12 @@ MonoBehaviour:
   cardDescription: Blocks a random hour in the schedule, then draws an additional
     card. \n As anxiety builds up, one's chest tightens and a feeling of inescapable
     dread rises. It becomes harder to do even the most basic tasks...
+  onPlayDescription: 
+  unplayedDescription: 
+  statusDescription: 'Blocks a random hour in the schedule, then draws an additional
+    card. '
+  flavorText: As anxiety builds up, one's chest tightens and a feeling of inescapable
+    dread rises. It becomes harder to do even the most basic tasks...
   placedResolve: []
   placedResolveParams: 
   unplacedResolve: []

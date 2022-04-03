@@ -22,6 +22,12 @@ MonoBehaviour:
   cardDescription: Will increase motivation by 10 and add a connection card to your
     discard, but will be destroyed when played. No effect when unplayed.\nA nice
     meal, shame it's gone so fast
+  onPlayDescription: Increases your motivation by 10 and adds a connection to your
+    discard. This card is destroyed after a single use.
+  unplayedDescription: No effect.
+  statusDescription: 
+  flavorText: Creativity and a sense of adventure are necessary ingredients when
+    attempting to cook with your pod's rations.
   placedResolve:
   - ChangeMotivation
   - AddCard

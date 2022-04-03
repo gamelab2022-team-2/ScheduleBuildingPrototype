@@ -21,6 +21,11 @@ MonoBehaviour:
   cardColor: {r: 0, g: 0, b: 0, a: 0}
   cardDescription: Removes an anxiety card from the discard (if possible), then this
     card is destroyed.\nRemember, you're not alone.
+  onPlayDescription: 
+  unplayedDescription: 
+  statusDescription: Removes an anxiety card from the discard if any are present,
+    then this card is destroyed as well.
+  flavorText: You probably won't be alone for too much longer.
   placedResolve: []
   placedResolveParams: 
   unplacedResolve: []

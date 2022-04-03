@@ -22,6 +22,10 @@ MonoBehaviour:
   cardDescription: Will increase grade by 3 but decrease motivation by 3 when entered
     in the schedule. Will add an anxiety card to the discard pile if unplayed.\nAdditional
     Study Time
+  onPlayDescription: Increases grade by 3 and decreases motivation by 3.
+  unplayedDescription: Adds an Anxiety Card to the discard pile.
+  statusDescription: 
+  flavorText: Assisted learning to prepare you for the new world.
   placedResolve:
   - ChangeMotivation
   - ChangeGrades

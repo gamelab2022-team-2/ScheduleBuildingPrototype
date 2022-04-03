@@ -22,6 +22,10 @@ MonoBehaviour:
   cardDescription: Will increase grade by 3 but decrease motivation by 3 when entered
     in the schedule. Will add an anxiety card to the discard pile if unplayed.\nIndependent
     Study
+  onPlayDescription: Increases motivation by 4.
+  unplayedDescription: Decreases motivation by 3.
+  statusDescription: 
+  flavorText: A clean pod is productive pod
   placedResolve:
   - ChangeMotivation
   placedResolveParams: 04000000
