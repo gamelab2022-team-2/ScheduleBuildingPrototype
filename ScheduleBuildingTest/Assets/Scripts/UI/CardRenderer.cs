@@ -11,7 +11,7 @@ public class CardRenderer : MonoBehaviour
     public TextMeshProUGUI title, inScheduleMot, inScheduleGrad, inHandMot, inHandAnx;
     public Image image;
     public Image cardImage;
-    public Sprite anxietyCard, connectionCard, normalCard;
+    public Sprite anxietyCard, connectionCard;
 
 
     public void Start()
@@ -52,7 +52,6 @@ public class CardRenderer : MonoBehaviour
                 inHandAnx.text = data.displayAnx.ToString();
                 inHandMot.text = data.displayMotivInHand.ToString();
                 cardImage.color = data.cardColor;
-                cardImage.sprite = normalCard;
                 image.color = data.cardColor;
             }
             
