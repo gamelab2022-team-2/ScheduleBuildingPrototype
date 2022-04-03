@@ -17,7 +17,7 @@ MonoBehaviour:
   cardId: 14
   type: 1
   cardName: Therapy
-  shapeImage: {fileID: 21300000, guid: e5f814040fc01ae448cc31640c3d8265, type: 3}
+  shapeImage: {fileID: 21300000, guid: c85f64360c1b67c45a51666341f28347, type: 3}
   cardColor: {r: 1, g: 0.023529412, b: 0.7921569, a: 1}
   cardDescription: Will increase motivation by 5 when played but decrease it by 10
     when unplayed.\nA session with a professional

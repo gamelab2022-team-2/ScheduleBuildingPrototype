@@ -189,7 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3668aee4a615f8a479ee8f4308402424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickable: 1
 --- !u!1001 &2773016609321755912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -603,7 +602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4404832895572645642, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_margin.y
-      value: 1.1640276
+      value: -0.11771071
       objectReference: {fileID: 0}
     - target: {fileID: 4404832895572645642, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_margin.z
@@ -647,7 +646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4454557804865302559, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_margin.y
-      value: 2.1000726
+      value: 0.5217416
       objectReference: {fileID: 0}
     - target: {fileID: 4454557804865302559, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_margin.z
@@ -827,7 +826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6228368040130542491, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_margin.y
-      value: 1.3611385
+      value: -0.6657191
       objectReference: {fileID: 0}
     - target: {fileID: 6228368040130542491, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_margin.z
@@ -993,6 +992,54 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7479398600429871028, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479398600429871028, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479398600429871028, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479398600429871028, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479398600429871028, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479398600429871028, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568378337822496601, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568378337822496601, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568378337822496601, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568378337822496601, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568378337822496601, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568378337822496601, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7639402072332367111, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1123,7 +1170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8301869762776606863, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_margin.y
-      value: 1.4666963
+      value: -0.5991259
       objectReference: {fileID: 0}
     - target: {fileID: 8301869762776606863, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_margin.z
