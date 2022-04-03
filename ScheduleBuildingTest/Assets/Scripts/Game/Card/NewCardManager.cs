@@ -10,7 +10,7 @@ public class NewCardManager : MonoBehaviour
     public Player player;
     public GameStateMachine stateMachine;
     private List<int> _threeCards;
-    public TextMeshProUGUI[] title;
+    public GameObject[] cards;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +41,8 @@ public class NewCardManager : MonoBehaviour
             Debug.Log(player.allCards.GetAtIndex(_threeCards[i]));
 
             //temporary text display TODO: use actual card art
-            title[i].text = player.allCards.GetAtIndex(_threeCards[i]).cardName;
+            //title[i].text = player.allCards.GetAtIndex(_threeCards[i]).cardName;
+            cards[i].GetComponent<CardRenderer>().UpdateCardDisplay(player.allCards.GetAtIndex(_threeCards[i]).cardData);
         }
     }
 
@@ -59,6 +60,6 @@ public class NewCardManager : MonoBehaviour
             Debug.Log("New Card State got no cards :(");
         }
 
-        player.deck.Shuffle();
+       // player.deck.Shuffle();
     }
 }

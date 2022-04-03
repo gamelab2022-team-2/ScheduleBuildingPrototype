@@ -22,6 +22,11 @@ MonoBehaviour:
   cardDescription: Will increase grades by 2 and increase motivation by 1 when played.
     Will decrease motivation by 4 when unplayed.\nA warm cup of coffee substitute
     helps you remember the joys of living.
+  onPlayDescription: Increases grades by 2 and increases motivation by 1.
+  unplayedDescription: Decreases motivation by 4.
+  statusDescription: 
+  flavorText: Help yourself to a cupful of liquid that is almost, but not quite,
+    entirely unlike coffee.
   placedResolve:
   - ChangeMotivation
   - ChangeGrades

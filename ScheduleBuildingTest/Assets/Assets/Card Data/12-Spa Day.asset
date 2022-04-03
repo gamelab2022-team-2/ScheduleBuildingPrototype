@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
   m_Name: 12-Spa Day
   m_EditorClassIdentifier: 
-  shape: 141111
+  shape: 1811111111
   shapeColor: {r: 0.023635997, g: 0.48235294, b: 0, a: 0}
   cardId: 12
   type: 1
@@ -22,6 +22,12 @@ MonoBehaviour:
   cardDescription: Will increase motivation by 5 and remove an anxiety card from
     the discard when played. Will decrease motivation by 6 when unplayed.\nTaking
     time out for relaxation is a good habit
+  onPlayDescription: Increases motivation by 5 and removes an anxiety card from the
+    discard if any are present.
+  unplayedDescription: Decreases motivation by 6.
+  statusDescription: 
+  flavorText: Please enjoy the soothing warm vapors of your pod's refuse burning
+    systems.
   placedResolve:
   - ChangeMotivation
   - RemoveCard

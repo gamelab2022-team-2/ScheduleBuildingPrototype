@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: 9-Practice
   m_EditorClassIdentifier: 
   shape: 2111
-  shapeColor: {r: 0, g: 0, b: 0, a: 0}
+  shapeColor: {r: 0.30700427, g: 0, b: 0.5283019, a: 0}
   cardId: 9
   type: 0
   cardName: Practice
   shapeImage: {fileID: 21300000, guid: c85f64360c1b67c45a51666341f28347, type: 3}
-  cardColor: {r: 0, g: 0, b: 0, a: 0}
+  cardColor: {r: 0.30980393, g: 0, b: 0.5294118, a: 1}
   cardDescription: Will increase grade by 1 but decrease motivation by 2 when entered
     in the schedule. Will add an anxiety card to the discard pile if unplayed.\n
     Easy to fit anywhere but not very efficient
+  onPlayDescription: Increases grade by 1 and decreases motivation by 2.
+  unplayedDescription: Adds an Anxiety Card to the discard pile.
+  statusDescription: 
+  flavorText: Practice makes "meets expectations".
   placedResolve:
   - ChangeMotivation
   - ChangeGrades

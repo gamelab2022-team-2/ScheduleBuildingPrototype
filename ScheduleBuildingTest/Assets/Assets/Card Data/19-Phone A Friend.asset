@@ -18,10 +18,15 @@ MonoBehaviour:
   type: 1
   cardName: Phone A Friend
   shapeImage: {fileID: 21300000, guid: 6183e0a4956dbe54ca4784f70f28ed96, type: 3}
-  cardColor: {r: 0, g: 0, b: 0, a: 0}
+  cardColor: {r: 1, g: 0.53333336, b: 0, a: 1}
   cardDescription: Adds 3 connection cards to your discard when played. Decreases
     your motivation by 6 when unplayed.\nHearing someone else's makes the time slip
     away
+  onPlayDescription: Adds 3 Connection Cards to the discard pile.
+  unplayedDescription: Decreases motivation by 6.
+  statusDescription: 
+  flavorText: Carries the distinct and unshakable suspicion that the phone was never
+    plugged in the entire time.
   placedResolve:
   - AddCard
   - AddCard

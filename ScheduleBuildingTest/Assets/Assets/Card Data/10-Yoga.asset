@@ -21,6 +21,11 @@ MonoBehaviour:
   cardColor: {r: 1, g: 0.97981787, b: 0, a: 1}
   cardDescription: Will increase motivation by 3 when entered in the schedule. Will
     decrease motivation when unplayed.\nCenters the mind, makes one feel driven
+  onPlayDescription: Increases motivation by 3.
+  unplayedDescription: Decreases motivation by 2.
+  statusDescription: 
+  flavorText: You are responsible to ensure your muscles did not atrophy during your
+    cryosleep.
   placedResolve:
   - ChangeMotivation
   placedResolveParams: 03000000

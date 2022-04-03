@@ -21,6 +21,11 @@ MonoBehaviour:
   cardColor: {r: 0.08795879, g: 0.027901389, b: 0.5377358, a: 1}
   cardDescription: WIll increase motivation by 10 when played. Will decrease motivation
     by 4 when unplayed.\nTime consuming but motivational
+  onPlayDescription: Increases motivation by 10.
+  unplayedDescription: Decreases motivation by 4.
+  statusDescription: 
+  flavorText: Yo settler I heard you like videogames so I got you a videogame inside
+    this videogame.
   placedResolve:
   - ChangeMotivation
   placedResolveParams: 0a000000
