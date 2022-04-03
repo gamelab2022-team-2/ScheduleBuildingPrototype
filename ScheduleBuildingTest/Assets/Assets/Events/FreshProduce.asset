@@ -19,7 +19,7 @@ MonoBehaviour:
   description: "Our delivery droids just finished dropping off some tubular new vegetables
     we found on the planet! We think you\u2019re totally gonna love em! Please munch
     away to get your stomach used to the nutrition of your new planet."
-  art: {fileID: 21300000, guid: 08199b8357e3cad4295f8c0e55426d69, type: 3}
+  art: {fileID: 21300000, guid: ceb76f2f41c11d54abd3e6947c43fc7a, type: 3}
   choice1: {fileID: 11400000, guid: ae73140f1a3bb4b42b098a232893914d, type: 2}
   choice2: {fileID: 11400000, guid: b7424755f6ab1be4dab3d2c0442c92b0, type: 2}
   hasPrerequisite: 0

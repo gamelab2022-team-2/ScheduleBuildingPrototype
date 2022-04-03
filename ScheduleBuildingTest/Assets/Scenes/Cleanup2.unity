@@ -1389,7 +1389,7 @@ MonoBehaviour:
   cardImage: {fileID: 1087809472}
   anxietyCard: {fileID: 21300000, guid: b4b536054d31c394694cff473b458ea9, type: 3}
   connectionCard: {fileID: 0}
-  normalCard: {fileID: 0}
+  cardImageSprite: {fileID: 0}
 --- !u!114 &183345814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2107,7 +2107,7 @@ MonoBehaviour:
   cardImage: {fileID: 613883924}
   anxietyCard: {fileID: 21300000, guid: b4b536054d31c394694cff473b458ea9, type: 3}
   connectionCard: {fileID: 0}
-  normalCard: {fileID: 0}
+  cardImageSprite: {fileID: 0}
 --- !u!114 &344893087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4417,7 +4417,7 @@ MonoBehaviour:
   cardImage: {fileID: 0}
   anxietyCard: {fileID: 0}
   connectionCard: {fileID: 0}
-  normalCard: {fileID: 0}
+  cardImageSprite: {fileID: 0}
 --- !u!1 &632637093
 GameObject:
   m_ObjectHideFlags: 0
@@ -4695,7 +4695,7 @@ MonoBehaviour:
   cardImage: {fileID: 1185711349}
   anxietyCard: {fileID: 21300000, guid: b4b536054d31c394694cff473b458ea9, type: 3}
   connectionCard: {fileID: 0}
-  normalCard: {fileID: 0}
+  cardImageSprite: {fileID: 21300000, guid: b4d77f5111cabf74492c9b1b8816af57, type: 3}
 --- !u!114 &678813105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9917,7 +9917,7 @@ PrefabInstance:
     - target: {fileID: 2439960609900866457, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f434ded49459b804bb686ec5cd88a5d4, type: 3}
+      objectReference: {fileID: 21300000, guid: b4d77f5111cabf74492c9b1b8816af57, type: 3}
     - target: {fileID: 2439960609900866457, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -10527,6 +10527,54 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7086511656437516129, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479398600429871028, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479398600429871028, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479398600429871028, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479398600429871028, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479398600429871028, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479398600429871028, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568378337822496601, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568378337822496601, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568378337822496601, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568378337822496601, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568378337822496601, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7568378337822496601, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -11566,7 +11614,6 @@ MonoBehaviour:
   eventPanel: {fileID: 669109005}
   newCardPanel: {fileID: 7156012716525650944}
   gameOverPanel: {fileID: 9071431619886440249}
-  handBook: {fileID: 279537373}
   schedule: {fileID: 811332696}
 --- !u!1 &1304094660
 GameObject:
@@ -16393,7 +16440,7 @@ MonoBehaviour:
   cardImage: {fileID: 730950498}
   anxietyCard: {fileID: 21300000, guid: b4b536054d31c394694cff473b458ea9, type: 3}
   connectionCard: {fileID: 0}
-  normalCard: {fileID: 0}
+  cardImageSprite: {fileID: 0}
 --- !u!114 &1951303725
 MonoBehaviour:
   m_ObjectHideFlags: 0
