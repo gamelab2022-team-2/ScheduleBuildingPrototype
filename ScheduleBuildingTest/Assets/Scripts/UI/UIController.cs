@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    public RectTransform eventPanel,newCardPanel, gameOverPanel, introPanel, winPanel, tempInfoPanel;
+    public RectTransform eventPanel,newCardPanel, gameOverPanel, introPanel, winPanel, tempInfoPanel, settlerHandbook;
     public Transform schedule;
         
     public void OpenEventPanel()
@@ -84,5 +84,15 @@ public class UIController : MonoBehaviour
     public void CloseTempInfo()
     {
         tempInfoPanel.gameObject.SetActive(false);
+    }
+
+    public void OpenHanbook()
+    {
+        settlerHandbook.gameObject.SetActive(true);
+    }
+
+    public void CloseHandbook()
+    {
+        settlerHandbook.gameObject.SetActive(false);
     }
 }
