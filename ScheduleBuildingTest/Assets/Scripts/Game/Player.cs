@@ -88,6 +88,7 @@ public class Player : MonoBehaviour
         DisplayCardsInHand();
     }
     
+    //TODO: Extract this functionality into a new "Card Animation Controller" class and flesh it out more
     //gets the 5 cards that should already be in the player's hand, and moves them from the offscreen "cardSleeve" to in front of the camera. also spawns the shapes on top of the cards
     public void DisplayCardsInHand()
     {
@@ -95,7 +96,11 @@ public class Player : MonoBehaviour
         {
             Card currCard = hand.GetAtIndex(i);
             //currCard.gameObject.transform.position = handTransform.GetChild(i).position + Vector3.up;
+            
+            //Animation
             currCard.transform.DOMove(handTransform.GetChild(i).position, 0.2f).SetDelay(i * 0.1f);
+            
+            //TODO: Move this gridObject generation into another class and only call it when clicking or hovering over a card in the hand
             var shape = Instantiate(gridObjectPrefab);
 
             shape.GetComponent<GridObject>().Initialize(currCard.shape,
