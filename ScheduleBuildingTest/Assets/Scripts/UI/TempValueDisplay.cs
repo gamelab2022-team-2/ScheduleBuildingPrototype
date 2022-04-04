@@ -11,12 +11,17 @@ public class TempValueDisplay : MonoBehaviour
     public int gradeValue, motivationValue;
     public Player player;
 
+    public void Awake()
+    {
+        ApplyHand();
+    }
 
     public void ApplyHand()
     {
-        motivationValue = 0;
-        gradeValue = 0;
+        motivationValue = player.Motivation;
+        gradeValue = player.Grade;
 
+        Debug.Log("Apply hand started. Motivation value = " + motivationValue.ToString());
         for (int c = 0; c < player.hand.Count; c++)
         {
             Card resolvingCard = player.hand.GetAtIndex(c);
@@ -57,12 +62,13 @@ public class TempValueDisplay : MonoBehaviour
 
     public void ChangeMotivation(int i)
     {
-        motivationValue += player.Motivation + i + player.motivationModifier;
+       
+        motivationValue += i + player.motivationModifier;
     }
 
     public void ChangeGrades(int i)
     {
-        gradeValue += player.Grade + i + player.gradeModifier;
+        gradeValue += i + player.gradeModifier;
     }
 
     public void UpdateDisplay()
