@@ -64,7 +64,8 @@ namespace Game
 
             shapeSpawner.GetComponent<ShapeSpawner>().Clear();
         }
-
+        
+        //TODO: function to reset the game
 
     }
 }

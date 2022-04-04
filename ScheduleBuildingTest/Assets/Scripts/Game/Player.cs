@@ -185,12 +185,12 @@ public class Player : MonoBehaviour
   //  return true;
   //}
  
-   public void ChangeMotivation(int i)
-    {
-        Debug.Log("IN CHANGE MOTIVATION WITH PARAM: "+ i);
-        motivation.runtimeValue += i + motivationModifier;
-        Debug.Log("MOTIVATION NOW IS "+motivation.runtimeValue);
-    }
+  public void ChangeMotivation(int i)
+  {
+      Debug.Log("IN CHANGE MOTIVATION WITH PARAM: "+ i);
+      motivation.runtimeValue += i + motivationModifier;
+      Debug.Log("MOTIVATION NOW IS "+motivation.runtimeValue);
+  }
 
     public void ChangeAnxiety(int i)
     {
