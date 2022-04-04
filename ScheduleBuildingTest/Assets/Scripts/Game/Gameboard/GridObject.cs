@@ -11,7 +11,7 @@ public class GridObject : MonoBehaviour
     private Vector3 _home;
 
     [SerializeField] public GameObject gridCubePrefab;
-    private Color mouseOverColor = Color.magenta;
+    private Color mouseOverColor = Color.yellow;
     private Color originalColor = Color.red;
     private bool dragging = false;
     private float distance;
