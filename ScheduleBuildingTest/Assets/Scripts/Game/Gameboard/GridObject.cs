@@ -19,6 +19,8 @@ public class GridObject : MonoBehaviour
     bool mouseOver;
     public bool isInGrid = false;
 
+    public GameEvent blockMoved;
+
     Schedule schedule;
 
     public bool allowedToMove = false;
@@ -114,9 +116,11 @@ public class GridObject : MonoBehaviour
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/FX/Snap");
                 isInGrid = true;
+                
             }
                 
         }
+        blockMoved.Raise();
     }
 
     void Update()

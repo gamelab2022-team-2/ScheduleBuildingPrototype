@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    public RectTransform eventPanel,newCardPanel, gameOverPanel, introPanel, winPanel;
+    public RectTransform eventPanel,newCardPanel, gameOverPanel, introPanel, winPanel, tempInfoPanel;
     public Transform schedule;
         
     public void OpenEventPanel()
@@ -33,7 +33,7 @@ public class UIController : MonoBehaviour
     public void OpenSchedule()
     {
         
-        schedule.DOMove(new Vector3(0, 1,0), 0.25f);
+        schedule.DOMove(new Vector3(0, 0,0), 0.25f);
     }
     public void CloseSchedule()
     {
@@ -74,5 +74,15 @@ public class UIController : MonoBehaviour
     {
         introPanel.DOAnchorPos(new Vector2(0, -1000), 0.25f).SetDelay(0.1f);
         introPanel.gameObject.SetActive(false);
+    }
+
+    public void OpenTempInfo()
+    {
+        tempInfoPanel.gameObject.SetActive(true);
+    }
+
+    public void CloseTempInfo()
+    {
+        tempInfoPanel.gameObject.SetActive(false);
     }
 }
