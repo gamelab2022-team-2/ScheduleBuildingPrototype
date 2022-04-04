@@ -41,18 +41,25 @@ public class Schedule : MonoBehaviour
         int rowX = -6 + (2 * i);
         for (int j = 0; j < slots.Length; j++)
         {
-            if (slots[j].transform.position.x == rowX)
+            Debug.Log("Trying slot " + j + " at x " + slots[j].transform.position.x);
+            if (Mathf.Abs(slots[j].transform.position.x - rowX) < 0.2f)
                 slots[j].takeSlot();
         }
     }
 
     public void BlockRow(int i)
     {
-        float colY = (float)(4.5 - (float)i);
+        float colY = (float)(17.5f - (float)i);
+        Debug.Log("Coly = " + colY);
         for (int j = 0; j < slots.Length; j++)
         {
-            if (slots[j].transform.position.y == colY)
+            Debug.Log("Trying slot " + j +" at y " + slots[j].transform.position.y);
+            if (Mathf.Abs(slots[j].transform.position.y - colY) < 0.2f)
+            {
+                Debug.Log("taking slot " + j);
                 slots[j].takeSlot();
+            }
+
         }
     }
 

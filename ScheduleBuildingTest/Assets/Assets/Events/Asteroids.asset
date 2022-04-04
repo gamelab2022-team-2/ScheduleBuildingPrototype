@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Asteroids
   m_EditorClassIdentifier: 
   eventID: 1
-  title: Meter shower
+  title: Meteor shower
   eventKarma: 20
   eventPriority: 0
   description: "WOAH settler! Rise and shine! We\u2019re about to hit some gnarly
