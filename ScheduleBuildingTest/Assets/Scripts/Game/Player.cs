@@ -4,6 +4,7 @@ using ScriptableObjects;
 using UnityEngine;
 using System;
 using System.Reflection;
+using DG.Tweening;
 using Game;
 
 public class Player : MonoBehaviour
@@ -12,6 +13,9 @@ public class Player : MonoBehaviour
     public CardSet discardPile = new CardSet();
     public CardSet hand = new CardSet();
     public CardSet allCards = new CardSet();
+
+    public Transform handTransform;
+    public GameObject gridObjectPrefab;
 
     // modifier variables (from events)
     public int motivationModifier = 0;
@@ -48,16 +52,6 @@ public class Player : MonoBehaviour
 
     public void DrawFromDeck()
     {
-        Debug.Log("DECK CONTAINS:");
-        foreach (Card c in deck.cards)
-        {
-            Debug.Log("   " + c.cardName);
-        }
-        Debug.Log("DISCARD CONTAINS:");
-        foreach (Card c in discardPile.cards)
-        {
-            Debug.Log("   " + c.cardName);
-        }
         while (hand.Count < 5)
         {
 
@@ -91,9 +85,32 @@ public class Player : MonoBehaviour
                 DiscardPileReturnToDeck();
             }
         }
-
-        GameManager.Instance.DisplayCardsInHand();
+        DisplayCardsInHand();
     }
+    
+    //gets the 5 cards that should already be in the player's hand, and moves them from the offscreen "cardSleeve" to in front of the camera. also spawns the shapes on top of the cards
+    public void DisplayCardsInHand()
+    {
+        for (int i = 0; i < hand.Count; i++)
+        {
+            Card currCard = hand.GetAtIndex(i);
+            //currCard.gameObject.transform.position = handTransform.GetChild(i).position + Vector3.up;
+            currCard.transform.DOMove(handTransform.GetChild(i).position, 0.2f).SetDelay(i * 0.1f);
+            var shape = Instantiate(gridObjectPrefab);
+
+            shape.GetComponent<GridObject>().Initialize(currCard.shape,
+                handTransform.GetChild(i).position + 2 * Vector3.up + Vector3.left*2 - Vector3.forward, currCard.shapeColor);
+            //shapeSpawner.GetComponent<ShapeSpawner>().SpawnShape(_player.handGO.transform.GetChild(i).position, currCard.cardData.shape, currCard.cardData.shapeColor);
+            gridObjects.Add(shape.GetComponent<GridObject>());
+        }
+
+        /*foreach (var card in hand.cards)
+        {
+            //card;
+        }*/
+    }
+    
+    
     private void DiscardPileReturnToDeck()
     {
         while (discardPile.Count > 0)
@@ -184,27 +201,32 @@ public class Player : MonoBehaviour
 
     public void AddCard(int i)
     {
-        GameObject newCardObject = Instantiate(cardObject);
+        /*GameObject newCardObject = Instantiate(cardObject);
 
-        var cardComponent = newCardObject.GetComponent<Card>();
+        var cardComponent = newCardObject.GetComponent<Card>();*/
 
         if (i == 0) ChangeAnxiety(1);
 
-        cardComponent.cardData = allCards.GetAtIndex(i).cardData;
+        /*cardComponent.cardData = allCards.GetAtIndex(i).cardData;
         cardComponent.LoadData(cardComponent.cardData);
-        cardObject.transform.position = new Vector3(-100, -100, -100);
-        discardPile.Add(cardComponent);
+        cardObject.transform.position = new Vector3(-100, -100, -100);*/
+        var cardData = allCards.GetAtIndex(i).cardData;
+        var card = GameManager.Instance.cardSpawner.SpawnCard(cardData);
+        discardPile.Add(card);
     }
 
     public void AddCardToDeck(int i)
     {
-        GameObject newCardObject = Instantiate(cardObject);
-
+        /*GameObject newCardObject = Instantiate(cardObject);
         var cardComponent = newCardObject.GetComponent<Card>();
         cardComponent.cardData = allCards.GetAtIndex(i).cardData;
         cardComponent.LoadData(cardComponent.cardData);
         cardObject.transform.position = new Vector3(-100, -100, -100);
-        deck.Add(cardComponent);
+        deck.Add(cardComponent);*/
+
+        var cardData = allCards.GetAtIndex(i).cardData;
+        var card = GameManager.Instance.cardSpawner.SpawnCard(cardData);
+        deck.Add(card);
     }
 
     public void RemoveCard(int i)

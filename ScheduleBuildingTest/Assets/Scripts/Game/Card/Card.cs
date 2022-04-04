@@ -9,11 +9,8 @@ public class Card : MonoBehaviour
 
     public string shape;
     public Color shapeColor;
-
     public int cardId;
-
     public CardType type;
-
     public string cardName;
 
 
@@ -37,17 +34,10 @@ public class Card : MonoBehaviour
             LoadData(cardData);
         }
     }
-
-    public void OnDrawGizmos()
-    {
-        Gizmos.DrawCube(transform.position, Vector3.one * 0.2f);
-    }
-
-
-
+    
     public void LoadData(CardData data)
     {
-        Debug.Log("Loading card data: " + data.cardName);
+        //Debug.Log("Loading card data: " + data.cardName);
         
         cardId = data.cardId;
         type = data.type;
@@ -67,31 +57,6 @@ public class Card : MonoBehaviour
 
         burnAfterUse = data.burnAfterUse;
     }
-
-    /*public Card(Card data)
-    {
-
-
-        this.cardData = data.cardData;
-
-        this.cardId = data.cardId;
-        this.type = data.type;
-        this.cardName = data.cardName;
-
-        this.shapeColor = data.shapeColor;
-        this.shape = data.shape;
-
-        this.placedResolve = data.placedResolve;
-        this.placedResolveParams = data.placedResolveParams;
-
-        this.unplacedResolve = data.unplacedResolve;
-        this.unplacedResolveParams = data.unplacedResolveParams;
-
-        this.onDraw = data.onDraw;
-        this.onDrawParams = data.onDrawParams;
-
-        this.burnAfterUse = data.burnAfterUse;
-
-    }*/
+    
 
 }

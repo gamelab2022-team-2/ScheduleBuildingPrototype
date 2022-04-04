@@ -5,25 +5,20 @@ using UnityEngine;
 
 public class CardSpawner : MonoBehaviour
 {
-    private GameObject _cardSleeve;
+    public GameObject cardSleeve;
     public GameObject cardPrefab;
 
 
-    public GameObject CardSleeve => _cardSleeve;
+    public GameObject CardSleeve => cardSleeve;
 
-    public void Awake()
-    {
-        _cardSleeve = new GameObject("Card Sleeve");
-        _cardSleeve.transform.position = new Vector3(-100, -100, -100);
-    }
 
     public Card SpawnCard(CardData c)
     {
-        GameObject card = Instantiate(cardPrefab, _cardSleeve.transform);
-        card.name = c.cardName + " Card";
+        GameObject card = Instantiate(cardPrefab, cardSleeve.transform);
         var cardComponent = card.GetComponent<Card>();
         cardComponent.cardData = c;
         cardComponent.LoadData(c);
+        card.name = cardComponent.cardName + " Card";
         return cardComponent;
     }
 }

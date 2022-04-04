@@ -30,7 +30,7 @@ public class GridObject : MonoBehaviour
         schedule = FindObjectOfType<Schedule>();
     }
 
-    public void init(string s, Vector3 home, Color color)
+    public void Initialize(string s, Vector3 home, Color color)
     {
         _home = home;
         transform.position = _home;

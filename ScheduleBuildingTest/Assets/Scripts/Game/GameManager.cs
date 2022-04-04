@@ -32,16 +32,8 @@ namespace Game
         [SerializeField] private Player _player;
 
         public List<CardData> allCardData;
-        
-        private GameObject cardSleeve;
-
         public GameObject shapeSpawner;
-
-        public GameObject gridObjectPrefab;
         public CardSpawner cardSpawner;
-
-        public GameObject handGO;
-
         public IntegerVariable turn;
 
         void Start()
@@ -60,23 +52,6 @@ namespace Game
             }
 
             _player.GetOpeningDeck();
-        }
-
-        //gets the 5 cards that should already be in the player's hand, and moves them from the offscreen "cardSleeve" to in front of the camera. also spawns the shapes on top of the cards
-        public void DisplayCardsInHand()
-        {
-            for (int i = 0; i < _player.hand.Count; i++)
-            {
-                Card currCard = _player.hand.GetAtIndex(i);
-                currCard.gameObject.transform.position = handGO.transform.GetChild(i).position + Vector3.up;
-                var shape = Instantiate(gridObjectPrefab);
-
-                shape.GetComponent<GridObject>().init(currCard.cardData.shape,
-                    handGO.transform.GetChild(i).position + 2 * Vector3.up + Vector3.left*2 - Vector3.forward, currCard.cardData.shapeColor);
-                //shapeSpawner.GetComponent<ShapeSpawner>().SpawnShape(_player.handGO.transform.GetChild(i).position, currCard.cardData.shape, currCard.cardData.shapeColor);
-                _player.gridObjects.Add(shape.GetComponent<GridObject>());
-            }
-            
         }
 
         //returns all cards to the off screen "cardSleeve" location in the discard or resolve phase

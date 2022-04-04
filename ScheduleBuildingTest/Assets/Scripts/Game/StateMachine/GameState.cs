@@ -17,7 +17,7 @@ namespace Game.StateMachine
     
         public GameState(GameStateMachine gsm, Player p)
         {
-            Debug.Log("Instantiating State: " + this);
+            //Debug.Log("Instantiating State: " + this);
             stateMachine = gsm;
             player = p;
         }

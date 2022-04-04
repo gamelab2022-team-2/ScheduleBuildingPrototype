@@ -31,7 +31,7 @@ public class ShapeSpawner : MonoBehaviour
         var shape = Instantiate(gridObjectPrefab);
         shapes.Add(shape);
         //shape.transform.parent = transform;
-        shape.GetComponent<GridObject>().init(shapeString, position, color);
+        shape.GetComponent<GridObject>().Initialize(shapeString, position, color);
     }
 
     public void Clear()
