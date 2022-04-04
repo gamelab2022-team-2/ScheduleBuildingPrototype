@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class HandController : MonoBehaviour
 {
-    public Transform[] slots;
+    public Transform[] slots = new Transform[5];
 
     public float spacing = 2f;
 
