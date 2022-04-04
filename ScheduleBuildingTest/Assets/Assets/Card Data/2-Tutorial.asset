@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: 2-Tutorial
   m_EditorClassIdentifier: 
   shape: 33101101101
-  shapeColor: {r: 0.09411764, g: 0.2399654, b: 0.8666667, a: 0}
+  shapeColor: {r: 0.28235295, g: 0.58431375, b: 0.93725497, a: 0}
   cardId: 2
   type: 0
   cardName: Tutorial
   shapeImage: {fileID: 21300000, guid: d631306dbd99c544b8ca181851654ad0, type: 3}
-  cardColor: {r: 0.012904947, g: 0.09610589, b: 0.5471698, a: 1}
+  cardColor: {r: 0.28235295, g: 0.58431375, b: 0.93725497, a: 1}
   cardDescription: Will increase grade by 3 but decrease motivation by 3 when entered
     in the schedule. Will add an anxiety card to the discard pile if unplayed.\nAdditional
     Study Time

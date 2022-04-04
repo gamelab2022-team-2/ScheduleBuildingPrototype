@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: 10-Yoga
   m_EditorClassIdentifier: 
   shape: 34111010010010
-  shapeColor: {r: 0.8163822, g: 0.8679245, b: 0.12609467, a: 0}
+  shapeColor: {r: 0.70980394, g: 0.09019608, b: 0.61960787, a: 0}
   cardId: 10
   type: 1
   cardName: Yoga
   shapeImage: {fileID: 21300000, guid: bc71e043cfa786541970eda5877afee0, type: 3}
-  cardColor: {r: 1, g: 0.97981787, b: 0, a: 1}
+  cardColor: {r: 0.70980394, g: 0.09019608, b: 0.61960787, a: 1}
   cardDescription: Will increase motivation by 3 when entered in the schedule. Will
     decrease motivation when unplayed.\nCenters the mind, makes one feel driven
   onPlayDescription: Increases motivation by 3.
