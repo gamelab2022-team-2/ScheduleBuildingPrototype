@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: 13-Video Games
   m_EditorClassIdentifier: 
   shape: 43111110001000
-  shapeColor: {r: 1, g: 0, b: 0, a: 0}
+  shapeColor: {r: 0.2627451, g: 0.3803922, b: 0.9333334, a: 0}
   cardId: 13
   type: 1
   cardName: Video Games
   shapeImage: {fileID: 21300000, guid: 1b54a7f4fe5c078429e8214ec057156a, type: 3}
-  cardColor: {r: 0.08795879, g: 0.027901389, b: 0.5377358, a: 1}
+  cardColor: {r: 0.2627451, g: 0.3803922, b: 0.9333334, a: 1}
   cardDescription: WIll increase motivation by 10 when played. Will decrease motivation
     by 4 when unplayed.\nTime consuming but motivational
   onPlayDescription: Increases motivation by 10.
