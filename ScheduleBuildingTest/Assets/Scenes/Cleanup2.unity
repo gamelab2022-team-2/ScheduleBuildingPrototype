@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2379,6 +2379,11 @@ Transform:
   m_Father: {fileID: 2177997252538929062}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &366734615 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7114871559045851505, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+  m_PrefabInstance: {fileID: 1749848373}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &369127453
 GameObject:
   m_ObjectHideFlags: 0
@@ -6116,6 +6121,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 810869483}
+        m_TargetAssemblyTypeName: Game.StateMachine.GameStateMachine, Assembly-CSharp
+        m_MethodName: NextState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &730788027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7951,9 +7968,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 093ff7b9ad0d7fe4a86adf314d06f3bb, type: 2}
   - {fileID: 11400000, guid: d8a01761a33d5244cbf4fff97a962ae7, type: 2}
   shapeSpawner: {fileID: 746132742}
-  gridObjectPrefab: {fileID: 5226957958578483780, guid: 43231032393513b4ca4f10c93d1d945b, type: 3}
   cardSpawner: {fileID: 810869486}
-  handGO: {fileID: 36325970}
   turn: {fileID: 11400000, guid: 822e5668a79d6dd42815af2bc96a001b, type: 2}
 --- !u!4 &810869482
 Transform:
@@ -8049,6 +8064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef6441f75c32df45893a50ffbb572e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardSleeve: {fileID: 1749848374}
   cardPrefab: {fileID: 2541533064208557587, guid: 6d80a66fb34684d04a487790385cf32c, type: 3}
 --- !u!114 &810869487
 MonoBehaviour:
@@ -16675,6 +16691,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739809804}
   m_CullTransparentMesh: 1
+--- !u!1001 &1749848373
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7114871558889228716, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: m_Name
+      value: Card Positions
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114871558889228717, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114871558889228717, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114871558889228717, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114871558889228717, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114871558889228717, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114871558889228717, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114871558889228717, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114871558889228717, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114871558889228717, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114871558889228717, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7114871558889228717, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+--- !u!1 &1749848374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7114871559833588460, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+  m_PrefabInstance: {fileID: 1749848373}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1758416018
 GameObject:
   m_ObjectHideFlags: 0
@@ -18466,6 +18544,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d768c0b66e18c24590edc662e8fde3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  handTransform: {fileID: 366734615}
+  gridObjectPrefab: {fileID: 5226957958578483780, guid: 43231032393513b4ca4f10c93d1d945b, type: 3}
   motivationModifier: 0
   gradeModifier: 0
   gridObjects: []
