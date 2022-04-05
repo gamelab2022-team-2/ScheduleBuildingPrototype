@@ -21,7 +21,7 @@ MonoBehaviour:
     sure we have the best of the best! To prove you're ready, you'd better have a
     grade of 60! If you don't, it's time to hit the books like a pro skater hits
     a sick ollie, settler!
-  art: {fileID: 21300000, guid: 08199b8357e3cad4295f8c0e55426d69, type: 3}
+  art: {fileID: 21300000, guid: f17a81cf7b7d04342ad3f06c68e65aa0, type: 3}
   choice1: {fileID: 11400000, guid: 9ab6eee7e2648c44ea0eb6bf2a413dc6, type: 2}
   choice2: {fileID: 11400000, guid: 6045d3313dde2d442b48394de7087f08, type: 2}
   hasPrerequisite: 1
