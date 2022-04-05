@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 33101101101
   shapeColor: {r: 0.28235295, g: 0.58431375, b: 0.93725497, a: 0}
-  cardArtIndex: 2
   cardId: 2
   type: 0
   cardName: Tutorial
@@ -37,7 +36,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  topLeftValue: 3
-  bottomLeftValue: -3
-  bottomRightValue: 0
-  topRightValue: 1
+  displayMotiv: -3
+  displayGrades: 3
+  displayAnx: 1
+  displayMotivInHand: 0

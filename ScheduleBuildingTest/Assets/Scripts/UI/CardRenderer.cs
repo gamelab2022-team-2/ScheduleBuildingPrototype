@@ -11,7 +11,7 @@ public class CardRenderer : MonoBehaviour
     public TextMeshProUGUI title, inScheduleMot, inScheduleGrad, inHandMot, inHandAnx;
     public Image image;
     public Image cardImage;
-    public Sprite[] spriteList;
+    public Sprite anxietyCard, connectionCard, cardImageSprite;
 
 
     public void Start()
@@ -34,26 +34,24 @@ public class CardRenderer : MonoBehaviour
                 inHandMot.gameObject.SetActive(false);
                 image.gameObject.SetActive(false);
 
-                cardImage.sprite = spriteList[data.cardArtIndex];
+                if(data.cardName == "Anxiety")
+                {
+                    cardImage.sprite = anxietyCard;
+                }
+                else if (data.cardName == "Connection")
+                {
+                    cardImage.sprite = connectionCard;
+                }
             }
             else
             {
                 title.text = data.cardName;
                 image.sprite = data.shapeImage;
-                if (data.topLeftValue == 0) inScheduleMot.text = " ";
-                else 
-                    inScheduleMot.text = data.topLeftValue.ToString();
-                if (data.bottomLeftValue == 0) inScheduleGrad.text = " ";
-                else 
-                    inScheduleGrad.text = data.bottomLeftValue.ToString();
-                if (data.bottomRightValue == 0) inHandAnx.text = " ";
-                else
-                    inHandAnx.text = data.bottomRightValue.ToString();
-                if (data.topRightValue == 0) inHandMot.text = " ";
-                else 
-                    inHandMot.text = data.topRightValue.ToString();
+                inScheduleMot.text = data.displayMotiv.ToString();
+                inScheduleGrad.text = data.displayGrades.ToString();
+                inHandAnx.text = data.displayAnx.ToString();
+                inHandMot.text = data.displayMotivInHand.ToString();
                 cardImage.color = data.cardColor;
-                cardImage.sprite = spriteList[data.cardArtIndex];
                 image.color = data.cardColor;
             }
             
@@ -72,26 +70,25 @@ public class CardRenderer : MonoBehaviour
                 inHandMot.gameObject.SetActive(false);
                 image.gameObject.SetActive(false);
 
-                cardImage.sprite = spriteList[data.cardArtIndex];
+                if (data.cardName == "Anxiety")
+                {
+                    cardImage.sprite = anxietyCard;
+                }
+                else if (data.cardName == "Connection")
+                {
+                    cardImage.sprite = connectionCard;
+                }
             }
             else
             {
                 title.text = data.cardName;
                 image.sprite = data.shapeImage;
-                if (data.topLeftValue == 0) inScheduleMot.text = " ";
-                else
-                    inScheduleMot.text = data.topLeftValue.ToString();
-                if (data.bottomLeftValue == 0) inScheduleGrad.text = " ";
-                else
-                    inScheduleGrad.text = data.bottomLeftValue.ToString();
-                if (data.bottomRightValue == 0) inHandAnx.text = " ";
-                else
-                    inHandAnx.text = data.bottomRightValue.ToString();
-                if (data.topRightValue == 0) inHandMot.text = " ";
-                else
-                    inHandMot.text = data.topRightValue.ToString();
+                inScheduleMot.text = data.displayMotiv.ToString();
+                inScheduleGrad.text = data.displayGrades.ToString();
+                inHandAnx.text = data.displayAnx.ToString();
+                inHandMot.text = data.displayMotivInHand.ToString();
                 cardImage.color = data.cardColor;
-                cardImage.sprite = spriteList[data.cardArtIndex];
+                cardImage.sprite = cardImageSprite;
                 image.color = data.cardColor;
             }
 

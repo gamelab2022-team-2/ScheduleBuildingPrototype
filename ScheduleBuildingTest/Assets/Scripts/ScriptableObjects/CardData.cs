@@ -14,8 +14,6 @@ public class CardData : ScriptableObject
     public string shape;
     public Color shapeColor;
 
-    public int cardArtIndex;
-
     public int cardId;
 
     public CardType type;
@@ -47,10 +45,10 @@ public class CardData : ScriptableObject
 
     public bool burnAfterUse;
 
-    public int topLeftValue;
-    public int bottomLeftValue;
-    public int bottomRightValue;
-    public int topRightValue;
+    public int displayMotiv;
+    public int displayGrades;
+    public int displayAnx;
+    public int displayMotivInHand;
 
 
 

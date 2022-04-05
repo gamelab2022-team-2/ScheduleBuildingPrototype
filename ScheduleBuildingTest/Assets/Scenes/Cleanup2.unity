@@ -1676,17 +1676,9 @@ MonoBehaviour:
   inHandAnx: {fileID: 1087809466}
   image: {fileID: 1087809471}
   cardImage: {fileID: 1087809472}
-  spriteList:
-  - {fileID: 21300000, guid: b4b536054d31c394694cff473b458ea9, type: 3}
-  - {fileID: 21300000, guid: fc92db77110ac19449e34002c9fa46c1, type: 3}
-  - {fileID: 21300000, guid: b48390b457aa4a34b95f667673cf9675, type: 3}
-  - {fileID: 21300000, guid: 5715348d1539c1048892da2e5154eb5a, type: 3}
-  - {fileID: 21300000, guid: b75c6a8cb820d2e4c843a46ac4668e6f, type: 3}
-  - {fileID: 21300000, guid: a0de16f58b977d149ad3838ab9192e7a, type: 3}
-  - {fileID: 21300000, guid: a75b208abd7c713478532726d28a8864, type: 3}
-  - {fileID: 21300000, guid: d9edf623862b3c041b446f8583f86877, type: 3}
-  - {fileID: 21300000, guid: bb171d79340df1c4b8ade2226dd54bf6, type: 3}
-  - {fileID: 21300000, guid: b4d77f5111cabf74492c9b1b8816af57, type: 3}
+  anxietyCard: {fileID: 21300000, guid: b4b536054d31c394694cff473b458ea9, type: 3}
+  connectionCard: {fileID: 0}
+  cardImageSprite: {fileID: 21300000, guid: b4d77f5111cabf74492c9b1b8816af57, type: 3}
 --- !u!114 &183345814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3016,17 +3008,9 @@ MonoBehaviour:
   inHandAnx: {fileID: 613883927}
   image: {fileID: 613883926}
   cardImage: {fileID: 613883924}
-  spriteList:
-  - {fileID: 21300000, guid: b4b536054d31c394694cff473b458ea9, type: 3}
-  - {fileID: 21300000, guid: fc92db77110ac19449e34002c9fa46c1, type: 3}
-  - {fileID: 21300000, guid: b48390b457aa4a34b95f667673cf9675, type: 3}
-  - {fileID: 21300000, guid: 5715348d1539c1048892da2e5154eb5a, type: 3}
-  - {fileID: 21300000, guid: b75c6a8cb820d2e4c843a46ac4668e6f, type: 3}
-  - {fileID: 21300000, guid: a0de16f58b977d149ad3838ab9192e7a, type: 3}
-  - {fileID: 21300000, guid: a75b208abd7c713478532726d28a8864, type: 3}
-  - {fileID: 21300000, guid: d9edf623862b3c041b446f8583f86877, type: 3}
-  - {fileID: 21300000, guid: bb171d79340df1c4b8ade2226dd54bf6, type: 3}
-  - {fileID: 21300000, guid: b4d77f5111cabf74492c9b1b8816af57, type: 3}
+  anxietyCard: {fileID: 21300000, guid: b4b536054d31c394694cff473b458ea9, type: 3}
+  connectionCard: {fileID: 0}
+  cardImageSprite: {fileID: 21300000, guid: b4d77f5111cabf74492c9b1b8816af57, type: 3}
 --- !u!114 &344893087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6652,7 +6636,9 @@ MonoBehaviour:
   inHandAnx: {fileID: 0}
   image: {fileID: 0}
   cardImage: {fileID: 0}
-  spriteList: []
+  anxietyCard: {fileID: 0}
+  connectionCard: {fileID: 0}
+  cardImageSprite: {fileID: 0}
 --- !u!1 &632637093
 GameObject:
   m_ObjectHideFlags: 0
@@ -6928,17 +6914,9 @@ MonoBehaviour:
   inHandAnx: {fileID: 1185711343}
   image: {fileID: 1185711348}
   cardImage: {fileID: 1185711349}
-  spriteList:
-  - {fileID: 21300000, guid: b4b536054d31c394694cff473b458ea9, type: 3}
-  - {fileID: 21300000, guid: fc92db77110ac19449e34002c9fa46c1, type: 3}
-  - {fileID: 21300000, guid: b48390b457aa4a34b95f667673cf9675, type: 3}
-  - {fileID: 21300000, guid: 5715348d1539c1048892da2e5154eb5a, type: 3}
-  - {fileID: 21300000, guid: b75c6a8cb820d2e4c843a46ac4668e6f, type: 3}
-  - {fileID: 21300000, guid: a0de16f58b977d149ad3838ab9192e7a, type: 3}
-  - {fileID: 21300000, guid: a75b208abd7c713478532726d28a8864, type: 3}
-  - {fileID: 21300000, guid: d9edf623862b3c041b446f8583f86877, type: 3}
-  - {fileID: 21300000, guid: bb171d79340df1c4b8ade2226dd54bf6, type: 3}
-  - {fileID: 21300000, guid: b4d77f5111cabf74492c9b1b8816af57, type: 3}
+  anxietyCard: {fileID: 21300000, guid: b4b536054d31c394694cff473b458ea9, type: 3}
+  connectionCard: {fileID: 0}
+  cardImageSprite: {fileID: 21300000, guid: b4d77f5111cabf74492c9b1b8816af57, type: 3}
 --- !u!114 &678813105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8355,7 +8333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4862104609075919047, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_PresetInfoIsWorld
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5034797999670606212, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_Pivot.x
@@ -23518,17 +23496,9 @@ MonoBehaviour:
   inHandAnx: {fileID: 730950492}
   image: {fileID: 730950497}
   cardImage: {fileID: 730950498}
-  spriteList:
-  - {fileID: 21300000, guid: b4b536054d31c394694cff473b458ea9, type: 3}
-  - {fileID: 21300000, guid: fc92db77110ac19449e34002c9fa46c1, type: 3}
-  - {fileID: 21300000, guid: b48390b457aa4a34b95f667673cf9675, type: 3}
-  - {fileID: 21300000, guid: 5715348d1539c1048892da2e5154eb5a, type: 3}
-  - {fileID: 21300000, guid: b75c6a8cb820d2e4c843a46ac4668e6f, type: 3}
-  - {fileID: 21300000, guid: a0de16f58b977d149ad3838ab9192e7a, type: 3}
-  - {fileID: 21300000, guid: a75b208abd7c713478532726d28a8864, type: 3}
-  - {fileID: 21300000, guid: d9edf623862b3c041b446f8583f86877, type: 3}
-  - {fileID: 21300000, guid: bb171d79340df1c4b8ade2226dd54bf6, type: 3}
-  - {fileID: 21300000, guid: b4d77f5111cabf74492c9b1b8816af57, type: 3}
+  anxietyCard: {fileID: 21300000, guid: b4b536054d31c394694cff473b458ea9, type: 3}
+  connectionCard: {fileID: 0}
+  cardImageSprite: {fileID: 21300000, guid: b4d77f5111cabf74492c9b1b8816af57, type: 3}
 --- !u!114 &1951303725
 MonoBehaviour:
   m_ObjectHideFlags: 0

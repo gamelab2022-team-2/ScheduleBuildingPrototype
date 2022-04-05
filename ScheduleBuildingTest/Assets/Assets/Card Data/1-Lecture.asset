@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 2411111111
   shapeColor: {r: 0.29803923, g: 0.78823537, b: 0.94117653, a: 0}
-  cardArtIndex: 2
   cardId: 1
   type: 0
   cardName: Lecture
@@ -38,7 +37,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  topLeftValue: 3
-  bottomLeftValue: -4
-  bottomRightValue: 0
-  topRightValue: 2
+  displayMotiv: -4
+  displayGrades: 3
+  displayAnx: 2
+  displayMotivInHand: 0

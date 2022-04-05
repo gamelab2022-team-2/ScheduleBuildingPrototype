@@ -16,7 +16,7 @@ public class UIController : MonoBehaviour
     public void CloseEventPanel()
     {
         eventPanel.DOAnchorPos(new Vector2(-1700, -50), 0.25f).SetDelay(0.1f);
-        //eventPanel.gameObject.SetActive(false);
+        eventPanel.gameObject.SetActive(true);
     }
     
     public void OpenNewCardPanel()
@@ -26,8 +26,8 @@ public class UIController : MonoBehaviour
     }
     public void CloseNewCardPanel()
     {
-        newCardPanel.DOAnchorPos(new Vector2(0, -1200), 0.25f).SetDelay(0.1f);
-        //newCardPanel.gameObject.SetActive(false);
+        newCardPanel.DOAnchorPos(new Vector2(0, -1000), 0.25f).SetDelay(0.1f);
+        newCardPanel.gameObject.SetActive(true);
     }
     
     public void OpenSchedule()
