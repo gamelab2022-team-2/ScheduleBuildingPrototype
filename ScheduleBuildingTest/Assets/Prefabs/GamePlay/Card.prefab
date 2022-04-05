@@ -78,7 +78,17 @@ MonoBehaviour:
   inHandAnx: {fileID: 1993545779063624983}
   image: {fileID: 2053397201481135848}
   cardImage: {fileID: 551621501677702801}
-  spriteList: []
+  spriteList:
+  - {fileID: 21300000, guid: 7e1412d4342f1c14299fcc5641313fa9, type: 3}
+  - {fileID: 21300000, guid: fc92db77110ac19449e34002c9fa46c1, type: 3}
+  - {fileID: 21300000, guid: b48390b457aa4a34b95f667673cf9675, type: 3}
+  - {fileID: 21300000, guid: 5715348d1539c1048892da2e5154eb5a, type: 3}
+  - {fileID: 21300000, guid: b75c6a8cb820d2e4c843a46ac4668e6f, type: 3}
+  - {fileID: 21300000, guid: a0de16f58b977d149ad3838ab9192e7a, type: 3}
+  - {fileID: 21300000, guid: a75b208abd7c713478532726d28a8864, type: 3}
+  - {fileID: 21300000, guid: d9edf623862b3c041b446f8583f86877, type: 3}
+  - {fileID: 21300000, guid: bb171d79340df1c4b8ade2226dd54bf6, type: 3}
+  - {fileID: 21300000, guid: 77f2d22ebb829de499fdb0428d95d67c, type: 3}
 --- !u!1 &3645405009817532727
 GameObject:
   m_ObjectHideFlags: 0
