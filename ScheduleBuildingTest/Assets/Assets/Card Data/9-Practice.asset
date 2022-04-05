@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 2111
   shapeColor: {r: 0.24705884, g: 0.21568629, b: 0.78823537, a: 0}
+  cardArtIndex: 2
   cardId: 9
   type: 0
   cardName: Practice
@@ -22,21 +23,21 @@ MonoBehaviour:
   cardDescription: Will increase grade by 1 but decrease motivation by 2 when entered
     in the schedule. Will add an anxiety card to the discard pile if unplayed.\n
     Easy to fit anywhere but not very efficient
-  onPlayDescription: Increases grade by 1 and decreases motivation by 2.
+  onPlayDescription: Increases grade by 1 and decreases motivation by 4.
   unplayedDescription: Adds an Anxiety Card to the discard pile.
   statusDescription: 
   flavorText: Practice makes "meets expectations".
   placedResolve:
   - ChangeMotivation
   - ChangeGrades
-  placedResolveParams: feffffff01000000
+  placedResolveParams: fcffffff01000000
   unplacedResolve:
   - AddCard
   unplacedResolveParams: 00000000
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  displayMotiv: -2
-  displayGrades: 1
-  displayAnx: 1
-  displayMotivInHand: 0
+  topLeftValue: 1
+  bottomLeftValue: -4
+  bottomRightValue: 0
+  topRightValue: 1

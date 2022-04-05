@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 13111
   shapeColor: {r: 1, g: 0.92549026, b: 0.121568635, a: 0}
+  cardArtIndex: 5
   cardId: 8
   type: 0
   cardName: Caffeinated Learning
@@ -40,7 +41,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  displayMotiv: 0
-  displayGrades: 6
-  displayAnx: 3
-  displayMotivInHand: 0
+  topLeftValue: 6
+  bottomLeftValue: 1
+  bottomRightValue: 0
+  topRightValue: 3

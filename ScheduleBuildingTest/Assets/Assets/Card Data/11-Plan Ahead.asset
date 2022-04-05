@@ -13,16 +13,17 @@ MonoBehaviour:
   m_Name: 11-Plan Ahead
   m_EditorClassIdentifier: 
   shape: 141111
-  shapeColor: {r: 0.28235295, g: 0.04705883, b: 0.65882355, a: 0}
+  shapeColor: {r: 0.3417261, g: 0.65882355, b: 0.047058802, a: 0}
+  cardArtIndex: 6
   cardId: 11
   type: 1
   cardName: Plan Ahead
   shapeImage: {fileID: 21300000, guid: 356d7ced328757240941eb9f3a02b3b0, type: 3}
-  cardColor: {r: 0.28235295, g: 0.04705883, b: 0.65882355, a: 1}
+  cardColor: {r: 0.26666668, g: 0.65882355, b: 0.047058824, a: 1}
   cardDescription: Will add 2 connection cards to the discard when played. Will decrease
     motivation by 2 when unplayed.\nGood preparation can keep anxiety at bay
   onPlayDescription: Adds 2 connection cards to the discard.
-  unplayedDescription: Decreases motivation by 2.
+  unplayedDescription: Decreases motivation by 4.
   statusDescription: 
   flavorText: Plan or plan not. There is no do.
   placedResolve:
@@ -35,7 +36,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  displayMotiv: 0
-  displayGrades: 0
-  displayAnx: -2
-  displayMotivInHand: -4
+  topLeftValue: 2
+  bottomLeftValue: 0
+  bottomRightValue: 0
+  topRightValue: -4
