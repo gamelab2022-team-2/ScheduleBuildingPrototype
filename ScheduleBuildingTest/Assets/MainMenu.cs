@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public AudioManager am;
     public RectTransform titleImage;
     private float sceneEnterTime = 0;
 
@@ -19,8 +20,9 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.Return) && Time.time - sceneEnterTime > 2f )
+        if (Input.GetKey(KeyCode.Return) && Time.time - sceneEnterTime > 2f )
         {
+            am.StopMusic(0);
             SceneManager.LoadScene(1);
         }
     }
