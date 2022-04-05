@@ -78,9 +78,7 @@ MonoBehaviour:
   inHandAnx: {fileID: 1993545779063624983}
   image: {fileID: 2053397201481135848}
   cardImage: {fileID: 551621501677702801}
-  anxietyCard: {fileID: 21300000, guid: b4b536054d31c394694cff473b458ea9, type: 3}
-  connectionCard: {fileID: 0}
-  cardImageSprite: {fileID: 21300000, guid: b4d77f5111cabf74492c9b1b8816af57, type: 3}
+  spriteList: []
 --- !u!1 &3645405009817532727
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +390,7 @@ PrefabInstance:
     - target: {fileID: 2439960609900866457, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b4d77f5111cabf74492c9b1b8816af57, type: 3}
+      objectReference: {fileID: 21300000, guid: 77f2d22ebb829de499fdb0428d95d67c, type: 3}
     - target: {fileID: 2439960609900866457, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_Color.b
       value: 1
