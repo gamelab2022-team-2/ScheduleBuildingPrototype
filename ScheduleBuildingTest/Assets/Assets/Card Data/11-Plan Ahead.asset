@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 141111
   shapeColor: {r: 0.28235295, g: 0.04705883, b: 0.65882355, a: 0}
+  cardArtIndex: 6
   cardId: 11
   type: 1
   cardName: Plan Ahead
@@ -35,7 +36,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  displayMotiv: 0
-  displayGrades: 0
-  displayAnx: -2
-  displayMotivInHand: -4
+  topLeftValue: 2
+  bottomLeftValue: 0
+  bottomRightValue: 0
+  topRightValue: -4

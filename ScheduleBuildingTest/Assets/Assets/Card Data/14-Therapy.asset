@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 1211
   shapeColor: {r: 0.3372549, g: 0.043137256, b: 0.6784314, a: 0}
+  cardArtIndex: 3
   cardId: 14
   type: 1
   cardName: Therapy
@@ -35,7 +36,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  displayMotiv: 5
-  displayGrades: 0
-  displayAnx: 0
-  displayMotivInHand: -10
+  topLeftValue: 3
+  bottomLeftValue: 0
+  bottomRightValue: 0
+  topRightValue: -10
