@@ -13,16 +13,13 @@ public class Player : MonoBehaviour
     public CardSet discardPile = new CardSet();
     public CardSet hand = new CardSet();
     public CardSet allCards = new CardSet();
-    
+
     public Transform handTransform;
-    public CardAnimationController cardAnimationController;
-    
     public GameObject gridObjectPrefab;
 
     // modifier variables (from events)
     public int motivationModifier = 0;
     public int gradeModifier = 0;
-    
     
 
     public List<GridObject> gridObjects;
@@ -30,7 +27,8 @@ public class Player : MonoBehaviour
     public EventContainer eventContainer;
 
     public IntegerVariable motivation, grade, anxiety;
-    
+
+    public GameObject cardObject;
     public int Motivation => motivation.runtimeValue;
     public int Grade => grade.runtimeValue;
     public int Anxiety => anxiety.runtimeValue;
@@ -54,19 +52,13 @@ public class Player : MonoBehaviour
 
     public void DrawFromDeck()
     {
-        int drawCount = 0;
-        Sequence sequence = DOTween.Sequence();
-        
         while (hand.Count < 5)
         {
 
             if (deck.Count >= 1)
             {
                 Card drawnCard = deck.Draw();
-                sequence.Append(cardAnimationController.AnimateDraw(drawnCard,hand.Count));
-                drawCount += 1;
-
-
+                
                 if (drawnCard.type == CardType.STATUS)
                 {
                     for (int m = 0; m < drawnCard.onDraw.Count; m++)
@@ -78,8 +70,7 @@ public class Player : MonoBehaviour
                     }
                     if (drawnCard.burnAfterUse)
                     {
-                        //TODO: destroy the card after it animates
-                        //Destroy(drawnCard.transform.gameObject);
+                        Destroy(drawnCard.transform.gameObject);
                     }
                     else
                     {
@@ -91,12 +82,36 @@ public class Player : MonoBehaviour
             }
             else
             {
-                sequence.Append(DiscardPileReturnToDeck());
+                DiscardPileReturnToDeck();
             }
         }
         DisplayCardsInHand();
     }
 
+    public void RecursiveDraw()
+    {
+        // Draw cards until hand full or anxiety card is pulled
+        // for each card pulled, animate it individually
+        if (hand.Count < 5)
+        {
+            Card card = deck.Draw();
+            if (card.type == CardType.STATUS)
+            {
+                // Animate
+                //Draw again
+                // Add to deck
+            }
+            else
+            {
+                // Animate
+                // Add to deck
+            }
+            RecursiveDraw();
+        }
+        
+
+    }
+    
     //TODO: Extract this functionality into a new "Card Animation Controller" class and flesh it out more
     //gets the 5 cards that should already be in the player's hand, and moves them from the offscreen "cardSleeve" to in front of the camera. also spawns the shapes on top of the cards
     public void DisplayCardsInHand()
@@ -104,7 +119,10 @@ public class Player : MonoBehaviour
         for (int i = 0; i < hand.Count; i++)
         {
             Card currCard = hand.GetAtIndex(i);
-            //currCard.gameObject.transform.position = handTransform.GetChild(i).position + Vector3.up;;
+            //currCard.gameObject.transform.position = handTransform.GetChild(i).position + Vector3.up;
+            
+            //Animation
+            currCard.transform.DOMove(handTransform.GetChild(i).position, 0.2f).SetDelay(i * 0.1f);
             
             //TODO: Move this gridObject generation into another class and only call it when clicking or hovering over a card in the hand
             var shape = Instantiate(gridObjectPrefab);
@@ -120,38 +138,16 @@ public class Player : MonoBehaviour
             //card;
         }*/
     }
-
-
-    private Tween DiscardPileReturnToDeck()
+    
+    
+    private void DiscardPileReturnToDeck()
     {
-        Sequence sequence = DOTween.Sequence();
         while (discardPile.Count > 0)
         {
             Card card = discardPile.Draw();
             deck.Add(card);
-            sequence.Append(cardAnimationController.ToDeck(card));
         }
         deck.Shuffle();
-        foreach (var card in deck.cards)
-        {
-            sequence.Append(cardAnimationController.Shuffle(card));
-        }
-            
-        return sequence;
-    }
-
-    /// <summary>
-    /// Discards cards from the Hand set into the Discard set
-    /// </summary>
-    public void DiscardHand()
-    {
-        Sequence sequence = DOTween.Sequence();
-        foreach (var card in hand.cards)
-        {
-            sequence.Append(cardAnimationController.ToDiscard(card));
-            discardPile.Add(card);
-        }
-        hand.EmptyCardSet();
     }
 
 
@@ -205,19 +201,14 @@ public class Player : MonoBehaviour
             theMethod.Invoke(this, new object[] { choice.choiceParams[m] });
         }
     }
-
+    
 
     // TODO: Implement this function on for the gameboard/schedule
-
-    //  public bool PlaceCard(Card card,Vector2Int pos)
-
-    //{
-
+  //  public bool PlaceCard(Card card,Vector2Int pos)
+  //{
   //  return true;
-
   //}
-
-
+ 
   public void ChangeMotivation(int i)
   {
       Debug.Log("IN CHANGE MOTIVATION WITH PARAM: "+ i);
@@ -225,14 +216,14 @@ public class Player : MonoBehaviour
       Debug.Log("MOTIVATION NOW IS "+motivation.runtimeValue);
   }
 
-  public void ChangeAnxiety(int i)
+    public void ChangeAnxiety(int i)
     {
         Debug.Log("IN CHANGE ANXIETY WITH PARAM: " + i);
         anxiety.runtimeValue += i;
         Debug.Log("ANXIETY NOW IS " + anxiety.runtimeValue);
     }
 
-  public void ChangeGrades(int i)
+    public void ChangeGrades(int i)
     {
         grade.runtimeValue += i + gradeModifier;
     }
@@ -250,7 +241,6 @@ public class Player : MonoBehaviour
         cardObject.transform.position = new Vector3(-100, -100, -100);*/
         var cardData = allCards.GetAtIndex(i).cardData;
         var card = GameManager.Instance.cardSpawner.SpawnCard(cardData);
-        cardAnimationController.ToDiscard(card);
         discardPile.Add(card);
     }
 
@@ -265,7 +255,6 @@ public class Player : MonoBehaviour
 
         var cardData = allCards.GetAtIndex(i).cardData;
         var card = GameManager.Instance.cardSpawner.SpawnCard(cardData);
-        cardAnimationController.ToDeck(card);
         deck.Add(card);
     }
 
@@ -338,6 +327,7 @@ public class Player : MonoBehaviour
         motivationModifier = 0;
     }
 
+    #region Discard Methods
     /// <summary>
     /// Discards cards from the schedule into the Discard set
     /// </summary>
@@ -350,12 +340,26 @@ public class Player : MonoBehaviour
     schedule.cardsInSchedule.Clear();*/
   }
 
+    /// <summary>
+    /// Discards cards from the Hand set into the Discard set
+    /// </summary>
+    public void DiscardHand()
+    {
+        GameManager.Instance.ReturnAllToSleeve();
+        foreach (var card in hand.cards)
+        {
+            discardPile.Add(card);
+        }
+        hand.EmptyCardSet();
+    }
+
     public void ClearShapes()
     {
         foreach (GridObject go in gridObjects)
             Destroy(go.transform.gameObject);
         gridObjects.Clear();  
     }
+    #endregion
 
 
 }
