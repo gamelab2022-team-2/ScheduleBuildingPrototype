@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 
   shapeColor: {r: 0.745283, g: 0.33326805, b: 0.62672734, a: 0}
+  cardArtIndex: 1
   cardId: 20
   type: 2
   cardName: Connection
   shapeImage: {fileID: 0}
-  cardColor: {r: 0, g: 0, b: 0, a: 1}
+  cardColor: {r: 1, g: 1, b: 1, a: 1}
   cardDescription: Removes an anxiety card from the discard (if possible), then this
     card is destroyed.\nRemember, you're not alone.
   onPlayDescription: 
@@ -34,7 +35,7 @@ MonoBehaviour:
   - RemoveCard
   onDrawParams: 00000000
   burnAfterUse: 1
-  displayMotiv: 0
-  displayGrades: 0
-  displayAnx: 0
-  displayMotivInHand: 0
+  topLeftValue: 0
+  bottomLeftValue: 0
+  bottomRightValue: 0
+  topRightValue: 0
