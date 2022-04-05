@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 141111
   shapeColor: {r: 1, g: 0.92549026, b: 0.121568635, a: 0}
-  cardArtIndex: 6
-  cardId: 19
+  cardArtIndex: 0
+  cardId: 0
   type: 1
   cardName: Phone A Friend
   shapeImage: {fileID: 21300000, guid: 6183e0a4956dbe54ca4784f70f28ed96, type: 3}
@@ -39,7 +39,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  topLeftValue: 0
+  topLeftValue: 3
   bottomLeftValue: 0
   bottomRightValue: 0
-  topRightValue: 0
+  topRightValue: -6

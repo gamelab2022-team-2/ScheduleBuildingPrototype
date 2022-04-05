@@ -42,7 +42,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  topLeftValue: 0
-  bottomLeftValue: 0
+  topLeftValue: 10
+  bottomLeftValue: 3
   bottomRightValue: 0
-  topRightValue: 0
+  topRightValue: -10
