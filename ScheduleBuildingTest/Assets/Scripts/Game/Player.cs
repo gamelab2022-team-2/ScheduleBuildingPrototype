@@ -87,6 +87,30 @@ public class Player : MonoBehaviour
         }
         DisplayCardsInHand();
     }
+
+    public void RecursiveDraw()
+    {
+        // Draw cards until hand full or anxiety card is pulled
+        // for each card pulled, animate it individually
+        if (hand.Count < 5)
+        {
+            Card card = deck.Draw();
+            if (card.type == CardType.STATUS)
+            {
+                // Animate
+                //Draw again
+                // Add to deck
+            }
+            else
+            {
+                // Animate
+                // Add to deck
+            }
+            RecursiveDraw();
+        }
+        
+
+    }
     
     //TODO: Extract this functionality into a new "Card Animation Controller" class and flesh it out more
     //gets the 5 cards that should already be in the player's hand, and moves them from the offscreen "cardSleeve" to in front of the camera. also spawns the shapes on top of the cards
@@ -141,7 +165,7 @@ public class Player : MonoBehaviour
                 Debug.Log("About to resolve card #" + c);
                 for (int m = 0; m < resolvingCard.placedResolve.Count; m++)
                 {
-                    Type thisType = this.GetType();
+                    Type thisType = GetType();
                     MethodInfo theMethod = thisType
                         .GetMethod(resolvingCard.placedResolve[m]);
                     
