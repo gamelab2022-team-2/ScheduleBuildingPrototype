@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 34010010101101
   shapeColor: {r: 0.2627451, g: 0.3803922, b: 0.9333334, a: 0}
+  cardArtIndex: 4
   cardId: 7
   type: 0
   cardName: Online Video
@@ -36,7 +37,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  displayMotiv: 0
-  displayGrades: 10
-  displayAnx: 2
-  displayMotivInHand: 0
+  topLeftValue: 0
+  bottomLeftValue: 0
+  bottomRightValue: 0
+  topRightValue: 0

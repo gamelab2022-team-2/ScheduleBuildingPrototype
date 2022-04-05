@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 13111
   shapeColor: {r: 0.9686275, g: 0.14509805, b: 0.52156866, a: 0}
+  cardArtIndex: 8
   cardId: 18
   type: 1
   cardName: Nice Meal
@@ -37,7 +38,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 1
-  displayMotiv: 10
-  displayGrades: 0
-  displayAnx: -1
-  displayMotivInHand: 0
+  topLeftValue: 0
+  bottomLeftValue: 0
+  bottomRightValue: 0
+  topRightValue: 0

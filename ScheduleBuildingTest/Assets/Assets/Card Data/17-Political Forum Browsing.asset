@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 221111
   shapeColor: {r: 0.227451, g: 0.04705883, b: 0.6392157, a: 0}
+  cardArtIndex: 7
   cardId: 17
   type: 1
   cardName: Political Forum Browsing
@@ -41,7 +42,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  displayMotiv: 10
-  displayGrades: 0
-  displayAnx: 0
-  displayMotivInHand: -10
+  topLeftValue: 0
+  bottomLeftValue: 0
+  bottomRightValue: 0
+  topRightValue: 0

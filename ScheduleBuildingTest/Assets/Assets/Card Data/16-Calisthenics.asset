@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 221111
   shapeColor: {r: 1, g: 0.92549026, b: 0.121568635, a: 0}
+  cardArtIndex: 8
   cardId: 16
   type: 1
   cardName: Calisthenics
@@ -38,7 +39,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  displayMotiv: 1
-  displayGrades: 0
-  displayAnx: -1
-  displayMotivInHand: -2
+  topLeftValue: 0
+  bottomLeftValue: 0
+  bottomRightValue: 0
+  topRightValue: 0
