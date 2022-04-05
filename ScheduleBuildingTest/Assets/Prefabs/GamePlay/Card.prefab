@@ -581,6 +581,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4180635722315846624, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4404086342925241788, guid: 88c7f90cef0b2bb4795e57a53889d30a, type: 3}
       propertyPath: m_ChildForceExpandWidth
       value: 1
