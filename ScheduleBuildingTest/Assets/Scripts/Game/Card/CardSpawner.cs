@@ -16,7 +16,7 @@ public class CardSpawner : MonoBehaviour
     public Card SpawnCard(CardData c)
     {
         GameObject card = Instantiate(cardPrefab, cardSleeve.transform);
-        //card.transform.DOScale(Vector3.one * 0.5f, 0.1f);
+        card.transform.DOScale(Vector3.one * 0.5f, 1f);
         var cardComponent = card.GetComponent<Card>();
         cardComponent.cardData = c;
         cardComponent.LoadData(c);
