@@ -48,5 +48,17 @@ public class CardSet
         cards.Clear();
     }
 
+    public bool CheckIfEmpty()
+    {
+        if(cards.Count <= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
 
 }
