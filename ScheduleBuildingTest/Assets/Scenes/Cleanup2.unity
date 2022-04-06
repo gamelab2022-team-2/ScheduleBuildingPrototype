@@ -317,7 +317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7114871559045851505, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11
+      value: -8.57
       objectReference: {fileID: 0}
     - target: {fileID: 7114871559045851510, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
       propertyPath: spacing
@@ -367,6 +367,16 @@ Transform:
 --- !u!4 &22541980 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7114871558665278091, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+  m_PrefabInstance: {fileID: 22541976}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &22541981 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7114871559045851505, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+  m_PrefabInstance: {fileID: 22541976}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &22541982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7114871559833588460, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
   m_PrefabInstance: {fileID: 22541976}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &26007959
@@ -11825,7 +11835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ef6441f75c32df45893a50ffbb572e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardSleeve: {fileID: 0}
+  cardSleeve: {fileID: 22541982}
   cardPrefab: {fileID: 2541533064208557587, guid: 6d80a66fb34684d04a487790385cf32c, type: 3}
 --- !u!114 &810869487
 MonoBehaviour:
@@ -27091,7 +27101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d768c0b66e18c24590edc662e8fde3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  handTransform: {fileID: 0}
+  handTransform: {fileID: 22541981}
+  cardAnimationController: {fileID: 2010268263}
   gridObjectPrefab: {fileID: 5226957958578483780, guid: 43231032393513b4ca4f10c93d1d945b, type: 3}
   motivationModifier: 0
   gradeModifier: 0
@@ -27100,7 +27111,6 @@ MonoBehaviour:
   motivation: {fileID: 11400000, guid: 7eea4d068aeea3f4fa7a3df9924855b6, type: 2}
   grade: {fileID: 11400000, guid: 759ada04acdc5a54394070bbcb9769c4, type: 2}
   anxiety: {fileID: 11400000, guid: fd7f0343e39c1164a8ec73d552b65e98, type: 2}
-  cardObject: {fileID: 2541533064208557587, guid: 6d80a66fb34684d04a487790385cf32c, type: 3}
   schedule: {fileID: 552416117}
 --- !u!4 &1944111506
 Transform:
@@ -27978,6 +27988,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003354531}
   m_CullTransparentMesh: 1
+--- !u!114 &2010268263 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4283600340257596796, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+  m_PrefabInstance: {fileID: 22541976}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3829f40c48f6c8346bdfefd2ef55943f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2011250930
 GameObject:
   m_ObjectHideFlags: 0
