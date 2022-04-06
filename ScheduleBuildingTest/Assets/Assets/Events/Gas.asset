@@ -18,7 +18,7 @@ MonoBehaviour:
   eventPriority: 0
   description: Hey Settler! We've authorized the release of a mood enhancing supplement
     into the air of your pod! This substance should really help your mood lighten!
-  art: {fileID: 21300000, guid: 08199b8357e3cad4295f8c0e55426d69, type: 3}
+  art: {fileID: 21300000, guid: 4cf8184c9412b414d9266df24b5b5e0e, type: 3}
   choice1: {fileID: 11400000, guid: 78f750f00795897479ca42d42fa28104, type: 2}
   choice2: {fileID: 11400000, guid: fcb7e11a379362141a73578ba8d4f77e, type: 2}
   hasPrerequisite: 0

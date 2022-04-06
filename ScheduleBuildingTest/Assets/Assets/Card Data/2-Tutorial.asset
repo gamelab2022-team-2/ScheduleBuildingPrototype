@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 33101101101
   shapeColor: {r: 0.28235295, g: 0.58431375, b: 0.93725497, a: 0}
+  cardArtIndex: 2
   cardId: 2
   type: 0
   cardName: Tutorial
@@ -22,21 +23,21 @@ MonoBehaviour:
   cardDescription: Will increase grade by 3 but decrease motivation by 3 when entered
     in the schedule. Will add an anxiety card to the discard pile if unplayed.\nAdditional
     Study Time
-  onPlayDescription: Increases grade by 3 and decreases motivation by 3.
+  onPlayDescription: Increases grade by 2 and decreases motivation by 3.
   unplayedDescription: Adds an Anxiety Card to the discard pile.
   statusDescription: 
   flavorText: Assisted learning to prepare you for the new world.
   placedResolve:
   - ChangeMotivation
   - ChangeGrades
-  placedResolveParams: fdffffff03000000
+  placedResolveParams: fdffffff02000000
   unplacedResolve:
   - AddCard
   unplacedResolveParams: 00000000
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  displayMotiv: -3
-  displayGrades: 3
-  displayAnx: 1
-  displayMotivInHand: 0
+  topLeftValue: 2
+  bottomLeftValue: -3
+  bottomRightValue: 0
+  topRightValue: 1

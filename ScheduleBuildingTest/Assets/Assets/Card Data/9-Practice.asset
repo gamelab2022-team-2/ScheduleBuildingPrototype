@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
   m_Name: 9-Practice
   m_EditorClassIdentifier: 
-  shape: 2111
+  shape: 1211
   shapeColor: {r: 0.24705884, g: 0.21568629, b: 0.78823537, a: 0}
+  cardArtIndex: 2
   cardId: 9
   type: 0
   cardName: Practice
@@ -36,7 +37,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  displayMotiv: -2
-  displayGrades: 1
-  displayAnx: 1
-  displayMotivInHand: 0
+  topLeftValue: 1
+  bottomLeftValue: -2
+  bottomRightValue: 0
+  topRightValue: 1

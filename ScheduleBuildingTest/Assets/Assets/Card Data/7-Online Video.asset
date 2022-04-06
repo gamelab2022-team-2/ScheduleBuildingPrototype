@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 34010010101101
   shapeColor: {r: 0.2627451, g: 0.3803922, b: 0.9333334, a: 0}
+  cardArtIndex: 4
   cardId: 7
   type: 0
   cardName: Online Video
@@ -22,13 +23,13 @@ MonoBehaviour:
   cardDescription: Will increase grade by 10 . Will add 2 anxiety cards to the discard
     pile if unplayed.\nAdditional educational videos. Efficient and motivational,
     but time consuming
-  onPlayDescription: Increases grade by 10.
+  onPlayDescription: Increases grade by 5.
   unplayedDescription: Adds 2 Anxiety Cards to the Discard.
   statusDescription: 
   flavorText: Please keep the use of non-company approved learning mediums to a minimum.
   placedResolve:
   - ChangeGrades
-  placedResolveParams: 0a000000
+  placedResolveParams: 05000000
   unplacedResolve:
   - AddCard
   - AddCard
@@ -36,7 +37,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  displayMotiv: 0
-  displayGrades: 10
-  displayAnx: 2
-  displayMotivInHand: 0
+  topLeftValue: 5
+  bottomLeftValue: 0
+  bottomRightValue: 0
+  topRightValue: 2

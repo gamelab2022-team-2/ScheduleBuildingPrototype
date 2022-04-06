@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum CardType  {STUDY, SELFCARE, STATUS };
+public enum CardType { STUDY, SELFCARE, STATUS };
 
 [CreateAssetMenu(fileName = "New Card ", menuName = "Card")]
 
@@ -13,6 +13,8 @@ public class CardData : ScriptableObject
     // played variables
     public string shape;
     public Color shapeColor;
+
+    public int cardArtIndex;
 
     public int cardId;
 
@@ -45,10 +47,10 @@ public class CardData : ScriptableObject
 
     public bool burnAfterUse;
 
-    public int displayMotiv;
-    public int displayGrades;
-    public int displayAnx;
-    public int displayMotivInHand;
+    public int topLeftValue;
+    public int bottomLeftValue;
+    public int bottomRightValue;
+    public int topRightValue;
 
 
 

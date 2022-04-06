@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 1211
   shapeColor: {r: 0.3372549, g: 0.043137256, b: 0.6784314, a: 0}
+  cardArtIndex: 3
   cardId: 14
   type: 1
   cardName: Therapy
@@ -21,21 +22,21 @@ MonoBehaviour:
   cardColor: {r: 0.3372549, g: 0.043137256, b: 0.6784314, a: 1}
   cardDescription: Will increase motivation by 5 when played but decrease it by 10
     when unplayed.\nA session with a professional
-  onPlayDescription: Increases motivation by 5.
+  onPlayDescription: Increases motivation by 2.
   unplayedDescription: Decreases motivation by 10.
   statusDescription: 
   flavorText: Our company mental health professional are available to help you get
     back to work faster.
   placedResolve:
   - ChangeMotivation
-  placedResolveParams: 05000000
+  placedResolveParams: 02000000
   unplacedResolve:
   - ChangeMotivation
   unplacedResolveParams: f6ffffff
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  displayMotiv: 5
-  displayGrades: 0
-  displayAnx: 0
-  displayMotivInHand: -10
+  topLeftValue: 2
+  bottomLeftValue: 0
+  bottomRightValue: 0
+  topRightValue: -10

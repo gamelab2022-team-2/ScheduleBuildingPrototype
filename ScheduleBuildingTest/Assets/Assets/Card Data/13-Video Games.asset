@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
   m_Name: 13-Video Games
   m_EditorClassIdentifier: 
-  shape: 43111110001000
+  shape: 43100010001111
   shapeColor: {r: 0.2627451, g: 0.3803922, b: 0.9333334, a: 0}
+  cardArtIndex: 3
   cardId: 13
   type: 1
   cardName: Video Games
@@ -21,21 +22,21 @@ MonoBehaviour:
   cardColor: {r: 0.2627451, g: 0.3803922, b: 0.9333334, a: 1}
   cardDescription: WIll increase motivation by 10 when played. Will decrease motivation
     by 4 when unplayed.\nTime consuming but motivational
-  onPlayDescription: Increases motivation by 10.
+  onPlayDescription: Increases motivation by 8.
   unplayedDescription: Decreases motivation by 4.
   statusDescription: 
   flavorText: Yo settler I heard you like videogames so I got you a videogame inside
     this videogame.
   placedResolve:
   - ChangeMotivation
-  placedResolveParams: 0a000000
+  placedResolveParams: 08000000
   unplacedResolve:
   - ChangeMotivation
   unplacedResolveParams: fcffffff
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  displayMotiv: 10
-  displayGrades: 0
-  displayAnx: 0
-  displayMotivInHand: -4
+  topLeftValue: 8
+  bottomLeftValue: 0
+  bottomRightValue: 0
+  topRightValue: -4

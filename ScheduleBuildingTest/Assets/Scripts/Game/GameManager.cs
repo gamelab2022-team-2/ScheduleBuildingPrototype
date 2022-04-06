@@ -55,7 +55,7 @@ namespace Game
         }
 
         //returns all cards to the off screen "cardSleeve" location in the discard or resolve phase
-        /*public void ReturnAllToSleeve()
+        public void ReturnAllToSleeve()
         {
             for (int i = 0; i < _player.hand.Count; i++)
             {
@@ -63,7 +63,7 @@ namespace Game
             }
 
             shapeSpawner.GetComponent<ShapeSpawner>().Clear();
-        }*/
+        }
         
         //TODO: function to reset the game
 
