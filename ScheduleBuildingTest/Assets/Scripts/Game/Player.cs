@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     public int motivationModifier = 0;
     public int gradeModifier = 0;
 
-
+    public GameObject submitButton;
 
     public List<GridObject> gridObjects;
 
@@ -36,6 +36,10 @@ public class Player : MonoBehaviour
     public int Anxiety => anxiety.runtimeValue;
 
     public Schedule schedule;
+
+    public AudioManager am;
+
+    private List<GameObject> cardsToDestroy;
 
     public void GetOpeningDeck()
     {
@@ -54,6 +58,7 @@ public class Player : MonoBehaviour
 
     public void DrawFromDeck()
     {
+        cardsToDestroy = new List<GameObject>();
         int drawCount = 0;
         Sequence sequence = DOTween.Sequence();
 
@@ -63,6 +68,7 @@ public class Player : MonoBehaviour
             if (deck.Count >= 1)
             {
                 Card drawnCard = deck.Draw();
+                sequence.AppendCallback(PlayDrawSound);
                 sequence.Append(cardAnimationController.AnimateDraw(drawnCard, hand.Count));
                 drawCount += 1;
 
@@ -72,14 +78,21 @@ public class Player : MonoBehaviour
                     for (int m = 0; m < drawnCard.onDraw.Count; m++)
                     {
                         Type thisType = this.GetType();
+                        if (drawnCard.onDraw[m].Equals("BlockSpot")) {
+                            sequence.AppendCallback(BlockASpot);
+                        }
+                        else { 
                         MethodInfo theMethod = thisType
                             .GetMethod(drawnCard.onDraw[m]);
                         theMethod.Invoke(this, new object[] { drawnCard.onDrawParams[m] });
+                        }
                     }
                     if (drawnCard.burnAfterUse)
                     {
                         //TODO: destroy the card after it animates
                         //Destroy(drawnCard.transform.gameObject);
+                        cardsToDestroy.Add(drawnCard.gameObject);
+                        
                     }
                     else
                     {
@@ -94,7 +107,10 @@ public class Player : MonoBehaviour
                 sequence.Append(DiscardPileReturnToDeck());
             }
         }
-        DisplayCardsInHand();
+        for(int i = 0; i<cardsToDestroy.Count;i++) sequence.AppendCallback(DestroyACard);
+        sequence.AppendCallback(DisplayCardsInHand);
+        sequence.AppendCallback(ActivateButton);
+
     }
 
     //TODO: Extract this functionality into a new "Card Animation Controller" class and flesh it out more
@@ -103,17 +119,21 @@ public class Player : MonoBehaviour
     {
         for (int i = 0; i < hand.Count; i++)
         {
+
             Card currCard = hand.GetAtIndex(i);
             //currCard.gameObject.transform.position = handTransform.GetChild(i).position + Vector3.up;;
-
+            float w = currCard.shape[0] - '0';
+            float h = currCard.shape[1] - '0';
             //TODO: Move this gridObject generation into another class and only call it when clicking or hovering over a card in the hand
             var shape = Instantiate(gridObjectPrefab);
 
             shape.GetComponent<GridObject>().Initialize(currCard.shape,
-                handTransform.GetChild(i).position + 2 * Vector3.up + Vector3.left * 2 - Vector3.forward, currCard.shapeColor);
+                handTransform.GetChild(i).position + ((3f-h)/2f + 1f) * Vector3.up + Vector3.left * (w-1f) - Vector3.forward, currCard.shapeColor);
             //shapeSpawner.GetComponent<ShapeSpawner>().SpawnShape(_player.handGO.transform.GetChild(i).position, currCard.cardData.shape, currCard.cardData.shapeColor);
             gridObjects.Add(shape.GetComponent<GridObject>());
         }
+
+        foreach (GridObject g in gridObjects) g.allowedToMove = true;
 
         /*foreach (var card in hand.cards)
         {
@@ -300,6 +320,10 @@ public class Player : MonoBehaviour
         for (int j = 0; j < i; j++)
             schedule.BlockRandomSlot();
     }
+    public void BlockASpot()
+    {
+        schedule.BlockRandomSlot();
+    }
 
     public void BlockRow(int i)
     {
@@ -357,5 +381,25 @@ public class Player : MonoBehaviour
         gridObjects.Clear();
     }
 
+    public void DestroyACard()
+    {
+        if (cardsToDestroy[0] != null)
+        {
+            Destroy(cardsToDestroy[0]);
+            cardsToDestroy.RemoveAt(0);
+        }
+    }
+    public void ActivateButton()
+    {
+        submitButton.SetActive(true);
+    }
+    public void PlayDrawSound()
+    {
+        float rand = UnityEngine.Random.Range(0f,1f);
+        if (rand < 0.5f)
+            am.PlaySingleSound("CardDeal");
+        else
+            am.PlaySingleSound("Discard");
+    }
 
 }

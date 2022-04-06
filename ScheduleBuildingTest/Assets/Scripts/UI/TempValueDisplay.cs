@@ -24,40 +24,43 @@ public class TempValueDisplay : MonoBehaviour
         Debug.Log("Apply hand started. Motivation value = " + motivationValue.ToString());
         for (int c = 0; c < player.hand.Count; c++)
         {
-            Card resolvingCard = player.hand.GetAtIndex(c);
-            if (player.gridObjects[c].OnGrid())
+            if (c < player.gridObjects.Count)
             {
-
-                for (int m = 0; m < resolvingCard.placedResolve.Count; m++)
+                Card resolvingCard = player.hand.GetAtIndex(c);
+                if (player.gridObjects[c].OnGrid())
                 {
-                    if( resolvingCard.placedResolve[m].Equals("ChangeMotivation") || resolvingCard.placedResolve[m].Equals("ChangeGrades"))
+
+                    for (int m = 0; m < resolvingCard.placedResolve.Count; m++)
                     {
-                        Type thisType = this.GetType();
-                        MethodInfo theMethod = thisType
-                            .GetMethod(resolvingCard.placedResolve[m]);
-                        theMethod.Invoke(this, new object[] { resolvingCard.placedResolveParams[m] });
+                        if (resolvingCard.placedResolve[m].Equals("ChangeMotivation") || resolvingCard.placedResolve[m].Equals("ChangeGrades"))
+                        {
+                            Type thisType = this.GetType();
+                            MethodInfo theMethod = thisType
+                                .GetMethod(resolvingCard.placedResolve[m]);
+                            theMethod.Invoke(this, new object[] { resolvingCard.placedResolveParams[m] });
+                        }
+
                     }
-                    
+                }
+                else
+                {
+
+                    for (int m = 0; m < resolvingCard.unplacedResolve.Count; m++)
+                    {
+                        if (resolvingCard.unplacedResolve[m].Equals("ChangeMotivation") || resolvingCard.unplacedResolve[m].Equals("ChangeGrades"))
+                        {
+                            Type thisType = this.GetType();
+                            MethodInfo theMethod = thisType
+                                .GetMethod(resolvingCard.unplacedResolve[m]);
+                            theMethod.Invoke(this, new object[] { resolvingCard.unplacedResolveParams[m] });
+                        }
+
+                    }
                 }
             }
-            else
-            {
 
-                for (int m = 0; m < resolvingCard.unplacedResolve.Count; m++)
-                {
-                    if (resolvingCard.unplacedResolve[m].Equals("ChangeMotivation") || resolvingCard.unplacedResolve[m].Equals("ChangeGrades"))
-                    {
-                        Type thisType = this.GetType();
-                        MethodInfo theMethod = thisType
-                            .GetMethod(resolvingCard.unplacedResolve[m]);
-                        theMethod.Invoke(this, new object[] { resolvingCard.unplacedResolveParams[m] });
-                    }
-                    
-                }
-            }
+            UpdateDisplay();
         }
-
-        UpdateDisplay();
     }
 
     public void ChangeMotivation(int i)
