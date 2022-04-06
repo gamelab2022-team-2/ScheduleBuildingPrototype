@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
   m_Name: 13-Video Games
   m_EditorClassIdentifier: 
-  shape: 43111110001000
+  shape: 43100010001111
   shapeColor: {r: 0.2627451, g: 0.3803922, b: 0.9333334, a: 0}
   cardArtIndex: 3
   cardId: 13
