@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.57481724, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11634,6 +11634,8 @@ MonoBehaviour:
   OnEventPhaseExit: {fileID: 11400000, guid: 28475defc82ff3e49b76330dcc9a7ab9, type: 2}
   OnNewCardPhaseEnter: {fileID: 11400000, guid: 0e1f12e4811f9c04498810e01f9cb54a, type: 2}
   OnNewCardPhaseExit: {fileID: 11400000, guid: 55a45a1293a1e714f9904fdd1d4a1cc8, type: 2}
+  OnDiscussionPhaseEnter: {fileID: 11400000, guid: e5a83d341e772a3f2badfbf8d6591d9d, type: 2}
+  OnDiscussionPhaseExit: {fileID: 11400000, guid: fc8a2b1efc56a4a4cb1390228892ead1, type: 2}
   OnGameOverStateEnter: {fileID: 11400000, guid: cdcaa71399447a84899810bd65b5197e, type: 2}
 --- !u!114 &810869484
 MonoBehaviour:

@@ -3,9 +3,10 @@ using UnityEngine;
 
 namespace Game.StateMachine
 {
-    public class NewCardState : GameState
+
+    public class DiscussionState : GameState
     {
-        public NewCardState(GameStateMachine gsm, Player player) : base(gsm, player)
+        public DiscussionState(GameStateMachine gsm, Player player) : base(gsm, player)
         {
         }
 
@@ -14,7 +15,6 @@ namespace Game.StateMachine
             get
             {
                 if (GameOverCondition()) return stateMachine.gameOverState;
-                if (Game.GameManager.Instance.turn.runtimeValue >= 4) return stateMachine.discussionPhase;
                 return stateMachine.drawPhase;
             }
         }
@@ -32,12 +32,12 @@ namespace Game.StateMachine
         public override void OnStateEnter()
         {
             base.OnStateEnter();
-            stateMachine.OnNewCardPhaseEnter.Raise();
+            stateMachine.OnDiscussionPhaseEnter.Raise();
         }
 
         public override void OnStateExit()
         {
-            stateMachine.OnNewCardPhaseExit.Raise();
+            stateMachine.OnDiscussionPhaseExit.Raise();
         }
 
         public override bool GameOverCondition()
