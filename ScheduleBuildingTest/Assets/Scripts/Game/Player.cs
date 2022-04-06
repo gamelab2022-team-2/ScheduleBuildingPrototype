@@ -81,6 +81,11 @@ public class Player : MonoBehaviour
                         if (drawnCard.onDraw[m].Equals("BlockSpot")) {
                             sequence.AppendCallback(BlockASpot);
                         }
+                        else if (drawnCard.onDraw[m].Equals("RemoveCard"))
+                        {
+                            sequence.Append(RemoveAnxiety());
+                        }
+
                         else { 
                         MethodInfo theMethod = thisType
                             .GetMethod(drawnCard.onDraw[m]);
@@ -178,7 +183,7 @@ public class Player : MonoBehaviour
     public void ApplyHand()
     {
         Debug.Log("Calculating Resolution Values");
-
+        Sequence sequence = DOTween.Sequence();
         for (int c = 0; c < hand.Count; c++)
         {
             Card resolvingCard = hand.GetAtIndex(c);
@@ -189,11 +194,17 @@ public class Player : MonoBehaviour
                 Debug.Log("About to resolve card #" + c);
                 for (int m = 0; m < resolvingCard.placedResolve.Count; m++)
                 {
+                    if (resolvingCard.placedResolve[m].Equals("AddCard"))
+                    {
+                        sequence.Append(AddCardTween(resolvingCard.placedResolveParams[m]));
+                    }
+                    else { 
                     Type thisType = GetType();
                     MethodInfo theMethod = thisType
                         .GetMethod(resolvingCard.placedResolve[m]);
 
                     theMethod.Invoke(this, new object[] { resolvingCard.placedResolveParams[m] });
+                    }
                 }
             }
             else
@@ -201,10 +212,17 @@ public class Player : MonoBehaviour
                 Debug.Log("About to resolve card #" + c);
                 for (int m = 0; m < resolvingCard.unplacedResolve.Count; m++)
                 {
-                    Type thisType = this.GetType();
+                    if (resolvingCard.unplacedResolve[m].Equals("AddCard"))
+                    {
+                        sequence.Append(AddCardTween(resolvingCard.unplacedResolveParams[m]));
+                    }
+                    else
+                    {
+                        Type thisType = this.GetType();
                     MethodInfo theMethod = thisType
                         .GetMethod(resolvingCard.unplacedResolve[m]);
                     theMethod.Invoke(this, new object[] { resolvingCard.unplacedResolveParams[m] });
+                    }
                 }
             }
         }
@@ -389,6 +407,31 @@ public class Player : MonoBehaviour
             cardsToDestroy.RemoveAt(0);
         }
     }
+
+    public Tween RemoveAnxiety()
+    {
+        Sequence sequence = DOTween.Sequence();
+        bool found = false;
+        int index = -1;
+        for (int j = 0; j < discardPile.cards.Count; j++)
+        {
+            if (discardPile.GetAtIndex(j).cardId == 0)
+            {
+                index = j;
+                found = true;
+            }
+        }
+        if (found)
+        {
+            Card toDelete = discardPile.GetAtIndex(index);
+            sequence.Append(cardAnimationController.RemoveFromDiscard(toDelete));
+            discardPile.cards.RemoveAt(index);
+            cardsToDestroy.Add(toDelete.gameObject);
+            ChangeAnxiety(-1);
+        }
+        return sequence;
+    }
+
     public void ActivateButton()
     {
         submitButton.SetActive(true);
@@ -401,5 +444,18 @@ public class Player : MonoBehaviour
         else
             am.PlaySingleSound("Discard");
     }
+    public Tween AddCardTween(int i)
+    {
+        Sequence sequence = DOTween.Sequence();
+        if (i == 0) ChangeAnxiety(1);
 
+        /*cardComponent.cardData = allCards.GetAtIndex(i).cardData;
+        cardComponent.LoadData(cardComponent.cardData);
+        cardObject.transform.position = new Vector3(-100, -100, -100);*/
+        var cardData = allCards.GetAtIndex(i).cardData;
+        var card = GameManager.Instance.cardSpawner.SpawnCard(cardData);
+        sequence.Append(cardAnimationController.ToDiscard(card));
+        discardPile.Add(card);
+        return sequence;
+    }
 }

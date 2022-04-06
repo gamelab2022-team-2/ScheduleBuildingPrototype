@@ -16,7 +16,7 @@ public class CardAnimationController : MonoBehaviour
         {
             case CardType.STATUS:
                 sequence.Append(card.transform.DOMove(focusTransform.position, drawDuration)).SetEase(Ease.InOutSine);
-                sequence.Append(card.transform.DOMove(focusTransform.position, 1f)).SetEase(Ease.InOutSine);
+                sequence.Append(card.transform.DOMove(focusTransform.position, 0.5f)).SetEase(Ease.InOutSine);
 
                 if (card.burnAfterUse)
                 {
@@ -55,6 +55,14 @@ public class CardAnimationController : MonoBehaviour
     {
         return card.transform.DOMove(discardTransform.position, drawDuration).SetEase(Ease.InOutSine);
     }
-
+    public Tween RemoveFromDiscard(Card card)
+    {
+        Sequence sequence = DOTween.Sequence();
+        sequence.Append(card.transform.DOMove(focusTransform.position, drawDuration/2)).SetEase(Ease.InOutSine);
+        sequence.Append(card.transform.DOMove(focusTransform.position, 0.5f)).SetEase(Ease.InOutSine);
+        sequence.Append(card.transform.DOShakePosition(1, drawDuration/4).SetEase(Ease.InOutSine));
+        sequence.Append(card.transform.DOMove(cardSleeveTransform.position, drawDuration/2).SetEase(Ease.InOutSine));
+        return sequence;
+    }
 
 }
