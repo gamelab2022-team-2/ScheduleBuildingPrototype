@@ -18475,6 +18475,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204236616}
   m_CullTransparentMesh: 1
+--- !u!1 &1214916401 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2177997252465534529, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+  m_PrefabInstance: {fileID: 2177997252538929057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1225298517
 GameObject:
   m_ObjectHideFlags: 0
@@ -27167,12 +27172,14 @@ MonoBehaviour:
   gridObjectPrefab: {fileID: 5226957958578483780, guid: 43231032393513b4ca4f10c93d1d945b, type: 3}
   motivationModifier: 0
   gradeModifier: 0
+  submitButton: {fileID: 1214916401}
   gridObjects: []
   eventContainer: {fileID: 810869484}
   motivation: {fileID: 11400000, guid: 7eea4d068aeea3f4fa7a3df9924855b6, type: 2}
   grade: {fileID: 11400000, guid: 759ada04acdc5a54394070bbcb9769c4, type: 2}
   anxiety: {fileID: 11400000, guid: fd7f0343e39c1164a8ec73d552b65e98, type: 2}
   schedule: {fileID: 552416117}
+  am: {fileID: 810869488}
 --- !u!4 &1944111506
 Transform:
   m_ObjectHideFlags: 0
@@ -30952,11 +30959,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -30967,9 +30978,13 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
-      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 810869488}
+    - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1302869122}
     - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -30991,20 +31006,28 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
-      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlaySingleSound
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
-      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: OpenTempInfo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: OpenSchedule
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: OpenSchedule
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
-      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UIController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
@@ -31027,8 +31050,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
-      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Swish
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769979, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument

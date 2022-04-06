@@ -20,8 +20,8 @@ public class CardAnimationController : MonoBehaviour
 
                 if (card.burnAfterUse)
                 {
-                    sequence.Append(card.transform.DOShakePosition(1, 3).SetEase(Ease.InOutSine));
-                    sequence.Append(card.transform.DOMove(cardSleeveTransform.position, 3).SetEase(Ease.InOutSine));
+                    sequence.Append(card.transform.DOShakePosition(1, drawDuration).SetEase(Ease.InOutSine));
+                    sequence.Append(card.transform.DOMove(cardSleeveTransform.position, drawDuration).SetEase(Ease.InOutSine));
                 }
                 else
                     sequence.Append(card.transform.DOMove(discardTransform.position, drawDuration).SetEase(Ease.InOutSine));

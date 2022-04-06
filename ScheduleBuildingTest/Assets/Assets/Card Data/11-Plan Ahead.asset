@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd4cf101f82a954419ebe5b7b3300130, type: 3}
   m_Name: 11-Plan Ahead
   m_EditorClassIdentifier: 
-  shape: 141111
+  shape: 411111
   shapeColor: {r: 0.28235295, g: 0.04705883, b: 0.65882355, a: 0}
   cardArtIndex: 6
   cardId: 11
