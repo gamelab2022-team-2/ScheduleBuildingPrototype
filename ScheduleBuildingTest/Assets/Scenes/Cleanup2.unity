@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.57481724, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -24459,38 +24459,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 254098281, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 254098282, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 1107992320, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4283600340257596796, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
-      propertyPath: deckTransform
-      value: 
-      objectReference: {fileID: 1749848378}
-    - target: {fileID: 4283600340257596796, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
-      propertyPath: focusTransform
-      value: 
-      objectReference: {fileID: 1749848376}
-    - target: {fileID: 4283600340257596796, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
-      propertyPath: discardTransform
-      value: 
-      objectReference: {fileID: 1749848377}
-    - target: {fileID: 4283600340257596796, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
-      propertyPath: cardSleeveTransform
-      value: 
-      objectReference: {fileID: 1749848375}
-    - target: {fileID: 7114871558665278091, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.5
-      objectReference: {fileID: 0}
     - target: {fileID: 7114871558889228716, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
       propertyPath: m_Name
       value: Card Positions
@@ -24539,10 +24507,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7114871560373338500, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 9.57
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
 --- !u!1 &1749848374 stripped
@@ -24550,37 +24514,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7114871559833588460, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
   m_PrefabInstance: {fileID: 1749848373}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1749848375 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7114871559833588461, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
-  m_PrefabInstance: {fileID: 1749848373}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1749848376 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3063394132508058417, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
-  m_PrefabInstance: {fileID: 1749848373}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1749848377 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7114871560373338500, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
-  m_PrefabInstance: {fileID: 1749848373}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1749848378 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7114871558665278091, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
-  m_PrefabInstance: {fileID: 1749848373}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1749848379 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4283600340257596796, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
-  m_PrefabInstance: {fileID: 1749848373}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3829f40c48f6c8346bdfefd2ef55943f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1758416018
 GameObject:
   m_ObjectHideFlags: 0
@@ -27081,7 +27014,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handTransform: {fileID: 366734615}
-  cardAnimationController: {fileID: 1749848379}
   gridObjectPrefab: {fileID: 5226957958578483780, guid: 43231032393513b4ca4f10c93d1d945b, type: 3}
   motivationModifier: 0
   gradeModifier: 0
@@ -27090,6 +27022,7 @@ MonoBehaviour:
   motivation: {fileID: 11400000, guid: 7eea4d068aeea3f4fa7a3df9924855b6, type: 2}
   grade: {fileID: 11400000, guid: 759ada04acdc5a54394070bbcb9769c4, type: 2}
   anxiety: {fileID: 11400000, guid: fd7f0343e39c1164a8ec73d552b65e98, type: 2}
+  cardObject: {fileID: 2541533064208557587, guid: 6d80a66fb34684d04a487790385cf32c, type: 3}
   schedule: {fileID: 552416117}
 --- !u!4 &1944111506
 Transform:
