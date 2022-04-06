@@ -322,7 +322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 417.3411}
+  m_AnchoredPosition: {x: 0, y: 417.34103}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &4541381194275104352
@@ -581,7 +581,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4541381194655736629}
   m_HandleRect: {fileID: 4541381194655736630}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1471,7 +1471,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 4541381195510991821}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DiscussionPanelManager, Assembly-CSharp
         m_MethodName: SendButton
         m_Mode: 1
@@ -3855,9 +3855,9 @@ GameObject:
   - component: {fileID: 4541381195510991816}
   - component: {fileID: 4541381195510991822}
   - component: {fileID: 4541381195510991823}
-  - component: {fileID: 4541381195510991821}
   - component: {fileID: 4541381195510991827}
   - component: {fileID: 4541381195510991820}
+  - component: {fileID: 4408448308852003625}
   m_Layer: 0
   m_Name: DiscussionPanel
   m_TagString: Untagged
@@ -3923,22 +3923,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4541381195510991821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4541381195510991817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60008350baee9674da374302c035ea42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chatPanel: {fileID: 4541381194275104355}
-  textObject: {fileID: 1768284196436017138, guid: 51a3b2d36540d904fb004443bea2b84e, type: 3}
-  chatBox: {fileID: 4541381194508949407}
-  messageList: []
 --- !u!114 &4541381195510991827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3968,6 +3952,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   username: 
   message: 
+--- !u!114 &4408448308852003625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4541381195510991817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d3b67a7496050489b36334213c27a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chatPanel: {fileID: 4541381194275104355}
+  textObject: {fileID: 1768284196436017138, guid: 51a3b2d36540d904fb004443bea2b84e, type: 3}
+  chatBox: {fileID: 4541381194508949407}
+  messageList: []
 --- !u!1 &4541381195529706951
 GameObject:
   m_ObjectHideFlags: 0
