@@ -230,6 +230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7114871558889228717}
+  - component: {fileID: 4505026614806872694}
   m_Layer: 0
   m_Name: Card Positions
   m_TagString: Untagged
@@ -255,6 +256,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4505026614806872694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7114871558889228716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3829f40c48f6c8346bdfefd2ef55943f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handTransform: {fileID: 7114871559045851505}
+  deckTransform: {fileID: 7114871558665278091}
+  discardTransform: {fileID: 7114871560373338500}
+  focusTransform: {fileID: 0}
+  cardSleeveTransform: {fileID: 7114871559833588461}
+  drawDuration: 0.2
 --- !u!1 &7114871558984013370
 GameObject:
   m_ObjectHideFlags: 0
