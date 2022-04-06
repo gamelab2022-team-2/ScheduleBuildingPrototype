@@ -450,30 +450,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4541381194595613613, guid: c67beac72cca4c44c99b869cbdcd44c5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1839199422}
-    - target: {fileID: 4541381194595613613, guid: c67beac72cca4c44c99b869cbdcd44c5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1839199421}
-    - target: {fileID: 4541381194595613613, guid: c67beac72cca4c44c99b869cbdcd44c5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SendButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 4541381194595613613, guid: c67beac72cca4c44c99b869cbdcd44c5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: CreateUserButtom
-      objectReference: {fileID: 0}
-    - target: {fileID: 4541381194595613613, guid: c67beac72cca4c44c99b869cbdcd44c5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: DiscussionPanelManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4541381194595613613, guid: c67beac72cca4c44c99b869cbdcd44c5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: DatabaseManager, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 4541381194655736630, guid: c67beac72cca4c44c99b869cbdcd44c5, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -12706,23 +12682,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1302869114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1302869112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &1302869122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17497,28 +17456,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828227705}
   m_CullTransparentMesh: 1
---- !u!114 &1839199421 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4541381195510991827, guid: c67beac72cca4c44c99b869cbdcd44c5, type: 3}
-  m_PrefabInstance: {fileID: 46554025}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3555ecf44747cc468a94d556b1905dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1839199422 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4408448308852003625, guid: c67beac72cca4c44c99b869cbdcd44c5, type: 3}
-  m_PrefabInstance: {fileID: 46554025}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42d3b67a7496050489b36334213c27a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1847392361
 GameObject:
   m_ObjectHideFlags: 0
