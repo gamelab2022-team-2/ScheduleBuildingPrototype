@@ -243,6 +243,22 @@ PrefabInstance:
       propertyPath: drawDuration
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 4283600340257596796, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: deckTransform
+      value: 
+      objectReference: {fileID: 22541980}
+    - target: {fileID: 4283600340257596796, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: focusTransform
+      value: 
+      objectReference: {fileID: 22541978}
+    - target: {fileID: 4283600340257596796, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: discardTransform
+      value: 
+      objectReference: {fileID: 22541979}
+    - target: {fileID: 4283600340257596796, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: cardSleeveTransform
+      value: 
+      objectReference: {fileID: 22541977}
     - target: {fileID: 7114871558665278091, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10
@@ -333,6 +349,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+--- !u!4 &22541977 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7114871559833588461, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+  m_PrefabInstance: {fileID: 22541976}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &22541978 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3063394132508058417, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+  m_PrefabInstance: {fileID: 22541976}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &22541979 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7114871560373338500, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+  m_PrefabInstance: {fileID: 22541976}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &22541980 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7114871558665278091, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+  m_PrefabInstance: {fileID: 22541976}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &26007959
 GameObject:
   m_ObjectHideFlags: 0
