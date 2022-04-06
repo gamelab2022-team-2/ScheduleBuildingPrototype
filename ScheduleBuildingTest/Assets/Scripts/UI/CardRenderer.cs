@@ -12,7 +12,6 @@ public class CardRenderer : MonoBehaviour
     public Image image;
     public Image cardImage;
     public Sprite[] spriteList;
-    public TextMeshProUGUI inScheduleIndicator, inHandIndicator;
 
 
     public void Start()
@@ -34,8 +33,6 @@ public class CardRenderer : MonoBehaviour
                 inHandAnx.gameObject.SetActive(false);
                 inHandMot.gameObject.SetActive(false);
                 image.gameObject.SetActive(false);
-                inScheduleIndicator.gameObject.SetActive(false);
-                inHandIndicator.gameObject.SetActive(false);
 
                 cardImage.sprite = spriteList[data.cardArtIndex];
             }
