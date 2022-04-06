@@ -24,13 +24,21 @@ public class DatabaseManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (usernameInput.text != "" && messageInput.text != "" && Input.GetKeyDown(KeyCode.Return))
         {
             CreateUser();
         }
         if (Input.GetKeyDown(KeyCode.Q))
         {
             StartCoroutine(GetMessage());
+        }
+    }
+
+    public void CreateUserButtom()
+    {
+        if (usernameInput.text != "" && messageInput.text != "")
+        {
+            CreateUser();
         }
     }
 
@@ -55,7 +63,7 @@ public class DatabaseManager : MonoBehaviour
         else
         {
             DataSnapshot snapshot = dbTask.Result;
-
+            
             foreach (Transform child in chatBox.transform)
             {
                 Destroy(child.gameObject);
