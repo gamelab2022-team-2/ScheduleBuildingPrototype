@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 34111010010010
   shapeColor: {r: 0.70980394, g: 0.09019608, b: 0.61960787, a: 0}
-  cardArtIndex: 3
   cardId: 10
   type: 1
   cardName: Yoga
@@ -36,7 +35,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  topLeftValue: 3
-  bottomLeftValue: 0
-  bottomRightValue: 0
-  topRightValue: -2
+  displayMotiv: 3
+  displayGrades: 0
+  displayAnx: 0
+  displayMotivInHand: -2

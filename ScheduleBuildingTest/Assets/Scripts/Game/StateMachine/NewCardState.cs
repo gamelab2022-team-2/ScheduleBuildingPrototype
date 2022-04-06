@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace Game.StateMachine
 {
+    /// <summary>
+    /// Adds anxiety cards - if cards are not played
+    /// Adds motivation or grades - added by certain choice
+    /// </summary>
     public class NewCardState : GameState
     {
         public NewCardState(GameStateMachine gsm, Player player) : base(gsm, player)
@@ -14,7 +18,6 @@ namespace Game.StateMachine
             get
             {
                 if (GameOverCondition()) return stateMachine.gameOverState;
-                //if (Game.GameManager.Instance.turn.runtimeValue >= 4) return stateMachine.discussionPhase;
                 return stateMachine.drawPhase;
             }
         }

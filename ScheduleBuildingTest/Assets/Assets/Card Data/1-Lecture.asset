@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 2411111111
   shapeColor: {r: 0.29803923, g: 0.78823537, b: 0.94117653, a: 0}
-  cardArtIndex: 2
   cardId: 1
   type: 0
   cardName: Lecture
@@ -23,14 +22,14 @@ MonoBehaviour:
   cardDescription: Will increase grade by 3 but decrease motivation by 4 when entered
     in the schedule. Will add 2 anxiety cards to the discard pile if unplayed. \nBasic
     education card
-  onPlayDescription: Increases grade by 2 and decreases motivation by 4.
+  onPlayDescription: Increases grade by 3 and decreases motivation by 4.
   unplayedDescription: Adds 2 Anxiety Cards to the discard pile.
   statusDescription: 
   flavorText: The cornerstone of any educational program
   placedResolve:
   - ChangeMotivation
   - ChangeGrades
-  placedResolveParams: fcffffff02000000
+  placedResolveParams: fcffffff03000000
   unplacedResolve:
   - AddCard
   - AddCard
@@ -38,7 +37,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  topLeftValue: 2
-  bottomLeftValue: -4
-  bottomRightValue: 0
-  topRightValue: 2
+  displayMotiv: -4
+  displayGrades: 3
+  displayAnx: 2
+  displayMotivInHand: 0

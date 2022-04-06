@@ -22,7 +22,6 @@ namespace Game.StateMachine
         public DiscardState discardPhase;
         public EventState eventPhase;
         public NewCardState newCardPhase;
-        public DiscussionState discussionPhase;
         public GameOverState gameOverState;
 
         [Header("GameEvents")] 
@@ -37,7 +36,6 @@ namespace Game.StateMachine
         public GameEvent OnDiscardPhaseEnter, OnDiscardPhaseExit;
         public GameEvent OnEventPhaseEnter, OnEventPhaseExit;
         public GameEvent OnNewCardPhaseEnter, OnNewCardPhaseExit;
-        public GameEvent OnDiscussionPhaseEnter, OnDiscussionPhaseExit;
         public GameEvent OnGameOverStateEnter;
   
 
@@ -52,7 +50,6 @@ namespace Game.StateMachine
             discardPhase = new DiscardState(this, player);
             eventPhase = new EventState(this, player);
             newCardPhase = new NewCardState(this, player);
-            discussionPhase = new DiscussionState(this, player);
             gameOverState = new GameOverState(this, player);
         
             initialPhase.InitializeNextState();
@@ -62,7 +59,6 @@ namespace Game.StateMachine
             discardPhase.InitializeNextState();
             eventPhase.InitializeNextState();
             newCardPhase.InitializeNextState();
-            discussionPhase.InitializeNextState();
             gameOverState.InitializeNextState();
 
         

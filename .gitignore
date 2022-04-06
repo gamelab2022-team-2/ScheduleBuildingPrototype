@@ -91,5 +91,3 @@ crashlytics-build.properties
 fmod_editor.log
 
 /FMOD/game music/.cache
-
-/ScheduleBuildingTest/Assets/StreamingAssets/python/Lib

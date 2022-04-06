@@ -5,8 +5,6 @@ using Game;
 
 public class AudioManager : MonoBehaviour
 {
-    public bool mainmenu;
-
     private List<FMOD.Studio.EventInstance> songs;
 
     private void Start()
@@ -16,11 +14,6 @@ public class AudioManager : MonoBehaviour
         songs.Add(FMODUnity.RuntimeManager.CreateInstance("event:/MainMenuMusic"));
         songs.Add(FMODUnity.RuntimeManager.CreateInstance("event:/GameMusic"));
         songs.Add(FMODUnity.RuntimeManager.CreateInstance("event:/GameOverMusic"));
-
-        if (mainmenu)
-        {
-            StartMusic(0);
-        }
     }
 
     public void PlaySingleSound(string sound)
