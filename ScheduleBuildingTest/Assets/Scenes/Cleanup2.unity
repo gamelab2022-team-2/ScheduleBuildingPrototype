@@ -9822,9 +9822,9 @@ MonoBehaviour:
   player: {fileID: 1944111505}
   stateMachine: {fileID: 810869483}
   cards:
-  - {fileID: 1782269196}
-  - {fileID: 775606492}
-  - {fileID: 236615021}
+  - {fileID: 183345811}
+  - {fileID: 1951303722}
+  - {fileID: 344893085}
 --- !u!114 &810869488
 MonoBehaviour:
   m_ObjectHideFlags: 0
