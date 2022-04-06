@@ -190,6 +190,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1010253790293615029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3063394132508058417}
+  m_Layer: 0
+  m_Name: Focus Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3063394132508058417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010253790293615029}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7114871558889228717}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7114871558665278090
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7114871558889228717}
+  - component: {fileID: 4283600340257596796}
   m_Layer: 0
   m_Name: Card Positions
   m_TagString: Untagged
@@ -252,9 +283,27 @@ Transform:
   - {fileID: 7114871558665278091}
   - {fileID: 7114871560373338500}
   - {fileID: 7114871559833588461}
+  - {fileID: 3063394132508058417}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4283600340257596796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7114871558889228716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3829f40c48f6c8346bdfefd2ef55943f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handTransform: {fileID: 7114871559045851505}
+  deckTransform: {fileID: 7114871558665278091}
+  discardTransform: {fileID: 7114871560373338500}
+  focusTransform: {fileID: 3063394132508058417}
+  cardSleeveTransform: {fileID: 7114871559833588461}
 --- !u!1 &7114871558984013370
 GameObject:
   m_ObjectHideFlags: 0

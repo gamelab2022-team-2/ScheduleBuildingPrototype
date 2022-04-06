@@ -19,7 +19,7 @@ MonoBehaviour:
   description: Hey Settler! Things are totally looking better so we've let a small
     group of your fellow company colleagues down to the colony. We can totally see
     the light at the end of the tunnel!
-  art: {fileID: 21300000, guid: ac34ba1958583df4db7ae21684bb50f7, type: 3}
+  art: {fileID: 21300000, guid: 08199b8357e3cad4295f8c0e55426d69, type: 3}
   choice1: {fileID: 11400000, guid: 8a0aa48692a96dc4f88b004bddb0414d, type: 2}
   choice2: {fileID: 11400000, guid: c1360c00cd4b647488973e9e55fbfbd9, type: 2}
   hasPrerequisite: 0

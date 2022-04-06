@@ -103,16 +103,17 @@ public class EventContainer : MonoBehaviour
     {
         int k = karma;
         int t = Game.GameManager.Instance.turn.runtimeValue % 10;
-        k -= (_player.motivation.runtimeValue - 25 + _player.grade.runtimeValue - 6*t);
-        k += 5 * (_player.anxiety.runtimeValue - 5);
+        k -= (_player.motivation.runtimeValue - 25 + _player.motivation.runtimeValue - 4*t);
+        k += 5 * (_player.anxiety.runtimeValue - 3);
         karma = k;
+
     }
     public Event AIGetNextEvent()
     {
-        UpdateKarma();
         Event potentialEvent1 = availableEvents[Random.Range(0, availableEvents.Count)];
         if (availableEvents.Count < 2) return potentialEvent1;
         int event1value = Mathf.Abs(potentialEvent1.eventKarma - karma) - potentialEvent1.eventPriority;
+       
         Event potentialEvent2 = availableEvents[Random.Range(0, availableEvents.Count)];
         bool eventFound = false;
         while (!eventFound)

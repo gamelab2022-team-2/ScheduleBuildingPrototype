@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shape: 221111
   shapeColor: {r: 1, g: 0.92549026, b: 0.121568635, a: 0}
-  cardArtIndex: 8
   cardId: 16
   type: 1
   cardName: Calisthenics
@@ -25,7 +24,7 @@ MonoBehaviour:
     to feel connected with the universe
   onPlayDescription: Increases motivation by 1 and adds a connection card to the
     discard pile.
-  unplayedDescription: Decreases motivation by 3.
+  unplayedDescription: Decreases motivation by 2.
   statusDescription: 
   flavorText: Parts of your vascular system may still be frozen from cryosleep. These
     exercises will hopefully thaw you out.
@@ -35,11 +34,11 @@ MonoBehaviour:
   placedResolveParams: 0100000014000000
   unplacedResolve:
   - ChangeMotivation
-  unplacedResolveParams: fdffffff
+  unplacedResolveParams: feffffff
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  topLeftValue: 1
-  bottomLeftValue: 1
-  bottomRightValue: 0
-  topRightValue: -3
+  displayMotiv: 1
+  displayGrades: 0
+  displayAnx: -1
+  displayMotivInHand: -2

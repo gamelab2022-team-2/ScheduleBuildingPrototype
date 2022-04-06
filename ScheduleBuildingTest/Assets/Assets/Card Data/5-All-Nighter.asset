@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: 5-All-Nighter
   m_EditorClassIdentifier: 
   shape: 281010000000000101
-  shapeColor: {r: 0.227451, g: 0.04705883, b: 0.6392157, a: 0}
-  cardArtIndex: 2
+  shapeColor: {r: 0.49803925, g: 0.49803925, b: 0.49803925, a: 0}
   cardId: 5
   type: 0
   cardName: All-Nighter
@@ -37,7 +36,7 @@ MonoBehaviour:
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
-  topLeftValue: 8
-  bottomLeftValue: -10
-  bottomRightValue: 0
-  topRightValue: 1
+  displayMotiv: -10
+  displayGrades: 8
+  displayAnx: 1
+  displayMotivInHand: 0
