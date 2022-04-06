@@ -25,7 +25,7 @@ MonoBehaviour:
     to feel connected with the universe
   onPlayDescription: Increases motivation by 1 and adds a connection card to the
     discard pile.
-  unplayedDescription: Decreases motivation by 2.
+  unplayedDescription: Decreases motivation by 3.
   statusDescription: 
   flavorText: Parts of your vascular system may still be frozen from cryosleep. These
     exercises will hopefully thaw you out.
@@ -35,11 +35,11 @@ MonoBehaviour:
   placedResolveParams: 0100000014000000
   unplacedResolve:
   - ChangeMotivation
-  unplacedResolveParams: feffffff
+  unplacedResolveParams: fdffffff
   onDraw: []
   onDrawParams: 
   burnAfterUse: 0
   topLeftValue: 1
   bottomLeftValue: 1
   bottomRightValue: 0
-  topRightValue: -2
+  topRightValue: -3
