@@ -43,7 +43,12 @@ namespace Game.StateMachine
         public override bool GameOverCondition()
         {
             if (player.Motivation <= 0) return true;
-            return GameManager.Instance.turn.runtimeValue == 10 && player.Grade < 60;
+            else if (GameManager.Instance.turn.runtimeValue == 10)
+            {
+                return GameManager.Instance.turn.runtimeValue == 10 && player.Grade < 60;
+            }
+            return GameManager.Instance.turn.runtimeValue == 20 && player.Grade < 60;
+
         }
 
     }

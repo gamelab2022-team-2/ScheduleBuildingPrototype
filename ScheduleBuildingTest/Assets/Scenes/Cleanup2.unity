@@ -19539,6 +19539,8 @@ MonoBehaviour:
   tempInfoPanel: {fileID: 369127454}
   settlerHandbook: {fileID: 279537373}
   schedule: {fileID: 811332696}
+  player: {fileID: 1944111505}
+  gameManager: {fileID: 810869481}
 --- !u!1 &1303236495
 GameObject:
   m_ObjectHideFlags: 0
