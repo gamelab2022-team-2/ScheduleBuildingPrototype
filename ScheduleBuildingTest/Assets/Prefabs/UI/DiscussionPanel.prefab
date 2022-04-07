@@ -130,7 +130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 417.34097}
+  m_AnchoredPosition: {x: 0, y: 417.34103}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &5576675864646288751
@@ -389,7 +389,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5576675865268092986}
   m_HandleRect: {fileID: 5576675865268092985}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -3273,8 +3273,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5576675866621805671}
   m_HandleRect: {fileID: 5576675866621805670}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4927,6 +4927,8 @@ GameObject:
   - component: {fileID: 5576675866156918978}
   - component: {fileID: 5576675866156919004}
   - component: {fileID: 5576675866156918979}
+  - component: {fileID: 1180366783859567138}
+  - component: {fileID: 3125305280373956555}
   m_Layer: 0
   m_Name: DiscussionPanel
   m_TagString: Untagged
@@ -5007,8 +5009,8 @@ MonoBehaviour:
   chatPanel: {fileID: 5576675864646288748}
   textObject: {fileID: 1768284196436017138, guid: 51a3b2d36540d904fb004443bea2b84e, type: 3}
   chatBox: {fileID: 5576675864878052496}
-  db: {fileID: 0}
-  sg: {fileID: 0}
+  db: {fileID: 1180366783859567138}
+  sg: {fileID: 3125305280373956555}
   player: {fileID: 0}
   sentiment: 
   messageList: []
@@ -5041,6 +5043,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   username: 
   message: 
+--- !u!114 &1180366783859567138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5576675866156918982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9deac4c9ecb795041aa4a4314e79a86b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  karma: 0
+--- !u!114 &3125305280373956555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5576675866156918982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29ea44d21594871478364ec1c1e0e45e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5576675866163800529
 GameObject:
   m_ObjectHideFlags: 0

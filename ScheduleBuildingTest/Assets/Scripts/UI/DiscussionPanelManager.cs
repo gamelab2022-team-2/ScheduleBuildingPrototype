@@ -31,6 +31,7 @@ public class DiscussionPanelManager : MonoBehaviour
                 SendMessageToChat(chatBox.text);
                 //chatBox.text = "";
 
+                GetAndApplySentiment(chatBox.text);
             }
         }
         else
@@ -46,6 +47,7 @@ public class DiscussionPanelManager : MonoBehaviour
     public void SendButton()
     {
         SendMessageToChat(chatBox.text);
+        GetAndApplySentiment(chatBox.text);
     }
 
     public void SendMessageToChat(string text)
@@ -59,6 +61,11 @@ public class DiscussionPanelManager : MonoBehaviour
 
         messageList.Add(newMessage);
 
+        
+    }
+
+    public void GetAndApplySentiment(string text)
+    {
         sentiment = sg.GetSentiment(text);
 
         switch (sentiment)
@@ -81,25 +88,27 @@ public class DiscussionPanelManager : MonoBehaviour
         {
             player.AddCard(20);
             player.AddCard(20);
+            Debug.Log("Added 2 connection!");
         }
-        else if(db.karma > 3)
+        else if (db.karma > 3)
         {
             player.AddCard(20);
+            Debug.Log("Added 1 connection!");
         }
-        else if(db.karma > -4)
+        else if (db.karma > -4)
         {
         }
-        else if(db.karma > -15)
+        else if (db.karma > -15)
         {
             player.AddCard(0);
+            Debug.Log("Added 1 anxiety!");
         }
         else
         {
             player.AddCard(0);
             player.AddCard(0);
+            Debug.Log("Added 2 anxiety!");
         }
-
-        
     }
 }
 

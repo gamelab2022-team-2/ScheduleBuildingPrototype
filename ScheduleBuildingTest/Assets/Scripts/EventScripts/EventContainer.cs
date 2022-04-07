@@ -52,6 +52,11 @@ public class EventContainer : MonoBehaviour
             eventSelect = FindEventByIdInPrecon(13);
         }
 
+        if(Game.GameManager.Instance.turn.runtimeValue == 4)
+        {
+            eventSelect = FindEventByIdInPrecon(100);
+        }
+
         eventManager.selectedEvent = eventSelect;
 
         Debug.Log("Event select = " + eventSelect.title);

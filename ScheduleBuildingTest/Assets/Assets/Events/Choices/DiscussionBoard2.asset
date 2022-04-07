@@ -10,17 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cff721d76f96434aab0c8260e8943d6, type: 3}
-  m_Name: FinalExams1
+  m_Name: DiscussionBoard2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Panic & Cram [+10 grade, +5 anxiety]
+  title: Maybe we can form a study group? [<color=yellow>Gain 5 grade</color>]
   karmaValue: 0
-  description: Panic & Cram [+10 grade, +5 anxiety]
+  description: 
   choiceResolve:
-  - AddCard
-  - AddCard
-  - AddCard
-  - AddCard
-  - AddCard
   - ChangeGrades
-  choiceParams: 00000000000000000000000000000000000000000a000000
+  choiceParams: 05000000
