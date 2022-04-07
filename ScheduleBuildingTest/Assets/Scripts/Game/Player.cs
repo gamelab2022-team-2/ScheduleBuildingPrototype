@@ -458,4 +458,13 @@ public class Player : MonoBehaviour
         discardPile.Add(card);
         return sequence;
     }
+    public void ResetGame()
+    {
+        anxiety.runtimeValue = 0;
+        grade.runtimeValue = 0;
+        motivation.runtimeValue = 50;
+        motivationModifier = 0;
+        gradeModifier = 0;
+        GameManager.Instance.turn.runtimeValue = 0;
+    }
 }
