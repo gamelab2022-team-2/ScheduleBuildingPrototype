@@ -15,8 +15,6 @@ public class Player : MonoBehaviour
     public int motivationModifier;
     public int gradeModifier;
 
-    public GameObject submitButton;
-
     public List<GridObject> gridObjects;
 
     public EventContainer eventContainer;
@@ -107,7 +105,6 @@ public class Player : MonoBehaviour
 
         for (var i = 0; i < cardsToDestroy.Count; i++) sequence.AppendCallback(DestroyACard);
         sequence.AppendCallback(DisplayCardsInHand);
-        sequence.AppendCallback(ActivateButton);
     }
 
     //TODO: Extract this functionality into a new "Card Animation Controller" class and flesh it out more
@@ -417,11 +414,6 @@ public class Player : MonoBehaviour
         }
 
         return sequence;
-    }
-
-    public void ActivateButton()
-    {
-        submitButton.SetActive(true);
     }
 
     /*public void PlayDrawSound()

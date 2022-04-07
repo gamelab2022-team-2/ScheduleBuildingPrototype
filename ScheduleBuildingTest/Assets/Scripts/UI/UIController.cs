@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    public RectTransform eventPanel,newCardPanel, discussionPanel, gameOverPanel, introPanel, winPanel, tempInfoPanel, settlerHandbook;
+    public RectTransform eventPanel,newCardPanel, discussionPanel, gameOverPanel, introPanel, winPanel, tempInfoPanel, settlerHandbook, submitSchedule;
     public Transform schedule;
     public Player player;
     public GameManager gameManager;
@@ -43,13 +43,14 @@ public class UIController : MonoBehaviour
 
     public void OpenDiscussionPanel()
     {
+        Debug.Log("Open Discussion Panel called");
         discussionPanel.gameObject.SetActive(true);
-        discussionPanel.DOAnchorPos(new Vector2(0, -50), 0.25f).SetDelay(0.25f);
+
     }
     public void CloseDiscussionPanel()
     {
-        discussionPanel.DOAnchorPos(new Vector2(-1700, -50), 0.25f).SetDelay(0.1f);
-        discussionPanel.gameObject.SetActive(true);
+
+        discussionPanel.gameObject.SetActive(false);
     }
 
     public void OpenSchedule()
@@ -117,5 +118,15 @@ public class UIController : MonoBehaviour
     public void CloseHandbook()
     {
         settlerHandbook.gameObject.SetActive(false);
+    }
+
+    public void OpenSubmitSchedule()
+    {
+        submitSchedule.gameObject.SetActive(true);
+    }
+
+    public void CloseSubmitSchedule()
+    {
+        submitSchedule.gameObject.SetActive(false);
     }
 }
