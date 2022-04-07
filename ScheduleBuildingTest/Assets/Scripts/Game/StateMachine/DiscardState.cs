@@ -15,11 +15,17 @@ namespace Game.StateMachine
 
         public GameState EventOrDraw()
         {
+            if (GameManager.Instance.turn.runtimeValue == 20 && player.grade.runtimeValue > 59)
+            {
+                return stateMachine.winState;
+            }
+
             if (GameManager.Instance.turn.runtimeValue % 2 == 0)
             {
                 Debug.Log(GameManager.Instance.turn);
                 return stateMachine.eventPhase;
             }
+
                 
             return stateMachine.drawPhase;
         }   

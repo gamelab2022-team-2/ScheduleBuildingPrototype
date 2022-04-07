@@ -24,6 +24,7 @@ namespace Game.StateMachine
         public NewCardState newCardPhase;
         public DiscussionState discussionPhase;
         public GameOverState gameOverState;
+        public WinState winState;
 
         [Header("GameEvents")] 
         public GameEvent changeStateEvent;
@@ -38,7 +39,8 @@ namespace Game.StateMachine
         public GameEvent OnEventPhaseEnter, OnEventPhaseExit;
         public GameEvent OnNewCardPhaseEnter, OnNewCardPhaseExit;
         public GameEvent OnDiscussionPhaseEnter, OnDiscussionPhaseExit;
-        public GameEvent OnGameOverStateEnter;
+        public GameEvent OnGameOverStateEnter, GameOverStateExit;
+        public GameEvent OnWinStateEnter, OnWinStateExit;
   
 
         public void Awake()
@@ -54,6 +56,7 @@ namespace Game.StateMachine
             newCardPhase = new NewCardState(this, player);
             discussionPhase = new DiscussionState(this, player);
             gameOverState = new GameOverState(this, player);
+            winState = new WinState(this, player);
         
             initialPhase.InitializeNextState();
             drawPhase.InitializeNextState();
@@ -64,6 +67,7 @@ namespace Game.StateMachine
             newCardPhase.InitializeNextState();
             discussionPhase.InitializeNextState();
             gameOverState.InitializeNextState();
+            winState.InitializeNextState();
 
         
             currentState = initialPhase;
@@ -75,6 +79,7 @@ namespace Game.StateMachine
         {
         
             currentState.Tick();
+            Debug.Log(currentState);
             //Debug.Log("State Time: " + currentState.TimeSinceEnter);
         }
 
@@ -98,6 +103,7 @@ namespace Game.StateMachine
         {
             ChangeState(currentState.NextState);
         }
+
 
         public bool GameOverCondition()
         {
