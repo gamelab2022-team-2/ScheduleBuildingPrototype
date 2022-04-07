@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Game;
 using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
     public RectTransform eventPanel,newCardPanel, discussionPanel, gameOverPanel, introPanel, winPanel, tempInfoPanel, settlerHandbook;
     public Transform schedule;
+    public Player player;
+    public GameManager gameManager;
         
     public void OpenEventPanel()
     {
@@ -21,8 +24,16 @@ public class UIController : MonoBehaviour
     
     public void OpenNewCardPanel()
     {
-        newCardPanel.gameObject.SetActive(true);
-        newCardPanel.DOAnchorPos(new Vector2(0, 0), 0.25f).SetDelay(0.25f);
+        if ((gameManager.turn.runtimeValue == 10 && player.grade.runtimeValue > 59) || (gameManager.turn.runtimeValue == 10 && player.grade.runtimeValue > 59))
+        {
+            newCardPanel.gameObject.SetActive(true);
+            newCardPanel.DOAnchorPos(new Vector2(0, 0), 0.25f).SetDelay(0.25f);
+        }
+        else if (gameManager.turn.runtimeValue != 10 && gameManager.turn.runtimeValue != 20)
+        {
+            newCardPanel.gameObject.SetActive(true);
+            newCardPanel.DOAnchorPos(new Vector2(0, 0), 0.25f).SetDelay(0.25f);
+        }
     }
     public void CloseNewCardPanel()
     {
