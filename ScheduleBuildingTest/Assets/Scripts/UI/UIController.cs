@@ -43,13 +43,14 @@ public class UIController : MonoBehaviour
 
     public void OpenDiscussionPanel()
     {
+        Debug.Log("Open Discussion Panel called");
         discussionPanel.gameObject.SetActive(true);
-        discussionPanel.DOAnchorPos(new Vector2(0, -50), 0.25f).SetDelay(0.25f);
+
     }
     public void CloseDiscussionPanel()
     {
-        discussionPanel.DOAnchorPos(new Vector2(-1700, -50), 0.25f).SetDelay(0.1f);
-        discussionPanel.gameObject.SetActive(true);
+
+        discussionPanel.gameObject.SetActive(false);
     }
 
     public void OpenSchedule()
