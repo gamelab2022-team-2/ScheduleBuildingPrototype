@@ -483,7 +483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3743961625719794897, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_IntArgument
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3743961625719794897, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -907,7 +907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3743961626396187208, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_IntArgument
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3743961626396187208, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -2310,7 +2310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac0863abbb50b647b2c57369d90d78a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameEvent: {fileID: 11400000, guid: e4a77fd463b4ffe4baaf3203708664e6, type: 2}
+  gameEvent: {fileID: 11400000, guid: ee969fd2474056c4e81e83e574bb8a8c, type: 2}
   response:
     m_PersistentCalls:
       m_Calls:
