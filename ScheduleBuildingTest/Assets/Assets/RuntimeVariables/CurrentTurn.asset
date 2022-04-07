@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2797867d9713b644db3f6c72a565fa78, type: 3}
   m_Name: CurrentTurn
   m_EditorClassIdentifier: 
-  initialValue: 0
+  initialValue: 19

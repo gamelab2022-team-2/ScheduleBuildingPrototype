@@ -8,14 +8,12 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public AudioManager am;
-    public RectTransform titleImage;
     private float sceneEnterTime = 0;
 
     public void Start()
     {
         sceneEnterTime = Time.time;
-        titleImage.DOLocalJump(new Vector2(0, 0), 100, 3, 1f).SetDelay(0.5f)
-            .OnComplete(ScalePunch);
+
     }
 
     void Update()
@@ -29,6 +27,5 @@ public class MainMenu : MonoBehaviour
 
     void ScalePunch()
     {
-        titleImage.DOPunchScale(new Vector3(1.5f,1.5f,1.5f),0.5f,8,1f );
     }
 }
