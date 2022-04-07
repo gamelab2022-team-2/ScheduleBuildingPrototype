@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SpaceChocoChoice2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Send it to a friend [Motivation +10]
+  title: Send it to a friend [<color=yellow>Motivation +10</color>]
   karmaValue: 0
   description: Send it to a friend [Motivation +10]
   choiceResolve:

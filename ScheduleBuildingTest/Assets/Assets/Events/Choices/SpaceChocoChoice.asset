@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SpaceChocoChoice
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Eat the chocolate [Remove 2 anxiety cards from your discard, Study cards
-    get -1 grade this week]
+  title: Eat the chocolate [<color=yellow>Remove 2 anxiety cards from your discard,
+    Study cards get -1 grade this week</color>]
   karmaValue: 0
   description: Eat the chocolate [Remove 2 anxiety cards from your discard, Study
     cards get -1 grade this week]

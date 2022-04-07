@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tightening1
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Hold back tears [Add an Anxiety card to your discard]
+  title: Hold back tears [<color=yellow>Add an Anxiety card to your discard</color>]
   karmaValue: 15
   description: 
   choiceResolve:

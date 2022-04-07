@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SicknessChoice2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Work through it [Motivation -10, Studies Cards worth -2 Grades this week]
+  title: Work through it [<color=yellow>Motivation -10, Studies Cards worth -2 Grades
+    this week</color>]
   karmaValue: 40
   description: Work through it [Motivation -10, Studies Cards worth -2 Grades this
     week]

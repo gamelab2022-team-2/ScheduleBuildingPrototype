@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: oxygenSupplyChoice1
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Fix the generator [Blocks off the first day of next week]
+  title: Fix the generator [<color=yellow>Blocks off the first day of next week</color>]
   karmaValue: 45
   description: Fix the generator [Blocks off the first day of next week]
   choiceResolve:

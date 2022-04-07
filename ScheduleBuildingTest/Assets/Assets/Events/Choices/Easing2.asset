@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Easing2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Do a fist pump [Motivation +4]
+  title: Do a fist pump [<color=yellow>Motivation +4</color>]
   karmaValue: -10
   description: Do a fist pump [Motivation +4]
   choiceResolve:
