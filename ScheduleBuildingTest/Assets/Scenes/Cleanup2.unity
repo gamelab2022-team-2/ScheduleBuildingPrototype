@@ -1601,6 +1601,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1944111508}
+        m_TargetAssemblyTypeName: ResetRunTimeValues, Assembly-CSharp
+        m_MethodName: ResetVariables
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &138684370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23920,6 +23932,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1944111508}
+        m_TargetAssemblyTypeName: ResetRunTimeValues, Assembly-CSharp
+        m_MethodName: ResetVariables
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1677005129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27150,6 +27174,7 @@ GameObject:
   - component: {fileID: 1944111506}
   - component: {fileID: 1944111505}
   - component: {fileID: 1944111507}
+  - component: {fileID: 1944111508}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -27224,6 +27249,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1944111508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944111504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55140d4bbe738084e9fcec1d56fc8159, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grade: {fileID: 11400000, guid: 759ada04acdc5a54394070bbcb9769c4, type: 2}
+  motivation: {fileID: 11400000, guid: 7eea4d068aeea3f4fa7a3df9924855b6, type: 2}
+  turn: {fileID: 11400000, guid: 822e5668a79d6dd42815af2bc96a001b, type: 2}
 --- !u!1 &1946072223
 GameObject:
   m_ObjectHideFlags: 0
