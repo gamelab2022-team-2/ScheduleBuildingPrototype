@@ -9,7 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2797867d9713b644db3f6c72a565fa78, type: 3}
-  m_Name: CurrentTurn
+  m_Script: {fileID: 11500000, guid: 01c0ddfe970335e4b8d67d1ceea23ed4, type: 3}
+  m_Name: WinStateEnter
   m_EditorClassIdentifier: 
-  initialValue: 0
