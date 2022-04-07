@@ -259,6 +259,10 @@ PrefabInstance:
       propertyPath: cardSleeveTransform
       value: 
       objectReference: {fileID: 22541977}
+    - target: {fileID: 4505026614806872694, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 810869488}
     - target: {fileID: 7114871558665278091, guid: 7d4d3c50bb32a9f4c8b4ca93ce1ece21, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10
@@ -27121,7 +27125,6 @@ MonoBehaviour:
   grade: {fileID: 11400000, guid: 759ada04acdc5a54394070bbcb9769c4, type: 2}
   anxiety: {fileID: 11400000, guid: fd7f0343e39c1164a8ec73d552b65e98, type: 2}
   schedule: {fileID: 552416117}
-  am: {fileID: 810869488}
 --- !u!4 &1944111506
 Transform:
   m_ObjectHideFlags: 0
@@ -33958,7 +33961,7 @@ MonoBehaviour:
     m_Bits: 256
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
-  antialiasingMode: 3
+  antialiasingMode: 2
   temporalAntialiasing:
     jitterSpread: 0.75
     sharpness: 0.25

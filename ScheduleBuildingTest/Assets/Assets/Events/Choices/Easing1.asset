@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Easing1
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Take a deep breath [Removes an Anxiety card from your discard]
+  title: Take a deep breath [<color=yellow>Removes an Anxiety card from your discard</color>]
   karmaValue: -15
   description: Take a deep breath [Removes an Anxiety card from your discard]
   choiceResolve:
