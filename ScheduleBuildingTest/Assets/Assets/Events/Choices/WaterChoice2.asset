@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WaterChoice2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Drink less [Motivation -3]
+  title: Drink less [<color=yellow>Motivation -3</color>]
   karmaValue: 20
   description: Drink less [Motivation -3]
   choiceResolve:

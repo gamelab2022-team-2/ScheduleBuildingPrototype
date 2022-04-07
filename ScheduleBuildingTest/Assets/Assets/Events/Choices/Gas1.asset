@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gas1
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Lie down and relax [+10 Motivation]
+  title: Lie down and relax [<color=yellow>+10 Motivation</color>]
   karmaValue: 30
   description: 
   choiceResolve:

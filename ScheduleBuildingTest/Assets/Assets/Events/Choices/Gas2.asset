@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gas2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Talk to the walls [Adds a Connection card to your discard]
+  title: Talk to the walls [<color=yellow>Adds a Connection card to your discard</color>]
   karmaValue: 25
   description: Talk to the walls [Adds a Connection card to your discard]
   choiceResolve:

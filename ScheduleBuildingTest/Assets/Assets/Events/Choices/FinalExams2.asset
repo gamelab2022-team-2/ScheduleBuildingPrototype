@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FinalExams2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Take it easy, you've got this! [No effect]
+  title: Take it easy, you've got this! [<color=yellow>No effec</color>t]
   karmaValue: 0
   description: Take it easy, you've got this! [No effect]
   choiceResolve: []

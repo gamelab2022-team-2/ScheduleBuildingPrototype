@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FreshProduceChoice2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Eat it raw [Motivation +25]
+  title: Eat it raw [<color=yellow>Motivation +25</color>]
   karmaValue: -45
   description: Eat it now [Motivation +25]
   choiceResolve:

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WaterChoice1
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Drink unfiltered water [Grades cards get -1 grade this week]
+  title: Drink unfiltered water [<color=yellow>Grades cards get -1 grade this week</color>]
   karmaValue: 15
   description: Drink unfiltered water [Grades cards get -1 grade this week]
   choiceResolve:

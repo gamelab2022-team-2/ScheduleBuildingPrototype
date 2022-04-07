@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Tightening2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Hold your head in your hand [-4 Motivation]
+  title: Hold your head in your hand [<color=yellow>-4 Motivation</color>]
   karmaValue: 20
   description: 
   choiceResolve:
