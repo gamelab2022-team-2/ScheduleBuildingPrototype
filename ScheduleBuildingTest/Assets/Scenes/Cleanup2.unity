@@ -1589,6 +1589,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1944111505}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: ResetGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 799661026}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadGame
@@ -23906,6 +23918,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1944111505}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: ResetGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 799661026}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadMainMenu
@@ -30878,6 +30902,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1302869122}
@@ -30890,11 +30918,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 810869488}
     - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 810869480}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
@@ -30910,6 +30946,10 @@ PrefabInstance:
       value: PlaySingleSound
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UIController, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -30922,6 +30962,10 @@ PrefabInstance:
       value: AudioManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
@@ -30930,8 +30974,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
       value: Swish
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_StringArgument
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -30940,6 +30992,10 @@ PrefabInstance:
     - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2177997252960769976, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
+      propertyPath: response.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2177997252960769977, guid: 79d7315a963c8084cab6263ee33e0454, type: 3}
       propertyPath: response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -33194,8 +33250,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Your motivation has plumetted settler. We don't think you are going to
-    make it! That's why we are sending you back to cryosleep until you feel better.
+  m_text: At this time, we are unable to continue on with your contract as an employee.
+    One of our security guards will be by shortly to take back the pod you're in
+    and escort you out of the colony's orbit. We wish you luck in your future career
+    endeavors in the cold vastness of outer space.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: eed505abea0db9742a89f1b182192fbe, type: 2}
   m_sharedMaterial: {fileID: 8419771641189457284, guid: eed505abea0db9742a89f1b182192fbe, type: 2}
