@@ -26,7 +26,7 @@ public class IntegerVariableTMP : MonoBehaviour
 
     public void SmoothTextChange()
     {
-        value = Mathf.Lerp(value, integerVariable.runtimeValue, 0.2f);
+        value = Mathf.Lerp(value, integerVariable.runtimeValue, 0.1f);
         var displayvalue = Mathf.RoundToInt(value);
         textMesh.text = displayvalue.ToString();
     }
