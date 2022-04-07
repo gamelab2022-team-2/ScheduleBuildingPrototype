@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ClearSkiesChoice1
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Sleep under the lights [Remove an Anxiety card from your discard]
+  title: Sleep under the lights [<color=yellow>Remove an Anxiety card from your discard</color>]
   karmaValue: -20
   description: 
   choiceResolve:

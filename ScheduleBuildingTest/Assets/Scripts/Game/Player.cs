@@ -1,27 +1,19 @@
-using System.Collections;
 using System.Collections.Generic;
-using ScriptableObjects;
-using UnityEngine;
-using System;
-using System.Reflection;
 using DG.Tweening;
 using Game;
+using ScriptableObjects;
+using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public CardSet deck = new CardSet();
-    public CardSet discardPile = new CardSet();
-    public CardSet hand = new CardSet();
-    public CardSet allCards = new CardSet();
-
     public Transform handTransform;
     public CardAnimationController cardAnimationController;
 
     public GameObject gridObjectPrefab;
 
     // modifier variables (from events)
-    public int motivationModifier = 0;
-    public int gradeModifier = 0;
+    public int motivationModifier;
+    public int gradeModifier;
 
     public GameObject submitButton;
 
@@ -31,15 +23,19 @@ public class Player : MonoBehaviour
 
     public IntegerVariable motivation, grade, anxiety;
 
+    public Schedule schedule;
+
+    //public AudioManager am;
+    public CardSet allCards = new CardSet();
+
+    private List<GameObject> cardsToDestroy;
+    public CardSet deck = new CardSet();
+    public CardSet discardPile = new CardSet();
+    public CardSet hand = new CardSet();
+
     public int Motivation => motivation.runtimeValue;
     public int Grade => grade.runtimeValue;
     public int Anxiety => anxiety.runtimeValue;
-
-    public Schedule schedule;
-
-    public AudioManager am;
-
-    private List<GameObject> cardsToDestroy;
 
     public void GetOpeningDeck()
     {
@@ -59,26 +55,24 @@ public class Player : MonoBehaviour
     public void DrawFromDeck()
     {
         cardsToDestroy = new List<GameObject>();
-        int drawCount = 0;
-        Sequence sequence = DOTween.Sequence();
+        var drawCount = 0;
+        var sequence = DOTween.Sequence();
 
         while (hand.Count < 5)
-        {
-
             if (deck.Count >= 1)
             {
-                Card drawnCard = deck.Draw();
-                sequence.AppendCallback(PlayDrawSound);
+                var drawnCard = deck.Draw();
                 sequence.Append(cardAnimationController.AnimateDraw(drawnCard, hand.Count));
                 drawCount += 1;
 
 
                 if (drawnCard.type == CardType.STATUS)
                 {
-                    for (int m = 0; m < drawnCard.onDraw.Count; m++)
+                    for (var m = 0; m < drawnCard.onDraw.Count; m++)
                     {
-                        Type thisType = this.GetType();
-                        if (drawnCard.onDraw[m].Equals("BlockSpot")) {
+                        var thisType = GetType();
+                        if (drawnCard.onDraw[m].Equals("BlockSpot"))
+                        {
                             sequence.AppendCallback(BlockASpot);
                         }
                         else if (drawnCard.onDraw[m].Equals("RemoveCard"))
@@ -86,46 +80,43 @@ public class Player : MonoBehaviour
                             sequence.Append(RemoveAnxiety());
                         }
 
-                        else { 
-                        MethodInfo theMethod = thisType
-                            .GetMethod(drawnCard.onDraw[m]);
-                        theMethod.Invoke(this, new object[] { drawnCard.onDrawParams[m] });
+                        else
+                        {
+                            var theMethod = thisType
+                                .GetMethod(drawnCard.onDraw[m]);
+                            theMethod.Invoke(this, new object[] { drawnCard.onDrawParams[m] });
                         }
                     }
+
                     if (drawnCard.burnAfterUse)
-                    {
                         //TODO: destroy the card after it animates
                         //Destroy(drawnCard.transform.gameObject);
                         cardsToDestroy.Add(drawnCard.gameObject);
-                        
-                    }
                     else
-                    {
                         discardPile.Add(drawnCard);
-                    }
                 }
                 else
+                {
                     hand.Add(drawnCard);
+                }
             }
             else
             {
                 sequence.Append(DiscardPileReturnToDeck());
             }
-        }
-        for(int i = 0; i<cardsToDestroy.Count;i++) sequence.AppendCallback(DestroyACard);
+
+        for (var i = 0; i < cardsToDestroy.Count; i++) sequence.AppendCallback(DestroyACard);
         sequence.AppendCallback(DisplayCardsInHand);
         sequence.AppendCallback(ActivateButton);
-
     }
 
     //TODO: Extract this functionality into a new "Card Animation Controller" class and flesh it out more
     //gets the 5 cards that should already be in the player's hand, and moves them from the offscreen "cardSleeve" to in front of the camera. also spawns the shapes on top of the cards
     public void DisplayCardsInHand()
     {
-        for (int i = 0; i < hand.Count; i++)
+        for (var i = 0; i < hand.Count; i++)
         {
-
-            Card currCard = hand.GetAtIndex(i);
+            var currCard = hand.GetAtIndex(i);
             //currCard.gameObject.transform.position = handTransform.GetChild(i).position + Vector3.up;;
             float w = currCard.shape[0] - '0';
             float h = currCard.shape[1] - '0';
@@ -133,12 +124,13 @@ public class Player : MonoBehaviour
             var shape = Instantiate(gridObjectPrefab);
 
             shape.GetComponent<GridObject>().Initialize(currCard.shape,
-                handTransform.GetChild(i).position + ((3f-h)/2f + 1f) * Vector3.up + Vector3.left * (w-1f) - Vector3.forward, currCard.shapeColor);
+                handTransform.GetChild(i).position + ((3f - h) / 2f + 1f) * Vector3.up + Vector3.left * (w - 1f) -
+                Vector3.forward, currCard.shapeColor);
             //shapeSpawner.GetComponent<ShapeSpawner>().SpawnShape(_player.handGO.transform.GetChild(i).position, currCard.cardData.shape, currCard.cardData.shapeColor);
             gridObjects.Add(shape.GetComponent<GridObject>());
         }
 
-        foreach (GridObject g in gridObjects) g.allowedToMove = true;
+        foreach (var g in gridObjects) g.allowedToMove = true;
 
         /*foreach (var card in hand.cards)
         {
@@ -149,33 +141,32 @@ public class Player : MonoBehaviour
 
     private Tween DiscardPileReturnToDeck()
     {
-        Sequence sequence = DOTween.Sequence();
+        var sequence = DOTween.Sequence();
         while (discardPile.Count > 0)
         {
-            Card card = discardPile.Draw();
+            var card = discardPile.Draw();
             deck.Add(card);
             sequence.Append(cardAnimationController.ToDeck(card));
         }
+
         deck.Shuffle();
-        foreach (var card in deck.cards)
-        {
-            sequence.Append(cardAnimationController.Shuffle(card));
-        }
+        foreach (var card in deck.cards) sequence.Append(cardAnimationController.Shuffle(card));
 
         return sequence;
     }
 
     /// <summary>
-    /// Discards cards from the Hand set into the Discard set
+    ///     Discards cards from the Hand set into the Discard set
     /// </summary>
     public void DiscardHand()
     {
-        Sequence sequence = DOTween.Sequence();
+        var sequence = DOTween.Sequence();
         foreach (var card in hand.cards)
         {
-            sequence.Append(cardAnimationController.ToDiscard(card));
+            sequence.Append(cardAnimationController.ToDiscard(card, discardPile.Count));
             discardPile.Add(card);
         }
+
         hand.EmptyCardSet();
     }
 
@@ -183,47 +174,43 @@ public class Player : MonoBehaviour
     public void ApplyHand()
     {
         Debug.Log("Calculating Resolution Values");
-        Sequence sequence = DOTween.Sequence();
-        for (int c = 0; c < hand.Count; c++)
+        var sequence = DOTween.Sequence();
+        for (var c = 0; c < hand.Count; c++)
         {
-            Card resolvingCard = hand.GetAtIndex(c);
+            var resolvingCard = hand.GetAtIndex(c);
             Debug.Log("cards in Hand resolving");
             if (gridObjects[c].OnGrid())
             {
-
                 Debug.Log("About to resolve card #" + c);
-                for (int m = 0; m < resolvingCard.placedResolve.Count; m++)
-                {
+                for (var m = 0; m < resolvingCard.placedResolve.Count; m++)
                     if (resolvingCard.placedResolve[m].Equals("AddCard"))
                     {
                         sequence.Append(AddCardTween(resolvingCard.placedResolveParams[m]));
                     }
-                    else { 
-                    Type thisType = GetType();
-                    MethodInfo theMethod = thisType
-                        .GetMethod(resolvingCard.placedResolve[m]);
+                    else
+                    {
+                        var thisType = GetType();
+                        var theMethod = thisType
+                            .GetMethod(resolvingCard.placedResolve[m]);
 
-                    theMethod.Invoke(this, new object[] { resolvingCard.placedResolveParams[m] });
+                        theMethod.Invoke(this, new object[] { resolvingCard.placedResolveParams[m] });
                     }
-                }
             }
             else
             {
                 Debug.Log("About to resolve card #" + c);
-                for (int m = 0; m < resolvingCard.unplacedResolve.Count; m++)
-                {
+                for (var m = 0; m < resolvingCard.unplacedResolve.Count; m++)
                     if (resolvingCard.unplacedResolve[m].Equals("AddCard"))
                     {
                         sequence.Append(AddCardTween(resolvingCard.unplacedResolveParams[m]));
                     }
                     else
                     {
-                        Type thisType = this.GetType();
-                    MethodInfo theMethod = thisType
-                        .GetMethod(resolvingCard.unplacedResolve[m]);
-                    theMethod.Invoke(this, new object[] { resolvingCard.unplacedResolveParams[m] });
+                        var thisType = GetType();
+                        var theMethod = thisType
+                            .GetMethod(resolvingCard.unplacedResolve[m]);
+                        theMethod.Invoke(this, new object[] { resolvingCard.unplacedResolveParams[m] });
                     }
-                }
             }
         }
     }
@@ -233,12 +220,12 @@ public class Player : MonoBehaviour
         Debug.Log("Calculating Choice Values");
         eventContainer.karma += choice.karmaValue;
 
-        for (int m = 0; m < choice.choiceResolve.Count; m++)
+        for (var m = 0; m < choice.choiceResolve.Count; m++)
         {
             Debug.Log("Get Method = " + choice.choiceResolve[m]);
-            Type thisType = this.GetType();
-            MethodInfo theMethod = thisType
-            .GetMethod(choice.choiceResolve[m]);
+            var thisType = GetType();
+            var theMethod = thisType
+                .GetMethod(choice.choiceResolve[m]);
 
             theMethod.Invoke(this, new object[] { choice.choiceParams[m] });
         }
@@ -288,7 +275,7 @@ public class Player : MonoBehaviour
         cardObject.transform.position = new Vector3(-100, -100, -100);*/
         var cardData = allCards.GetAtIndex(i).cardData;
         var card = GameManager.Instance.cardSpawner.SpawnCard(cardData);
-        cardAnimationController.ToDiscard(card);
+        cardAnimationController.ToDiscard(card, discardPile.Count);
         discardPile.Add(card);
     }
 
@@ -309,19 +296,18 @@ public class Player : MonoBehaviour
 
     public void RemoveCard(int i)
     {
-        bool found = false;
-        int index = -1;
-        for (int j = 0; j < discardPile.cards.Count; j++)
-        {
+        var found = false;
+        var index = -1;
+        for (var j = 0; j < discardPile.cards.Count; j++)
             if (discardPile.GetAtIndex(j).cardId == i)
             {
                 index = j;
                 found = true;
             }
-        }
+
         if (found)
         {
-            Card toDelete = discardPile.GetAtIndex(index);
+            var toDelete = discardPile.GetAtIndex(index);
             discardPile.cards.RemoveAt(index);
             Destroy(toDelete.transform.gameObject);
             if (i == 0) ChangeAnxiety(-1);
@@ -335,9 +321,10 @@ public class Player : MonoBehaviour
 
     public void BlockSpot(int i)
     {
-        for (int j = 0; j < i; j++)
+        for (var j = 0; j < i; j++)
             schedule.BlockRandomSlot();
     }
+
     public void BlockASpot()
     {
         schedule.BlockRandomSlot();
@@ -381,7 +368,7 @@ public class Player : MonoBehaviour
     }
 
     /// <summary>
-    /// Discards cards from the schedule into the Discard set
+    ///     Discards cards from the schedule into the Discard set
     /// </summary>
     public void DiscardSchedule()
     {
@@ -394,7 +381,7 @@ public class Player : MonoBehaviour
 
     public void ClearShapes()
     {
-        foreach (GridObject go in gridObjects)
+        foreach (var go in gridObjects)
             Destroy(go.transform.gameObject);
         gridObjects.Clear();
     }
@@ -410,25 +397,25 @@ public class Player : MonoBehaviour
 
     public Tween RemoveAnxiety()
     {
-        Sequence sequence = DOTween.Sequence();
-        bool found = false;
-        int index = -1;
-        for (int j = 0; j < discardPile.cards.Count; j++)
-        {
+        var sequence = DOTween.Sequence();
+        var found = false;
+        var index = -1;
+        for (var j = 0; j < discardPile.cards.Count; j++)
             if (discardPile.GetAtIndex(j).cardId == 0)
             {
                 index = j;
                 found = true;
             }
-        }
+
         if (found)
         {
-            Card toDelete = discardPile.GetAtIndex(index);
+            var toDelete = discardPile.GetAtIndex(index);
             sequence.Append(cardAnimationController.RemoveFromDiscard(toDelete));
             discardPile.cards.RemoveAt(index);
             cardsToDestroy.Add(toDelete.gameObject);
             ChangeAnxiety(-1);
         }
+
         return sequence;
     }
 
@@ -436,17 +423,19 @@ public class Player : MonoBehaviour
     {
         submitButton.SetActive(true);
     }
-    public void PlayDrawSound()
+
+    /*public void PlayDrawSound()
     {
-        float rand = UnityEngine.Random.Range(0f,1f);
+        var rand = Random.Range(0f, 1f);
         if (rand < 0.5f)
             am.PlaySingleSound("CardDeal");
         else
             am.PlaySingleSound("Discard");
-    }
+    }*/
+
     public Tween AddCardTween(int i)
     {
-        Sequence sequence = DOTween.Sequence();
+        var sequence = DOTween.Sequence();
         if (i == 0) ChangeAnxiety(1);
 
         /*cardComponent.cardData = allCards.GetAtIndex(i).cardData;
@@ -454,10 +443,11 @@ public class Player : MonoBehaviour
         cardObject.transform.position = new Vector3(-100, -100, -100);*/
         var cardData = allCards.GetAtIndex(i).cardData;
         var card = GameManager.Instance.cardSpawner.SpawnCard(cardData);
-        sequence.Append(cardAnimationController.ToDiscard(card));
+        sequence.Append(cardAnimationController.ToDiscard(card, discardPile.Count));
         discardPile.Add(card);
         return sequence;
     }
+
     public void ResetGame()
     {
         anxiety.runtimeValue = 0;

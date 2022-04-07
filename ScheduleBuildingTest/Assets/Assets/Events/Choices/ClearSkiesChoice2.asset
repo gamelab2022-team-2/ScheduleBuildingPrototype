@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ClearSkiesChoice2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Admire the view [+4 Motivation]
+  title: Admire the view [<color=yellow>+4 Motivation</color>]
   karmaValue: -15
   description: 
   choiceResolve:

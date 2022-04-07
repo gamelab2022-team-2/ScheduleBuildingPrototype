@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AsteroidChoice2
   m_EditorClassIdentifier: 
   eventChoiceId: 0
-  title: Power through [-6 Motivation, Studies Cards get -1 this week]
+  title: Power through [<color=yellow>-6 Motivation, Studies Cards get -1 this week</color>]
   karmaValue: 30
   description: No time to loose, sleep is for the dead!
   choiceResolve:
