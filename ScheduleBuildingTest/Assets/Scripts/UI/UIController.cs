@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    public RectTransform eventPanel,newCardPanel, gameOverPanel, introPanel, winPanel, tempInfoPanel, settlerHandbook;
+    public RectTransform eventPanel,newCardPanel, discussionPanel, gameOverPanel, introPanel, winPanel, tempInfoPanel, settlerHandbook;
     public Transform schedule;
         
     public void OpenEventPanel()
@@ -29,7 +29,18 @@ public class UIController : MonoBehaviour
         newCardPanel.DOAnchorPos(new Vector2(0, -1000), 0.25f).SetDelay(0.1f);
         newCardPanel.gameObject.SetActive(true);
     }
-    
+
+    public void OpenDiscussionPanel()
+    {
+        discussionPanel.gameObject.SetActive(true);
+        discussionPanel.DOAnchorPos(new Vector2(0, -50), 0.25f).SetDelay(0.25f);
+    }
+    public void CloseDiscussionPanel()
+    {
+        discussionPanel.DOAnchorPos(new Vector2(-1700, -50), 0.25f).SetDelay(0.1f);
+        discussionPanel.gameObject.SetActive(true);
+    }
+
     public void OpenSchedule()
     {
         

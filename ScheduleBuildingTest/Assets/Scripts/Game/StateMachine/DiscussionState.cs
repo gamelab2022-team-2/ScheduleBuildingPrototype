@@ -33,6 +33,7 @@ namespace Game.StateMachine
         {
             base.OnStateEnter();
             stateMachine.OnDiscussionPhaseEnter.Raise();
+            Debug.Log("discussion phase entered!!!");
         }
 
         public override void OnStateExit()

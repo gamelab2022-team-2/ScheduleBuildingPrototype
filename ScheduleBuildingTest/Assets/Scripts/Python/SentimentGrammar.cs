@@ -27,7 +27,9 @@ public class SentimentGrammar : MonoBehaviour
         }
         catch (Exception e)
         {
+            Debug.Log("NLTK ERROR:" + e);
             return "positive";
+            
         }
 
         nltk.download("opinion_lexicon");

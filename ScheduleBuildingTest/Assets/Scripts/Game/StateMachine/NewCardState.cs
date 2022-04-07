@@ -14,7 +14,7 @@ namespace Game.StateMachine
             get
             {
                 if (GameOverCondition()) return stateMachine.gameOverState;
-                //if (Game.GameManager.Instance.turn.runtimeValue >= 4) return stateMachine.discussionPhase;
+                if (Game.GameManager.Instance.turn.runtimeValue % 4 == 0) return stateMachine.discussionPhase;
                 return stateMachine.drawPhase;
             }
         }
