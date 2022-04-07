@@ -10100,6 +10100,9 @@ MonoBehaviour:
   OnDiscussionPhaseEnter: {fileID: 11400000, guid: 2064e082954b78e70b35594ebeda1933, type: 2}
   OnDiscussionPhaseExit: {fileID: 11400000, guid: e5a83d341e772a3f2badfbf8d6591d9d, type: 2}
   OnGameOverStateEnter: {fileID: 11400000, guid: cdcaa71399447a84899810bd65b5197e, type: 2}
+  GameOverStateExit: {fileID: 11400000, guid: cdcaa71399447a84899810bd65b5197e, type: 2}
+  OnWinStateEnter: {fileID: 11400000, guid: 446e76945906ac441a561d425af1b185, type: 2}
+  OnWinStateExit: {fileID: 11400000, guid: 2430ec768ec7bdf41934c7c4686cc912, type: 2}
 --- !u!114 &810869484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16199,6 +16202,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1944111508}
+        m_TargetAssemblyTypeName: ResetRunTimeValues, Assembly-CSharp
+        m_MethodName: ResetVariables
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1225298521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16907,6 +16922,34 @@ MonoBehaviour:
       - m_Target: {fileID: 1302869122}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: OpenGameOver
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1302869114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302869112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac0863abbb50b647b2c57369d90d78a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 446e76945906ac441a561d425af1b185, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1302869122}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: OpenWinPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21181,6 +21224,18 @@ MonoBehaviour:
       - m_Target: {fileID: 799661026}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1944111508}
+        m_TargetAssemblyTypeName: ResetRunTimeValues, Assembly-CSharp
+        m_MethodName: ResetVariables
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

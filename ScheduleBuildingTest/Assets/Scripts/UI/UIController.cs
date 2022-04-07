@@ -76,6 +76,7 @@ public class UIController : MonoBehaviour
 
     public void OpenWinPanel()
     {
+        Debug.Log("Open Win Panel");
         winPanel.gameObject.SetActive(true);
         winPanel.DOAnchorPos(new Vector2(0, 0), 0.25f).SetDelay(0.25f);
     }
