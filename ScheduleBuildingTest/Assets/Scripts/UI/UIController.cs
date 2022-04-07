@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    public RectTransform eventPanel,newCardPanel, discussionPanel, gameOverPanel, introPanel, winPanel, tempInfoPanel, settlerHandbook;
+    public RectTransform eventPanel,newCardPanel, discussionPanel, gameOverPanel, introPanel, winPanel, tempInfoPanel, settlerHandbook, submitSchedule;
     public Transform schedule;
     public Player player;
     public GameManager gameManager;
@@ -118,5 +118,15 @@ public class UIController : MonoBehaviour
     public void CloseHandbook()
     {
         settlerHandbook.gameObject.SetActive(false);
+    }
+
+    public void OpenSubmitSchedule()
+    {
+        submitSchedule.gameObject.SetActive(true);
+    }
+
+    public void CloseSubmitSchedule()
+    {
+        submitSchedule.gameObject.SetActive(false);
     }
 }

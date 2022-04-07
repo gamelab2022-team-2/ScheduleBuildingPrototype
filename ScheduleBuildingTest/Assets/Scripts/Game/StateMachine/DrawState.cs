@@ -24,7 +24,7 @@ namespace Game.StateMachine
         public override void Tick()
         {
             base.Tick();
-            if (TimeSinceEnter > 1)
+            if (TimeSinceEnter > 2)
             {
                 stateMachine.ChangeState(NextState);
             }
