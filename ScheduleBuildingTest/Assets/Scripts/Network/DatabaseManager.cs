@@ -75,7 +75,8 @@ public class DatabaseManager : MonoBehaviour
             {
                 string message = childSnapshot.Child("message").Value.ToString();
                 Debug.Log(message);
-                gameObject.GetComponent<DiscussionPanelManager>().SendMessageToChat(message);
+                //DEPRECATED
+                //gameObject.GetComponent<DiscussionPanelManager>().SendMessageToChat(message);
                 i++;
 
                 if(i >= 5)
