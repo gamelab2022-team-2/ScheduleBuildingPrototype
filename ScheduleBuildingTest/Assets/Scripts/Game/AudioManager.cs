@@ -9,6 +9,8 @@ public class AudioManager : MonoBehaviour
 
     private List<FMOD.Studio.EventInstance> songs;
 
+    bool muted;
+
     private void Start()
     {
         songs = new List<FMOD.Studio.EventInstance>();
@@ -21,6 +23,8 @@ public class AudioManager : MonoBehaviour
         {
             StartMusic(0);
         }
+
+        muted = false;
     }
 
     public void PlaySingleSound(string sound)
@@ -37,4 +41,11 @@ public class AudioManager : MonoBehaviour
     {
         songs[song].stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
+
+    public void Mute()
+    {
+        muted = !muted;
+        FMODUnity.RuntimeManager.MuteAllEvents(muted);
+    }
+
 }
