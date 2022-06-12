@@ -890,6 +890,18 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3743961626396187208, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1944111505}
+    - target: {fileID: 3743961626396187208, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1944111508}
+    - target: {fileID: 3743961626396187208, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 799661026}
+    - target: {fileID: 3743961626396187208, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 810869488}
@@ -898,8 +910,28 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3743961626396187208, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3743961626396187208, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: ResetVariables
+      objectReference: {fileID: 0}
+    - target: {fileID: 3743961626396187208, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: LoadGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3743961626396187208, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: StopMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 3743961626396187208, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ResetRunTimeValues, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3743961626396187208, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3743961626396187208, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
@@ -1743,8 +1775,6 @@ MonoBehaviour:
   OnEventPhaseExit: {fileID: 11400000, guid: 28475defc82ff3e49b76330dcc9a7ab9, type: 2}
   OnNewCardPhaseEnter: {fileID: 11400000, guid: 0e1f12e4811f9c04498810e01f9cb54a, type: 2}
   OnNewCardPhaseExit: {fileID: 11400000, guid: 55a45a1293a1e714f9904fdd1d4a1cc8, type: 2}
-  OnDiscussionPhaseEnter: {fileID: 11400000, guid: 2064e082954b78e70b35594ebeda1933, type: 2}
-  OnDiscussionPhaseExit: {fileID: 11400000, guid: e5a83d341e772a3f2badfbf8d6591d9d, type: 2}
   OnGameOverStateEnter: {fileID: 11400000, guid: cdcaa71399447a84899810bd65b5197e, type: 2}
   GameOverStateExit: {fileID: 11400000, guid: 4b2ab711ead55aa44b07f58691dc4233, type: 2}
   OnWinStateEnter: {fileID: 11400000, guid: 446e76945906ac441a561d425af1b185, type: 2}
