@@ -1645,6 +1645,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7690611875014227079, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8481917398016305147, guid: 367d10d2cbaf0e949a4ac434d95f1b31, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2679,6 +2683,7 @@ GameObject:
   - component: {fileID: 1770563967}
   - component: {fileID: 1770563965}
   - component: {fileID: 1770563964}
+  - component: {fileID: 1770563966}
   m_Layer: 0
   m_Name: MusicManager
   m_TagString: Untagged
@@ -2745,6 +2750,34 @@ MonoBehaviour:
       - m_Target: {fileID: 810869488}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: StartMusic
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1770563966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770563963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac0863abbb50b647b2c57369d90d78a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 446e76945906ac441a561d425af1b185, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 810869488}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: StopMusic
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
