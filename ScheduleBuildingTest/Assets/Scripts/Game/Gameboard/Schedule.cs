@@ -26,6 +26,7 @@ public class Schedule : MonoBehaviour
                 blocked = true;
             }
         }
+        Game.GameManager.Instance.GetComponent<AudioManager>().PlaySingleSound("Block");
     }
 
     public void ClearSchedule()
